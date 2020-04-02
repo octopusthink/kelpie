@@ -35,7 +35,7 @@ function gutenberg_starter_theme_options() {
  */
 function gutenberg_starter_theme_options_page() { ?>
 	<div class="wrap">
-	<h1><?php _e('Gutenberg Starter Theme Options', 'gutenberg-starter-theme'); ?></h1>
+	<h1><?php _e( 'Gutenberg Starter Theme Options', 'gutenberg-starter-theme' ); ?></h1>
 	<form method="post" action="options.php">
 		<?php settings_fields( 'gutenberg-starter-theme-options' ); ?>
 		<?php do_settings_sections( 'gutenberg-starter-theme-options' ); ?>
@@ -91,7 +91,8 @@ function gutenberg_starter_theme_options_page() { ?>
 		<?php submit_button(); ?>
 	</form>
 	</div>
-<?php }
+	<?php 
+}
 
 
 /**
@@ -115,28 +116,31 @@ function gutenberg_starter_theme_enable_editor_color_palette() {
 	if ( get_option( 'gutenberg-starter-theme-editor-color-palette', 1 ) == 1 ) {
 		
 		// Add support for a custom color scheme.
-		add_theme_support( 'editor-color-palette', array(
+		add_theme_support(
+			'editor-color-palette',
 			array(
-				'name'  => __( 'Strong Blue', 'gutenberg-starter-theme' ),
-				'slug'  => 'strong-blue',
-				'color' => '#0073aa',
-			),
-			array(
-				'name'  => __( 'Lighter Blue', 'gutenberg-starter-theme' ),
-				'slug'  => 'lighter-blue',
-				'color' => '#229fd8',
-			),
-			array(
-				'name'  => __( 'Very Light Gray', 'gutenberg-starter-theme' ),
-				'slug'  => 'very-light-gray',
-				'color' => '#eee',
-			),
-			array(
-				'name'  => __( 'Very Dark Gray', 'gutenberg-starter-theme' ),
-				'slug'  => 'very-dark-gray',
-				'color' => '#444',
-			),
-		) );
+				array(
+					'name'  => __( 'Strong Blue', 'gutenberg-starter-theme' ),
+					'slug'  => 'strong-blue',
+					'color' => '#0073aa',
+				),
+				array(
+					'name'  => __( 'Lighter Blue', 'gutenberg-starter-theme' ),
+					'slug'  => 'lighter-blue',
+					'color' => '#229fd8',
+				),
+				array(
+					'name'  => __( 'Very Light Gray', 'gutenberg-starter-theme' ),
+					'slug'  => 'very-light-gray',
+					'color' => '#eee',
+				),
+				array(
+					'name'  => __( 'Very Dark Gray', 'gutenberg-starter-theme' ),
+					'slug'  => 'very-dark-gray',
+					'color' => '#444',
+				),
+			) 
+		);
 	}
 }
 add_action( 'after_setup_theme', 'gutenberg_starter_theme_enable_editor_color_palette' );
