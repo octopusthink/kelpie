@@ -95,6 +95,20 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		// Add support for full and wide align images.
+		add_theme_support( 'align-wide' );
+
+		// Add support for responsive embedded content.
+		add_theme_support( 'responsive-embeds' );
+
+		// Add support for Global Styles.
+		add_theme_support(
+			'jetpack-global-styles',
+			[
+				'enable_theme_default' => true,
+			]
+		);
 	}
 endif;
 add_action( 'after_setup_theme', 'kelpie_setup' );
@@ -190,8 +204,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-/**
- * Theme Settings
- */
-require get_template_directory() . '/inc/theme-options.php';
