@@ -1,0 +1,24 @@
+{
+  "name": "octopusthink/kelpie",
+  "description": "A block editor-friendly WordPress starter theme.",
+  "type": "wordpress-theme",
+  "homepage": "https://github.com/octopusthink/kelpie",
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.3",
+    "wp-coding-standards/wpcs": "^1",
+    "dealerdirect/phpcodesniffer-composer-installer": "0.4.4",
+    "automattic/vipwpcs": "^0.3.0"
+  },
+  "require": {
+    "php": ">=7"
+  },
+  "config": {
+    "platform": {
+      "php": "7"
+    }
+  },
+  "scripts": {
+    "lint": "phpcs",
+    "lint-fix": "phpcbf"
+  }
+}
