@@ -15,17 +15,22 @@
 
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
-		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kelpie' ) ); ?>">
-							<?php
-							/* translators: %s: CMS name, i.e. WordPress. */
-							printf( esc_html__( 'Proudly powered by %s', 'kelpie' ), 'WordPress' );
-							?>
-		</a>
-		<span class="sep"> | </span>
-		<?php
-			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Theme: %s', 'kelpie' ), '<a href="https://github.com/WordPress/kelpie/">Kelpie</a>' );
-		?>
+		<p class="footer-copyright">&copy;
+			<?php
+			echo date_i18n(
+				/* translators: Copyright date format, see https://secure.php.net/date */
+				_x( 'Y', 'copyright date format', 'kelpie' )
+			);
+			?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+		</p><!-- .footer-copyright -->
+
+		<p class="powered-by-wordpress">
+			<?php echo esc_html_e( 'Made with', 'kelpie' ); ?>
+			<a href="<?php echo esc_url( __( 'https://wordpress.com/', 'kelpie' ) ); ?>" ><?php echo esc_html_e( 'WordPress', 'kelpie' ); ?></a>
+			<?php echo esc_html_e( '&', 'kelpie' ); ?>
+			<a href="<?php echo esc_url( __( 'https://github.com/octopusthink/kelpie', 'kelpie' ) ); ?>"><?php echo esc_html_e( 'Kelpie Starter Theme', 'kelpie' ); ?></a>
+		</p><!-- .powered-by-wordpress -->
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
