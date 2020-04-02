@@ -9,7 +9,9 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package gutenberg-starter-theme
+ * @package WordPress
+ * @subpackage Kelpie
+ * @since 0.1.0
  */
 
 get_header(); ?>
@@ -19,7 +21,7 @@ get_header(); ?>
 	<?php
 	if ( have_posts() ) :
 
-		if ( is_home() && ! is_front_page() ) : 
+		if ( is_home() && ! is_front_page() ) :
 			?>
 			<header>
 				<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
@@ -47,7 +49,7 @@ get_header(); ?>
 
 		get_template_part( 'template-parts/content', 'none' );
 
-	endif; 
+	endif;
 	?>
 
 	</main><!-- #primary -->

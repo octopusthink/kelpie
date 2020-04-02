@@ -1,13 +1,15 @@
 <?php
 /**
- * gutenberg-starter-theme functions and definitions
+ * kelpie functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package gutenberg-starter-theme
+ * @package WordPress
+ * @subpackage Kelpie
+ * @since 0.1.0
  */
 
-if ( ! function_exists( 'gutenberg_starter_theme_setup' ) ) :
+if ( ! function_exists( 'kelpie_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,14 +17,14 @@ if ( ! function_exists( 'gutenberg_starter_theme_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function gutenberg_starter_theme_setup() {
+	function kelpie_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on gutenberg-starter-theme, use a find and replace
-		 * to change 'gutenberg-starter-theme' to the name of your theme in all the template files.
+		 * If you're building a theme based on kelpie, use a find and replace
+		 * to change 'kelpie' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'gutenberg-starter-theme', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'kelpie', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -45,8 +47,8 @@ if ( ! function_exists( 'gutenberg_starter_theme_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'gutenberg-starter-theme' ),
-			) 
+				'menu-1' => esc_html__( 'Primary', 'kelpie' ),
+			)
 		);
 
 		/*
@@ -61,7 +63,7 @@ if ( ! function_exists( 'gutenberg_starter_theme_setup' ) ) :
 				'comment-list',
 				'gallery',
 				'caption',
-			) 
+			)
 		);
 
 		// Set up the WordPress core custom background feature.
@@ -72,8 +74,8 @@ if ( ! function_exists( 'gutenberg_starter_theme_setup' ) ) :
 				array(
 					'default-color' => 'ffffff',
 					'default-image' => '',
-				) 
-			) 
+				)
+			)
 		);
 
 		// Add theme support for selective refresh for widgets.
@@ -91,11 +93,11 @@ if ( ! function_exists( 'gutenberg_starter_theme_setup' ) ) :
 				'width'       => 250,
 				'flex-width'  => true,
 				'flex-height' => true,
-			) 
+			)
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'gutenberg_starter_theme_setup' );
+add_action( 'after_setup_theme', 'kelpie_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -104,15 +106,15 @@ add_action( 'after_setup_theme', 'gutenberg_starter_theme_setup' );
  *
  * @global int $content_width
  */
-function gutenberg_starter_theme_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'gutenberg_starter_theme_content_width', 640 );
+function kelpie_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'kelpie_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'gutenberg_starter_theme_content_width', 0 );
+add_action( 'after_setup_theme', 'kelpie_content_width', 0 );
 
 /**
  * Register Google Fonts
  */
-function gutenberg_starter_theme_fonts_url() {
+function kelpie_fonts_url() {
 	$fonts_url = '';
 
 	/*
@@ -120,7 +122,7 @@ function gutenberg_starter_theme_fonts_url() {
 	 * supported by Noto Serif, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'gutenberg-starter-theme' );
+	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'kelpie' );
 
 	if ( 'off' !== $notoserif ) {
 		$font_families   = array();
@@ -141,7 +143,7 @@ function gutenberg_starter_theme_fonts_url() {
 /**
  * Enqueue scripts and styles.
  */
-function gutenberg_starter_theme_scripts() {
+function kelpie_scripts() {
 
 	// Get theme version from the theme's style.css.
 	$theme_version = wp_get_theme()->get( 'Version' );
@@ -150,17 +152,17 @@ function gutenberg_starter_theme_scripts() {
 
 	wp_enqueue_style( 'kelpie-blockstyles', get_template_directory_uri() . '/css/blocks.css', array(), $theme_version );
 
-	wp_enqueue_style( 'gutenberg-starter-theme-fonts', gutenberg_starter_theme_fonts_url(), array(), $theme_version );
+	wp_enqueue_style( 'kelpie-fonts', kelpie_fonts_url(), array(), $theme_version );
 
-	wp_enqueue_script( 'gutenberg-starter-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'kelpie-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'gutenberg-starter-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'kelpie-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'gutenberg_starter_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'kelpie_scripts' );
 
 /**
  * Implement the Custom Header feature.

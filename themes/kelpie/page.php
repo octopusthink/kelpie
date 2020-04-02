@@ -9,7 +9,9 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package gutenberg-starter-theme
+ * @package WordPress
+ * @subpackage Kelpie
+ * @since 0.1.0
  */
 
 get_header(); ?>

@@ -4,7 +4,9 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package gutenberg-starter-theme
+ * @package WordPress
+ * @subpackage Kelpie
+ * @since 0.1.0
  */
 
 get_header(); ?>
@@ -21,7 +23,7 @@ get_header(); ?>
 			array(
 				'prev_text' => '&larr; %title',
 				'next_text' => '%title &rarr;',
-			) 
+			)
 		);
 
 		// If comments are open or we have at least one comment, load up the comment template.

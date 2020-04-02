@@ -4,7 +4,9 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package gutenberg-starter-theme
+ * @package WordPress
+ * @subpackage Kelpie
+ * @since 0.1.0
  */
 
 ?>
@@ -21,13 +23,13 @@
 			endif;
 		endif;
 
-		if ( 'post' === get_post_type() ) : 
+		if ( 'post' === get_post_type() ) :
 			?>
 		<div class="entry-meta">
-			<?php gutenberg_starter_theme_posted_on(); ?>
+			<?php kelpie_posted_on(); ?>
 		</div><!-- .entry-meta -->
 			<?php
-		endif; 
+		endif;
 		?>
 	</header><!-- .entry-header -->
 
@@ -37,7 +39,7 @@
 				sprintf(
 					wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'gutenberg-starter-theme' ),
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'kelpie' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -45,19 +47,19 @@
 						)
 					),
 					get_the_title()
-				) 
+				)
 			);
 
 			wp_link_pages(
 				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gutenberg-starter-theme' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kelpie' ),
 					'after'  => '</div>',
-				) 
+				)
 			);
 			?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php gutenberg_starter_theme_entry_footer(); ?>
+		<?php kelpie_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

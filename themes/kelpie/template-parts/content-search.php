@@ -4,7 +4,9 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package gutenberg-starter-theme
+ * @package WordPress
+ * @subpackage Kelpie
+ * @since 0.1.0
  */
 
 ?>
@@ -15,7 +17,7 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php gutenberg_starter_theme_posted_on(); ?>
+			<?php kelpie_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -25,6 +27,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php gutenberg_starter_theme_entry_footer(); ?>
+		<?php kelpie_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

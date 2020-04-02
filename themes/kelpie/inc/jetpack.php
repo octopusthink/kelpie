@@ -4,7 +4,9 @@
  *
  * @link https://jetpack.com/
  *
- * @package gutenberg-starter-theme
+ * @package WordPress
+ * @subpackage Kelpie
+ * @since 0.1.0
  */
 
 /**
@@ -14,15 +16,15 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function gutenberg_starter_theme_jetpack_setup() {
+function kelpie_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'gutenberg_starter_theme_infinite_scroll_render',
+			'render'    => 'kelpie_infinite_scroll_render',
 			'footer'    => 'page',
-		) 
+		)
 	);
 
 	// Add theme support for Responsive Videos.
@@ -33,22 +35,22 @@ function gutenberg_starter_theme_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'gutenberg-starter-theme-style',
+				'stylesheet' => 'kelpie-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
 				'author'     => '.byline',
 				'comment'    => '.comments-link',
 			),
-		) 
+		)
 	);
 }
-add_action( 'after_setup_theme', 'gutenberg_starter_theme_jetpack_setup' );
+add_action( 'after_setup_theme', 'kelpie_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function gutenberg_starter_theme_infinite_scroll_render() {
+function kelpie_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

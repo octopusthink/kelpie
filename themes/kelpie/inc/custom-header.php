@@ -8,39 +8,41 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package gutenberg-starter-theme
+ * @package WordPress
+ * @subpackage Kelpie
+ * @since 0.1.0
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses gutenberg_starter_theme_header_style()
+ * @uses kelpie_header_style()
  */
-function gutenberg_starter_theme_custom_header_setup() {
+function kelpie_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'gutenberg_starter_theme_custom_header_args',
+			'kelpie_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'gutenberg_starter_theme_header_style',
-			) 
-		) 
+				'wp-head-callback'   => 'kelpie_header_style',
+			)
+		)
 	);
 }
-add_action( 'after_setup_theme', 'gutenberg_starter_theme_custom_header_setup' );
+add_action( 'after_setup_theme', 'kelpie_custom_header_setup' );
 
-if ( ! function_exists( 'gutenberg_starter_theme_header_style' ) ) :
+if ( ! function_exists( 'kelpie_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see gutenberg_starter_theme_custom_header_setup().
+	 * @see kelpie_custom_header_setup().
 	 */
-	function gutenberg_starter_theme_header_style() {
+	function kelpie_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
