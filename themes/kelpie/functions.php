@@ -143,26 +143,14 @@ function gutenberg_starter_theme_fonts_url() {
  */
 function gutenberg_starter_theme_scripts() {
 
-	wp_enqueue_style(
-		'kelpie-styles', 
-		get_stylesheet_uri(), 
-		array(), 
-		filemtime(get_stylesheet_uri()), 
-		false
-	);
+	// Get theme version from the theme's style.css.
+	$theme_version = wp_get_theme()->get( 'Version' );
 
-	$blockstyles_url = get_template_directory_uri() . '/css/blocks.css';
-	wp_enqueue_style(
-		'kelpie-blockstyles', 
-		$blockstyles_url, 
-		array(), 
-		filemtime( $blockstyles_url ), 
-		false
-	);
+	wp_enqueue_style( 'kelpie-style', get_stylesheet_uri(), array(), $theme_version );
 
-	wp_enqueue_style( 'gutenberg-starter-themeblocks-style', get_template_directory_uri() . '/css/blocks.css' );
+	wp_enqueue_style( 'kelpie-blockstyles', get_template_directory_uri() . '/css/blocks.css', array(), $theme_version );
 
-	wp_enqueue_style( 'gutenberg-starter-theme-fonts', gutenberg_starter_theme_fonts_url() );
+	wp_enqueue_style( 'gutenberg-starter-theme-fonts', gutenberg_starter_theme_fonts_url(), array(), $theme_version );
 
 	wp_enqueue_script( 'gutenberg-starter-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

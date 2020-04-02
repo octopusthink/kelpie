@@ -35,7 +35,7 @@ function gutenberg_starter_theme_options() {
  */
 function gutenberg_starter_theme_options_page() { ?>
 	<div class="wrap">
-	<h1><?php _e( 'Gutenberg Starter Theme Options', 'gutenberg-starter-theme' ); ?></h1>
+	<h1><?php esc_html_e( 'Gutenberg Starter Theme Options', 'gutenberg-starter-theme' ); ?></h1>
 	<form method="post" action="options.php">
 		<?php settings_fields( 'gutenberg-starter-theme-options' ); ?>
 		<?php do_settings_sections( 'gutenberg-starter-theme-options' ); ?>
@@ -45,7 +45,7 @@ function gutenberg_starter_theme_options_page() { ?>
 					<td>
 						<label>
 							<input name="gutenberg-starter-theme-align-wide" type="checkbox" value="1" <?php checked( '1', get_option( 'gutenberg-starter-theme-align-wide' ) ); ?> />
-							<?php _e( 'Enable wide and full alignments.', 'gutenberg-starter-theme' ); ?>
+							<?php esc_html_e( 'Enable wide and full alignments.', 'gutenberg-starter-theme' ); ?>
 							(<a href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#wide-alignment"><code>align-wide</code></a>)
 						</label>
 					</td>
@@ -54,7 +54,7 @@ function gutenberg_starter_theme_options_page() { ?>
 					<td>
 						<label>
 							<input name="gutenberg-starter-theme-editor-color-palette" type="checkbox" value="1" <?php checked( '1', get_option( 'gutenberg-starter-theme-editor-color-palette' ) ); ?> />
-							<?php _e( 'Enable a custom theme color palette.', 'gutenberg-starter-theme' ); ?>
+							<?php esc_html_e( 'Enable a custom theme color palette.', 'gutenberg-starter-theme' ); ?>
 							(<a href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes"><code>editor-color-palette</code></a>)
 						</label>
 					</td>
@@ -63,7 +63,7 @@ function gutenberg_starter_theme_options_page() { ?>
 					<td>
 						<label>
 							<input name="gutenberg-starter-theme-dark-mode" type="checkbox" value="1" <?php checked( '1', get_option( 'gutenberg-starter-theme-dark-mode' ) ); ?> />
-							<?php _e( 'Enable a dark theme style.', 'gutenberg-starter-theme' ); ?>
+							<?php esc_html_e( 'Enable a dark theme style.', 'gutenberg-starter-theme' ); ?>
 							(<a href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#dark-backgrounds"><code>dark-editor-style</code></a>)
 						</label>
 					</td>
@@ -72,7 +72,7 @@ function gutenberg_starter_theme_options_page() { ?>
 					<td>
 						<label>
 							<input name="gutenberg-starter-theme-wp-block-styles" type="checkbox" value="1" <?php checked( '1', get_option( 'gutenberg-starter-theme-wp-block-styles' ) ); ?> />
-							<?php _e( 'Enable core block styles on the front end.', 'gutenberg-starter-theme' ); ?>
+							<?php esc_html_e( 'Enable core block styles on the front end.', 'gutenberg-starter-theme' ); ?>
 							(<a href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#default-block-styles"><code>wp-block-styles</code></a>)
 						</label>
 					</td>
@@ -81,7 +81,7 @@ function gutenberg_starter_theme_options_page() { ?>
 					<td>
 						<label>
 							<input name="gutenberg-starter-theme-responsive-embeds" type="checkbox" value="1" <?php checked( '1', get_option( 'gutenberg-starter-theme-responsive-embeds' ) ); ?> />
-							<?php _e( 'Enable responsive embedded content.', 'gutenberg-starter-theme' ); ?>
+							<?php esc_html_e( 'Enable responsive embedded content.', 'gutenberg-starter-theme' ); ?>
 							(<a href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#responsive-embedded-content"><code>responsive-embeds</code></a>)
 						</label>
 					</td>
@@ -168,7 +168,7 @@ add_action( 'after_setup_theme', 'gutenberg_starter_theme_enable_dark_mode' );
  */
 function gutenberg_starter_theme_enable_dark_mode_frontend_styles() {
 	if ( get_option( 'gutenberg-starter-theme-dark-mode' ) == 1 ) {
-		wp_enqueue_style( 'gutenberg-starter-themedark-style', get_template_directory_uri() . '/css/dark-mode.css' );
+		wp_enqueue_style( 'gutenberg-starter-themedark-style', get_template_directory_uri() . '/css/dark-mode.css', array(), wp_get_theme()->get( 'Version' ) );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'gutenberg_starter_theme_enable_dark_mode_frontend_styles' );
