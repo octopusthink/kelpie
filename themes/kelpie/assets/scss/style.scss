@@ -21,6 +21,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
 @import "base/normalize";
+@import "base/sanitize";
 @import "base/wp-normalize";
 @import "base/accessibility";
 @import "base/alignments";
