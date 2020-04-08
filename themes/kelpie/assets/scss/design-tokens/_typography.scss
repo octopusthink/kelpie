@@ -1,0 +1,8 @@
+// Apply type styles to 
+@mixin typography($class: body, $size: medium) {
+    color: get($typography, $class, "color");
+    font-family: get($typography, $class, "font-family");
+    font-weight: get($typography, $class, "weight");
+    line-height: get($typography, $class, "line-height");
+    letter-spacing: get($typography, $class, "letter-spacing");
+}

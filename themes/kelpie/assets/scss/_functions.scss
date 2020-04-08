@@ -1,0 +1,13 @@
+/**
+ * Get a value from a nested map
+ *
+ * Example:
+ * get($typography, "headings", "color");
+ */
+@function get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
+}

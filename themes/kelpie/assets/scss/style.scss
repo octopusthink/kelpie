@@ -20,17 +20,34 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
+@import "functions";
+
+// Start with nice clean base styles.
 @import "base/normalize";
 @import "base/sanitize";
 @import "base/wp-normalize";
+
+// Import all our variables & design tokens.
+@import "design-tokens/variables";
+@import "design-tokens/typography";
+
+// Utility functions.
 @import "base/accessibility";
 @import "base/alignments";
 @import "base/typography";
-@import "base/elements";
+//@import "base/elements";
 
+// Larger layout components.
 @import "components/site-header";
 @import "components/site-footer";
 @import "components/site-content";
+
+// Gutenberg blocks, scoped to post content.
+@import "blocks/paragraphs";
+@import "blocks/headings";
+@import "blocks/lists";
+@import "blocks/quotes";
+
 
 @import "components/captions";
 @import "components/comments";
@@ -38,6 +55,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "components/galleries";
 @import "components/infinite-scroll";
 @import "components/links";
+
 @import "components/menus";
 @import "components/post-navigation";
 @import "components/posts";

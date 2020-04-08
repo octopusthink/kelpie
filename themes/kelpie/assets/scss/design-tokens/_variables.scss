@@ -1,0 +1,19 @@
+/* Typography */
+
+$typography: (
+    "body":  (
+        font-family: (-apple-system, BlinkMacSystemFont, "Segoe UI",Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
+        line-height: 1.6,
+        letter-spacing: 0,
+        color: #000,
+        weight: 400,
+    ),
+    "headings":  (
+        font-family: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
+        line-height: 1.2,
+        letter-spacing: '-0.1em',
+        color: hotpink,
+        weight: 800,
+        case: normal,
+    ),
+);

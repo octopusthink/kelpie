@@ -1,0 +1,52 @@
+/*--------------------------------------------------------------
+# List
+--------------------------------------------------------------*/
+
+.site-main {
+    blockquote {
+        @include typography(body);
+    }
+}
+
+/*--------------------------------------------------------------
+## Pullquote
+--------------------------------------------------------------*/
+
+.wp-block-pullquote>p:first-child {
+  margin-top: 0;
+}
+
+/*--------------------------------------------------------------
+## Quote
+--------------------------------------------------------------*/
+
+.wp-block-quote {
+  margin-left: 14px;
+  margin-right: 14px;
+  padding: 0;
+}
+
+.wp-block-quote > * {
+  margin-left: 1rem;
+}
+
+.wp-block-quote.is-large, 
+.wp-block-quote.is-style-large {
+  margin: 36px auto;
+  padding: 0;
+}
+
+.wp-block-quote.is-large cite, 
+.wp-block-quote.is-large footer, 
+.wp-block-quote.is-style-large cite, 
+.wp-block-quote.is-style-large footer {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+@media screen and (min-width: 644px) {
+  .wp-block-quote {
+    margin: 36px auto;
+  }
+}
+
