@@ -13,23 +13,28 @@
 	text-align: center;
 }
 
-.site-title {
-	margin: .4375em 0 0;
-	font-size: 38px;
-	font-weight: bold;
-	line-height: 1.2;
+.custom-logo {
+	height: auto;
+	margin: 0 0 get($spacing, "xxs");
+	max-width: 100%;
+	width: 16rem;
 }
 
-.site-title a {
-	text-decoration: none;
+.site-title {
+	@include typography(headings, medium);
 	color: inherit;
+	margin: 0 0 get($spacing, "xxs");
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
 }
 
 .site-description {
-	margin: .4375em 0 0;
-	font-size: 17px;
-	font-weight: inherit;
-	line-height: 1.4;
+	@include typography(subtitles, small);
+	color: inherit;
+	margin: 0 0 get($spacing, "xxs");
+	opacity: 0.5;
 	word-wrap: break-word;
-	color: #6c7781;
 }

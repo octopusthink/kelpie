@@ -41,10 +41,10 @@
     }
 
     @if $class == subtitles and $size == small {
-        font-size: get($typography, "sizes", "l");
+        font-size: get($typography, "sizes", "m");
     }
 
     @if $class == subtitles and $size == large {
-        font-size: get($typography, "sizes", "xl");
+        font-size: get($typography, "sizes", "l");
     }
 }

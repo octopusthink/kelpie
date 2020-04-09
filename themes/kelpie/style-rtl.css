@@ -982,11 +982,23 @@ big {
 	text-align: center;
 }
 
+.custom-logo {
+	height: auto;
+	margin: 0 0 0.8rem;
+	width: 16rem;
+	max-width: 100%;
+}
+
 .site-title {
-	margin: .4375em 0 0;
-	font-size: 38px;
-	font-weight: bold;
+	font-size: 3.90625rem;
+	color: #000;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	letter-spacing: -0.025em;
 	line-height: 1.2;
+	color: inherit;
+	margin: 0 0 0.8rem;
 }
 
 .site-title a {
@@ -995,12 +1007,17 @@ big {
 }
 
 .site-description {
-	margin: .4375em 0 0;
-	font-size: 17px;
-	font-weight: inherit;
-	line-height: 1.4;
+	font-size: 2rem;
+	color: #666;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: -0.015em;
+	line-height: 1.2;
+	color: inherit;
+	margin: 0 0 0.8rem;
+	opacity: 0.5;
 	word-wrap: break-word;
-	color: #6c7781;
 }
 
 /*--------------------------------------------------------------
@@ -1095,7 +1112,7 @@ big {
 }
 
 .site-main h5 {
-	font-size: 3.125rem;
+	font-size: 2.5rem;
 	color: #666;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
@@ -1107,7 +1124,7 @@ big {
 }
 
 .site-main h6 {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	color: #666;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
@@ -1539,10 +1556,6 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .sticky {
 	display: block;
-}
-
-.hentry {
-	margin: 60px 0;
 }
 
 .updated:not(.published) {
