@@ -825,6 +825,7 @@ object {
 }
 
 /* Spacing */
+/* Site structure */
 /* Typography */
 /*--------------------------------------------------------------
 # Accessibility
@@ -969,13 +970,16 @@ big {
 /*--------------------------------------------------------------
 # Site Header
 --------------------------------------------------------------*/
-.site-branding {
-	text-align: center;
-	margin: 60px 0;
+.site-header {
+	background: #000;
+	color: #fff;
+	padding: 1.6rem;
 }
 
-.archive .site-header {
-	margin-bottom: 3.5em;
+.site-branding {
+	margin: 0 auto 3.2rem;
+	max-width: 56rem;
+	text-align: center;
 }
 
 .site-title {
@@ -983,16 +987,11 @@ big {
 	font-size: 38px;
 	font-weight: bold;
 	line-height: 1.2;
-	color: #333332;
 }
 
 .site-title a {
 	text-decoration: none;
 	color: inherit;
-}
-
-.site-branding {
-	margin-bottom: 1.75em;
 }
 
 .site-description {
@@ -1008,17 +1007,17 @@ big {
 # Site Footer
 --------------------------------------------------------------*/
 .site-footer {
-	margin: 1em 0;
-	color: #6c7781;
-	font-size: 90%;
+	background: #000;
+	color: #fff;
+	padding: 1.6rem;
 }
 
 /*--------------------------------------------------------------
 # Site Content
 --------------------------------------------------------------*/
-#page {
+.site-main {
 	margin: 0 auto;
-	max-width: 100%;
+	padding: 1.6rem;
 }
 
 /*--------------------------------------------------------------
@@ -1032,7 +1031,8 @@ big {
 	font-weight: 400;
 	letter-spacing: 0;
 	line-height: 1.6;
-	margin: 0 0 2.4rem;
+	margin: 0 auto 2.4rem;
+	max-width: 56rem;
 }
 
 .site-main p.has-small-font-size {
@@ -1054,7 +1054,8 @@ big {
 	font-weight: 800;
 	letter-spacing: -0.05em;
 	line-height: 1;
-	margin: 0 0 2.4rem;
+	margin: 0 auto 2.4rem;
+	max-width: 56rem;
 }
 
 .site-main h2 {
@@ -1065,7 +1066,8 @@ big {
 	font-weight: 600;
 	letter-spacing: -0.025em;
 	line-height: 1.2;
-	margin: 0 0 2.4rem;
+	margin: 0 auto 2.4rem;
+	max-width: 56rem;
 }
 
 .site-main h3 {
@@ -1076,7 +1078,8 @@ big {
 	font-weight: 600;
 	letter-spacing: -0.025em;
 	line-height: 1.2;
-	margin: 0 0 2.4rem;
+	margin: 0 auto 2.4rem;
+	max-width: 56rem;
 }
 
 .site-main h4 {
@@ -1087,7 +1090,8 @@ big {
 	font-weight: 600;
 	letter-spacing: -0.025em;
 	line-height: 1.2;
-	margin: 0 0 2.4rem;
+	margin: 0 auto 2.4rem;
+	max-width: 56rem;
 }
 
 .site-main h5 {
@@ -1098,7 +1102,8 @@ big {
 	font-weight: 400;
 	letter-spacing: -0.015em;
 	line-height: 1.2;
-	margin: 0 0 2.4rem;
+	margin: 0 auto 2.4rem;
+	max-width: 56rem;
 }
 
 .site-main h6 {
@@ -1109,7 +1114,8 @@ big {
 	font-weight: 400;
 	letter-spacing: -0.015em;
 	line-height: 1.2;
-	margin: 0 0 2.4rem;
+	margin: 0 auto 2.4rem;
+	max-width: 56rem;
 }
 
 .site-main p + h1,
@@ -1533,10 +1539,6 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .sticky {
 	display: block;
-}
-
-.hentry {
-	margin: 60px 0;
 }
 
 .updated:not(.published) {

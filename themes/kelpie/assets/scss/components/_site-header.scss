@@ -1,14 +1,16 @@
 /*--------------------------------------------------------------
 # Site Header
 --------------------------------------------------------------*/
-.site-branding {
-  text-align: center;
-  margin: 60px 0;
+.site-header {
+	background: #000;
+	color: #fff;
+	padding: get($site, "padding");
 }
 
-
-.archive .site-header {
-	margin-bottom: 3.5em;
+.site-branding {
+	margin: 0 auto get($spacing, "m");
+	max-width: get($site, "max-content-width");
+	text-align: center;
 }
 
 .site-title {
@@ -16,16 +18,11 @@
 	font-size: 38px;
 	font-weight: bold;
 	line-height: 1.2;
-	color: #333332;
 }
 
 .site-title a {
 	text-decoration: none;
 	color: inherit;
-}
-
-.site-branding {
-	margin-bottom: 1.75em;
 }
 
 .site-description {

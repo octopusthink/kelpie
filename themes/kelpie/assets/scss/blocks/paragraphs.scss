@@ -4,7 +4,8 @@
 .site-main {
     p {
         @include typography(body);
-        margin: 0 0 get($spacing, "s");
+        margin: 0 auto get($spacing, "s");
+        max-width: get($site, "max-content-width");
 
         // Gutenberg Font-size utility classes
         &.has-small-font-size {
