@@ -2,7 +2,27 @@
 # Headings
 --------------------------------------------------------------*/
 .site-main {
-    h1, h2, h3, h4, h5, h6 {
-        @include typography(headings);
+    h1 {
+        @include typography(titles);
+    }
+
+    h2 {
+        @include typography(headings, large);
+    }
+
+    h3 {
+        @include typography(headings, medium);
+    }
+
+    h4 {
+        @include typography(headings, small);
+    }
+
+    h5 {
+        @include typography(subtitles, large);
+    }
+
+    h6 {
+        @include typography(subtitles, small);
     }
 }

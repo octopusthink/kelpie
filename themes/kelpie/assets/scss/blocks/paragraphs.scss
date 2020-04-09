@@ -4,5 +4,14 @@
 .site-main {
     p {
         @include typography(body);
+
+        // Gutenberg Font-size utility classes
+        &.has-small-font-size {
+            @include font-size(body, small);
+        }
+
+        &.has-large-font-size {
+            @include font-size(body, large);
+        }
     }
 }

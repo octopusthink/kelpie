@@ -102,6 +102,31 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 
+		// Add custom editor font sizes.
+		add_theme_support(
+			'editor-font-sizes',
+			array(
+				array(
+					'name'      => __( 'Small', 'kelpie' ),
+					'shortName' => __( 'S', 'kelpie' ),
+					'size'      => 15,
+					'slug'      => 'small',
+				),
+				array(
+					'name'      => __( 'Normal', 'kelpie' ),
+					'shortName' => __( 'M', 'kelpie' ),
+					'size'      => 18,
+					'slug'      => 'normal',
+				),
+				array(
+					'name'      => __( 'Large', 'kelpie' ),
+					'shortName' => __( 'L', 'kelpie' ),
+					'size'      => 21,
+					'slug'      => 'large',
+				),
+			)
+		);
+
 		// Add support for Global Styles.
 		add_theme_support(
 			'jetpack-global-styles',

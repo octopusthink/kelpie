@@ -1,13 +1,8 @@
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
-  
+html {
+  font-size: 62.5%; // Set base font size at 10px for easier measurements in rems.
 }
 
 dfn, cite, em, i {

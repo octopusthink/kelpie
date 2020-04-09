@@ -1,8 +1,50 @@
 // Apply type styles to 
 @mixin typography($class: body, $size: medium) {
+    @include font-size($class, $size);
     color: get($typography, $class, "color");
     font-family: get($typography, $class, "font-family");
+    font-style: get($typography, $class, "font-style");
     font-weight: get($typography, $class, "weight");
-    line-height: get($typography, $class, "line-height");
     letter-spacing: get($typography, $class, "letter-spacing");
+    line-height: get($typography, $class, "line-height");
+}
+
+// Generate font size and line-height.
+@mixin font-size($class: body, $size: medium) {
+
+    @if $class == body and $size == small {
+        font-size: get($typography, "sizes", "s");
+    }
+
+    @if $class == body and $size == medium {
+        font-size: get($typography, "sizes", "base");
+    }
+
+    @if $class == body and $size == large {
+        font-size: get($typography, "sizes", "m");
+    }
+
+    @if $class == headings and $size == small {
+        font-size: get($typography, "sizes", "xl");
+    }
+
+    @if $class == headings and $size == medium {
+        font-size: get($typography, "sizes", "xxl");
+    }
+
+    @if $class == headings and $size == large {
+        font-size: get($typography, "sizes", "xxxl");
+    }
+
+    @if $class == titles {
+        font-size: get($typography, "sizes", "xxxxl");
+    }
+
+    @if $class == subtitles and $size == small {
+        font-size: get($typography, "sizes", "l");
+    }
+
+    @if $class == subtitles and $size == large {
+        font-size: get($typography, "sizes", "xl");
+    }
 }
