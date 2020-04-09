@@ -5,36 +5,50 @@
 	background: #000;
 	color: #fff;
 	padding: get($site, "padding");
+	position: relative;
 }
 
-.site-branding {
-	margin: 0 auto get($spacing, "m");
-	max-width: get($site, "max-content-width");
+// Menu bar (logo + search + menu)
+.kelpie-menu-bar {
+	align-items: center;
+	display: flex;
+	justify-content: center;
 	text-align: center;
 }
 
-.custom-logo {
-	height: auto;
-	margin: 0 0 get($spacing, "xxs");
-	max-width: 100%;
-	width: 16rem;
+body:not(.enable-search-modal) .kelpie-menu-bar {
+	justify-content: space-between;
+	text-align: left;
+}
+
+.site-logo {
+	a {
+		display: block;
+	}
+
+	img {
+		max-height: 6rem;
+		margin: 0 auto;
+		width: auto;
+	}
 }
 
 .site-title {
 	@include typography(headings, medium);
 	color: inherit;
-	margin: 0 0 get($spacing, "xxs");
+	margin: 0;
 
 	a {
 		text-decoration: none;
 		color: inherit;
+		display: block;
 	}
 }
 
 .site-description {
 	@include typography(subtitles, small);
 	color: inherit;
-	margin: 0 0 get($spacing, "xxs");
+	margin: 0;
 	opacity: 0.5;
 	word-wrap: break-word;
 }

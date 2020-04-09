@@ -47,7 +47,8 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'kelpie' ),
+				'primary' => esc_html__( 'Primary', 'kelpie' ),
+				'social' => esc_html__( 'Social', 'kelpie' ),
 			)
 		);
 
@@ -193,7 +194,8 @@ function kelpie_scripts() {
 
 	wp_enqueue_style( 'kelpie-fonts', kelpie_fonts_url(), array(), $theme_version );
 
-	wp_enqueue_script( 'kelpie-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'kelpie-js', get_template_directory_uri() . '/js/index.js', array(), $theme_version, false );
+	wp_script_add_data( 'kelpie-js', 'async', true );
 
 	wp_enqueue_script( 'kelpie-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -222,6 +224,12 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * SVG icons.
+ */
+require get_template_directory() . '/classes/class-kelpie-svg-icons.php';
+require get_template_directory() . '/inc/svg-icons.php';
 
 /**
  * Load Jetpack compatibility file.

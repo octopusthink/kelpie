@@ -39,6 +39,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 // Larger layout components.
 @import "components/site-header";
+@import "components/site-menu/menu";
+//@import "components/site-menu/toggles";
+@import "components/site-menu/modal";
+// @import "components/site-menu/expanded";
 @import "components/site-footer";
 @import "components/site-content";
 
@@ -56,7 +60,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "components/infinite-scroll";
 @import "components/links";
 
-@import "components/menus";
 @import "components/post-navigation";
 @import "components/posts";
 @import "components/widgets";
