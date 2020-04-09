@@ -824,6 +824,7 @@ object {
 	display: inline-block;
 }
 
+/* Spacing */
 /* Typography */
 /*--------------------------------------------------------------
 # Accessibility
@@ -1031,6 +1032,7 @@ big {
 	font-weight: 400;
 	letter-spacing: 0;
 	line-height: 1.6;
+	margin: 0 0 2.4rem;
 }
 
 .site-main p.has-small-font-size {
@@ -1052,6 +1054,7 @@ big {
 	font-weight: 800;
 	letter-spacing: -0.05em;
 	line-height: 1;
+	margin: 0 0 2.4rem;
 }
 
 .site-main h2 {
@@ -1062,6 +1065,7 @@ big {
 	font-weight: 600;
 	letter-spacing: -0.025em;
 	line-height: 1.2;
+	margin: 0 0 2.4rem;
 }
 
 .site-main h3 {
@@ -1072,6 +1076,7 @@ big {
 	font-weight: 600;
 	letter-spacing: -0.025em;
 	line-height: 1.2;
+	margin: 0 0 2.4rem;
 }
 
 .site-main h4 {
@@ -1082,6 +1087,7 @@ big {
 	font-weight: 600;
 	letter-spacing: -0.025em;
 	line-height: 1.2;
+	margin: 0 0 2.4rem;
 }
 
 .site-main h5 {
@@ -1092,6 +1098,7 @@ big {
 	font-weight: 400;
 	letter-spacing: -0.015em;
 	line-height: 1.2;
+	margin: 0 0 2.4rem;
 }
 
 .site-main h6 {
@@ -1102,6 +1109,13 @@ big {
 	font-weight: 400;
 	letter-spacing: -0.015em;
 	line-height: 1.2;
+	margin: 0 0 2.4rem;
+}
+
+.site-main p + h1,
+.site-main p + h2,
+.site-main p + h3 {
+	margin-top: 4.8rem;
 }
 
 /*--------------------------------------------------------------

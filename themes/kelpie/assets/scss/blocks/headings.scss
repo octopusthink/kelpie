@@ -4,25 +4,41 @@
 .site-main {
     h1 {
         @include typography(titles);
+        margin: 0 0 get($spacing, "s");
     }
 
     h2 {
         @include typography(headings, large);
+        margin: 0 0 get($spacing, "s");
     }
 
     h3 {
         @include typography(headings, medium);
+        margin: 0 0 get($spacing, "s");
     }
 
     h4 {
         @include typography(headings, small);
+        margin: 0 0 get($spacing, "s");
     }
 
     h5 {
         @include typography(subtitles, large);
+        margin: 0 0 get($spacing, "s");
     }
 
     h6 {
         @include typography(subtitles, small);
+        margin: 0 0 get($spacing, "s");
     }
+
+    // Headings that follow a paragraph get a little extra spacing.
+    p + h1,
+    p + h2,
+    p + h3,
+    p + h4,
+    p + h5,
+    p + h6 {
+        margin-top: get($spacing, "l");
+    } 
 }

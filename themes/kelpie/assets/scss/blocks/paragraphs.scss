@@ -4,6 +4,7 @@
 .site-main {
     p {
         @include typography(body);
+        margin: 0 0 get($spacing, "s");
 
         // Gutenberg Font-size utility classes
         &.has-small-font-size {
