@@ -37,10 +37,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "base/typography";
 //@import "base/elements";
 
+// Base components
+@import "components/icon-buttons";
+
 // Larger layout components.
 @import "components/site-header";
 @import "components/site-menu/menu";
-//@import "components/site-menu/toggles";
 @import "components/site-menu/modal";
 // @import "components/site-menu/expanded";
 @import "components/site-footer";

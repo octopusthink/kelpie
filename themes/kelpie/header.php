@@ -41,20 +41,17 @@
 					?>
 				</div><!-- .header-titles -->
 
-				<button class="kelpie-toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
-					<span class="kelpie-toggle-inner">
-						<span class="kelpie-toggle-icon">
-							<?php kelpie_the_theme_svg( 'ellipsis' ); ?>
-						</span>
-						<span class="kelpie-toggle-text"><?php _e( 'Menu', 'kelpie' ); ?></span>
-					</span>
+				<button class="kelpie-icon-button nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+					<?php kelpie_the_theme_svg( 'ellipsis' ); ?>
+					<span class="kelpie-icon-button-label"><?php esc_html_e( 'Menu', 'kelpie' ); ?></span>
 				</button><!-- .nav-toggle -->
 
 				<div class="header-navigation-wrapper">
 					<?php if ( has_nav_menu( 'primary' ) ) : ?>
 						<nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'kelpie' ); ?>" role="navigation">
 							<ul class="primary-menu reset-list-style">
-								<?php if ( has_nav_menu( 'primary' ) ) :
+								<?php
+								if ( has_nav_menu( 'primary' ) ) :
 									wp_nav_menu(
 										array(
 											'container'  => '',
@@ -62,7 +59,8 @@
 											'theme_location' => 'primary',
 										)
 									);
-								endif; ?>
+								endif;
+								?>
 							</ul>
 						</nav><!-- .primary-menu-wrapper -->
 					<?php endif; ?>

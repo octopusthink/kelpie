@@ -17,9 +17,11 @@
 	<div class="site-info">
 		<p class="footer-copyright">&copy;
 			<?php
-			echo date_i18n(
+			echo esc_html(
+				date_i18n(
 				/* translators: Copyright date format, see https://secure.php.net/date */
-				_x( 'Y', 'copyright date format', 'kelpie' )
+					_x( 'Y', 'copyright date format', 'kelpie' )
+				)
 			);
 			?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>

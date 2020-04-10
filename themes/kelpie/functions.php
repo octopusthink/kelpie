@@ -48,7 +48,7 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 		register_nav_menus(
 			array(
 				'primary' => esc_html__( 'Primary', 'kelpie' ),
-				'social' => esc_html__( 'Social', 'kelpie' ),
+				'social'  => esc_html__( 'Social', 'kelpie' ),
 			)
 		);
 

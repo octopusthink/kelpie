@@ -58,30 +58,14 @@ $color-white: white;
 	position: relative;
 }
 
-button.close-nav-toggle {
-	align-items: center;
-	display: flex;
-	font-size: 1.6rem;
-	justify-content: flex-end;
-	padding: 3.1rem 0;
-	width: 100%;
-}
 
-button.close-nav-toggle svg {
-	height: 1.6rem;
-	width: 1.6rem;
-}
-
-button.close-nav-toggle .toggle-text {
-	margin-right: 1.6rem;
-}
-
-.menu-modal .menu-top {
-	flex-shrink: 0;
-}
-
-.menu-modal .toggle {
-	color: $color-white;
+// "Close menu" toggle
+.kelpie-close-nav-toggle-wrapper {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: get($site, "padding");
 }
 
 
