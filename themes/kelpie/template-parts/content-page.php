@@ -16,7 +16,7 @@
 		<?php the_title( '<h1 class="entry-title kelpie-page-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content kelpie-page-content">
 		<?php
 			the_content();
 
