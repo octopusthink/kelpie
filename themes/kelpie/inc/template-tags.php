@@ -292,45 +292,9 @@ function kelpie_get_post_meta( $post_id = null, $location = 'single-top' ) {
 
 if ( ! function_exists( 'kelpie_entry_footer' ) ) :
 	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
+	 * Prints HTML with an edit post link.
 	 */
 	function kelpie_entry_footer() {
-		// Hide category and tag text for pages.
-		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'kelpie' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'kelpie' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
-
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'kelpie' ) );
-			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'kelpie' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-			}
-		}
-
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'kelpie' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
-			echo '</span>';
-		}
-
 		edit_post_link(
 			sprintf(
 				wp_kses(
@@ -349,6 +313,45 @@ if ( ! function_exists( 'kelpie_entry_footer' ) ) :
 		);
 	}
 endif;
+
+/**
+ * Filters the edit post link to add an icon and use the post meta structure.
+ *
+ * @param string $link    Anchor tag for the edit link.
+ * @param int    $post_id Post ID.
+ * @param string $text    Anchor text.
+ */
+function kelpie_edit_post_link( $link, $post_id, $text ) {
+	if ( is_admin() ) {
+		return $link;
+	}
+
+	$edit_url = get_edit_post_link( $post_id );
+
+	if ( ! $edit_url ) {
+		return;
+	}
+
+	$text = sprintf(
+		wp_kses(
+			/* translators: %s: Post title. Only visible to screen readers. */
+			__( 'Edit <span class="screen-reader-text">%s</span>', 'kelpie' ),
+			array(
+				'span' => array(
+					'class' => array(),
+				),
+			)
+		),
+		get_the_title( $post_id )
+	);
+
+	return '<div class="kelpie-edit-link">
+		<span class="meta-icon">' . kelpie_get_theme_svg( 'edit' ) . '</span>
+		<span class="meta-text"><a href="' . esc_url( $edit_url ) . '">' . $text . '</a></span>
+		</div><!-- .post-meta-wrapper -->';
+}
+
+add_filter( 'edit_post_link', 'kelpie_edit_post_link', 10, 3 );
 
 /**
  * Logo & Description
