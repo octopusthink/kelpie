@@ -48,8 +48,8 @@
 
 				<div class="header-navigation-wrapper">
 					<?php if ( has_nav_menu( 'primary' ) ) : ?>
-						<nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'kelpie' ); ?>" role="navigation">
-							<ul class="primary-menu reset-list-style">
+						<nav class="expanded-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'kelpie' ); ?>" role="navigation">
+							<ul class="expanded-menu reset-list-style">
 								<?php
 								if ( has_nav_menu( 'primary' ) ) :
 									wp_nav_menu(
@@ -62,7 +62,7 @@
 								endif;
 								?>
 							</ul>
-						</nav><!-- .primary-menu-wrapper -->
+						</nav><!-- .expanded-menu-wrapper -->
 					<?php endif; ?>
 				</div><!-- .header-navigation-wrapper -->
 			</div><!-- .kelpie-site-navigation-menu -->

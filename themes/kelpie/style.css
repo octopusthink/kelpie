@@ -1185,7 +1185,14 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	width: 100%;
 }
 
-.menu-item {
+.modal-menu .menu-item {
+	font-size: 2rem;
+	color: hotpink;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: -0.015em;
+	line-height: 1.2;
 	border-color: grey;
 	border-style: solid;
 	border-width: 0.1rem 0 0 0;
@@ -1196,26 +1203,19 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	margin: 0;
 }
 
-.menu-item:last-child {
+.modal-menu .menu-item:last-child {
 	border-bottom-width: 0.1rem;
 }
 
-.menu-item a {
-	font-size: 2rem;
-	color: hotpink;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-style: normal;
-	font-weight: 500;
-	letter-spacing: -0.015em;
-	line-height: 1.2;
+.modal-menu .menu-item a {
 	color: hotpink;
 	display: block;
-	padding: 2rem 2.5rem;
+	padding: 2.4rem;
 	text-decoration: none;
 	width: 100%;
 }
 
-.menu-item a:focus, .menu-item a:hover {
+.modal-menu .menu-item a:focus, .modal-menu .menu-item a:hover {
 	text-decoration: underline;
 }
 
@@ -1359,15 +1359,22 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	display: none;
 }
 
-/* Primary Menu ---------------------------- */
+@media (min-width: 640px) {
+	.header-navigation-wrapper {
+		align-items: center;
+		display: flex;
+	}
+	.expanded-menu-wrapper {
+		display: block;
+		width: 100%;
+	}
+	.mobile-search-toggle,
+	.mobile-nav-toggle {
+		display: none !important;
+	}
+}
+
 .expanded-menu {
-	font-size: 1.6rem;
-	color: hotpink;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-style: normal;
-	font-weight: 500;
-	letter-spacing: -0.015em;
-	line-height: 1.2;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
@@ -1402,57 +1409,50 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	width: 0.9rem;
 }
 
-.expanded-menu li {
-	font-size: inherit;
-	line-height: 1.25;
+.expanded-menu .menu-item {
+	font-size: 1.6rem;
+	color: hotpink;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: -0.015em;
+	line-height: 1.2;
+	margin-top: 1.6rem;
+	margin-right: 2.4rem;
 	position: relative;
 }
 
-.expanded-menu > li {
-	margin: 0.8rem 0 0 1.6rem;
-}
-
-.expanded-menu > li.menu-item-has-children > a {
-	padding-right: 2rem;
-}
-
-.expanded-menu > li > .icon {
-	right: -0.5rem;
-	top: calc(50% - 0.4rem);
-}
-
-.expanded-menu a {
+.expanded-menu .menu-item a {
 	color: hotpink;
 	display: block;
-	line-height: 1.2;
 	text-decoration: none;
 }
 
-.expanded-menu a:hover,
-.expanded-menu a:focus,
+.expanded-menu .menu-item a:hover, .expanded-menu .menu-item a:focus {
+	text-decoration: underline;
+}
+
 .expanded-menu .current_page_ancestor {
 	text-decoration: underline;
 }
 
-.expanded-menu li.current-menu-item > a,
-.expanded-menu li.current-menu-item > .link-icon-wrapper > a {
+.expanded-menu .current-menu-item > a,
+.expanded-menu .current-menu-item > .link-icon-wrapper > a {
 	text-decoration: underline;
 }
 
-.expanded-menu li.current-menu-item > a:hover,
-.expanded-menu li.current-menu-item > .link-icon-wrapper > a:hover,
-.expanded-menu li.current-menu-item > a:focus,
-.expanded-menu li.current-menu-item > .link-icon-wrapper > a:focus {
+.expanded-menu .current-menu-item > a:hover, .expanded-menu .current-menu-item > a:focus,
+.expanded-menu .current-menu-item > .link-icon-wrapper > a:hover,
+.expanded-menu .current-menu-item > .link-icon-wrapper > a:focus {
 	text-decoration: none;
 }
 
-.expanded-menu ul {
+.expanded-menu .sub-menu {
 	background: #000;
 	border-radius: 0.4rem;
 	color: #fff;
-	font-size: 1.7rem;
 	opacity: 0;
-	padding: 1rem 0;
+	padding: 0.8rem 0;
 	position: absolute;
 	right: 9999rem;
 	top: calc(100% + 2rem);
@@ -1462,66 +1462,63 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	z-index: 1;
 }
 
-.expanded-menu li.menu-item-has-children:hover > ul,
-.expanded-menu li.menu-item-has-children:focus > ul,
-.expanded-menu li.menu-item-has-children.focus > ul {
-	right: 0;
-	opacity: 1;
-	transform: translateY(0);
-	transition: opacity 0.15s linear, transform 0.15s linear;
-}
-
-.expanded-menu ul::before,
-.expanded-menu ul::after {
+.expanded-menu .sub-menu::before, .expanded-menu .sub-menu::after {
 	content: "";
 	display: block;
 	position: absolute;
 	bottom: 100%;
 }
 
-.expanded-menu ul::before {
+.expanded-menu .sub-menu::before {
 	height: 2rem;
 	left: 0;
 	right: 0;
 }
 
-.expanded-menu ul::after {
+.expanded-menu .sub-menu::after {
 	border: 0.8rem solid transparent;
 	border-bottom-color: #000;
 	right: 1.8rem;
 }
 
-.expanded-menu ul a {
+.expanded-menu .sub-menu .menu-item {
+	margin: 0;
+}
+
+.expanded-menu .sub-menu a {
 	background: transparent;
 	border: none;
 	color: inherit;
 	display: block;
-	padding: 1rem 2rem;
+	padding: 0.8rem 1.6rem;
 	transition: background-color 0.15s linear;
 	width: 100%;
 }
 
-.expanded-menu ul li.menu-item-has-children > a {
+.expanded-menu .menu-item-has-children:hover > .sub-menu,
+.expanded-menu .menu-item-has-children:focus > .sub-menu,
+.expanded-menu .menu-item-has-children.focus > .sub-menu {
+	right: 0;
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 0.15s linear, transform 0.15s linear;
+}
+
+.expanded-menu .sub-menu .menu-item-has-children > a {
 	padding-right: 4.5rem;
 }
 
-.expanded-menu ul li.menu-item-has-children .icon {
+.expanded-menu .sub-menu .menu-item-has-children .icon {
 	position: absolute;
 	right: 1.5rem;
 	top: calc(50% - 0.5rem);
 }
 
-.expanded-menu ul ul {
+.expanded-menu .sub-menu .sub-menu {
 	top: -1rem;
 }
 
-.expanded-menu ul li.menu-item-has-children:hover > ul,
-.expanded-menu ul li.menu-item-has-children:focus > ul,
-.expanded-menu ul li.menu-item-has-children.focus > ul {
-	right: calc(100% + 2rem);
-}
-
-.expanded-menu ul ul::before {
+.expanded-menu .sub-menu .sub-menu::before {
 	bottom: 0;
 	height: auto;
 	left: auto;
@@ -1530,7 +1527,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	width: 2rem;
 }
 
-.expanded-menu ul ul::after {
+.expanded-menu .sub-menu .sub-menu::after {
 	border-bottom-color: transparent;
 	/*rtl:ignore*/
 	border-left-color: #000;
@@ -1539,8 +1536,14 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	top: 2rem;
 }
 
-.rtl .expanded-menu ul ul::after {
+.rtl .expanded-menu .sub-menu .sub-menu::after {
 	transform: rotate(180deg);
+}
+
+.expanded-menu .sub-menu .menu-item-has-children:hover > .sub-menu,
+.expanded-menu .sub-menu .menu-item-has-children:focus > .sub-menu,
+.expanded-menu .sub-menu .menu-item-has-children.focus > .sub-menu {
+	right: calc(100% + 2rem);
 }
 
 /*
@@ -1573,19 +1576,19 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 }
 
 /*--------------------------------------------------------------
+# Site Content
+--------------------------------------------------------------*/
+.site-main {
+	margin: 0 auto;
+	padding: 1.6rem;
+}
+
+/*--------------------------------------------------------------
 # Site Footer
 --------------------------------------------------------------*/
 .site-footer {
 	background: #000;
 	color: #fff;
-	padding: 1.6rem;
-}
-
-/*--------------------------------------------------------------
-# Site Content
---------------------------------------------------------------*/
-.site-main {
-	margin: 0 auto;
 	padding: 1.6rem;
 }
 

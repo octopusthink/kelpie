@@ -1,0 +1,239 @@
+$color-primary-dark: grey;
+$color-primary: black;
+$color-secondary: hotpink;
+$color-white: white;
+$color-primary-white: white;
+
+/* Header Navigation ------------------------- */
+
+.header-navigation-wrapper {
+	display: none;
+}
+
+// Hide by default.
+.expanded-menu-wrapper {
+	display: none;
+}
+
+// Show expanded menu at larger screen sizes. 
+@media (min-width: get($site, "expanded-menu-breakpoint")) {
+	.header-navigation-wrapper {
+		align-items: center;
+		display: flex;
+	}
+
+	.expanded-menu-wrapper {
+		display: block;
+		width: 100%;
+	}
+
+	// Hide mobile toggles.
+	.mobile-search-toggle,
+	.mobile-nav-toggle {
+		display: none !important;
+	}
+}
+
+.expanded-menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	margin: -0.8rem 0 0 -1.6rem;
+}
+
+// Icons! Not sure where they're used yet.
+.expanded-menu .icon {
+	display: block;
+	height: 0.7rem;
+	position: absolute;
+	pointer-events: none;
+	transform: rotate(-45deg);
+	width: 1.3rem;
+
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		background-color: currentColor;
+		position: absolute;
+		bottom: calc(50% - 0.1rem);
+		left: 0;
+	}
+
+	&::before {
+		height: 0.9rem;
+		width: 0.2rem;
+	}
+
+	&::after {
+		height: 0.2rem;
+		width: 0.9rem;
+	}
+}
+
+// Menu items.
+.expanded-menu .menu-item {
+	@include typography(interface);
+	margin-top: get($spacing, "xs"); 
+	margin-right: get($spacing, "s");
+	position: relative;
+
+	a {
+		color: $color-secondary;
+		display: block;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+// Current page.
+.expanded-menu .current_page_ancestor {
+	text-decoration: underline;
+}
+.expanded-menu .current-menu-item > a,
+.expanded-menu .current-menu-item > .link-icon-wrapper > a {
+	text-decoration: underline;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+// Sub-menus.
+.expanded-menu .sub-menu {
+	background: #000;
+	border-radius: 0.4rem;
+	color: #fff;
+	opacity: 0;
+	padding: get($spacing, "xxs") 0;
+	position: absolute;
+	right: 9999rem;
+	top: calc(100% + 2rem);
+	transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
+	transform: translateY(0.6rem);
+	width: 20rem;
+	z-index: 1;
+
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 100%;
+	}
+
+	&::before {
+		height: 2rem;
+		left: 0;
+		right: 0;
+	}
+
+	&::after {
+		border: 0.8rem solid transparent;
+		border-bottom-color: #000;
+		right: 1.8rem;
+	}
+
+	.menu-item {
+		margin: 0;
+	}
+
+	a {
+		background: transparent;
+		border: none;
+		color: inherit;
+		display: block;
+		padding: get($spacing, "xxs") get($spacing, "xs");
+		transition: background-color 0.15s linear;
+		width: 100%;
+	}
+}
+
+// Show sub-menu on hover/focus.
+.expanded-menu .menu-item-has-children:hover > .sub-menu,
+.expanded-menu .menu-item-has-children:focus > .sub-menu,
+.expanded-menu .menu-item-has-children.focus > .sub-menu {
+	right: 0;
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 0.15s linear, transform 0.15s linear;
+}
+
+.expanded-menu .sub-menu .menu-item-has-children > a {
+	padding-right: 4.5rem;
+}
+
+.expanded-menu .sub-menu .menu-item-has-children .icon {
+	position: absolute;
+	right: 1.5rem;
+	top: calc(50% - 0.5rem);
+}
+
+// Multi-nested menus. Try to avoid these if at all possible!
+.expanded-menu .sub-menu .sub-menu {
+	top: -1rem;
+
+	&::before {
+		bottom: 0;
+		height: auto;
+		left: auto;
+		right: -2rem;
+		top: 0;
+		width: 2rem;
+	}
+
+	&::after {
+		border-bottom-color: transparent;
+		/*rtl:ignore*/
+		border-left-color: #000;
+		bottom: auto;
+		right: -1.6rem;
+		top: 2rem;
+	}
+}
+
+
+.rtl .expanded-menu .sub-menu .sub-menu::after {
+	transform: rotate(180deg);
+}
+
+.expanded-menu .sub-menu .menu-item-has-children:hover > .sub-menu,
+.expanded-menu .sub-menu .menu-item-has-children:focus > .sub-menu,
+.expanded-menu .sub-menu .menu-item-has-children.focus > .sub-menu {
+	right: calc(100% + 2rem);
+}
+
+/*
+ * Enable nav submenu expansion with tapping on arrows on large-viewport
+ * touch interfaces (e.g. tablets or laptops with touch screens).
+ * These rules are supported by all browsers (>IE11) and when JS is disabled.
+ */
+@media (any-pointer: coarse) {
+	.expanded-menu > li.menu-item-has-children > a {
+		padding-right: 0;
+		margin-right: 2rem;
+	}
+
+	.expanded-menu ul li.menu-item-has-children > a {
+		margin-right: 4.5rem;
+		padding-right: 0;
+		width: unset;
+	}
+}
+
+/* Repeat previous rules for IE11 (when JS enabled for polyfill). */
+.touch-enabled .expanded-menu > li.menu-item-has-children > a {
+	padding-right: 0;
+	margin-right: 2rem;
+}
+
+.touch-enabled .expanded-menu ul li.menu-item-has-children > a {
+	margin-right: 4.5rem;
+	padding-right: 0;
+	width: unset;
+}

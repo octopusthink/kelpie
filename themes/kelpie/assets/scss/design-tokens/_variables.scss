@@ -21,10 +21,11 @@ $spacing: (
  * how elements are sized & within the available viewport space.
  */
  $site: (
+    "expanded-menu-breakpoint": 640px, // At this point, we show a full menu.
     "max-site-width": 160rem, // 1600px. Beyond this, we'll block out the edges of the screen.
     // If you need to change this width, also be sure to change set_post_thumbnail_size in functions.php
     "max-content-width": 56rem, // 560px. Used for content and Gutenberg blocks.
-    "padding": 1.6rem, // 16px, used to determine the minimum distance between 
+    "padding": 1.6rem, // 16px, used to determine the minimum padding around the whole site content.
 );
 
 /* Typography 

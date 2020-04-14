@@ -85,7 +85,8 @@ $color-white: white;
 	}
 }
 
-.menu-item {
+.modal-menu .menu-item {
+	@include typography(interface, large);
 	border-color: $color-primary-dark;
 	border-style: solid;
 	border-width: 0.1rem 0 0 0;
@@ -100,10 +101,9 @@ $color-white: white;
 	}
 
 	a {
-		@include typography(interface, large);
 		color: $color-secondary;
 		display: block;
-		padding: 2rem 2.5rem;
+		padding: get($spacing, "s");
 		text-decoration: none;
 		width: 100%;
 
