@@ -41,3 +41,8 @@ ul,
 ol {
   padding: 0;
 }
+
+/* Remove the default text-decoration on links. */
+a {
+  text-decoration: none;
+}

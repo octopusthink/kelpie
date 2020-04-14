@@ -1,11 +1,11 @@
 /* Post taxonomies */
+.kelpie-post-taxonomies {
+    display: grid;
+    grid-gap: get($spacing, "xxs");
+}
+
 .entry-categories {
     @include typography(metadata, medium);
-    margin-bottom: get($spacing, "xxs");
-
-    a {
-        text-decoration: none;
-    }
 }
 
 .entry-tags {
@@ -14,17 +14,12 @@
     flex-wrap: wrap;
     justify-content: center;
     list-style-type: none;
-    margin-bottom: get($spacing, "xxs");
 }
 
 .entry-tag {
     padding-top: get($spacing, "hairline");
     padding-left: get($spacing, "hairline");
-    padding-right: get($spacing, "hairline");
-
-    a {
-        text-decoration: none;
-    } 
+    padding-right: get($spacing, "hairline"); 
 }
 
     

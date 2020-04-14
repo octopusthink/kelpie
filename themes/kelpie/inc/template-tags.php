@@ -120,9 +120,9 @@ function kelpie_get_post_meta( $post_id = null, $location = 'single-top' ) {
 
 		?>
 
-		<div class="post-meta-wrapper<?php echo esc_attr( $post_meta_wrapper_classes ); ?>">
+		<div class="kelpie-post-meta-wrapper<?php echo esc_attr( $post_meta_wrapper_classes ); ?>">
 
-			<ul class="post-meta<?php echo esc_attr( $post_meta_classes ); ?>">
+			<ul class="kelpie-post-meta<?php echo esc_attr( $post_meta_classes ); ?>">
 
 				<?php
 

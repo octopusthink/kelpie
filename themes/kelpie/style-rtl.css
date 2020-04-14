@@ -844,6 +844,11 @@ ol {
 	padding: 0;
 }
 
+/* Remove the default text-decoration on links. */
+a {
+	text-decoration: none;
+}
+
 /*
  * Colour palettes
  *
@@ -1657,6 +1662,8 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	text-align: center;
 	max-width: 56rem;
 	padding: 2.4rem;
+	display: grid;
+	grid-gap: 1.6rem;
 }
 
 .kelpie-page-header .kelpie-page-title {
@@ -1921,6 +1928,11 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 }
 
 /* Post taxonomies */
+.kelpie-post-taxonomies {
+	display: grid;
+	grid-gap: 0.8rem;
+}
+
 .entry-categories {
 	font-size: 1.28rem;
 	color: #3b3f45;
@@ -1930,11 +1942,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	letter-spacing: 0.015em;
 	line-height: 1.2;
 	text-transform: uppercase;
-	margin-bottom: 0.8rem;
-}
-
-.entry-categories a {
-	text-decoration: none;
 }
 
 .entry-tags {
@@ -1950,7 +1957,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	flex-wrap: wrap;
 	justify-content: center;
 	list-style-type: none;
-	margin-bottom: 0.8rem;
 }
 
 .entry-tag {
@@ -1959,8 +1965,50 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	padding-left: 0.4rem;
 }
 
-.entry-tag a {
-	text-decoration: none;
+/* Post meta (author, date, comments) */
+.kelpie-post-meta {
+	display: flex;
+	list-style-type: none;
+	justify-content: center;
+}
+
+.post-author {
+	font-size: 1.28rem;
+	color: #3b3f45;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 0.015em;
+	line-height: 1.2;
+	text-transform: uppercase;
+	padding-right: 0.8rem;
+	padding-left: 0.8rem;
+}
+
+.post-date {
+	font-size: 1.28rem;
+	color: #3b3f45;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 0.015em;
+	line-height: 1.2;
+	text-transform: uppercase;
+	padding-right: 0.8rem;
+	padding-left: 0.8rem;
+}
+
+.post-comment-link {
+	font-size: 1.28rem;
+	color: #3b3f45;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 0.015em;
+	line-height: 1.2;
+	text-transform: uppercase;
+	padding-right: 0.8rem;
+	padding-left: 0.8rem;
 }
 
 /*--------------------------------------------------------------

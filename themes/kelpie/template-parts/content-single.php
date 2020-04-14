@@ -33,6 +33,10 @@
 
 		<?php the_title( '<h1 class="entry-title kelpie-page-title">', '</h1>' ); ?>
 
+		<div class="kelpie-post-meta">
+			<?php kelpie_the_post_meta( get_the_ID(), 'single-top' ); ?>
+		</div>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content kelpie-page-content">

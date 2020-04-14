@@ -5,8 +5,11 @@
     text-align: center;
     max-width: get($site, "max-content-width");
     padding: get($spacing, "s");
-        
+    display: grid;
+    grid-gap: get($spacing, "xs");
+
     .kelpie-page-title {
         @include typography(titles);
+        margin-bottom: get($spacing, "xs");
     }
 }
