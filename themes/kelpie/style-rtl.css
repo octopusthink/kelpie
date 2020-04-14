@@ -824,12 +824,27 @@ object {
 	display: inline-block;
 }
 
-/* Spacing */
+/* Spacing
+ *
+ * We use an 8px grid and size spacing based on 10rem = 1px.
+ * This allows spacing to scale with font size whilst maintaining readability. 
+ * Try to use only the spacing units below for margins and padding.
+ */
 /* Site structure
  *
- *
+ * These are site-wide variables that determine 
+ * how elements are sized & within the available viewport space.
  */
-/* Typography */
+/* Typography 
+ *
+ * These variables determine how typography is applied across the site.
+ * Several "styles" are configurable here to apply typographic treatments
+ * to elements based on their semantic intention. (ie, headings, links, etc.)
+ * See design-tokens/typography.scss for full implementation.
+ * The easiest way to use this is to determine a base size and a scale modifier,
+ * and Kelpie will generate a type scale to use, but these values can also be
+ * overridden as needed. 
+ */
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1001,12 +1016,12 @@ big {
 
 .kelpie-icon-button-label {
 	font-size: 1.28rem;
-	color: #000;
+	color: hotpink;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
-	font-weight: 400;
-	letter-spacing: 0;
-	line-height: 1.6;
+	font-weight: 500;
+	letter-spacing: -0.015em;
+	line-height: 1.2;
 	color: inherit;
 	position: absolute;
 	top: calc(100% + 0.5rem);
@@ -1074,6 +1089,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	letter-spacing: -0.015em;
 	line-height: 1.2;
 	color: inherit;
+	display: none;
 	margin: 0;
 	opacity: 0.5;
 	word-wrap: break-word;
@@ -1094,229 +1110,8 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	width: 2.3rem;
 }
 
-/* Header Navigation ------------------------- */
-.header-navigation-wrapper {
-	display: none;
-}
-
-/* Primary Menu ---------------------------- */
-.primary-menu-wrapper {
-	display: none;
-}
-
-ul.primary-menu {
-	display: flex;
-	font-family: UniversLTPro-55Roman, "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 1.8rem;
-	font-weight: normal;
-	letter-spacing: -0.01em;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	margin: -0.8rem -1.6rem 0 0;
-}
-
-.primary-menu .icon {
-	display: block;
-	height: 0.7rem;
-	position: absolute;
-	pointer-events: none;
-	transform: rotate(45deg);
-	width: 1.3rem;
-}
-
-.primary-menu .icon::before,
-.primary-menu .icon::after {
-	content: "";
-	display: block;
-	background-color: currentColor;
-	position: absolute;
-	bottom: calc(50% - 0.1rem);
-	right: 0;
-}
-
-.primary-menu .icon::before {
-	height: 0.9rem;
-	width: 0.2rem;
-}
-
-.primary-menu .icon::after {
-	height: 0.2rem;
-	width: 0.9rem;
-}
-
-.primary-menu li {
-	font-size: inherit;
-	line-height: 1.25;
-	position: relative;
-}
-
-.primary-menu > li {
-	margin: 0.8rem 1.6rem 0 0;
-}
-
-.primary-menu > li.menu-item-has-children > a {
-	padding-left: 2rem;
-}
-
-.primary-menu > li > .icon {
-	left: -0.5rem;
-	top: calc(50% - 0.4rem);
-}
-
-.primary-menu a {
-	color: aqua;
-	display: block;
-	line-height: 1.2;
-	text-decoration: none;
-}
-
-.primary-menu a:hover,
-.primary-menu a:focus,
-.primary-menu .current_page_ancestor {
-	text-decoration: underline;
-}
-
-.primary-menu li.current-menu-item > a,
-.primary-menu li.current-menu-item > .link-icon-wrapper > a {
-	text-decoration: underline;
-}
-
-.primary-menu li.current-menu-item > a:hover,
-.primary-menu li.current-menu-item > .link-icon-wrapper > a:hover,
-.primary-menu li.current-menu-item > a:focus,
-.primary-menu li.current-menu-item > .link-icon-wrapper > a:focus {
-	text-decoration: none;
-}
-
-/* SUB MENU */
-.primary-menu ul {
-	background: #000;
-	border-radius: 0.4rem;
-	color: #fff;
-	font-size: 1.7rem;
-	opacity: 0;
-	padding: 1rem 0;
-	position: absolute;
-	left: 9999rem;
-	top: calc(100% + 2rem);
-	transition: opacity 0.15s linear, transform 0.15s linear, left 0s 0.15s;
-	transform: translateY(0.6rem);
-	width: 20rem;
-	z-index: 1;
-}
-
-.primary-menu li.menu-item-has-children:hover > ul,
-.primary-menu li.menu-item-has-children:focus > ul,
-.primary-menu li.menu-item-has-children.focus > ul {
-	left: 0;
-	opacity: 1;
-	transform: translateY(0);
-	transition: opacity 0.15s linear, transform 0.15s linear;
-}
-
-.primary-menu ul::before,
-.primary-menu ul::after {
-	content: "";
-	display: block;
-	position: absolute;
-	bottom: 100%;
-}
-
-.primary-menu ul::before {
-	height: 2rem;
-	right: 0;
-	left: 0;
-}
-
-.primary-menu ul::after {
-	border: 0.8rem solid transparent;
-	border-bottom-color: #000;
-	left: 1.8rem;
-}
-
-.primary-menu ul a {
-	background: transparent;
-	border: none;
-	color: inherit;
-	display: block;
-	padding: 1rem 2rem;
-	transition: background-color 0.15s linear;
-	width: 100%;
-}
-
-.primary-menu ul li.menu-item-has-children > a {
-	padding-left: 4.5rem;
-}
-
-.primary-menu ul li.menu-item-has-children .icon {
-	position: absolute;
-	left: 1.5rem;
-	top: calc(50% - 0.5rem);
-}
-
-/* DEEP DOWN */
-.primary-menu ul ul {
-	top: -1rem;
-}
-
-.primary-menu ul li.menu-item-has-children:hover > ul,
-.primary-menu ul li.menu-item-has-children:focus > ul,
-.primary-menu ul li.menu-item-has-children.focus > ul {
-	left: calc(100% + 2rem);
-}
-
-.primary-menu ul ul::before {
-	bottom: 0;
-	height: auto;
-	right: auto;
-	left: -2rem;
-	top: 0;
-	width: 2rem;
-}
-
-.primary-menu ul ul::after {
-	border-bottom-color: transparent;
-	border-left-color: #000;
-	bottom: auto;
-	left: -1.6rem;
-	top: 2rem;
-}
-
-.rtl .primary-menu ul ul::after {
-	transform: rotate(-180deg);
-}
-
-/*
- * Enable nav submenu expansion with tapping on arrows on large-viewport
- * touch interfaces (e.g. tablets or laptops with touch screens).
- * These rules are supported by all browsers (>IE11) and when JS is disabled.
- */
-@media (any-pointer: coarse) {
-	.primary-menu > li.menu-item-has-children > a {
-		padding-left: 0;
-		margin-left: 2rem;
-	}
-	.primary-menu ul li.menu-item-has-children > a {
-		margin-left: 4.5rem;
-		padding-left: 0;
-		width: unset;
-	}
-}
-
-/* Repeat previous rules for IE11 (when JS enabled for polyfill). */
-body.touch-enabled .primary-menu > li.menu-item-has-children > a {
-	padding-left: 0;
-	margin-left: 2rem;
-}
-
-body.touch-enabled .primary-menu ul li.menu-item-has-children > a {
-	margin-left: 4.5rem;
-	padding-left: 0;
-	width: unset;
-}
-
 /*--------------------------------------------------------------
-## Primary Site Navigation Menu (Header)
+## Modal site menu (used primarily for mobile devices)
 --------------------------------------------------------------*/
 .menu-modal {
 	background: #fff;
@@ -1333,16 +1128,6 @@ body.touch-enabled .primary-menu ul li.menu-item-has-children > a {
 	z-index: 99;
 }
 
-.admin-bar .menu-modal {
-	top: 32px;
-}
-
-@media (max-width: 782px) {
-	.admin-bar .menu-modal {
-		top: 46px;
-	}
-}
-
 .menu-modal.show-modal {
 	display: flex;
 }
@@ -1352,6 +1137,16 @@ body.touch-enabled .primary-menu ul li.menu-item-has-children > a {
 	opacity: 1;
 	left: 0;
 	transition: opacity 0.25s ease-out;
+}
+
+.admin-bar .menu-modal {
+	top: 32px;
+}
+
+@media (max-width: 782px) {
+	.admin-bar .menu-modal {
+		top: 46px;
+	}
 }
 
 .menu-modal-inner {
@@ -1372,22 +1167,26 @@ body.touch-enabled .primary-menu ul li.menu-item-has-children > a {
 
 .kelpie-close-nav-toggle-wrapper {
 	height: 8rem;
-	padding: 0.8rem;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	padding: 1.6rem;
 }
 
-/* Main Menu --------------------------------- */
 .modal-menu {
 	position: relative;
 	right: calc(50% - 50vw);
 	width: 100vw;
 }
 
-.modal-menu li {
-	border-color: hotpink;
+.modal-menu .ancestor-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.menu-item {
+	border-color: grey;
 	border-style: solid;
 	border-width: 0.1rem 0 0 0;
 	display: flex;
@@ -1397,51 +1196,48 @@ body.touch-enabled .primary-menu ul li.menu-item-has-children > a {
 	margin: 0;
 }
 
-.modal-menu > li > a,
-.modal-menu > li > .ancestor-wrapper > a {
-	font-size: 2rem;
-	letter-spacing: -0.0375em;
-}
-
-.modal-menu > li:last-child {
+.menu-item:last-child {
 	border-bottom-width: 0.1rem;
 }
 
-.modal-menu .ancestor-wrapper {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-}
-
-.modal-menu a {
-	color: aqua;
+.menu-item a {
+	font-size: 2rem;
+	color: hotpink;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: -0.015em;
+	line-height: 1.2;
+	color: hotpink;
 	display: block;
 	padding: 2rem 2.5rem;
 	text-decoration: none;
 	width: 100%;
 }
 
-.modal-menu a:focus,
-.modal-menu a:hover,
-.modal-menu li.current-menu-item > .ancestor-wrapper > a,
-.modal-menu li.current_page_ancestor > .ancestor-wrapper > a {
+.menu-item a:focus, .menu-item a:hover {
 	text-decoration: underline;
 }
 
-button.sub-menu-toggle {
+.modal-menu .current-menu-item > .ancestor-wrapper > a,
+.modal-menu .current_page_ancestor > .ancestor-wrapper > a {
+	text-decoration: underline;
+}
+
+.sub-menu-toggle {
 	border-right: 0.1rem solid #dedfdf;
 	flex-shrink: 0;
 	margin: 1rem 0;
 	padding: 0 2.5rem;
 }
 
-button.sub-menu-toggle svg {
+.sub-menu-toggle svg {
 	height: 0.9rem;
 	transition: transform 0.15s linear;
 	width: 1.5rem;
 }
 
-button.sub-menu-toggle.active svg {
+.sub-menu-toggle.active svg {
 	transform: rotate(-180deg);
 }
 
@@ -1453,11 +1249,6 @@ button.sub-menu-toggle.active svg {
 
 .modal-menu ul li {
 	border-right-width: 1rem;
-}
-
-.modal-menu ul li a {
-	font-family: UniversLTPro-55Roman, "Helvetica Neue", Helvetica, sans-serif;
-	color: inherit;
 }
 
 /* Main menu animation ----------------------- */
@@ -1528,15 +1319,6 @@ button.sub-menu-toggle.active svg {
 	}
 }
 
-/* Expanded Menu ----------------------------- */
-.expanded-menu {
-	display: none;
-}
-
-.mobile-menu {
-	display: block;
-}
-
 /* Menu Bottom ------------------------------- */
 .menu-bottom {
 	flex-shrink: 0;
@@ -1548,9 +1330,14 @@ button.sub-menu-toggle.active svg {
 }
 
 .menu-copyright {
+	font-size: 1.28rem;
+	color: #000;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 1.6;
 	display: none;
-	font-size: 1.6rem;
-	font-family: UniversLTPro-55Roman, "Helvetica Neue", Helvetica, sans-serif;
 	margin: 0;
 }
 
@@ -1561,6 +1348,242 @@ button.sub-menu-toggle.active svg {
 
 .menu-bottom .social-menu {
 	justify-content: center;
+}
+
+/* Header Navigation ------------------------- */
+.header-navigation-wrapper {
+	display: none;
+}
+
+.expanded-menu-wrapper {
+	display: none;
+}
+
+@media (min-width: 640px) {
+	.header-navigation-wrapper {
+		align-items: center;
+		display: flex;
+	}
+	.primary-menu-wrapper {
+		display: block;
+		width: 100%;
+	}
+	.mobile-search-toggle,
+	.mobile-nav-toggle {
+		display: none !important;
+	}
+}
+
+/* Primary Menu ---------------------------- */
+.expanded-menu {
+	font-size: 1.6rem;
+	color: hotpink;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: -0.015em;
+	line-height: 1.2;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	margin: -0.8rem -1.6rem 0 0;
+}
+
+.expanded-menu .icon {
+	display: block;
+	height: 0.7rem;
+	position: absolute;
+	pointer-events: none;
+	transform: rotate(45deg);
+	width: 1.3rem;
+}
+
+.expanded-menu .icon::before, .expanded-menu .icon::after {
+	content: "";
+	display: block;
+	background-color: currentColor;
+	position: absolute;
+	bottom: calc(50% - 0.1rem);
+	right: 0;
+}
+
+.expanded-menu .icon::before {
+	height: 0.9rem;
+	width: 0.2rem;
+}
+
+.expanded-menu .icon::after {
+	height: 0.2rem;
+	width: 0.9rem;
+}
+
+.expanded-menu li {
+	font-size: inherit;
+	line-height: 1.25;
+	position: relative;
+}
+
+.expanded-menu > li {
+	margin: 0.8rem 1.6rem 0 0;
+}
+
+.expanded-menu > li.menu-item-has-children > a {
+	padding-left: 2rem;
+}
+
+.expanded-menu > li > .icon {
+	left: -0.5rem;
+	top: calc(50% - 0.4rem);
+}
+
+.expanded-menu a {
+	color: hotpink;
+	display: block;
+	line-height: 1.2;
+	text-decoration: none;
+}
+
+.expanded-menu a:hover,
+.expanded-menu a:focus,
+.expanded-menu .current_page_ancestor {
+	text-decoration: underline;
+}
+
+.expanded-menu li.current-menu-item > a,
+.expanded-menu li.current-menu-item > .link-icon-wrapper > a {
+	text-decoration: underline;
+}
+
+.expanded-menu li.current-menu-item > a:hover,
+.expanded-menu li.current-menu-item > .link-icon-wrapper > a:hover,
+.expanded-menu li.current-menu-item > a:focus,
+.expanded-menu li.current-menu-item > .link-icon-wrapper > a:focus {
+	text-decoration: none;
+}
+
+.expanded-menu ul {
+	background: #000;
+	border-radius: 0.4rem;
+	color: #fff;
+	font-size: 1.7rem;
+	opacity: 0;
+	padding: 1rem 0;
+	position: absolute;
+	left: 9999rem;
+	top: calc(100% + 2rem);
+	transition: opacity 0.15s linear, transform 0.15s linear, left 0s 0.15s;
+	transform: translateY(0.6rem);
+	width: 20rem;
+	z-index: 1;
+}
+
+.expanded-menu li.menu-item-has-children:hover > ul,
+.expanded-menu li.menu-item-has-children:focus > ul,
+.expanded-menu li.menu-item-has-children.focus > ul {
+	left: 0;
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 0.15s linear, transform 0.15s linear;
+}
+
+.expanded-menu ul::before,
+.expanded-menu ul::after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 100%;
+}
+
+.expanded-menu ul::before {
+	height: 2rem;
+	right: 0;
+	left: 0;
+}
+
+.expanded-menu ul::after {
+	border: 0.8rem solid transparent;
+	border-bottom-color: #000;
+	left: 1.8rem;
+}
+
+.expanded-menu ul a {
+	background: transparent;
+	border: none;
+	color: inherit;
+	display: block;
+	padding: 1rem 2rem;
+	transition: background-color 0.15s linear;
+	width: 100%;
+}
+
+.expanded-menu ul li.menu-item-has-children > a {
+	padding-left: 4.5rem;
+}
+
+.expanded-menu ul li.menu-item-has-children .icon {
+	position: absolute;
+	left: 1.5rem;
+	top: calc(50% - 0.5rem);
+}
+
+.expanded-menu ul ul {
+	top: -1rem;
+}
+
+.expanded-menu ul li.menu-item-has-children:hover > ul,
+.expanded-menu ul li.menu-item-has-children:focus > ul,
+.expanded-menu ul li.menu-item-has-children.focus > ul {
+	left: calc(100% + 2rem);
+}
+
+.expanded-menu ul ul::before {
+	bottom: 0;
+	height: auto;
+	right: auto;
+	left: -2rem;
+	top: 0;
+	width: 2rem;
+}
+
+.expanded-menu ul ul::after {
+	border-bottom-color: transparent;
+	border-left-color: #000;
+	bottom: auto;
+	left: -1.6rem;
+	top: 2rem;
+}
+
+.rtl .expanded-menu ul ul::after {
+	transform: rotate(-180deg);
+}
+
+/*
+ * Enable nav submenu expansion with tapping on arrows on large-viewport
+ * touch interfaces (e.g. tablets or laptops with touch screens).
+ * These rules are supported by all browsers (>IE11) and when JS is disabled.
+ */
+@media (any-pointer: coarse) {
+	.expanded-menu > li.menu-item-has-children > a {
+		padding-left: 0;
+		margin-left: 2rem;
+	}
+	.expanded-menu ul li.menu-item-has-children > a {
+		margin-left: 4.5rem;
+		padding-left: 0;
+		width: unset;
+	}
+}
+
+/* Repeat previous rules for IE11 (when JS enabled for polyfill). */
+.touch-enabled .expanded-menu > li.menu-item-has-children > a {
+	padding-left: 0;
+	margin-left: 2rem;
+}
+
+.touch-enabled .expanded-menu ul li.menu-item-has-children > a {
+	margin-left: 4.5rem;
+	padding-left: 0;
+	width: unset;
 }
 
 /*--------------------------------------------------------------

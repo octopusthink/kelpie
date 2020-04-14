@@ -47,4 +47,16 @@
     @if $class == subtitles and $size == large {
         font-size: get($typography, "sizes", "l");
     }
+
+    @if $class == interface and $size == small {
+        font-size: get($typography, "sizes", "s");
+    }
+
+    @if $class == interface and $size == medium {
+        font-size: get($typography, "sizes", "base");
+    }
+
+    @if $class == interface and $size == large {
+        font-size: get($typography, "sizes", "m");
+    }
 }

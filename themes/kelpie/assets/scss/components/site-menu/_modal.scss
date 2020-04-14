@@ -1,11 +1,12 @@
 /*--------------------------------------------------------------
-## Primary Site Navigation Menu (Header)
+## Modal site menu (used primarily for mobile devices)
 --------------------------------------------------------------*/
-$color-primary-dark: hotpink;
+$color-primary-dark: grey;
 $color-primary: black;
-$color-secondary: aqua;
+$color-secondary: hotpink;
 $color-white: white;
 
+// Modal that contains the menu.
 .menu-modal {
 	background: #fff;
 	display: none;
@@ -19,8 +20,20 @@ $color-white: white;
 	top: 0;
 	transition: opacity 0.25s ease-in, left 0s 0.25s, right 0s 0.25s;
 	z-index: 99;
+
+	&.show-modal {
+		display: flex;
+	}
+
+	&.active {
+		left: 0;
+		opacity: 1;
+		right: 0;
+		transition: opacity 0.25s ease-out;
+	}
 }
 
+// Position modal menu to account for the admin bar.
 .admin-bar .menu-modal {
 	top: 32px;
 }
@@ -31,17 +44,7 @@ $color-white: white;
 	}
 }
 
-.menu-modal.show-modal {
-	display: flex;
-}
-
-.menu-modal.active {
-	left: 0;
-	opacity: 1;
-	right: 0;
-	transition: opacity 0.25s ease-out;
-}
-
+// Inner wrapper elements.
 .menu-modal-inner {
 	background: $color-primary;
 	display: flex;
@@ -69,15 +72,20 @@ $color-white: white;
 }
 
 
-/* Main Menu --------------------------------- */
-
+// Menu within the modal.
 .modal-menu {
 	position: relative;
 	left: calc(50% - 50vw);
 	width: 100vw;
+
+	.ancestor-wrapper {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
 }
 
-.modal-menu li {
+.menu-item {
 	border-color: $color-primary-dark;
 	border-style: solid;
 	border-width: 0.1rem 0 0 0;
@@ -86,54 +94,48 @@ $color-white: white;
 	line-height: 1;
 	justify-content: flex-start;
 	margin: 0;
+	
+	&:last-child {
+		border-bottom-width: 0.1rem;
+	}
+
+	a {
+		@include typography(interface, large);
+		color: $color-secondary;
+		display: block;
+		padding: 2rem 2.5rem;
+		text-decoration: none;
+		width: 100%;
+
+		&:focus,
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
-.modal-menu > li > a,
-.modal-menu > li > .ancestor-wrapper > a {
-	font-size: 2rem;
-	letter-spacing: -0.0375em;
-}
-
-.modal-menu > li:last-child {
-	border-bottom-width: 0.1rem;
-}
-
-.modal-menu .ancestor-wrapper {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-}
-
-.modal-menu a {
-	color: $color-secondary;
-	display: block;
-	padding: 2rem 2.5rem;
-	text-decoration: none;
-	width: 100%;
-}
-
-.modal-menu a:focus,
-.modal-menu a:hover,
-.modal-menu li.current-menu-item > .ancestor-wrapper > a,
-.modal-menu li.current_page_ancestor > .ancestor-wrapper > a {
+// Current menu item highlighting.
+.modal-menu .current-menu-item > .ancestor-wrapper > a,
+.modal-menu .current_page_ancestor > .ancestor-wrapper > a {
 	text-decoration: underline;
 }
 
-button.sub-menu-toggle {
+// Sub-menu
+.sub-menu-toggle {
 	border-left: 0.1rem solid #dedfdf;
 	flex-shrink: 0;
 	margin: 1rem 0;
 	padding: 0 2.5rem;
-}
 
-button.sub-menu-toggle svg {
-	height: 0.9rem;
-	transition: transform 0.15s linear;
-	width: 1.5rem;
-}
+	svg {
+		height: 0.9rem;
+		transition: transform 0.15s linear;
+		width: 1.5rem;
+	}
 
-button.sub-menu-toggle.active svg {
-	transform: rotate(180deg);
+	&.active svg {
+		transform: rotate(180deg);
+	}
 }
 
 .modal-menu ul {
@@ -146,13 +148,8 @@ button.sub-menu-toggle.active svg {
 	border-left-width: 1rem;
 }
 
-.modal-menu ul li a {
-	font-family: UniversLTPro-55Roman, "Helvetica Neue", Helvetica, sans-serif;
-	color: inherit;
-}
 
 /* Main menu animation ----------------------- */
-
 .menu-wrapper .menu-item {
 	position: relative;
 }
@@ -222,18 +219,6 @@ button.sub-menu-toggle.active svg {
 
 }
 
-
-/* Expanded Menu ----------------------------- */
-
-.expanded-menu {
-	display: none;
-}
-
-.mobile-menu {
-	display: block;
-}
-
-
 /* Menu Bottom ------------------------------- */
 
 .menu-bottom {
@@ -246,9 +231,8 @@ button.sub-menu-toggle.active svg {
 }
 
 .menu-copyright {
+	@include typography(body, small);
 	display: none;
-	font-size: 1.6rem;
-	font-family: UniversLTPro-55Roman, "Helvetica Neue", Helvetica, sans-serif;
 	margin: 0;
 }
 

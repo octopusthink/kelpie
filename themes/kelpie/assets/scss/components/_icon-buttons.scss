@@ -28,7 +28,7 @@
 }
 
 .kelpie-icon-button-label {
-	@include typography(body, small);
+	@include typography(interface, small);
 	color: inherit;
 	position: absolute;
 	top: calc(100% + 0.5rem);
