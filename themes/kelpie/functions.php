@@ -232,6 +232,11 @@ require get_template_directory() . '/classes/class-kelpie-svg-icons.php';
 require get_template_directory() . '/inc/svg-icons.php';
 
 /**
+ * Custom comment walker, courtesy of Twenty Twenty.
+ */
+require get_template_directory() . '/classes/class-kelpie-walker-comment.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

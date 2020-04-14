@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 # Quotes
 --------------------------------------------------------------*/
-.site-main {
+.kelpie-page-content {
     p {
         @include typography(body);
         margin: 0 auto get($spacing, "s");

@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 # Headings
 --------------------------------------------------------------*/
-.site-main {
+.kelpie-page-content {
     h1 {
         @include typography(titles);
         margin: 0 auto get($spacing, "s");

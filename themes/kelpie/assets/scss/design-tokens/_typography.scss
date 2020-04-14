@@ -1,4 +1,4 @@
-// Apply type styles to 
+// Apply type styles to elements using this mixin.
 @mixin typography($class: body, $size: medium) {
     @include font-size($class, $size);
     color: get($typography, $class, "color");
@@ -7,6 +7,7 @@
     font-weight: get($typography, $class, "weight");
     letter-spacing: get($typography, $class, "letter-spacing");
     line-height: get($typography, $class, "line-height");
+    text-transform: get($typography, $class, "text-transform");
 }
 
 // Generate font size and line-height.
@@ -57,6 +58,18 @@
     }
 
     @if $class == interface and $size == large {
+        font-size: get($typography, "sizes", "m");
+    }
+
+    @if $class == metadata and $size == small {
+        font-size: get($typography, "sizes", "xs");
+    }
+
+    @if $class == metadata and $size == medium {
+        font-size: get($typography, "sizes", "s");
+    }
+
+    @if $class == metadata and $size == large {
         font-size: get($typography, "sizes", "m");
     }
 }
