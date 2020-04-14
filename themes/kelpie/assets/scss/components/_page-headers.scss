@@ -1,0 +1,13 @@
+/* Page titles: the primary title of the page. */
+.kelpie-page-header {
+    border-bottom: 2px solid get($colors, "borders", "dark");
+    margin: 0 auto get($spacing, "l");
+    text-align: center;
+    max-width: get($site, "max-content-width");
+    padding: get($spacing, "s");
+        
+    .kelpie-page-title {
+        @include typography(titles);
+        margin: 0;
+    }
+}

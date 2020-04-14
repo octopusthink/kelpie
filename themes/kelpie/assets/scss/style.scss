@@ -37,7 +37,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "base/typography";
 //@import "base/elements";
 
-// Base components
+// Base components, usable anywhere.
 @import "components/icon-buttons";
 @import "components/social-icons";
 
@@ -45,6 +45,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "components/site-header";
 @import "components/site-menu/modal";
 @import "components/site-menu/expanded";
+@import "components/page-headers";
 @import "components/site-content";
 @import "components/site-footer";
 
@@ -55,6 +56,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "blocks/quotes";
 
 
+
+
+
 @import "components/captions";
 @import "components/comments";
 @import "components/forms";
@@ -63,7 +67,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "components/links";
 
 @import "components/post-navigation";
-@import "components/posts";
 @import "components/widgets";
 
 

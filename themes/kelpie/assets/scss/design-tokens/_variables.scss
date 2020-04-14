@@ -63,11 +63,11 @@ $colors: (
 
     // Colours used for text.
     "text": (
-        "default": get($palette, "neutral", "grey800"),
+        "default": get($palette, "neutral", "grey900"),
         "dark": get($palette, "neutral", "black"),
-        "light": get($palette, "neutral", "grey600"),
-        "inverse": get($palette, "neutral", "grey200"),
-        "inverse-dark": get($palette, "neutral", "grey400"),
+        "light": get($palette, "neutral", "grey800"),
+        "inverse": get($palette, "neutral", "grey100"),
+        "inverse-dark": get($palette, "neutral", "grey200"),
         "inverse-light": get($palette, "neutral", "white"),
     ), 
 
@@ -82,7 +82,7 @@ $colors: (
     
     // Colours used for borders.
     "borders": (
-        "dark": get($palette, "neutral", "grey400"),
+        "dark": get($palette, "neutral", "grey600"),
         "default": get($palette, "neutral", "grey200"),
         "inverse": get($palette, "neutral", "grey800"),
         "inverse-light": get($palette, "neutral", "grey600"),
@@ -154,9 +154,9 @@ $typography: (
         font-family: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
         font-style: normal,
         line-height: 1,
-        letter-spacing: -0.05em,
-        color: get($colors, "text", "dark"),
-        weight: 800,
+        letter-spacing: -0.025em,
+        color: get($colors, "text", "default"),
+        weight: 400,
         case: normal,
     ),
     "subtitles":  (
@@ -164,7 +164,7 @@ $typography: (
         font-style: normal,
         line-height: 1.2,
         letter-spacing: -0.015em,
-        color: get($colors, "text", "light"),
+        color: get($colors, "text", "default"),
         weight: 400,
         case: normal,
     ),

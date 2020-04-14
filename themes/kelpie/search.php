@@ -17,7 +17,7 @@ get_header(); ?>
 	if ( have_posts() ) :
 		?>
 
-		<header class="page-header">
+		<header class="page-header kelpie-page-title">
 			<h1 class="page-title">
 			<?php
 				/* translators: %s: search query. */

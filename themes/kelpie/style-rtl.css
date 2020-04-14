@@ -1033,7 +1033,7 @@ big {
 
 .kelpie-icon-button-label {
 	font-size: 1.28rem;
-	color: #666c76;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 500;
@@ -1116,7 +1116,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-title {
 	font-size: 3.90625rem;
-	color: #666c76;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -1134,7 +1134,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-description {
 	font-size: 2rem;
-	color: #97a0af;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -1238,7 +1238,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .modal-menu .menu-item {
 	font-size: 2rem;
-	color: #666c76;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 500;
@@ -1382,7 +1382,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .menu-copyright {
 	font-size: 1.28rem;
-	color: #666c76;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -1462,7 +1462,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .expanded-menu .menu-item {
 	font-size: 1.6rem;
-	color: #666c76;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 500;
@@ -1625,6 +1625,26 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	width: unset;
 }
 
+/* Page titles: the primary title of the page. */
+.kelpie-page-header {
+	border-bottom: 2px solid #97a0af;
+	margin: 0 auto 4.8rem;
+	text-align: center;
+	max-width: 56rem;
+	padding: 3.2rem;
+}
+
+.kelpie-page-header .kelpie-page-title {
+	font-size: 6.10352rem;
+	color: #3b3f45;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: -0.025em;
+	line-height: 1;
+	margin: 0;
+}
+
 /*--------------------------------------------------------------
 # Site Content
 --------------------------------------------------------------*/
@@ -1649,13 +1669,13 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-info {
 	font-size: 1.28rem;
-	color: #666c76;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	letter-spacing: 0;
 	line-height: 1.6;
-	color: #dee0e5;
+	color: #ebedf0;
 	text-align: center;
 }
 
@@ -1676,7 +1696,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 --------------------------------------------------------------*/
 .site-main p {
 	font-size: 1.6rem;
-	color: #666c76;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -1699,11 +1719,11 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 --------------------------------------------------------------*/
 .site-main h1 {
 	font-size: 6.10352rem;
-	color: #181b1c;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
-	font-weight: 800;
-	letter-spacing: -0.05em;
+	font-weight: 400;
+	letter-spacing: -0.025em;
 	line-height: 1;
 	margin: 0 auto 2.4rem;
 	max-width: 56rem;
@@ -1711,7 +1731,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-main h2 {
 	font-size: 4.88281rem;
-	color: #666c76;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -1723,7 +1743,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-main h3 {
 	font-size: 3.90625rem;
-	color: #666c76;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -1735,7 +1755,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-main h4 {
 	font-size: 3.125rem;
-	color: #666c76;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -1747,7 +1767,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-main h5 {
 	font-size: 2.5rem;
-	color: #97a0af;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -1759,7 +1779,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-main h6 {
 	font-size: 2rem;
-	color: #97a0af;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -1783,7 +1803,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 --------------------------------------------------------------*/
 .site-main ul, .site-main ol {
 	font-size: 1.6rem;
-	color: #666c76;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -1821,7 +1841,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 --------------------------------------------------------------*/
 .site-main blockquote {
 	font-size: 1.6rem;
-	color: #666c76;
+	color: #3b3f45;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -2099,90 +2119,6 @@ a:hover, a:active {
 .post-navigation .nav-next {
 	text-align: end;
 	flex: 1 0 50%;
-}
-
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
-.sticky {
-	display: block;
-}
-
-.updated:not(.published) {
-	display: none;
-}
-
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
-.entry-meta {
-	color: #6c7781;
-	font-size: 90%;
-}
-
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
-}
-
-.entry-header .entry-title {
-	font-size: 3.90625rem;
-	color: #666c76;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-style: normal;
-	font-weight: 600;
-	letter-spacing: -0.025em;
-	line-height: 1.2;
-}
-
-.entry-header,
-.page-header,
-.entry-footer,
-.site-info,
-.posts-navigation,
-.post-navigation,
-.page-navigation,
-.comments-area,
-.not-found .page-content,
-.search .entry-summary {
-	margin: 1.5em auto;
-	padding-right: 14px;
-	padding-left: 14px;
-	max-width: 580px;
-}
-
-.entry-header .wp-post-image {
-	margin-bottom: 1.5em;
-}
-
-.entry-footer span {
-	margin-left: 1em;
-}
-
-.entry-footer {
-	color: #6c7781;
-	font-size: 90%;
-	padding-bottom: 40px;
-	border-bottom: 1px solid #e2e4e7;
-}
-
-@media screen and (min-width: 608px) {
-	.entry-header,
-	.page-header,
-	.entry-footer,
-	.site-info,
-	.posts-navigation,
-	.post-navigation,
-	.page-navigation,
-	.comments-area,
-	.not-found .page-content,
-	.search .entry-summary {
-		padding-right: 0;
-		padding-left: 0;
-	}
 }
 
 /*--------------------------------------------------------------

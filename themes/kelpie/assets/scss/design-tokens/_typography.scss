@@ -1,4 +1,4 @@
-// Apply type styles to 
+// Apply type styles to elements using this mixin.
 @mixin typography($class: body, $size: medium) {
     @include font-size($class, $size);
     color: get($typography, $class, "color");
