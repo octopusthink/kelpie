@@ -1,12 +1,14 @@
 /* Social Icons ------------------------------ */
 .social-icons {
+	align-items: center;
 	display: flex;
-	flex-wrap: wrap;
-	margin: -0.9rem 0 0 -0.9rem;
-    width: calc(100% + 0.9rem);
+    justify-content: center;
+    margin: 0 auto;
+    max-width: get($site, "max-content-width");
+    width: 100%;
     
     .menu-item {
-	    margin: 0.9rem 0 0 0.9rem;
+	    margin-right: get($spacing, "xxs");
     }
 
     a {

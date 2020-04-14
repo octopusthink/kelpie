@@ -6,3 +6,27 @@
 	color: get($colors, "text", "inverse-light");
 	padding: get($site, "padding");
 }
+
+.footer-social-wrapper {
+	margin-top: get($spacing, "m");
+	margin-bottom: get($spacing, "m");
+}
+
+.site-info {
+	@include typography(body, small);
+	color: get($colors, "text", "inverse");
+	text-align: center;
+
+	a {
+		color: get($colors, "text", "inverse-light");
+	}
+
+	.footer-copyright {
+		margin: 0 0 get($spacing, "hairline");
+	}
+
+	.powered-by-wordpress {
+		margin: 0 0 get($spacing, "xs");
+	}
+}
+
