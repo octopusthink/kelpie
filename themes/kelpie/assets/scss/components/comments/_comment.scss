@@ -1,0 +1,145 @@
+/* Comment Item ----------------------------- */
+
+/* COMMENT HEADER */
+
+.comments .comment,
+.comments .pingback,
+.comments .trackback,
+.comments .review {
+	padding-top: 3.5rem;
+}
+
+div.comment:first-of-type {
+	margin-top: 3.5rem;
+	padding-top: 0;
+}
+
+.comments .comments-header + div {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.comment-body {
+	position: relative;
+}
+
+.comment .comment {
+	padding-left: 5%;
+}
+
+.comment-meta {
+	line-height: 1.1;
+	margin-bottom: 1.5rem;
+	min-height: 5rem;
+	padding-left: 5rem;
+	position: relative;
+}
+
+.hide-avatars .comment-meta {
+	min-height: 0;
+	padding-left: 0;
+}
+
+.comment-meta a {
+	color: inherit;
+}
+
+.comment-author {
+	font-size: 1.8rem;
+	font-family: UniversLTPro-55Roman, "Helvetica Neue", Helvetica, sans-serif;
+	letter-spacing: -0.027777778em;
+}
+
+.comment-author a {
+	text-decoration: underline;
+}
+
+.comment-author a:hover,
+.comment-author a:focus {
+	text-decoration: none;
+}
+
+.comment-meta .avatar {
+	height: 4rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 4rem;
+}
+
+.comment-author .url {
+	text-decoration: underline;
+}
+
+.comment-metadata {
+	color: #6d6d6d;
+	font-size: 1.4rem;
+	font-family: UniversLTPro-55Roman, "Helvetica Neue", Helvetica, sans-serif;
+	margin-top: 0.6rem;
+}
+
+.comment-metadata a {
+	text-decoration: none;
+}
+
+.comment-metadata a:focus,
+.comment-metadata a:hover {
+	text-decoration: underline;
+}
+
+
+/* COMMENT CONTENT */
+
+.comment-content.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	width: 100%;
+}
+
+.comment-content.entry-content .alignleft {
+
+	/*rtl:ignore*/
+	margin-left: 0;
+}
+
+.comment-content.entry-content .alignright {
+
+	/*rtl:ignore*/
+	margin-right: 0;
+}
+
+/* COMMENT FOOTER */
+.comment-footer-meta {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.2rem;
+	font-family: UniversLTPro-55Roman, "Helvetica Neue", Helvetica, sans-serif;
+	justify-content: flex-start;
+	letter-spacing: 0.030833333em;
+	line-height: 1;
+	margin: 1.5rem 0 -1rem -1.5rem;
+	text-transform: uppercase;
+}
+
+.comment-footer-meta > * {
+	margin: 0 0 1rem 1.5rem;
+}
+
+.comment-reply-link {
+	background-color: #2e4371;
+	color: #fff;
+	display: block;
+	padding: 0.7rem;
+}
+
+.bypostauthor .comment-footer-meta .by-post-author {
+	display: block;
+}
+
+.comment-footer-meta a {
+	text-decoration: none;
+}
+
+.comment-footer-meta a:focus,
+.comment-footer-meta a:hover {
+	text-decoration: underline;
+}   

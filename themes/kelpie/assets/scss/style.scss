@@ -40,20 +40,25 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 // Base components, usable anywhere.
 @import "components/icon-buttons";
 @import "components/social-icons";
+@import "components/forms";
+@import "components/links";
 
-// Larger layout components.
+// Layout components.
 @import "components/site-header";
 @import "components/site-menu/modal";
 @import "components/site-menu/expanded";
 @import "components/page-headers";
 @import "components/site-content";
 @import "components/site-footer";
+@import "components/widgets";
 
 // Gutenberg blocks, scoped to post content.
 @import "blocks/paragraphs";
 @import "blocks/headings";
 @import "blocks/lists";
 @import "blocks/quotes";
+@import "components/captions";
+@import "components/galleries";
 
 // Single post- or page-related components
 @import "components/posts/post-taxonomies";
@@ -61,13 +66,22 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "components/posts/edit-link";
 @import "components/posts/navigation";
 
-@import "components/captions";
-@import "components/comments";
-@import "components/forms";
-@import "components/galleries";
-@import "components/infinite-scroll";
-@import "components/links";
+// Comment components
+@import "components/comments/wrapper";
+@import "components/comments/form";
+@import "components/comments/comment";
+@import "components/comments/pingback-trackback";
+@import "components/comments/pagination";
 
-@import "components/widgets";
+
+
+// Archive-related components
+@import "components/infinite-scroll";
+
+
+
+
+
+
 
 
