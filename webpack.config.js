@@ -15,9 +15,9 @@ module.exports = [
 			style: `./themes/${THEME_NAME}/assets/scss/style.scss`,
 		},
 		output: {
-			filename: '[name].css',
+			filename: '[name].js',
 			path: path.join(__dirname, 'themes', THEME_NAME),
-			chunkFilename: '[name]-[chunkhash].css',
+			chunkFilename: '[name]-[chunkhash].js',
 			// publicPath: '',
 		},
 		module: {
@@ -31,7 +31,7 @@ module.exports = [
 				// },
 				{
 					test: /\.css$/,
-					use: ['style-loader', 'css-loader'],
+					use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader'],
 				},
 				{
 					test: /\.scss$/,
@@ -55,7 +55,9 @@ module.exports = [
 			],
 		},
 		plugins: [
-			new MiniCssExtractPlugin(),
+			new MiniCssExtractPlugin({
+				filename: '/themes/kelpie/[name].css',
+			}),
 			new WebpackRTLPlugin({
 				diffOnly: true,
 				filename: 'style-rtl.css',

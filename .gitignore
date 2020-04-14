@@ -7,8 +7,10 @@ templates/*
 node_modules
 vendor
 
+# Build artifacts
 dist/
 *.map
+themes/kelpie/style.js
 
 # Theme and Plugin handling
 #
