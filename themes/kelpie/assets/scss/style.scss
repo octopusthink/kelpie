@@ -37,10 +37,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "base/typography";
 //@import "base/elements";
 
+// Base components
+@import "components/icon-buttons";
+@import "components/social-icons";
+
 // Larger layout components.
 @import "components/site-header";
-@import "components/site-footer";
+@import "components/site-menu/modal";
+@import "components/site-menu/expanded";
 @import "components/site-content";
+@import "components/site-footer";
 
 // Gutenberg blocks, scoped to post content.
 @import "blocks/paragraphs";
@@ -56,7 +62,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "components/infinite-scroll";
 @import "components/links";
 
-@import "components/menus";
 @import "components/post-navigation";
 @import "components/posts";
 @import "components/widgets";

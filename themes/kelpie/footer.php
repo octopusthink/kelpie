@@ -14,12 +14,38 @@
 ?>
 
 <footer id="colophon" class="site-footer">
+
+	<?php if ( has_nav_menu( 'social' ) ) : ?>
+		<nav aria-label="<?php esc_attr_e( 'Social links', 'kelpie' ); ?>" class="footer-social-wrapper">
+			<ul class="social-menu footer-social reset-list-style social-icons fill-children-current-color">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'social',
+						'container'       => '',
+						'container_class' => '',
+						'items_wrap'      => '%3$s',
+						'menu_id'         => '',
+						'menu_class'      => '',
+						'depth'           => 1,
+						'link_before'     => '<span class="screen-reader-text">',
+						'link_after'      => '</span>',
+						'fallback_cb'     => '',
+					)
+				);
+				?>
+			</ul><!-- .footer-social -->
+		</nav><!-- .footer-social-wrapper -->
+	<?php endif; ?>
+
 	<div class="site-info">
 		<p class="footer-copyright">&copy;
 			<?php
-			echo date_i18n(
+			echo esc_html(
+				date_i18n(
 				/* translators: Copyright date format, see https://secure.php.net/date */
-				_x( 'Y', 'copyright date format', 'kelpie' )
+					_x( 'Y', 'copyright date format', 'kelpie' )
+				)
 			);
 			?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>

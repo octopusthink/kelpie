@@ -824,9 +824,27 @@ object {
 	display: inline-block;
 }
 
-/* Spacing */
-/* Site structure */
-/* Typography */
+/* Spacing
+ *
+ * We use an 8px grid and size spacing based on 10rem = 1px.
+ * This allows spacing to scale with font size whilst maintaining readability. 
+ * Try to use only the spacing units below for margins and padding.
+ */
+/* Site structure
+ *
+ * These are site-wide variables that determine 
+ * how elements are sized & within the available viewport space.
+ */
+/* Typography 
+ *
+ * These variables determine how typography is applied across the site.
+ * Several "styles" are configurable here to apply typographic treatments
+ * to elements based on their semantic intention. (ie, headings, links, etc.)
+ * See design-tokens/typography.scss for full implementation.
+ * The easiest way to use this is to determine a base size and a scale modifier,
+ * and Kelpie will generate a type scale to use, but these values can also be
+ * overridden as needed. 
+ */
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -967,6 +985,82 @@ big {
 	font-size: 125%;
 }
 
+/* Icon Buttons ---------------------------- */
+.kelpie-icon-button {
+	align-items: center;
+	background: transparent;
+	border: none;
+	color: #fff;
+	display: flex;
+	height: 2.4rem;
+	justify-content: center;
+	overflow: visible;
+	position: relative;
+}
+
+.kelpie-icon-button svg {
+	display: block;
+	position: relative;
+	z-index: 1;
+}
+
+.kelpie-icon-button path {
+	fill: currentColor;
+	opacity: 0.8;
+}
+
+.kelpie-icon-button:focus .kelpie-icon-button-label,
+.kelpie-icon-button:hover .kelpie-icon-button-label {
+	text-decoration: underline;
+}
+
+.kelpie-icon-button-label {
+	font-size: 1.28rem;
+	color: hotpink;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: -0.015em;
+	line-height: 1.2;
+	color: inherit;
+	position: absolute;
+	top: calc(100% + 0.5rem);
+	width: auto;
+	white-space: nowrap;
+	word-break: break-all;
+}
+
+/* Social Icons ------------------------------ */
+.social-icons {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -0.9rem 0 0 -0.9rem;
+	width: calc(100% + 0.9rem);
+}
+
+.social-icons .menu-item {
+	margin: 0.9rem 0 0 0.9rem;
+}
+
+.social-icons a {
+	align-items: center;
+	background: hotpink;
+	border-radius: 50%;
+	color: black;
+	display: flex;
+	height: 4.4rem;
+	justify-content: center;
+	padding: 0;
+	text-decoration: none;
+	transition: transform 0.15s ease-in-out;
+	width: 4.4rem;
+}
+
+.social-icons a:focus, .social-icons a:hover {
+	transform: scale(1.1);
+	text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 # Site Header
 --------------------------------------------------------------*/
@@ -974,19 +1068,29 @@ big {
 	background: #000;
 	color: #fff;
 	padding: 1.6rem;
+	position: relative;
 }
 
-.site-branding {
-	margin: 0 auto 3.2rem;
-	max-width: 56rem;
+.kelpie-menu-bar {
+	align-items: center;
+	display: flex;
+	justify-content: center;
 	text-align: center;
 }
 
-.custom-logo {
-	height: auto;
-	margin: 0 0 0.8rem;
-	max-width: 100%;
-	width: 16rem;
+body:not(.enable-search-modal) .kelpie-menu-bar {
+	justify-content: space-between;
+	text-align: left;
+}
+
+.site-logo a {
+	display: block;
+}
+
+.site-logo img {
+	max-height: 6rem;
+	margin: 0 auto;
+	width: auto;
 }
 
 .site-title {
@@ -998,12 +1102,13 @@ big {
 	letter-spacing: -0.025em;
 	line-height: 1.2;
 	color: inherit;
-	margin: 0 0 0.8rem;
+	margin: 0;
 }
 
 .site-title a {
 	text-decoration: none;
 	color: inherit;
+	display: block;
 }
 
 .site-description {
@@ -1015,9 +1120,498 @@ big {
 	letter-spacing: -0.015em;
 	line-height: 1.2;
 	color: inherit;
-	margin: 0 0 0.8rem;
+	display: none;
+	margin: 0;
 	opacity: 0.5;
 	word-wrap: break-word;
+}
+
+/* Search Toggle ----------------------------- */
+.search-toggle {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	top: 0;
+}
+
+.search-toggle .kelpie-toggle-icon,
+.search-toggle svg {
+	height: 2.5rem;
+	max-width: 2.3rem;
+	width: 2.3rem;
+}
+
+/*--------------------------------------------------------------
+## Modal site menu (used primarily for mobile devices)
+--------------------------------------------------------------*/
+.menu-modal {
+	background: #fff;
+	display: none;
+	opacity: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: fixed;
+	bottom: 0;
+	left: -99999rem;
+	right: 99999rem;
+	top: 0;
+	transition: opacity 0.25s ease-in, left 0s 0.25s, right 0s 0.25s;
+	z-index: 99;
+}
+
+.menu-modal.show-modal {
+	display: flex;
+}
+
+.menu-modal.active {
+	left: 0;
+	opacity: 1;
+	right: 0;
+	transition: opacity 0.25s ease-out;
+}
+
+.admin-bar .menu-modal {
+	top: 32px;
+}
+
+@media (max-width: 782px) {
+	.admin-bar .menu-modal {
+		top: 46px;
+	}
+}
+
+.menu-modal-inner {
+	background: black;
+	display: flex;
+	justify-content: stretch;
+	overflow: auto;
+	-ms-overflow-style: auto;
+	width: 100%;
+}
+
+.menu-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+}
+
+.kelpie-close-nav-toggle-wrapper {
+	height: 8rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 1.6rem;
+}
+
+.modal-menu {
+	position: relative;
+	left: calc(50% - 50vw);
+	width: 100vw;
+}
+
+.modal-menu .ancestor-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.modal-menu .menu-item {
+	font-size: 2rem;
+	color: hotpink;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: -0.015em;
+	line-height: 1.2;
+	border-color: grey;
+	border-style: solid;
+	border-width: 0.1rem 0 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 1;
+	justify-content: flex-start;
+	margin: 0;
+}
+
+.modal-menu .menu-item:last-child {
+	border-bottom-width: 0.1rem;
+}
+
+.modal-menu .menu-item a {
+	color: hotpink;
+	display: block;
+	padding: 2.4rem;
+	text-decoration: none;
+	width: 100%;
+}
+
+.modal-menu .menu-item a:focus, .modal-menu .menu-item a:hover {
+	text-decoration: underline;
+}
+
+.modal-menu .current-menu-item > .ancestor-wrapper > a,
+.modal-menu .current_page_ancestor > .ancestor-wrapper > a {
+	text-decoration: underline;
+}
+
+.sub-menu-toggle {
+	border-left: 0.1rem solid #dedfdf;
+	flex-shrink: 0;
+	margin: 1rem 0;
+	padding: 0 2.5rem;
+}
+
+.sub-menu-toggle svg {
+	height: 0.9rem;
+	transition: transform 0.15s linear;
+	width: 1.5rem;
+}
+
+.sub-menu-toggle.active svg {
+	transform: rotate(180deg);
+}
+
+.modal-menu ul {
+	display: none;
+	margin: 0;
+	width: 100%;
+}
+
+.modal-menu ul li {
+	border-left-width: 1rem;
+}
+
+/* Main menu animation ----------------------- */
+.menu-wrapper .menu-item {
+	position: relative;
+}
+
+.menu-wrapper .active {
+	display: block;
+}
+
+.menu-wrapper.is-toggling {
+	pointer-events: none;
+}
+
+.menu-wrapper.is-toggling .menu-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.menu-wrapper.is-toggling .menu-bottom .social-menu .menu-item {
+	width: auto;
+}
+
+.menu-wrapper.is-animating .menu-item,
+.menu-wrapper.is-animating .toggling-target {
+	transition-duration: 250ms;
+}
+
+.menu-wrapper.is-animating .menu-item {
+	transition-property: transform;
+}
+
+.menu-wrapper.is-toggling .toggling-target {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 1;
+}
+
+.menu-wrapper.is-toggling .toggling-target.active {
+	opacity: 0;
+}
+
+.menu-wrapper.is-animating.is-toggling .toggling-target {
+	display: block;
+	transition-property: opacity;
+	opacity: 0;
+}
+
+.menu-wrapper.is-animating.is-toggling .toggling-target.active {
+	opacity: 1;
+}
+
+.menu-wrapper.is-toggling .modal-menu > li:last-child li {
+	border-top-color: transparent;
+	border-bottom-width: 0.1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.menu-wrapper.is-animating .menu-item,
+	.menu-wrapper.is-animating .toggling-target {
+		transition-duration: 1ms !important;
+	}
+}
+
+/* Menu Bottom ------------------------------- */
+.menu-bottom {
+	flex-shrink: 0;
+	padding: 4rem 0;
+}
+
+.menu-bottom nav {
+	width: 100%;
+}
+
+.menu-copyright {
+	font-size: 1.28rem;
+	color: #000;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 1.6;
+	display: none;
+	margin: 0;
+}
+
+.menu-copyright a:focus,
+.menu-copyright a:hover {
+	text-decoration: underline;
+}
+
+.menu-bottom .social-menu {
+	justify-content: center;
+}
+
+/* Header Navigation ------------------------- */
+.header-navigation-wrapper {
+	display: none;
+}
+
+.expanded-menu-wrapper {
+	display: none;
+}
+
+@media (min-width: 640px) {
+	.header-navigation-wrapper {
+		align-items: center;
+		display: flex;
+	}
+	.expanded-menu-wrapper {
+		display: block;
+		width: 100%;
+	}
+	.mobile-search-toggle,
+	.mobile-nav-toggle {
+		display: none !important;
+	}
+}
+
+.expanded-menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	margin: -0.8rem 0 0 -1.6rem;
+}
+
+.expanded-menu .icon {
+	display: block;
+	height: 0.7rem;
+	position: absolute;
+	pointer-events: none;
+	transform: rotate(-45deg);
+	width: 1.3rem;
+}
+
+.expanded-menu .icon::before, .expanded-menu .icon::after {
+	content: "";
+	display: block;
+	background-color: currentColor;
+	position: absolute;
+	bottom: calc(50% - 0.1rem);
+	left: 0;
+}
+
+.expanded-menu .icon::before {
+	height: 0.9rem;
+	width: 0.2rem;
+}
+
+.expanded-menu .icon::after {
+	height: 0.2rem;
+	width: 0.9rem;
+}
+
+.expanded-menu .menu-item {
+	font-size: 1.6rem;
+	color: hotpink;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: -0.015em;
+	line-height: 1.2;
+	margin-top: 1.6rem;
+	margin-right: 2.4rem;
+	position: relative;
+}
+
+.expanded-menu .menu-item a {
+	color: hotpink;
+	display: block;
+	text-decoration: none;
+}
+
+.expanded-menu .menu-item a:hover, .expanded-menu .menu-item a:focus {
+	text-decoration: underline;
+}
+
+.expanded-menu .current_page_ancestor {
+	text-decoration: underline;
+}
+
+.expanded-menu .current-menu-item > a,
+.expanded-menu .current-menu-item > .link-icon-wrapper > a {
+	text-decoration: underline;
+}
+
+.expanded-menu .current-menu-item > a:hover, .expanded-menu .current-menu-item > a:focus,
+.expanded-menu .current-menu-item > .link-icon-wrapper > a:hover,
+.expanded-menu .current-menu-item > .link-icon-wrapper > a:focus {
+	text-decoration: none;
+}
+
+.expanded-menu .sub-menu {
+	background: #000;
+	border-radius: 0.4rem;
+	color: #fff;
+	opacity: 0;
+	padding: 0.8rem 0;
+	position: absolute;
+	right: 9999rem;
+	top: calc(100% + 2rem);
+	transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
+	transform: translateY(0.6rem);
+	width: 20rem;
+	z-index: 1;
+}
+
+.expanded-menu .sub-menu::before, .expanded-menu .sub-menu::after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 100%;
+}
+
+.expanded-menu .sub-menu::before {
+	height: 2rem;
+	left: 0;
+	right: 0;
+}
+
+.expanded-menu .sub-menu::after {
+	border: 0.8rem solid transparent;
+	border-bottom-color: #000;
+	right: 1.8rem;
+}
+
+.expanded-menu .sub-menu .menu-item {
+	margin: 0;
+}
+
+.expanded-menu .sub-menu a {
+	background: transparent;
+	border: none;
+	color: inherit;
+	display: block;
+	padding: 0.8rem 1.6rem;
+	transition: background-color 0.15s linear;
+	width: 100%;
+}
+
+.expanded-menu .menu-item-has-children:hover > .sub-menu,
+.expanded-menu .menu-item-has-children:focus > .sub-menu,
+.expanded-menu .menu-item-has-children.focus > .sub-menu {
+	right: 0;
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 0.15s linear, transform 0.15s linear;
+}
+
+.expanded-menu .sub-menu .menu-item-has-children > a {
+	padding-right: 4.5rem;
+}
+
+.expanded-menu .sub-menu .menu-item-has-children .icon {
+	position: absolute;
+	right: 1.5rem;
+	top: calc(50% - 0.5rem);
+}
+
+.expanded-menu .sub-menu .sub-menu {
+	top: -1rem;
+}
+
+.expanded-menu .sub-menu .sub-menu::before {
+	bottom: 0;
+	height: auto;
+	left: auto;
+	right: -2rem;
+	top: 0;
+	width: 2rem;
+}
+
+.expanded-menu .sub-menu .sub-menu::after {
+	border-bottom-color: transparent;
+	/*rtl:ignore*/
+	border-left-color: #000;
+	bottom: auto;
+	right: -1.6rem;
+	top: 2rem;
+}
+
+.rtl .expanded-menu .sub-menu .sub-menu::after {
+	transform: rotate(180deg);
+}
+
+.expanded-menu .sub-menu .menu-item-has-children:hover > .sub-menu,
+.expanded-menu .sub-menu .menu-item-has-children:focus > .sub-menu,
+.expanded-menu .sub-menu .menu-item-has-children.focus > .sub-menu {
+	right: calc(100% + 2rem);
+}
+
+/*
+ * Enable nav submenu expansion with tapping on arrows on large-viewport
+ * touch interfaces (e.g. tablets or laptops with touch screens).
+ * These rules are supported by all browsers (>IE11) and when JS is disabled.
+ */
+@media (any-pointer: coarse) {
+	.expanded-menu > li.menu-item-has-children > a {
+		padding-right: 0;
+		margin-right: 2rem;
+	}
+	.expanded-menu ul li.menu-item-has-children > a {
+		margin-right: 4.5rem;
+		padding-right: 0;
+		width: unset;
+	}
+}
+
+/* Repeat previous rules for IE11 (when JS enabled for polyfill). */
+.touch-enabled .expanded-menu > li.menu-item-has-children > a {
+	padding-right: 0;
+	margin-right: 2rem;
+}
+
+.touch-enabled .expanded-menu ul li.menu-item-has-children > a {
+	margin-right: 4.5rem;
+	padding-right: 0;
+	width: unset;
+}
+
+/*--------------------------------------------------------------
+# Site Content
+--------------------------------------------------------------*/
+.site-main {
+	margin: 0 auto;
+	padding: 1.6rem;
 }
 
 /*--------------------------------------------------------------
@@ -1026,14 +1620,6 @@ big {
 .site-footer {
 	background: #000;
 	color: #fff;
-	padding: 1.6rem;
-}
-
-/*--------------------------------------------------------------
-# Site Content
---------------------------------------------------------------*/
-.site-main {
-	margin: 0 auto;
 	padding: 1.6rem;
 }
 
@@ -1434,90 +2020,6 @@ a:focus {
 
 a:hover, a:active {
 	outline: 0;
-}
-
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	margin: 0 auto;
-	max-width: 580px;
-	text-align: center;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-	text-align: left;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	display: block;
-	left: auto;
-}
-
-.main-navigation li {
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-
-.menu-toggle {
-	padding: 1em;
-}
-
-@media screen and (max-width: 37.5em) {
-	/* Small menu. */
-	.menu-toggle,
-	.main-navigation.toggled ul {
-		display: block;
-		margin: 0 auto;
-	}
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-	.main-navigation a {
-		padding: 0 .5em;
-	}
 }
 
 /*--------------------------------------------------------------

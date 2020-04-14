@@ -22,38 +22,52 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'kelpie' ); ?></a>
-		<header id="masthead" class="site-header">
-			<div class="site-branding">
-				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
-					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php
-				endif;
 
-				$description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) :
-					?>
-					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-					<?php
-				endif;
-				?>
-			</div><!-- .site-branding -->
+		<?php
+		wp_body_open();
+		?>
 
-			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'kelpie' ); ?></button>
-				<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						)
-					);
+		<header id="site-header" class="site-header" role="banner">
+
+			<div class="kelpie-menu-bar">
+
+				<div class="site-branding">
+					<?php
+						// Site title or logo.
+						kelpie_site_logo();
+
+						// Site description.
+						kelpie_site_description();
 					?>
-			</nav><!-- #site-navigation -->
+				</div><!-- .header-titles -->
+
+				<button class="kelpie-icon-button nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+					<?php kelpie_the_theme_svg( 'menu' ); ?>
+					<span class="kelpie-icon-button-label"><?php esc_html_e( 'Menu', 'kelpie' ); ?></span>
+				</button><!-- .nav-toggle -->
+
+				<div class="header-navigation-wrapper">
+					<?php if ( has_nav_menu( 'primary' ) ) : ?>
+						<nav class="expanded-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'kelpie' ); ?>" role="navigation">
+							<ul class="expanded-menu reset-list-style">
+								<?php
+								if ( has_nav_menu( 'primary' ) ) :
+									wp_nav_menu(
+										array(
+											'container'  => '',
+											'items_wrap' => '%3$s',
+											'theme_location' => 'primary',
+										)
+									);
+								endif;
+								?>
+							</ul>
+						</nav><!-- .expanded-menu-wrapper -->
+					<?php endif; ?>
+				</div><!-- .header-navigation-wrapper -->
+			</div><!-- .kelpie-site-navigation-menu -->
 		</header><!-- #masthead -->
+
+		<?php
+		// Output the menu modal.
+		get_template_part( 'template-parts/modal-menu' );
