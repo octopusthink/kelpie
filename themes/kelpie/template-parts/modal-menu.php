@@ -19,7 +19,7 @@
 
 				<div class="kelpie-close-nav-toggle-wrapper">
 					<button class="kelpie-icon-button" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
-						<?php kelpie_the_theme_svg( 'cross' ); ?>
+						<?php kelpie_the_theme_svg( 'x' ); ?>
 						<span class="kelpie-icon-button-label"><?php esc_html_e( 'Close', 'kelpie' ); ?></span>
 					</button><!-- .nav-toggle -->
 				</div>

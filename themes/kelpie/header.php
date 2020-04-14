@@ -42,7 +42,7 @@
 				</div><!-- .header-titles -->
 
 				<button class="kelpie-icon-button nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
-					<?php kelpie_the_theme_svg( 'ellipsis' ); ?>
+					<?php kelpie_the_theme_svg( 'menu' ); ?>
 					<span class="kelpie-icon-button-label"><?php esc_html_e( 'Menu', 'kelpie' ); ?></span>
 				</button><!-- .nav-toggle -->
 
