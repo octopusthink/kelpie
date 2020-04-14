@@ -1968,37 +1968,14 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 /* Post meta (author, date, comments) */
 .kelpie-post-meta {
-	display: flex;
 	list-style-type: none;
 	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.post-author {
-	font-size: 1.28rem;
-	color: #3b3f45;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-style: normal;
-	font-weight: 500;
-	letter-spacing: 0.015em;
-	line-height: 1.2;
-	text-transform: uppercase;
-	padding-left: 0.8rem;
-	padding-right: 0.8rem;
-}
-
-.post-date {
-	font-size: 1.28rem;
-	color: #3b3f45;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-style: normal;
-	font-weight: 500;
-	letter-spacing: 0.015em;
-	line-height: 1.2;
-	text-transform: uppercase;
-	padding-left: 0.8rem;
-	padding-right: 0.8rem;
-}
-
+.post-author,
+.post-date,
 .post-comment-link {
 	font-size: 1.28rem;
 	color: #3b3f45;
@@ -2010,6 +1987,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	text-transform: uppercase;
 	padding-left: 0.8rem;
 	padding-right: 0.8rem;
+	margin-bottom: 0.8rem;
 }
 
 /* Edit link (appears at the bottom of posts and pages */
