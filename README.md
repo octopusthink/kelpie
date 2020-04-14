@@ -71,11 +71,9 @@ This project is licensed under the MIT License - see the [LICENSE.txt](https://g
 
 ## Acknowledgments
 
-Kelpie borrows and steals from all sorts of sources. 
+Kelpie borrows and steals from all sorts of sources, namely:
 
-- [Ether](https://ether.thescenery.co/)
-- [GOV.UK Design System](https://design-system.service.gov.uk/)
-- [Carbon](https://www.carbondesignsystem.com/)
-- [Polaris](https://polaris.shopify.com/)
-- [Material Design](https://material.io/design/)
-- [Inclusive Components](https://inclusive-components.design/)
+- [_s](https://github.com/Automattic/_s)
+- [Gutenberg Starter Theme](https://github.com/WordPress/gutenberg-starter-theme)
+- [Twenty Twenty](https://wordpress.org/themes/twentytwenty/)
+- [Varia](https://github.com/Automattic/themes/blob/master/varia)
