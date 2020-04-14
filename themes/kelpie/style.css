@@ -1662,7 +1662,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	margin: 0 auto 4.8rem;
 	text-align: center;
 	max-width: 56rem;
-	padding: 2.4rem;
+	padding: 3.2rem;
 	display: grid;
 	grid-gap: 1.6rem;
 }

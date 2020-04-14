@@ -1675,6 +1675,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	letter-spacing: -0.025em;
 	line-height: 1;
 	text-transform: normal;
+	margin-bottom: 1.6rem;
 }
 
 /*--------------------------------------------------------------
