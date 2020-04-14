@@ -7,6 +7,9 @@ templates/*
 node_modules
 vendor
 
+dist/
+*.map
+
 # Theme and Plugin handling
 #
 # Ignore the parent, but explicitly exclude (from ignore)
