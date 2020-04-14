@@ -55,10 +55,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "blocks/lists";
 @import "blocks/quotes";
 
-// Post-related components
+// Single post- or page-related components
 @import "components/posts/post-taxonomies";
 @import "components/posts/post-meta";
-@import "components/edit-link";
+@import "components/posts/edit-link";
+@import "components/posts/navigation";
 
 @import "components/captions";
 @import "components/comments";
@@ -67,7 +68,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "components/infinite-scroll";
 @import "components/links";
 
-@import "components/post-navigation";
 @import "components/widgets";
 
 

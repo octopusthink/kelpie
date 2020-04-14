@@ -21,8 +21,12 @@ get_header(); ?>
 
 		the_post_navigation(
 			array(
-				'prev_text' => '&larr; %title',
-				'next_text' => '%title &rarr;',
+				'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'kelpie' ) . kelpie_get_theme_svg( 'arrow-right' ) . '</span> ' .
+					'<span class="screen-reader-text">' . __( 'Next post:', 'kelpie' ) . '</span>' .
+					'<span class="post-title">%title</span>',
+				'prev_text' => '<span class="meta-nav" aria-hidden="true">' .kelpie_get_theme_svg( 'arrow-left' ) . __( 'Previous', 'kelpie' ) . '</span> ' .
+					'<span class="screen-reader-text">' . __( 'Previous post:', 'kelpie' ) . '</span>' .
+					'<span class="post-title">%title</span>',
 			)
 		);
 
