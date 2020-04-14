@@ -12,12 +12,27 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<header class="entry-header kelpie-page-header">
-		<div class="entry-meta">
-			<?php kelpie_posted_on(); ?>
-		</div><!-- .entry-meta -->
+
+		<div class="kelpie-post-taxonomies">
+			<?php if ( has_category() ) : ?>
+				<div class="entry-categories">
+					<span class="screen-reader-text"><?php _e( 'Categories', 'kelpie' ); ?></span>
+					<?php the_category( ' ' ); ?>
+				</div><!-- .entry-categories -->
+			<?php endif; ?>
+
+			<?php if ( has_tag() ) : ?>
+				<span class="screen-reader-text"><?php _e( 'Tags', 'kelpie' ); ?></span>
+				<ul class="entry-tags">
+					<?php the_tags( '<li class="entry-tag">#', '</li><li class="entry-tag">#', '</li>' ); ?>
+				</ul><!-- .entry-tags -->
+			<?php endif; ?>
+		</div><!-- .kelpie-post-taxonomies -->
 
 		<?php the_title( '<h1 class="entry-title kelpie-page-title">', '</h1>' ); ?>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content kelpie-page-content">

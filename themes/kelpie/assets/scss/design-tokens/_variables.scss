@@ -3,7 +3,7 @@
  *
  * We try to use colour in a semantic and predicatable way, 
  * so we start by defining a palette of colours here, and then
- * we apply those colours to specific use cases.
+ * we apply those colours to specific use text-transforms.
  *
  * As a general rule, try to avoid calling the colours directly, 
  * and instead use the semantic colour variables defined below.
@@ -148,7 +148,7 @@ $typography: (
         letter-spacing: -0.025em,
         color: get($colors, "text", "default"),
         weight: 600,
-        case: normal,
+        text-transform: normal,
     ),
     "titles":  (
         font-family: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
@@ -157,7 +157,7 @@ $typography: (
         letter-spacing: -0.025em,
         color: get($colors, "text", "default"),
         weight: 400,
-        case: normal,
+        text-transform: normal,
     ),
     "subtitles":  (
         font-family: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
@@ -166,7 +166,7 @@ $typography: (
         letter-spacing: -0.015em,
         color: get($colors, "text", "default"),
         weight: 400,
-        case: normal,
+        text-transform: normal,
     ),
     "interface":  (
         font-family: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
@@ -175,7 +175,16 @@ $typography: (
         letter-spacing: -0.015em,
         color: get($colors, "text", "default"),
         weight: 500,
-        case: normal,
+        text-transform: normal,
+    ),
+    "metadata":  (
+        font-family: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
+        font-style: normal,
+        line-height: 1.2,
+        letter-spacing: 0.015em,
+        color: get($colors, "text", "default"),
+        weight: 500,
+        text-transform: uppercase,
     ),
     "sizes": (
         "xs": ($typescale-base / $typescale-modifier / $typescale-modifier),
