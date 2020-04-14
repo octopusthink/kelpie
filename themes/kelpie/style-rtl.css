@@ -1061,9 +1061,9 @@ big {
 
 .social-icons a {
 	align-items: center;
-	background: hotpink;
+	background: #e33592;
 	border-radius: 50%;
-	color: black;
+	color: #fff;
 	display: flex;
 	height: 4.4rem;
 	justify-content: center;
@@ -1074,6 +1074,8 @@ big {
 }
 
 .social-icons a:focus, .social-icons a:hover {
+	background: #00a8b4;
+	color: inherit;
 	transform: scale(1.1);
 	text-decoration: none;
 }
@@ -1082,7 +1084,7 @@ big {
 # Site Header
 --------------------------------------------------------------*/
 .site-header {
-	background: #000;
+	background: #181b1c;
 	color: #fff;
 	padding: 1.6rem;
 	position: relative;
@@ -1112,7 +1114,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-title {
 	font-size: 3.90625rem;
-	color: #97a0af;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -1162,7 +1164,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 ## Modal site menu (used primarily for mobile devices)
 --------------------------------------------------------------*/
 .menu-modal {
-	background: #fff;
+	background: #181b1c;
 	display: none;
 	opacity: 0;
 	overflow-y: auto;
@@ -1198,7 +1200,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 }
 
 .menu-modal-inner {
-	background: black;
 	display: flex;
 	justify-content: stretch;
 	overflow: auto;
@@ -1241,7 +1242,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	font-weight: 500;
 	letter-spacing: -0.015em;
 	line-height: 1.2;
-	border-color: grey;
 	border-style: solid;
 	border-width: 0.1rem 0 0 0;
 	display: flex;
@@ -1256,7 +1256,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 }
 
 .modal-menu .menu-item a {
-	color: hotpink;
+	color: #fff;
 	display: block;
 	padding: 2.4rem;
 	text-decoration: none;
@@ -1264,6 +1264,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 }
 
 .modal-menu .menu-item a:focus, .modal-menu .menu-item a:hover {
+	color: #00a8b4;
 	text-decoration: underline;
 }
 
@@ -1273,7 +1274,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 }
 
 .sub-menu-toggle {
-	border-right: 0.1rem solid #dedfdf;
+	border-right: 0.1rem solid;
 	flex-shrink: 0;
 	margin: 1rem 0;
 	padding: 0 2.5rem;
@@ -1398,7 +1399,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	justify-content: center;
 }
 
-/* Header Navigation ------------------------- */
+/* Expanded (desktop) menu ------------------------- */
 .header-navigation-wrapper {
 	display: none;
 }
@@ -1471,12 +1472,13 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 }
 
 .expanded-menu .menu-item a {
-	color: hotpink;
+	color: #fff;
 	display: block;
 	text-decoration: none;
 }
 
 .expanded-menu .menu-item a:hover, .expanded-menu .menu-item a:focus {
+	color: #00a8b4;
 	text-decoration: underline;
 }
 
@@ -1496,9 +1498,8 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 }
 
 .expanded-menu .sub-menu {
-	background: #000;
+	background: #666c76;
 	border-radius: 0.4rem;
-	color: #fff;
 	opacity: 0;
 	padding: 0.8rem 0;
 	position: absolute;
@@ -1525,7 +1526,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .expanded-menu .sub-menu::after {
 	border: 0.8rem solid transparent;
-	border-bottom-color: #000;
+	border-bottom-color: #666c76;
 	left: 1.8rem;
 }
 
@@ -1533,10 +1534,10 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	margin: 0;
 }
 
-.expanded-menu .sub-menu a {
+.expanded-menu .sub-menu .menu-item a {
 	background: transparent;
 	border: none;
-	color: inherit;
+	color: #fff;
 	display: block;
 	padding: 0.8rem 1.6rem;
 	transition: background-color 0.15s linear;
@@ -1577,7 +1578,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .expanded-menu .sub-menu .sub-menu::after {
 	border-bottom-color: transparent;
-	border-left-color: #000;
+	border-left-color: #666c76;
 	bottom: auto;
 	left: -1.6rem;
 	top: 2rem;
@@ -1679,7 +1680,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-main h2 {
 	font-size: 4.88281rem;
-	color: #97a0af;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -1691,7 +1692,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-main h3 {
 	font-size: 3.90625rem;
-	color: #97a0af;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -1703,7 +1704,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-main h4 {
 	font-size: 3.125rem;
-	color: #97a0af;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -2098,7 +2099,7 @@ a:hover, a:active {
 
 .entry-header .entry-title {
 	font-size: 3.90625rem;
-	color: #97a0af;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;

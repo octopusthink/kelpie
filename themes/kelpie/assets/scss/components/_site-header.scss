@@ -2,8 +2,8 @@
 # Site Header
 --------------------------------------------------------------*/
 .site-header {
-	background: #000;
-	color: #fff;
+	background: get($colors, "layout", "header-background" );
+	color: get($colors, "text", "inverse-light");
 	padding: get($site, "padding");
 	position: relative;
 }

@@ -1,7 +1,4 @@
 /* Social Icons ------------------------------ */
-$color-primary: black;
-$color-secondary: hotpink;
-
 .social-icons {
 	display: flex;
 	flex-wrap: wrap;
@@ -14,9 +11,9 @@ $color-secondary: hotpink;
 
     a {
         align-items: center;
-        background: $color-secondary;
+        background: get($colors, "interactive", "text");
         border-radius: 50%;
-        color: $color-primary;
+        color: get($colors, "text", "inverse-light");
         display: flex;
         height: 4.4rem;
         justify-content: center;
@@ -27,6 +24,8 @@ $color-secondary: hotpink;
 
         &:focus,
         &:hover {
+            background: get($colors, "interactive", "hover");
+            color: inherit;
 	        transform: scale(1.1);
 	        text-decoration: none;
         }

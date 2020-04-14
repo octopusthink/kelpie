@@ -57,6 +57,8 @@ $colors: (
         "content-background": get($palette, "neutral", "off-white"),
         "header-background": get($palette, "neutral", "black"),
         "footer-background": get($palette, "neutral", "black"),
+        "modal-menu-background": get($palette, "neutral", "black"),
+        "submenu-background": get($palette, "neutral", "grey800"),
     ),
 
     // Colours used for text.
@@ -76,7 +78,15 @@ $colors: (
         "text": get($palette, "primary", "default"),
         "focus": get($palette, "primary", "light"),
         "hover": get($palette, "secondary", "default"),
-    )
+    ),
+    
+    // Colours used for borders.
+    "borders": (
+        "dark": get($palette, "neutral", "grey400"),
+        "default": get($palette, "neutral", "grey200"),
+        "inverse": get($palette, "neutral", "grey800"),
+        "inverse-light": get($palette, "neutral", "grey600"),
+    ), 
 );
 
 /* Spacing

@@ -3,7 +3,7 @@
 	align-items: center;
 	background: transparent;
 	border: none;
-	color: #fff;
+	color: get($colors, "text", "inverse-light");
 	display: flex;
 	height: 2.4rem;
 	justify-content: center;

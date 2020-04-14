@@ -1,10 +1,4 @@
-$color-primary-dark: grey;
-$color-primary: black;
-$color-secondary: hotpink;
-$color-white: white;
-$color-primary-white: white;
-
-/* Header Navigation ------------------------- */
+/* Expanded (desktop) menu ------------------------- */
 
 .header-navigation-wrapper {
 	display: none;
@@ -79,12 +73,13 @@ $color-primary-white: white;
 	position: relative;
 
 	a {
-		color: $color-secondary;
+		color: get($colors, "text", "inverse-light");
 		display: block;
 		text-decoration: none;
 
 		&:hover,
 		&:focus {
+			color: get($colors, "interactive", "hover");
 			text-decoration: underline;
 		}
 	}
@@ -106,9 +101,8 @@ $color-primary-white: white;
 
 // Sub-menus.
 .expanded-menu .sub-menu {
-	background: #000;
+	background: get($colors, "layout", "submenu-background");
 	border-radius: 0.4rem;
-	color: #fff;
 	opacity: 0;
 	padding: get($spacing, "xxs") 0;
 	position: absolute;
@@ -135,22 +129,22 @@ $color-primary-white: white;
 
 	&::after {
 		border: 0.8rem solid transparent;
-		border-bottom-color: #000;
+		border-bottom-color: get($colors, "layout", "submenu-background");
 		right: 1.8rem;
 	}
 
 	.menu-item {
 		margin: 0;
-	}
 
-	a {
-		background: transparent;
-		border: none;
-		color: inherit;
-		display: block;
-		padding: get($spacing, "xxs") get($spacing, "xs");
-		transition: background-color 0.15s linear;
-		width: 100%;
+		a {
+			background: transparent;
+			border: none;
+			color: get($colors, "text", "inverse-light");
+			display: block;
+			padding: get($spacing, "xxs") get($spacing, "xs");
+			transition: background-color 0.15s linear;
+			width: 100%;
+		}
 	}
 }
 
@@ -190,7 +184,7 @@ $color-primary-white: white;
 	&::after {
 		border-bottom-color: transparent;
 		/*rtl:ignore*/
-		border-left-color: #000;
+		border-left-color: get($colors, "layout", "submenu-background");
 		bottom: auto;
 		right: -1.6rem;
 		top: 2rem;
