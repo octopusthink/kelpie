@@ -48,6 +48,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 .site-description {
 	@include typography(subtitles, small);
 	color: inherit;
+	display: none;
 	margin: 0;
 	opacity: 0.5;
 	word-wrap: break-word;
