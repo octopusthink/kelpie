@@ -1,3 +1,84 @@
+/*
+ * Colour palettes
+ *
+ * We try to use colour in a semantic and predicatable way, 
+ * so we start by defining a palette of colours here, and then
+ * we apply those colours to specific use cases.
+ *
+ * As a general rule, try to avoid calling the colours directly, 
+ * and instead use the semantic colour variables defined below.
+ */
+$palette: (
+    // Neutrals
+    "neutral": (
+        "white": #fff,
+        "off-white": #f8f9fa,
+        "grey100": #ebedf0,
+        "grey200": #dee0e5,
+        "grey300": #cfd3da,
+        "grey400": #bec4cd,
+        "grey500": #acb3bf,
+        "grey600": #97a0af,
+        "grey700": #818996,
+        "grey800": #666c76,
+        "grey900": #3b3f45,
+        "black": #181b1c,
+    ),
+
+    // Accent or brand colours.
+    // May also require a "text" value (for brighter links) and an "inverse" value, depending on how colour is used in the theme.
+    "primary": (
+        "white": #fcebf4,
+        "light": #f19dca,
+        "default": #e33592,
+        "dark": #b32973,
+        "black": #6a1844,
+    ),
+
+    "secondary": (
+        "white": #e2f5f6,
+        "light": #76d0d6,
+        "default": #00a8b4,
+        "dark": #00858e,
+        "black": #004f54,
+    ),
+);
+
+/*
+ * Colours
+ *
+ * We define a number of semantic colour variables here to apply colours 
+ * in a predictable way. When applying colours to elements, try to use these
+ * variables!
+ */
+$colors: (
+    // Colours of layout elements.
+    "layout": (
+        "content-background": get($palette, "neutral", "off-white"),
+        "header-background": get($palette, "neutral", "black"),
+        "footer-background": get($palette, "neutral", "black"),
+    ),
+
+    // Colours used for text.
+    "text": (
+        "default": get($palette, "neutral", "grey800"),
+        "dark": get($palette, "neutral", "black"),
+        "light": get($palette, "neutral", "grey600"),
+        "inverse": get($palette, "neutral", "grey200"),
+        "inverse-dark": get($palette, "neutral", "grey400"),
+        "inverse-light": get($palette, "neutral", "white"),
+    ), 
+
+    // Colours for interactive elements (buttons, links).
+    "interactive": (
+        "background": get($palette, "primary", "dark"),
+        "border": get($palette, "primary", "default"),
+        "text": get($palette, "primary", "default"),
+        "focus": get($palette, "primary", "light"),
+        "hover": get($palette, "secondary", "default"),
+    )
+);
+
 /* Spacing
  *
  * We use an 8px grid and size spacing based on 10rem = 1px.
@@ -47,7 +128,7 @@ $typography: (
         font-style: normal,
         line-height: 1.6,
         letter-spacing: 0,
-        color: #000,
+        color: get($colors, "text", "default"),
         weight: 400,
     ),
     "headings":  (
@@ -55,7 +136,7 @@ $typography: (
         font-style: normal,
         line-height: 1.2,
         letter-spacing: -0.025em,
-        color: #000,
+        color: get($colors, "text", "default"),
         weight: 600,
         case: normal,
     ),
@@ -64,7 +145,7 @@ $typography: (
         font-style: normal,
         line-height: 1,
         letter-spacing: -0.05em,
-        color: hotpink,
+        color: get($colors, "text", "dark"),
         weight: 800,
         case: normal,
     ),
@@ -73,7 +154,7 @@ $typography: (
         font-style: normal,
         line-height: 1.2,
         letter-spacing: -0.015em,
-        color: #666,
+        color: get($colors, "text", "light"),
         weight: 400,
         case: normal,
     ),
@@ -82,7 +163,7 @@ $typography: (
         font-style: normal,
         line-height: 1.2,
         letter-spacing: -0.015em,
-        color: hotpink,
+        color: get($colors, "text", "default"),
         weight: 500,
         case: normal,
     ),

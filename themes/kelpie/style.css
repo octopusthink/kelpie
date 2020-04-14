@@ -824,6 +824,23 @@ object {
 	display: inline-block;
 }
 
+/*
+ * Colour palettes
+ *
+ * We try to use colour in a semantic and predicatable way, 
+ * so we start by defining a palette of colours here, and then
+ * we apply those colours to specific use cases.
+ *
+ * As a general rule, try to avoid calling the colours directly, 
+ * and instead use the semantic colour variables defined below.
+ */
+/*
+ * Colours
+ *
+ * We define a number of semantic colour variables here to apply colours 
+ * in a predictable way. When applying colours to elements, try to use these
+ * variables!
+ */
 /* Spacing
  *
  * We use an 8px grid and size spacing based on 10rem = 1px.
@@ -1016,7 +1033,7 @@ big {
 
 .kelpie-icon-button-label {
 	font-size: 1.28rem;
-	color: hotpink;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 500;
@@ -1095,7 +1112,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-title {
 	font-size: 3.90625rem;
-	color: #000;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -1113,7 +1130,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-description {
 	font-size: 2rem;
-	color: #666;
+	color: #97a0af;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -1218,7 +1235,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .modal-menu .menu-item {
 	font-size: 2rem;
-	color: hotpink;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 500;
@@ -1362,7 +1379,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .menu-copyright {
 	font-size: 1.28rem;
-	color: #000;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -1442,7 +1459,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .expanded-menu .menu-item {
 	font-size: 1.6rem;
-	color: hotpink;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 500;
@@ -1628,7 +1645,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 --------------------------------------------------------------*/
 .site-main p {
 	font-size: 1.6rem;
-	color: #000;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -1651,7 +1668,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 --------------------------------------------------------------*/
 .site-main h1 {
 	font-size: 6.10352rem;
-	color: hotpink;
+	color: #181b1c;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 800;
@@ -1663,7 +1680,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-main h2 {
 	font-size: 4.88281rem;
-	color: #000;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -1675,7 +1692,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-main h3 {
 	font-size: 3.90625rem;
-	color: #000;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -1687,7 +1704,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-main h4 {
 	font-size: 3.125rem;
-	color: #000;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;
@@ -1699,7 +1716,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-main h5 {
 	font-size: 2.5rem;
-	color: #666;
+	color: #97a0af;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -1711,7 +1728,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-main h6 {
 	font-size: 2rem;
-	color: #666;
+	color: #97a0af;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -1735,7 +1752,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 --------------------------------------------------------------*/
 .site-main ul, .site-main ol {
 	font-size: 1.6rem;
-	color: #000;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -1773,7 +1790,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 --------------------------------------------------------------*/
 .site-main blockquote {
 	font-size: 1.6rem;
-	color: #000;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -2082,7 +2099,7 @@ a:hover, a:active {
 
 .entry-header .entry-title {
 	font-size: 3.90625rem;
-	color: #000;
+	color: #666c76;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-weight: 600;
