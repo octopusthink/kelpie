@@ -1,9 +1,9 @@
 const devMode = process.env.NODE_ENV !== 'production';
 
-const path = require('path');
-const globImporter = require('node-sass-glob-importer');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WebpackRTLPlugin = require('webpack-rtl-plugin');
+const path = require( 'path' );
+const globImporter = require( 'node-sass-glob-importer' );
+const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
+const WebpackRTLPlugin = require( 'webpack-rtl-plugin' );
 
 const THEME_NAME = 'kelpie';
 
@@ -12,11 +12,11 @@ module.exports = [
 		devtool: devMode ? 'source-map' : 'cheap-eval-source-map',
 		entry: {
 			// './src/js/index.js',
-			style: `./themes/${THEME_NAME}/assets/scss/style.scss`,
+			style: `./themes/${ THEME_NAME }/assets/scss/style.scss`,
 		},
 		output: {
 			filename: '[name].js',
-			path: path.join(__dirname, 'themes', THEME_NAME),
+			path: path.join( __dirname, 'themes', THEME_NAME ),
 			chunkFilename: '[name]-[chunkhash].js',
 			// publicPath: '',
 		},
@@ -31,7 +31,7 @@ module.exports = [
 				// },
 				{
 					test: /\.css$/,
-					use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader'],
+					use: [ MiniCssExtractPlugin.loader, 'style-loader', 'css-loader' ],
 				},
 				{
 					test: /\.scss$/,
@@ -55,10 +55,10 @@ module.exports = [
 			],
 		},
 		plugins: [
-			new MiniCssExtractPlugin({
-				filename: '/themes/kelpie/[name].css',
-			}),
-			new WebpackRTLPlugin({
+			new MiniCssExtractPlugin( {
+				filename: '[name].css',
+			} ),
+			new WebpackRTLPlugin( {
 				diffOnly: true,
 				filename: 'style-rtl.css',
 				options: {
@@ -74,7 +74,7 @@ module.exports = [
 					plugins: [],
 					map: false,
 				},
-			}),
+			} ),
 		],
 		watch: devMode,
 	},

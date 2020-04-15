@@ -1,14 +1,6 @@
 /* Comment Item ----------------------------- */
 
-/* COMMENT HEADER */
-
-.comments .comment,
-.comments .pingback,
-.comments .trackback,
-.comments .review {
-	padding-top: 3.5rem;
-}
-
+// Not sure what these are for just yet.
 div.comment:first-of-type {
 	margin-top: 3.5rem;
 	padding-top: 0;
@@ -19,127 +11,91 @@ div.comment:first-of-type {
 	padding-top: 0;
 }
 
-.comment-body {
-	position: relative;
-}
-
+// Nested comments.
 .comment .comment {
 	padding-left: 5%;
+	border: 1px solid red;
 }
 
+// Comment container
+.comment {
+	margin-bottom: get( $spacing, 'l' );
+}
+
+// Comment meta container
 .comment-meta {
-	line-height: 1.1;
-	margin-bottom: 1.5rem;
-	min-height: 5rem;
-	padding-left: 5rem;
+	margin-bottom: get( $spacing, 's' );
+	min-height: 8rem;
 	position: relative;
+	padding-left: 9.2rem; // To account for avatars!
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	a {
+		color: inherit;
+	}
 }
 
-.hide-avatars .comment-meta {
-	min-height: 0;
-	padding-left: 0;
-}
-
-.comment-meta a {
-	color: inherit;
-}
-
-.comment-author {
-	font-size: 1.8rem;
-	font-family: UniversLTPro-55Roman, "Helvetica Neue", Helvetica, sans-serif;
-	letter-spacing: -0.027777778em;
-}
-
-.comment-author a {
-	text-decoration: underline;
-}
-
-.comment-author a:hover,
-.comment-author a:focus {
-	text-decoration: none;
-}
-
+// Avatar
 .comment-meta .avatar {
-	height: 4rem;
+	height: 8rem;
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 4rem;
+	width: 8rem;
 }
 
-.comment-author .url {
-	text-decoration: underline;
+// Author name
+.comment-author {
+	@include typography( metadata, medium );
+
+	a {
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
 }
 
+// Date posted
 .comment-metadata {
-	color: #6d6d6d;
-	font-size: 1.4rem;
-	font-family: UniversLTPro-55Roman, "Helvetica Neue", Helvetica, sans-serif;
-	margin-top: 0.6rem;
+	@include typography( subtitles, small );
+
+	a {
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
 }
 
-.comment-metadata a {
-	text-decoration: none;
+// Comment body
+.comment-content {
+	@include typography( body, medium );
 }
 
-.comment-metadata a:focus,
-.comment-metadata a:hover {
-	text-decoration: underline;
-}
-
-
-/* COMMENT CONTENT */
-
-.comment-content.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-	width: 100%;
-}
-
-.comment-content.entry-content .alignleft {
-
-	/*rtl:ignore*/
-	margin-left: 0;
-}
-
-.comment-content.entry-content .alignright {
-
-	/*rtl:ignore*/
-	margin-right: 0;
-}
-
-/* COMMENT FOOTER */
+// Comment footer
 .comment-footer-meta {
+	@include typography( metadata, medium );
 	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
-	font-size: 1.2rem;
-	font-family: UniversLTPro-55Roman, "Helvetica Neue", Helvetica, sans-serif;
-	justify-content: flex-start;
-	letter-spacing: 0.030833333em;
-	line-height: 1;
 	margin: 1.5rem 0 -1rem -1.5rem;
-	text-transform: uppercase;
-}
-
-.comment-footer-meta > * {
-	margin: 0 0 1rem 1.5rem;
 }
 
 .comment-reply-link {
-	background-color: #2e4371;
-	color: #fff;
+	background-color: get( $colors, 'interactive', 'background' );
+	color: get( $colors, 'text', 'inverse' );
 	display: block;
-	padding: 0.7rem;
+	padding: get( $spacing, 'xxs' );
 }
 
-.bypostauthor .comment-footer-meta .by-post-author {
+.by-post-author {
+	padding-left: get( $spacing, 'hairline' );
 	display: block;
 }
-
-.comment-footer-meta a {
-	text-decoration: none;
-}
-
-.comment-footer-meta a:focus,
-.comment-footer-meta a:hover {
-	text-decoration: underline;
-}   
