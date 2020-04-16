@@ -35,21 +35,23 @@ if ( $comments ) {
 			<h2 class="comment-reply-title screen-reader-text">
 			<?php
 			if ( ! have_comments() ) {
-				_e( 'Leave a comment', 'kelpie' );
+				esc_html_e( 'Leave a comment', 'kelpie' );
 			} elseif ( '1' === $comments_number ) {
 				/* translators: %s: post title */
-				printf( _x( 'One reply to &ldquo;%s&rdquo;', 'comments title', 'kelpie' ), esc_html( get_the_title() ) );
+				printf( esc_html_x( 'One reply to &ldquo;%s&rdquo;', 'comments title', 'kelpie' ), esc_html( get_the_title() ) );
 			} else {
 				echo sprintf(
-					/* translators: 1: number of comments, 2: post title */
-					_nx(
-						'%1$s reply to &ldquo;%2$s&rdquo;',
-						'%1$s replies to &ldquo;%2$s&rdquo;',
-						$comments_number,
-						'comments title',
-						'kelpie'
+					esc_html(
+						/* translators: 1: number of comments, 2: post title */
+						_nx(
+							'%1$s reply to &ldquo;%2$s&rdquo;',
+							'%1$s replies to &ldquo;%2$s&rdquo;',
+							$comments_number,
+							'comments title',
+							'kelpie'
+						)
 					),
-					number_format_i18n( $comments_number ),
+					esc_html( number_format_i18n( $comments_number ) ),
 					esc_html( get_the_title() )
 				);
 			}
@@ -128,7 +130,7 @@ if ( comments_open() || pings_open() ) {
 
 	<div class="comment-respond" id="respond">
 
-		<p class="comments-closed"><?php _e( 'Comments are closed.', 'kelpie' ); ?></p>
+		<p class="comments-closed"><?php esc_html_e( 'Comments are closed.', 'kelpie' ); ?></p>
 
 	</div><!-- #respond -->
 

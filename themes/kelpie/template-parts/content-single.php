@@ -18,13 +18,13 @@
 		<div class="kelpie-post-taxonomies">
 			<?php if ( has_category() ) : ?>
 				<div class="entry-categories">
-					<span class="screen-reader-text"><?php _e( 'Categories', 'kelpie' ); ?></span>
+					<span class="screen-reader-text"><?php esc_html_e( 'Categories', 'kelpie' ); ?></span>
 					<?php the_category( ' ' ); ?>
 				</div><!-- .entry-categories -->
 			<?php endif; ?>
 
 			<?php if ( has_tag() ) : ?>
-				<span class="screen-reader-text"><?php _e( 'Tags', 'kelpie' ); ?></span>
+				<span class="screen-reader-text"><?php esc_html_e( 'Tags', 'kelpie' ); ?></span>
 				<ul class="entry-tags">
 					<?php the_tags( '<li class="entry-tag">#', '</li><li class="entry-tag">#', '</li>' ); ?>
 				</ul><!-- .entry-tags -->

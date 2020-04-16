@@ -9,7 +9,7 @@
  * @since 0.1.0
  */
 
- /**
+/**
  * Post Meta
  */
 /**
@@ -148,14 +148,14 @@ function kelpie_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					?>
 					<li class="post-author meta-wrapper">
 						<span class="meta-icon">
-							<span class="screen-reader-text"><?php _e( 'Post author', 'kelpie' ); ?></span>
+							<span class="screen-reader-text"><?php esc_html_e( 'Post author', 'kelpie' ); ?></span>
 							<?php kelpie_the_theme_svg( 'user' ); ?>
 						</span>
 						<span class="meta-text">
 							<?php
 							printf(
 								/* translators: %s: Author name */
-								__( 'By %s', 'kelpie' ),
+								esc_html__( 'By %s', 'kelpie' ),
 								'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author_meta( 'display_name' ) ) . '</a>'
 							);
 							?>
@@ -172,7 +172,7 @@ function kelpie_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					?>
 					<li class="post-date meta-wrapper">
 						<span class="meta-icon">
-							<span class="screen-reader-text"><?php _e( 'Post date', 'kelpie' ); ?></span>
+							<span class="screen-reader-text"><?php esc_html_e( 'Post date', 'kelpie' ); ?></span>
 							<?php kelpie_the_theme_svg( 'calendar' ); ?>
 						</span>
 						<span class="meta-text">
@@ -190,11 +190,11 @@ function kelpie_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					?>
 					<li class="post-categories meta-wrapper">
 						<span class="meta-icon">
-							<span class="screen-reader-text"><?php _e( 'Categories', 'kelpie' ); ?></span>
+							<span class="screen-reader-text"><?php esc_html_e( 'Categories', 'kelpie' ); ?></span>
 							<?php kelpie_the_theme_svg( 'folder' ); ?>
 						</span>
 						<span class="meta-text">
-							<?php _ex( 'In', 'A string that is output before one or more categories', 'kelpie' ); ?> <?php the_category( ', ' ); ?>
+							<?php echo( esc_html_x( 'In', 'A string that is output before one or more categories', 'kelpie' ) ); ?> <?php the_category( ', ' ); ?>
 						</span>
 					</li>
 					<?php
@@ -208,7 +208,7 @@ function kelpie_get_post_meta( $post_id = null, $location = 'single-top' ) {
 					?>
 					<li class="post-tags meta-wrapper">
 						<span class="meta-icon">
-							<span class="screen-reader-text"><?php _e( 'Tags', 'kelpie' ); ?></span>
+							<span class="screen-reader-text"><?php esc_html_e( 'Tags', 'kelpie' ); ?></span>
 							<?php kelpie_the_theme_svg( 'tag' ); ?>
 						</span>
 						<span class="meta-text">
@@ -246,7 +246,7 @@ function kelpie_get_post_meta( $post_id = null, $location = 'single-top' ) {
 							<?php kelpie_the_theme_svg( 'bookmark' ); ?>
 						</span>
 						<span class="meta-text">
-							<?php _e( 'Sticky post', 'kelpie' ); ?>
+							<?php esc_html_e( 'Sticky post', 'kelpie' ); ?>
 						</span>
 					</li>
 					<?php
@@ -286,9 +286,9 @@ function kelpie_get_post_meta( $post_id = null, $location = 'single-top' ) {
 			return $meta_output;
 
 		}
-		}
+	}
 
-		}
+}
 
 if ( ! function_exists( 'kelpie_entry_footer' ) ) :
 	/**
@@ -324,12 +324,6 @@ endif;
 function kelpie_edit_post_link( $link, $post_id, $text ) {
 	if ( is_admin() ) {
 		return $link;
-	}
-
-	$edit_url = get_edit_post_link( $post_id );
-
-	if ( ! $edit_url ) {
-		return;
 	}
 
 	$text = sprintf(
