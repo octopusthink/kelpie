@@ -158,35 +158,6 @@ function kelpie_content_width() {
 add_action( 'after_setup_theme', 'kelpie_content_width', 0 );
 
 /**
- * Register Google Fonts
- */
-function kelpie_fonts_url() {
-	$fonts_url = '';
-
-	/*
-	 *Translators: If there are characters in your language that are not
-	 * supported by Noto Serif, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'kelpie' );
-
-	if ( 'off' !== $notoserif ) {
-		$font_families   = array();
-		$font_families[] = 'Noto Serif:400,400italic,700,700italic';
-
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-
-	return $fonts_url;
-
-}
-
-/**
  * Enqueue scripts and styles.
  */
 function kelpie_scripts() {
@@ -197,8 +168,6 @@ function kelpie_scripts() {
 	wp_enqueue_style( 'kelpie-style', get_stylesheet_uri(), array(), $theme_version );
 
 	wp_enqueue_style( 'kelpie-blockstyles', get_template_directory_uri() . '/css/blocks.css', array(), $theme_version );
-
-	wp_enqueue_style( 'kelpie-fonts', kelpie_fonts_url(), array(), $theme_version );
 
 	wp_enqueue_script( 'kelpie-js', get_template_directory_uri() . '/js/index.js', array(), $theme_version, false );
 	wp_script_add_data( 'kelpie-js', 'async', true );
