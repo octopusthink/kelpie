@@ -2,18 +2,17 @@
 # Quotes
 --------------------------------------------------------------*/
 .kelpie-page-content {
-    p {
-        @include typography(body);
-        margin: 0 auto get($spacing, "s");
-        max-width: get($site, "max-content-width");
+	p {
+		@include typography( body );
+		@include content-block();
 
-        // Gutenberg Font-size utility classes
-        &.has-small-font-size {
-            @include font-size(body, small);
-        }
+		// Gutenberg Font-size utility classes
+		&.has-small-font-size {
+			@include font-size( body, small );
+		}
 
-        &.has-large-font-size {
-            @include font-size(body, large);
-        }
-    }
+		&.has-large-font-size {
+			@include font-size( body, large );
+		}
+	}
 }

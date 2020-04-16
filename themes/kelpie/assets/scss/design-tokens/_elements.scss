@@ -4,6 +4,12 @@
 	outline: 0;
 }
 
+// Style content blocks within pages so they're consistently spaced.
+@mixin content-block() {
+	margin: 0 auto get( $spacing, 's' );
+	max-width: get( $site, 'max-content-width' );
+}
+
 // Apply button styles.
 @mixin button( $class: default, $size: medium ) {
 	@include typography( interface, medium );
