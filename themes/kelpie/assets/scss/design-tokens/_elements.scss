@@ -18,10 +18,10 @@
 	border-radius: 0;
 	color: get( $colors, 'text', 'inverse-light' );
 	cursor: pointer;
-	display: block;
+	display: inline-block;
 	margin: 0;
 	outline: none;
-	padding: get( $spacing, 'xxs' ) get( $spacing, 'm' );
+	padding: get( $spacing, 'xxs' ) get( $spacing, 'xs' );
 	position: relative;
 	text-align: center;
 	text-decoration: none;
