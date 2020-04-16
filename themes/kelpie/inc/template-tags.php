@@ -354,6 +354,36 @@ function kelpie_edit_post_link( $link, $post_id, $text ) {
 add_filter( 'edit_post_link', 'kelpie_edit_post_link', 10, 3 );
 
 /**
+ * Archives
+ */
+/**
+ * Filters the archive title and styles the word before the first colon.
+ *
+ * @param string $title Current archive title.
+ *
+ * @return string $title Current archive title.
+ */
+function kelpie_get_the_archive_title( $title ) {
+
+	$regex = apply_filters(
+		'kelpie_get_the_archive_title_regex',
+		array(
+			'pattern'     => '/(\A[^\:]+)\:/',
+			'replacement' => '<span class="kelpie-archive-type">$1</span>',
+		)
+	);
+
+	if ( empty( $regex ) ) {
+		return $title;
+	}
+
+	return preg_replace( $regex['pattern'], $regex['replacement'], $title );
+
+}
+
+add_filter( 'get_the_archive_title', 'kelpie_get_the_archive_title' );
+
+/**
  * Logo & Description
  */
 /**
