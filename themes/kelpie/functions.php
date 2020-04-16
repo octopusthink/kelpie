@@ -134,6 +134,57 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 			)
 		);
 
+		// Editor color palette.
+		add_theme_support(
+			'editor-color-palette',
+			array(
+				array(
+					'name'  => __( 'Primary', 'varia' ),
+					'slug'  => 'primary',
+					'color' => '#e33592',
+				),
+				array(
+					'name'  => __( 'Primary Dark', 'varia' ),
+					'slug'  => 'primary-dark',
+					'color' => '#b32973',
+				),
+				array(
+					'name'  => __( 'Primary Light', 'varia' ),
+					'slug'  => 'primary-light',
+					'color' => '#f19dca',
+				),
+				array(
+					'name'  => __( 'Secondary', 'varia' ),
+					'slug'  => 'secondary',
+					'color' => '#00a8b4',
+				),
+				array(
+					'name'  => __( 'Secondary Light', 'varia' ),
+					'slug'  => 'secondary-light',
+					'color' => '#76d0d6',
+				),
+				array(
+					'name'  => __( 'Secondary Dark', 'varia' ),
+					'slug'  => 'secondary-dark',
+					'color' => '#00858e',
+				),
+				array(
+					'name'  => __( 'Black', 'varia' ),
+					'slug'  => 'black',
+					'color' => '#181b1c',
+				),
+				array(
+					'name'  => __( 'White', 'varia' ),
+					'slug'  => 'white',
+					'color' => '#FFFFFF',
+				),
+			)
+		);
+
+		// Disable custom colours and font sizes to increase consistency.
+		add_theme_support('disable-custom-font-sizes');
+		add_theme_support( 'disable-custom-colors' );
+
 		// Add support for Global Styles.
 		add_theme_support(
 			'jetpack-global-styles',

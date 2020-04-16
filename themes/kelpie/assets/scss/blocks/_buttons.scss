@@ -6,5 +6,9 @@
 }
 
 .wp-block-button__link {
-	@include button();
+	@include button( 'none' );
+}
+
+.wp-block-button__link:not( .has-background ) {
+	background: get( $colors, 'interactive', 'background' );
 }

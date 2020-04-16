@@ -11,9 +11,8 @@
 }
 
 // Apply button styles.
-@mixin button( $class: default, $size: medium ) {
+@mixin button( $color: default, $style: default, $size: medium ) {
 	@include typography( interface, medium );
-	background: get( $colors, 'interactive', 'background' );
 	border: 0;
 	border-radius: 0;
 	color: get( $colors, 'text', 'inverse-light' );
@@ -27,6 +26,10 @@
 	text-decoration: none;
 	top: 0;
 	transition: all 200ms ease-out;
+
+	@if $color == 'default' {
+		background: get( $colors, 'interactive', 'background' );
+	}
 
 	&:hover {
 		background: get( $colors, 'interactive', 'hover' );

@@ -5,10 +5,6 @@
 //@import 'base/sanitize';
 @import 'base/wp-normalize';
 
-.wp-block h1 {
-	font-size: 30%; // Set base font size at 10px for easier measurements in rems.
-}
-
 // Import all our variables & design tokens.
 @import 'design-tokens/**/*.scss';
 
@@ -16,6 +12,7 @@
 @import 'base/**/*.scss';
 
 // Gutenberg blocks, scoped to .editor-styles-wrapper
+@import 'editor-styles/_colors.scss';
 @import 'blocks/**/*.scss';
 
 // Editor overrides.
