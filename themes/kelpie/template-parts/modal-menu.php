@@ -95,7 +95,7 @@
 									'match_menu_classes' => true,
 									'show_toggles'       => true,
 									'title_li'           => false,
-									'walker'             => new kelpie_Walker_Page(),
+									'walker'             => new Kelpie_Walker_Page(),
 								)
 							);
 

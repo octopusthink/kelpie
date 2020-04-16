@@ -207,6 +207,11 @@ require get_template_directory() . '/classes/class-kelpie-svg-icons.php';
 require get_template_directory() . '/inc/svg-icons.php';
 
 /**
+ * Custom page walker, courtesy of Twenty Twenty.
+ */
+require get_template_directory() . '/classes/class-kelpie-walker-page.php';
+
+/**
  * Custom comment walker, courtesy of Twenty Twenty.
  */
 require get_template_directory() . '/classes/class-kelpie-walker-comment.php';
