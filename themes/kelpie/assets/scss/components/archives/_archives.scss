@@ -1,8 +1,7 @@
 /*--------------------------------------------------------------
-# Site Footer
+# Archive pages
 --------------------------------------------------------------*/
-.site-footer {
-  margin: 1em 0;
-  color: #6c7781;
-  font-size: 90%;
+.kelpie-archive-type {
+	@include typography( metadata, medium );
+	display: block;
 }

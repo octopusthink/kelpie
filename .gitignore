@@ -7,6 +7,11 @@ templates/*
 node_modules
 vendor
 
+# Build artifacts
+dist/
+*.map
+themes/kelpie/style.js
+
 # Theme and Plugin handling
 #
 # Ignore the parent, but explicitly exclude (from ignore)

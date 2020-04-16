@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------
+# Post excerpts
+--------------------------------------------------------------*/
+.kelpie-post-excerpt {
+	margin: 0 auto get( $spacing, 'xxl' );
+	max-width: get( $site, 'max-content-width' );
+
+	.entry-title {
+		@include typography( headings, medium );
+		margin: 0 auto get( $spacing, 's' );
+		text-align: center;
+	}
+
+	.kelpie-post-meta {
+		margin-bottom: get( $spacing, 's' );
+	}
+}
+
+// Post thumbnails
+.kelpie-post-excerpt-thumbnail {
+	width: calc( 100% + #{get( $spacing, 'm' )} * 2 );
+	margin-left: -#{get( $spacing, 'm' )};
+	margin-right: -#{get( $spacing, 'm' )};
+	margin-bottom: get( $spacing, 'm' );
+}
