@@ -31,7 +31,12 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'excerpt' );
 		endwhile;
 
-		the_posts_navigation();
+		the_posts_navigation(
+			array(
+				'next_text' => '<span class="meta-nav" aria-hidden="true">' . esc_html__( 'Newer posts', 'kelpie' ) . kelpie_get_theme_svg( 'arrow-right' ) . '</span> ',
+				'prev_text' => '<span class="meta-nav" aria-hidden="true">' . kelpie_get_theme_svg( 'arrow-left' ) . esc_html__( 'Older posts', 'kelpie' ) . '</span> ',
+			)
+		);
 
 	else :
 
