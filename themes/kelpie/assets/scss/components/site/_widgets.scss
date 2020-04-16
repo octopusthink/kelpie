@@ -6,10 +6,15 @@
 }
 
 .widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */
+	margin-bottom: get( $spacing, 'm' );
 }
 
+.widgettitle,
+.widget-title {
+	@include typography( metadata, large );
+}
+
+/* Make sure select elements fit in widgets. */
 .widget select {
-  max-width: 100%;
+	max-width: 100%;
 }

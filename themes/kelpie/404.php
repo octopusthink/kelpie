@@ -15,12 +15,15 @@ get_header(); ?>
 
 		<section class="error-404 not-found">
 			<header class="page-header kelpie-page-header">
-				<h1 class="page-title kelpie-page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'kelpie' ); ?></h1>
+				<span class="kelpie-archive-type">404 Error</span>
+				<h1 class="page-title kelpie-page-title"><?php esc_html_e( 'Page not found', 'kelpie' ); ?></h1>
 			</header><!-- .page-header -->
 
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'kelpie' ); ?></p>
+			<div class="page-content kelpie-page-content">
+				<p><?php esc_html_e( 'Sorry! We couldne’t find the content youe’re looking for. You can search or browse the site below.', 'kelpie' ); ?></p>
+			</div>
 
+			<div class="kelpie-404-widgets kelpie-page-content">
 				<?php
 					get_search_form();
 
@@ -53,7 +56,7 @@ get_header(); ?>
 					the_widget( 'WP_Widget_Tag_Cloud' );
 				?>
 
-			</div><!-- .page-content -->
+			</div><!-- .kelpie-404-widgets -->
 		</section><!-- .error-404 -->
 
 	</main><!-- #primary -->
