@@ -1,13 +1,27 @@
 /**
- * Get a value from a nested map
+ * Get a value from a map, nested or otherwise.
  *
  * Example:
- * get($typography, "headings", "color");
+ * get($typography, "colors", "red");
+ * get($spacing, "m");
  */
-@function get($map, $keys...) {
-    @each $key in $keys {
-        $map: map-get($map, $key);
-    }
+@function get( $map, $keys... ) {
+	@each $key in $keys {
+		$map: map-get( $map, $key );
+	}
 
-    @return $map;
+	@return $map;
+}
+
+/**
+ * Remove units from a number, so we can do maths on it.
+ *
+ * @param {Number} $number - Number to remove unit from
+ * @return {Number} - Unitless number
+ */
+@function strip-unit( $number ) {
+	@if type-of( $number ) == 'number' and not unitless( $number ) {
+		@return $number / ( $number * 0 + 1 );
+	}
+	@return $number;
 }

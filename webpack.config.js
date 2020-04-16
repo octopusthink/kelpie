@@ -13,6 +13,7 @@ module.exports = [
 		entry: {
 			// './src/js/index.js',
 			style: `./themes/${ THEME_NAME }/assets/scss/style.scss`,
+			'style-editor': `./themes/${ THEME_NAME }/assets/scss/style-editor.scss`,
 		},
 		output: {
 			filename: '[name].js',

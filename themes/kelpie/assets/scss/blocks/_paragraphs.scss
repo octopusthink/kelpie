@@ -1,0 +1,17 @@
+/*--------------------------------------------------------------
+# Quotes
+--------------------------------------------------------------*/
+.kelpie-page-content p,
+.wp-block-paragraph {
+	@include typography( body );
+	@include content-block();
+
+	// Gutenberg font-size utility classes
+	&.has-small-font-size {
+		@include font-size( body, small );
+	}
+
+	&.has-large-font-size {
+		@include font-size( body, large );
+	}
+}

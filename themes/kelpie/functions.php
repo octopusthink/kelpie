@@ -103,6 +103,12 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 
+		// Add support for editor styles.
+		add_theme_support( 'editor-styles' );
+
+		// Enqueue editor styles.
+		add_editor_style( 'style-editor.css' );
+
 		// Add custom editor font sizes.
 		add_theme_support(
 			'editor-font-sizes',

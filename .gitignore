@@ -11,6 +11,7 @@ vendor
 dist/
 *.map
 themes/kelpie/style.js
+themes/kelpie/style-editor.js
 
 # Theme and Plugin handling
 #

@@ -1,0 +1,17 @@
+/*--------------------------------------------------------------
+# List
+--------------------------------------------------------------*/
+.kelpie-page-content ul,
+.kelpie-page-content ol,
+.wp-block ul,
+.wp-block ol {
+	@include typography( body );
+	@include content-block();
+	list-style-position: outside;
+
+	ul,
+	ol {
+		margin-left: get( $spacing, 'xs' );
+		margin-bottom: 0;
+	}
+}
