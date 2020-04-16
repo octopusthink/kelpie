@@ -11,29 +11,22 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'kelpie-post-excerpt' ); ?>>
 	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title kelpie-page-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			if ( has_post_thumbnail() ) :
-				the_post_thumbnail();
-			endif;
-		endif;
+		<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 
-		if ( 'post' === get_post_type() ) :
-			?>
-		<div class="entry-meta">
-			<?php kelpie_posted_on(); ?>
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="kelpie-post-excerpt-thumbnail">
+				<?php the_post_thumbnail(); ?>
+			</div>
+		<?php endif; ?>
+
+		<div class="kelpie-post-meta">
+			<?php kelpie_the_post_meta( get_the_ID(), 'single-top' ); ?>
 		</div><!-- .entry-meta -->
-			<?php
-		endif;
-		?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content kelpie-page-content">
 		<?php
 			the_content(
 				sprintf(
