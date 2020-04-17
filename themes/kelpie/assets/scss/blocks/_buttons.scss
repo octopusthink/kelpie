@@ -1,8 +1,18 @@
 /*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
-.wp-block-button {
+.wp-block-buttons {
 	@include content-block();
+	display: flex;
+	justify-content: center;
+
+	&.alignleft {
+		justify-content: flex-start;
+	}
+
+	&.alignright {
+		justify-content: flex-end;
+	}
 }
 
 .wp-block-button__link {
