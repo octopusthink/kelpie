@@ -1,0 +1,8 @@
+/*--------------------------------------------------------------
+## Images
+--------------------------------------------------------------*/
+.wp-block-image figcaption {
+    @include typography(body, small);
+    @include content-block();
+    text-align: center;
+}
