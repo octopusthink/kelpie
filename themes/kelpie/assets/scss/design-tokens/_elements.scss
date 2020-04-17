@@ -28,7 +28,7 @@
 	display: inline-block;
 	margin: 0;
 	outline: none;
-	padding: get( $spacing, 'xxs' ) get( $spacing, 'xs' );
+	padding: get( $spacing, 'xs' ) get( $spacing, 'm' );
 	position: relative;
 	text-align: center;
 	text-decoration: none;
@@ -56,7 +56,7 @@
 @mixin textfield() {
 	@include typography( body );
 	border: 2px solid get( $colors, 'borders', 'default' );
-	padding: get( $spacing, 'xxs' ) get( $spacing, 'xxs' );
+	padding: get( $spacing, 'xs' ) get( $spacing, 'xs' );
 
 	&:focus {
 		@include focus-ring();
