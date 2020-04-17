@@ -20,23 +20,20 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
-@import 'functions';
+// Import all our variables, mixins, and functions.
+@import 'abstracts/**/*.scss';
 
 // Start with nice, clean base styles.
-@import 'base/normalize';
-@import 'base/sanitize';
-@import 'base/wp-normalize';
-
-// Import all our variables & design tokens.
-@import 'design-tokens/**/*.scss';
-
-// Utility functions.
 @import 'base/**/*.scss';
 
 // Layout components.
+@import 'layout/**/*.scss';
+
+// Modular components.
 @import 'components/**/*.scss';
 
-// Gutenberg blocks, scoped to post content.
-@import 'editor-styles/_colors.scss';
-@import 'editor-styles/_alignments.scss';
+// Editor styles.
+@import 'editor-styles/**/*.scss';
+
+// Gutenberg blocks.
 @import 'blocks/**/*.scss';
