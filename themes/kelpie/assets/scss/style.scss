@@ -11,7 +11,8 @@ Text Domain: kelpie
 Tags: translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Use it to make something cool, have fun, and share what you've learned with
+others.
 
 Kelpie is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
@@ -20,23 +21,23 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
-@import 'functions';
+@import "functions";
 
 // Start with nice, clean base styles.
-@import 'base/normalize';
-@import 'base/sanitize';
-@import 'base/wp-normalize';
+@import "base/normalize";
+@import "base/sanitize";
+@import "base/wp-normalize";
 
 // Import all our variables & design tokens.
-@import 'design-tokens/**/*.scss';
+@import "design-tokens/**/*.scss";
 
 // Utility functions.
-@import 'base/**/*.scss';
+@import "base/**/*.scss";
 
 // Layout components.
-@import 'components/**/*.scss';
+@import "components/**/*.scss";
 
 // Gutenberg blocks, scoped to post content.
-@import 'editor-styles/_colors.scss';
-@import 'editor-styles/_alignments.scss';
-@import 'blocks/**/*.scss';
+@import "editor-styles/colors.scss";
+@import "editor-styles/alignments.scss";
+@import "blocks/**/*.scss";

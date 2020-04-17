@@ -1,48 +1,50 @@
+/* stylint-disable */
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
+	border: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
 }
 
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
-  display: inline-block;
+	display: inline-block;
 }
 
 /* Zero out default browser margins on elements. */
-p, 
-ul, 
+p,
+ul,
 ol,
-li, 
+li,
 h1,
-h2, 
-h3, 
-h4, 
-h5, 
+h2,
+h3,
+h4,
+h5,
 h6 {
-  margin: 0;
+	margin: 0;
 }
 
 /* Remove padding from lists. */
 ul,
 ol {
-  padding: 0;
+	padding: 0;
 }
 
 /* Remove the default text-decoration on links. */
 a {
-  text-decoration: none;
+	text-decoration: none;
 }

@@ -4,7 +4,7 @@ A block editor-friendly starter theme for WordPress. Alternatively: [Scottish wa
 
 Kelpie is designed for agency-types building custom WordPress themes for clients. If you're looking to build a theme to distribute more widely, this may not be the right choice for you.
 
-Kelpie aims to avoid the whack-a-mole process of building WordPress themes by relying heavily on design tokens and mixins, scoping styles tightly to individual components rather than creating a lot of broad global style rules. 
+Kelpie aims to avoid the whack-a-mole process of building WordPress themes by relying heavily on design tokens and mixins, scoping styles tightly to individual components rather than creating a lot of broad global style rules.
 
 This is very much an experiment-in-progress. If you're interested in using Kelpie for your own projects, do feel free, but keep in mind that it is extremely experimental at the moment.
 
@@ -46,34 +46,26 @@ Please read (`CONTRIBUTING.md`) for details on our code of conduct and the proce
 
 We use the [Conventional Commits](https://www.conventionalcommits.org/) specification for commit messages to ensure that commit messages are written in a consistent and predictable way.
 
-## 
-
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [releases page](https://github.com/octopusthink/kelpie/releases).
 
-## 
-
 ## Authors
 
-- **sarah semark** - *CDO (Chief Design Octopus)* - [@sarahmonster](https://github.com/sarahmonster)
-- **Matthew Riley MacPherson** - *CTO (Chief Technical Octopus)* - [@tofumatt](https://github.com/tofumatt)
+- **sarah semark** - _CDO (Chief Design Octopus)_ - [@sarahmonster](https://github.com/sarahmonster)
+- **Matthew Riley MacPherson** - _CTO (Chief Technical Octopus)_ - [@tofumatt](https://github.com/tofumatt)
 
 See also the list of [contributors](https://github.com/octopusthink/kelpie/contributors) who participated in this project.
-
-## 
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.txt](https://github.com/octopusthink/kelpie/blob/master/LICENSE.txt) file for details.
 
-## 
-
 ## Acknowledgments
 
 Kelpie borrows and steals from all sorts of sources, namely:
 
-- [_s](https://github.com/Automattic/_s)
+- [\_s](https://github.com/Automattic/_s)
 - [Gutenberg Starter Theme](https://github.com/WordPress/gutenberg-starter-theme)
 - [Twenty Twenty](https://wordpress.org/themes/twentytwenty/)
 - [Varia](https://github.com/Automattic/themes/blob/master/varia)

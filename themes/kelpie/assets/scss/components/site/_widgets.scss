@@ -6,11 +6,12 @@
 }
 
 .widget {
-	margin-bottom: get( $spacing, 'm' );
+	margin-bottom: get($spacing, "m");
 }
 
 .widgettitle,
 .widget-title {
+
 	@include typography( metadata, large );
 }
 

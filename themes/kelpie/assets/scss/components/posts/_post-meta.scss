@@ -1,16 +1,17 @@
 /* Post meta (author, date, comments) */
 .kelpie-post-meta {
-    list-style-type: none;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style-type: none;
 }
 
 .post-author,
 .post-date,
 .post-comment-link {
-    @include typography(metadata, medium);
-    padding-left: get($spacing, "xxs");
-    padding-right: get($spacing, "xxs");
-    margin-bottom: get($spacing, "xxs");
+
+	@include typography(metadata, medium);
+	margin-bottom: get($spacing, "xxs");
+	padding-left: get($spacing, "xxs");
+	padding-right: get($spacing, "xxs");
 }

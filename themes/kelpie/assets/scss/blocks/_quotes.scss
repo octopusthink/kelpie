@@ -4,34 +4,37 @@
 .kelpie-page-content blockquote,
 .wp-block-pullquote,
 .wp-block-quote {
+
 	@include content-block();
 	border: 0;
 	padding: 0;
 	position: relative;
 
 	&::before {
-		content: '“';
-		color: get( $colors, 'text', 'light' );
+		color: get($colors, "text", "light");
+		content: "“";
 		display: block;
-		font-family: Georgia, 'Times New Roman', Times, serif;
+		font-family: Georgia, "Times New Roman", Times, serif;
 		font-size: 12rem;
 		font-weight: bold;
 		left: -4rem;
+		opacity: 0.15;
 		position: absolute;
 		top: -4rem;
 		z-index: -1;
-		opacity: 0.15;
 	}
 
 	p {
+
 		@include typography( body, large );
-		color: get( $colors, 'text', 'light' );
-		margin-bottom: get( $spacing, 'xs' );
+		color: get($colors, "text", "light");
+		margin-bottom: get($spacing, "xs");
 		position: relative;
 		z-index: 1;
 	}
 
 	cite {
+
 		@include typography( metadata, small );
 	}
 }
@@ -41,11 +44,14 @@
 --------------------------------------------------------------*/
 
 .wp-block-quote {
+
 	&.is-large {
+
 		@include content-block();
 		padding: 0; // Reset default styling provided by Gutenberg.
 
 		p {
+
 			@include typography( subtitles, large );
 		}
 	}
@@ -55,5 +61,7 @@
 ## Pullquote
 --------------------------------------------------------------*/
 
+/* stylelint-disable-next-line block-no-empty */
 .wp-block-pullquote {
+	// TBD...
 }

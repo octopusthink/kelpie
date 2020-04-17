@@ -1,9 +1,10 @@
 /* Edit link (appears at the bottom of posts and pages */
 .kelpie-edit-link {
-    @include typography(metadata, medium);
-    margin-top: get($spacing, "m");
-    margin: 0 auto get($spacing, "l");
-    max-width: get($site, "max-content-width");
-    padding-top: get($spacing, "s");
-    text-align: center;
+
+	@include typography(metadata, medium);
+	margin: 0 auto get($spacing, "l");
+	margin-top: get($spacing, "m");
+	max-width: get($site, "max-content-width");
+	padding-top: get($spacing, "s");
+	text-align: center;
 }

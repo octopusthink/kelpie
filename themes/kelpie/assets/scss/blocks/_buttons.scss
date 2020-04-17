@@ -2,6 +2,7 @@
 # Buttons
 --------------------------------------------------------------*/
 .wp-block-buttons {
+
 	@include content-block();
 	display: flex;
 	justify-content: center;
@@ -16,9 +17,10 @@
 }
 
 .wp-block-button__link {
-	@include button( 'none' );
+
+	@include button( "none" );
 }
 
-.wp-block-button__link:not( .has-background ) {
-	background: get( $colors, 'interactive', 'background' );
+.wp-block-button__link:not(.has-background) {
+	background: get($colors, "interactive", "background");
 }

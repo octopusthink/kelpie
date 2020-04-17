@@ -2,17 +2,18 @@
 # Site Footer
 --------------------------------------------------------------*/
 .site-footer {
-	background: get($colors, "layout", "footer-background" );
+	background: get($colors, "layout", "footer-background");
 	color: get($colors, "text", "inverse-light");
 	padding: get($site, "padding");
 }
 
 .footer-social-wrapper {
-	margin-top: get($spacing, "m");
 	margin-bottom: get($spacing, "m");
+	margin-top: get($spacing, "m");
 }
 
 .site-info {
+
 	@include typography(body, small);
 	color: get($colors, "text", "inverse");
 	text-align: center;
