@@ -13,7 +13,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header kelpie-page-header">
-		<?php the_title( '<h1 class="entry-title kelpie-page-title">', '</h1>' ); ?>
+		<?php
+		if ( is_front_page() ) :
+			printf( '<h1 class="entry-title kelpie-page-title">%1$s</h1>', esc_html( get_bloginfo( 'description' ) ) );
+
+			else :
+				the_title( '<h1 class="entry-title kelpie-page-title">', '</h1>' );
+			endif;
+			?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content kelpie-page-content">

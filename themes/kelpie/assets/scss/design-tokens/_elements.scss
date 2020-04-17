@@ -8,12 +8,19 @@
 @mixin content-block() {
 	margin: 0 auto get( $spacing, 's' );
 	max-width: get( $site, 'max-content-width' );
+
+	&.alignwide {
+  		max-width: 1070px;
+	}
+
+	&.alignfull {
+		max-width: 100%;
+	}
 }
 
 // Apply button styles.
-@mixin button( $class: default, $size: medium ) {
+@mixin button( $color: default, $style: default, $size: medium ) {
 	@include typography( interface, medium );
-	background: get( $colors, 'interactive', 'background' );
 	border: 0;
 	border-radius: 0;
 	color: get( $colors, 'text', 'inverse-light' );
@@ -21,12 +28,16 @@
 	display: inline-block;
 	margin: 0;
 	outline: none;
-	padding: get( $spacing, 'xxs' ) get( $spacing, 'xs' );
+	padding: get( $spacing, 'xs' ) get( $spacing, 'm' );
 	position: relative;
 	text-align: center;
 	text-decoration: none;
 	top: 0;
 	transition: all 200ms ease-out;
+
+	@if $color == 'default' {
+		background: get( $colors, 'interactive', 'background' );
+	}
 
 	&:hover {
 		background: get( $colors, 'interactive', 'hover' );
@@ -45,7 +56,7 @@
 @mixin textfield() {
 	@include typography( body );
 	border: 2px solid get( $colors, 'borders', 'default' );
-	padding: get( $spacing, 'xxs' ) get( $spacing, 'xxs' );
+	padding: get( $spacing, 'xs' ) get( $spacing, 'xs' );
 
 	&:focus {
 		@include focus-ring();

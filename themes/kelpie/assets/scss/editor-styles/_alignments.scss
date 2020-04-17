@@ -2,11 +2,6 @@
 # Alignments
 --------------------------------------------------------------*/
 
-.alignleft,
-.alignright {
-	max-width: 580px !important;	/* Let's work to make this !important unnecessary */
-}
-
 .alignleft img,
 .alignright img,
 .alignleft figcaption,
@@ -40,4 +35,12 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.alignwide {
+  max-width: 1070px;
+}
+
+.alignfull {
+  max-width: 100%;
 }

@@ -134,6 +134,57 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 			)
 		);
 
+		// Editor color palette.
+		add_theme_support(
+			'editor-color-palette',
+			array(
+				array(
+					'name'  => __( 'Primary', 'varia' ),
+					'slug'  => 'primary',
+					'color' => '#e33592',
+				),
+				array(
+					'name'  => __( 'Primary Dark', 'varia' ),
+					'slug'  => 'primary-dark',
+					'color' => '#b32973',
+				),
+				array(
+					'name'  => __( 'Primary Light', 'varia' ),
+					'slug'  => 'primary-light',
+					'color' => '#f19dca',
+				),
+				array(
+					'name'  => __( 'Secondary', 'varia' ),
+					'slug'  => 'secondary',
+					'color' => '#00a8b4',
+				),
+				array(
+					'name'  => __( 'Secondary Light', 'varia' ),
+					'slug'  => 'secondary-light',
+					'color' => '#76d0d6',
+				),
+				array(
+					'name'  => __( 'Secondary Dark', 'varia' ),
+					'slug'  => 'secondary-dark',
+					'color' => '#00858e',
+				),
+				array(
+					'name'  => __( 'Black', 'varia' ),
+					'slug'  => 'black',
+					'color' => '#181b1c',
+				),
+				array(
+					'name'  => __( 'White', 'varia' ),
+					'slug'  => 'white',
+					'color' => '#FFFFFF',
+				),
+			)
+		);
+
+		// Disable custom colours and font sizes to increase consistency.
+		add_theme_support( 'disable-custom-font-sizes' );
+		add_theme_support( 'disable-custom-colors' );
+
 		// Add support for Global Styles.
 		add_theme_support(
 			'jetpack-global-styles',
@@ -166,8 +217,6 @@ function kelpie_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_style( 'kelpie-style', get_stylesheet_uri(), array(), $theme_version );
-
-	wp_enqueue_style( 'kelpie-blockstyles', get_template_directory_uri() . '/css/blocks.css', array(), $theme_version );
 
 	wp_enqueue_script( 'kelpie-js', get_template_directory_uri() . '/js/index.js', array(), $theme_version, false );
 	wp_script_add_data( 'kelpie-js', 'async', true );

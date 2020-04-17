@@ -47,3 +47,8 @@
 .gallery-caption {
   display: block;
 }
+
+.wp-block-gallery:not(.components-placeholder) {
+  margin: 1.5em auto;
+}
+
