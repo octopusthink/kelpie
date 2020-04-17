@@ -20,19 +20,6 @@
   ## Color Palette
 --------------------------------------------------------------*/
 
-/*--------------------------------------------------------------
-# Block Styles
---------------------------------------------------------------*/
-
-
-.alignwide {
-  max-width: 1070px;
-}
-
-.alignfull {
-  margin: 1.5em 0;
-  max-width: 100%;
-}
 
 /*--------------------------------------------------------------
 ## Code
@@ -92,35 +79,6 @@
 
 .wp-block-gallery:not(.components-placeholder) {
   margin: 1.5em auto;
-}
-
-/*--------------------------------------------------------------
-## Group
---------------------------------------------------------------*/
-
-.wp-block-group > .wp-block-group__inner-container > * {
-  max-width: 580px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.wp-block-group > .wp-block-group__inner-container > .alignwide {
-  max-width: 1070px;
-}
-
-.wp-block-group > .wp-block-group__inner-container > .alignfull {
-  max-width: 100%;
-}
-
-.wp-block-group.has-background > .wp-block-group__inner-container > :first-child {
-  margin-top: 0;
-}
-
-.wp-block-group.has-background > .wp-block-group__inner-container > .alignfull {
-  width: calc( 100% + 60px );
-  max-width: calc( 100% + 60px );
-  position: relative;
-  left: -30px;
 }
 
 /*--------------------------------------------------------------
@@ -210,44 +168,4 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .wp-block-video video {
   max-width: 580px;
-}
-
-/*--------------------------------------------------------------
-# Additional Theme Styles
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-## Color Palette
---------------------------------------------------------------*/
-
-.has-strong-blue-color {
-  color: #0073aa;
-}
-
-.has-strong-blue-background-color {
-  background-color: #0073aa;
-}
-
-.has-lighter-blue-color {
-  color: #229fd8;
-}
-
-.has-lighter-blue-background-color {
-  background-color: #229fd8;
-}
-
-.has-very-light-gray-color {
-  color: #eee;
-}
-
-.has-very-light-gray-background-color {
-  background-color: #eee;
-}
-
-.has-very-dark-gray-color {
-  color: #444;
-}
-
-.has-very-dark-gray-background-color {
-  background-color: #444;
 }

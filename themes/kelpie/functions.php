@@ -182,7 +182,7 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 		);
 
 		// Disable custom colours and font sizes to increase consistency.
-		add_theme_support('disable-custom-font-sizes');
+		add_theme_support( 'disable-custom-font-sizes' );
 		add_theme_support( 'disable-custom-colors' );
 
 		// Add support for Global Styles.
@@ -217,8 +217,6 @@ function kelpie_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_style( 'kelpie-style', get_stylesheet_uri(), array(), $theme_version );
-
-	wp_enqueue_style( 'kelpie-blockstyles', get_template_directory_uri() . '/css/blocks.css', array(), $theme_version );
 
 	wp_enqueue_script( 'kelpie-js', get_template_directory_uri() . '/js/index.js', array(), $theme_version, false );
 	wp_script_add_data( 'kelpie-js', 'async', true );

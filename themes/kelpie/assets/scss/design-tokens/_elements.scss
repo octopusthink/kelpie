@@ -8,6 +8,14 @@
 @mixin content-block() {
 	margin: 0 auto get( $spacing, 's' );
 	max-width: get( $site, 'max-content-width' );
+
+	&.alignwide {
+  		max-width: 1070px;
+	}
+
+	&.alignfull {
+		max-width: 100%;
+	}
 }
 
 // Apply button styles.

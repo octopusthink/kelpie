@@ -13,7 +13,8 @@
 
 // Gutenberg blocks, scoped to .editor-styles-wrapper
 @import 'editor-styles/_colors.scss';
+@import 'editor-styles/_alignments.scss';
 @import 'blocks/**/*.scss';
 
 // Editor overrides.
-@import 'editor-styles/**/*.scss';
+@import 'editor-styles/_typography.scss';

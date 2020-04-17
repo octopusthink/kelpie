@@ -38,4 +38,5 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 // Gutenberg blocks, scoped to post content.
 @import 'editor-styles/_colors.scss';
+@import 'editor-styles/_alignments.scss';
 @import 'blocks/**/*.scss';
