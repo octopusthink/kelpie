@@ -119,6 +119,22 @@ $spacing: (
     "padding": 1.6rem, // 16px, used to determine the minimum padding around the whole site content.
 );
 
+/* Breakpoints
+ *
+ * These determine our standard media queries. 
+ * Chances are we very rarely need this many. 
+ */
+$breakpoints: (
+	'phone': 400px,
+	'phone-wide': 480px,
+	'phablet': 560px,
+	'tablet-small': 640px,
+	'tablet': 768px,
+	'tablet-wide': 1024px,
+	'desktop': 1248px,
+	'desktop-wide': 1440px,
+);
+
 /* Typography 
  *
  * These variables determine how typography is applied across the site.
