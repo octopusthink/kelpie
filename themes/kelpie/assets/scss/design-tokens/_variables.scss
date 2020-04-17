@@ -54,11 +54,16 @@ $palette: (
 $colors: (
     // Colours of layout elements.
     "layout": (
+        "page-background": get($palette, "primary", "default"),
         "content-background": get($palette, "neutral", "off-white"),
         "header-background": get($palette, "neutral", "black"),
+        "header-text": get($palette, "neutral", "white"),
         "footer-background": get($palette, "neutral", "black"),
+        "footer-text": get($palette, "neutral", "white"),
         "modal-menu-background": get($palette, "neutral", "black"),
-        "submenu-background": get($palette, "neutral", "grey800"),
+        "modal-menu-text": get($palette, "neutral", "white"),
+        "submenu-background": get($palette, "neutral", "grey200"),
+        "submenu-text": get($palette, "neutral", "black"),  
     ),
 
     // Colours used for text.

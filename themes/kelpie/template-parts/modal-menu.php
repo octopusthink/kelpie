@@ -18,7 +18,7 @@
 			<div class="menu-top">
 
 				<div class="kelpie-close-nav-toggle-wrapper">
-					<button class="kelpie-icon-button" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
+					<button class="kelpie-icon-button mobile-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
 						<?php kelpie_the_theme_svg( 'x' ); ?>
 						<span class="kelpie-icon-button-label"><?php esc_html_e( 'Close', 'kelpie' ); ?></span>
 					</button><!-- .nav-toggle -->

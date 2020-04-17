@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 .site-header {
 	background: get($colors, "layout", "header-background" );
-	color: get($colors, "text", "inverse-light");
+	color: get($colors, "layout", "header-text");
 	padding: get($site, "padding");
 	position: relative;
 }

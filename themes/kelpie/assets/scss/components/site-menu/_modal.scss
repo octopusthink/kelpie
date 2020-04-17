@@ -56,16 +56,20 @@
 	position: relative;
 }
 
+// Adopt header colour for mobile toggles.
+.mobile-nav-toggle {
+	color: inherit;
+}
 
 // "Close menu" toggle
 .kelpie-close-nav-toggle-wrapper {
-  height: 8rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: get($site, "padding");
+	align-items: center;
+	color: get($colors, "layout", "modal-menu-text");
+	display: flex;
+	height: 8rem;
+	justify-content: flex-end;
+	padding: get($site, "padding");
 }
-
 
 // Menu within the modal.
 .modal-menu {
@@ -96,7 +100,7 @@
 	}
 
 	a {
-		color: get($colors, "text", "inverse-light");
+		color: get($colors, "layout", "modal-menu-text");
 		display: block;
 		padding: get($spacing, "s");
 		text-decoration: none;

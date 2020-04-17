@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 .site-footer {
 	background: get($colors, "layout", "footer-background" );
-	color: get($colors, "text", "inverse-light");
+	color: get($colors, "layout", "footer-text");
 	padding: get($site, "padding");
 }
 
@@ -14,11 +14,16 @@
 
 .site-info {
 	@include typography(body, small);
-	color: get($colors, "text", "inverse");
+	color: inherit;
 	text-align: center;
 
 	a {
-		color: get($colors, "text", "inverse-light");
+		color: inherit;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 
 	.footer-copyright {

@@ -1,3 +1,8 @@
+// Make sure we use the proper background colour!
+body {
+	background-color: get($colors, "layout", "content-background");
+}
+
 // Set font size of title block the same as body.
 .editor-post-title__block {
 	@include font-size-editor( body );
