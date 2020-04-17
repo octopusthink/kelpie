@@ -308,44 +308,11 @@ if ( ! function_exists( 'kelpie_entry_footer' ) ) :
 				),
 				get_the_title()
 			),
-			'<span class="edit-link">',
-			'</span>'
+			'<div class="kelpie-edit-link"><span class="edit-link">',
+			'</span></div>'
 		);
 	}
 endif;
-
-/**
- * Filters the edit post link to add an icon and use the post meta structure.
- *
- * @param string $link    Anchor tag for the edit link.
- * @param int    $post_id Post ID.
- * @param string $text    Anchor text.
- */
-function kelpie_edit_post_link( $link, $post_id, $text ) {
-	if ( is_admin() ) {
-		return $link;
-	}
-
-	$text = sprintf(
-		wp_kses(
-			/* translators: %s: Post title. Only visible to screen readers. */
-			__( 'Edit <span class="screen-reader-text">%s</span>', 'kelpie' ),
-			array(
-				'span' => array(
-					'class' => array(),
-				),
-			)
-		),
-		get_the_title( $post_id )
-	);
-
-	return '<div class="kelpie-edit-link">
-		<span class="meta-icon">' . kelpie_get_theme_svg( 'edit' ) . '</span>
-		<span class="meta-text"><a href="' . esc_url( $edit_url ) . '">' . $text . '</a></span>
-		</div><!-- .post-meta-wrapper -->';
-}
-
-add_filter( 'edit_post_link', 'kelpie_edit_post_link', 10, 3 );
 
 /**
  * Archives
