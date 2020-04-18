@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+# Preformatted and other code-like blocks I never use.
+--------------------------------------------------------------*/
+// Preformatted
+.wp-block-preformatted {
+	@include content-block;
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	line-height: 1.6;
+	overflow: auto;
+}
+
+// Code
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 0.875rem;
+}
+
+p > code {
+  padding: 2px;
+  border-radius: 2px;
+  background: #f3f4f5;
+  font-size: inherit;
+}
+
+// Verse
+.wp-block-verse {
+	@include content-block;
+	@include typography('body');
+}
