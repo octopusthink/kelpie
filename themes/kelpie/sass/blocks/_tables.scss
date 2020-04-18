@@ -1,11 +1,9 @@
 /*--------------------------------------------------------------
-## Separator
+## Tables
 --------------------------------------------------------------*/
 
-.wp-block-separator {
+table {
   @include content-block();
-  margin: 3em auto;
-  padding: 0;
-  border: 0;
-  height: 1px;
+  margin: 0 0 1.5em;
+  width: 100%;
 }
