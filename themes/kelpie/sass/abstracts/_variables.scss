@@ -54,8 +54,8 @@ $palette: (
 $colors: (
     // Colours of layout elements.
     "layout": (
-        "page-background": get($palette, "primary", "default"),
-        "content-background": get($palette, "neutral", "off-white"),
+        "page-background": get($palette, "neutral", "off-white"),
+        "content-background": get($palette, "neutral", "white"),
         "header-background": get($palette, "neutral", "black"),
         "header-text": get($palette, "neutral", "white"),
         "footer-background": get($palette, "neutral", "black"),

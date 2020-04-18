@@ -12,8 +12,8 @@ module.exports = [
 		devtool: devMode ? 'source-map' : 'cheap-eval-source-map',
 		entry: {
 			// './src/js/index.js',
-			style: `./themes/${ THEME_NAME }/assets/scss/style.scss`,
-			'style-editor': `./themes/${ THEME_NAME }/assets/scss/style-editor.scss`,
+			style: `./themes/${ THEME_NAME }/sass/style.scss`,
+			'style-editor': `./themes/${ THEME_NAME }/sass/style-editor.scss`,
 		},
 		output: {
 			filename: '[name].js',

@@ -1,23 +1,3 @@
-// Focus ring, used to indicate focus.
-@mixin focus-ring() {
-	box-shadow: 0 0 0 3px get( $colors, 'interactive', 'focus' );
-	outline: 0;
-}
-
-// Style content blocks within pages so they're consistently spaced.
-@mixin content-block() {
-	margin: 0 auto get( $spacing, 's' );
-	max-width: get( $site, 'max-content-width' );
-
-	&.alignwide {
-  		max-width: 1070px;
-	}
-
-	&.alignfull {
-		max-width: 100%;
-	}
-}
-
 // Apply button styles.
 @mixin button( $color: default, $style: default, $size: medium ) {
 	@include typography( interface, medium );
@@ -66,4 +46,18 @@
 
 @mixin label() {
 	@include typography( interface, small );
+}
+
+// Style content blocks within pages so they're consistently spaced.
+@mixin content-block() {
+	margin: 0 auto get( $spacing, 's' );
+	max-width: get( $site, 'max-content-width' );
+
+	&.alignwide {
+  		max-width: 1070px;
+	}
+
+	&.alignfull {
+		max-width: 100%;
+	}
 }

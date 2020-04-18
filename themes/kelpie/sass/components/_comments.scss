@@ -1,3 +1,12 @@
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+.kelpie-comments-wrapper {
+	margin: 0 auto get( $spacing, 'l' );
+	max-width: get( $site, 'max-content-width' );
+}
+
 /* Comment Item ----------------------------- */
 
 // Comment container
@@ -92,4 +101,10 @@
 .comment .comment {
 	padding-left: get( $spacing, 's' );
 	border-left: 2px solid get( $colors, 'borders', 'light' );
+}
+
+/* Hide pingback & trackbacks ------------------------- */
+.pingback .comment-meta,
+.trackback .comment-meta {
+	display: none;
 }
