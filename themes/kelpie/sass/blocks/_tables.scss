@@ -1,0 +1,34 @@
+/*--------------------------------------------------------------
+## Tables
+--------------------------------------------------------------*/
+.kelpie-page-content table,
+.wp-block-table {
+  @include content-block();
+  @include typography('body', 'small');
+  width: 100%;
+  overflow-x: auto;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  thead {
+    @include typography('metadata', 'small');
+    border-bottom: 1px solid get($colors, 'borders', 'default');
+    text-align: left;
+  }
+
+  tfoot {
+    border-top: 1px solid get($colors, 'borders', 'default');
+    font-weight: bolder;
+  }
+
+  td,
+  th {
+    padding-top: get($spacing, 'xxs');
+    padding-bottom: get($spacing, 'xxs');
+    padding-left: 0;
+    padding-right: get($spacing, 'xxs');
+  }
+}

@@ -1,0 +1,12 @@
+/*--------------------------------------------------------------
+## Separator
+--------------------------------------------------------------*/
+
+.wp-block-separator {
+
+	@include content-block();
+	border: 0;
+	height: 1px;
+	margin: 3em auto;
+	padding: 0;
+}

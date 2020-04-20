@@ -1,0 +1,52 @@
+/*--------------------------------------------------------------
+# Colour classes to apply to elements.
+--------------------------------------------------------------*/
+// Apply extra colours to elements.
+.has-primary-light-background-color {
+	background-color: get($palette, "primary", "light");
+	color: get($palette, "primary", "black");
+}
+
+.has-primary-background-color {
+	background-color: get($palette, "primary", "default");
+	color: get($palette, "primary", "white");
+}
+
+.has-primary-dark-background-color {
+	background-color: get($palette, "primary", "dark");
+	color: get($palette, "primary", "white");
+}
+
+.has-secondary-light-background-color {
+	background-color: get($palette, "secondary", "light");
+	color: get($palette, "secondary", "black");
+}
+
+.has-secondary-background-color {
+	background-color: get($palette, "secondary", "default");
+	color: get($palette, "secondary", "white");
+}
+
+.has-secondary-dark-background-color {
+	background-color: get($palette, "secondary", "dark");
+	color: get($palette, "secondary", "white");
+}
+
+.has-background,
+.kelpie-page-content .has-background {
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: inherit;
+	}
+
+	a {
+		color: inherit;
+		text-decoration-color: currentColor;
+	}
+}

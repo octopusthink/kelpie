@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+# Site Footer
+--------------------------------------------------------------*/
+.site-footer {
+	background: get($colors, "layout", "footer-background");
+	color: get($colors, "layout", "footer-text");
+	padding: get($site, "padding");
+}
+
+.footer-social-wrapper {
+	margin-bottom: get($spacing, "m");
+	margin-top: get($spacing, "m");
+}
+
+.site-info {
+
+	@include typography(body, small);
+	color: inherit;
+	text-align: center;
+
+	a {
+		color: inherit;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.footer-copyright {
+		margin: 0 0 get($spacing, "hairline");
+	}
+
+	.powered-by-wordpress {
+		margin: 0 0 get($spacing, "xs");
+	}
+}
+

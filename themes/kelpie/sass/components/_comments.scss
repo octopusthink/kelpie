@@ -1,0 +1,114 @@
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+.kelpie-comments-wrapper {
+	margin: 0 auto get( $spacing, 'l' );
+	max-width: get( $site, 'max-content-width' );
+}
+
+/* Comment Item ----------------------------- */
+
+// Comment container
+.comment {
+	margin-bottom: get($spacing, "l");
+}
+
+// Comment meta container
+.comment-meta {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: get($spacing, "s");
+	min-height: 8rem;
+	padding-left: 9.2rem; // To account for avatars!
+	position: relative;
+
+	a {
+		color: inherit;
+	}
+}
+
+// Avatar
+.comment-meta .avatar {
+	height: 8rem;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 8rem;
+}
+
+// Author name
+.comment-author {
+
+	@include typography( metadata, medium );
+
+	a {
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+}
+
+// Date posted
+.comment-metadata {
+
+	@include typography( subtitles, small );
+
+	a {
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+}
+
+// Comment body
+.comment-content {
+
+	@include typography( body, medium );
+}
+
+// Comment footer
+.comment-footer-meta {
+
+	@include typography( metadata, medium );
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1.5rem 0 -1rem -1.5rem;
+}
+
+.comment-reply-link {
+	background-color: get($colors, "interactive", "background");
+	color: get($colors, "text", "inverse");
+	display: block;
+	padding: get($spacing, "xxs");
+}
+
+.by-post-author {
+	display: block;
+	padding-left: get($spacing, "hairline");
+}
+
+// Space out a threaded comment.
+.parent .comment:first-of-type {
+	margin-top: get($spacing, "m");
+}
+
+// Nested comments.
+.comment .comment {
+	border-left: 2px solid get($colors, "borders", "light");
+	padding-left: get($spacing, "s");
+}
+
+/* Hide pingback & trackbacks ------------------------- */
+.pingback .comment-meta,
+.trackback .comment-meta {
+	display: none;
+}
