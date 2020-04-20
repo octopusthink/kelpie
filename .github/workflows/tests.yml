@@ -40,6 +40,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.3'
       - name: Get Composer Cache Directory
         id: composer-cache
         run: |
