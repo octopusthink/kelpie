@@ -2,35 +2,35 @@
 .social-icons {
 	align-items: center;
 	display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: get($site, "max-content-width");
-    width: 100%;
-    
-    .menu-item {
-	    margin-right: get($spacing, "xxs");
-    }
+	justify-content: center;
+	margin: 0 auto;
+	max-width: get($site, "max-content-width");
+	width: 100%;
 
-    a {
-        align-items: center;
-        background: get($colors, "interactive", "text");
-        border-radius: 50%;
-        color: get($colors, "text", "inverse-light");
-        display: flex;
-        height: 4.4rem;
-        justify-content: center;
-        padding: 0;
-        text-decoration: none;
-        transition: transform 0.15s ease-in-out;
-        width: 4.4rem;
+	.menu-item {
+		margin-right: get($spacing, "xxs");
+	}
 
-        &:focus,
-        &:hover {
-            background: get($colors, "interactive", "hover");
-            color: inherit;
-	        transform: scale(1.1);
-	        text-decoration: none;
-        }
-    }
+	a {
+		align-items: center;
+		background: get($colors, "interactive", "text");
+		border-radius: 50%;
+		color: get($colors, "text", "inverse-light");
+		display: flex;
+		height: 4.4rem;
+		justify-content: center;
+		padding: 0;
+		text-decoration: none;
+		transition: transform 0.15s ease-in-out;
+		width: 4.4rem;
+
+		&:focus,
+		&:hover {
+			background: get($colors, "interactive", "hover");
+			color: inherit;
+			text-decoration: none;
+			transform: scale(1.1);
+		}
+	}
 }
 

@@ -20,27 +20,27 @@
 
 .alignleft img,
 .alignleft figcaption {
-  float: left;
-  margin-right: 1.5em;
+	float: left;
+	margin-right: 1.5em;
 }
 
 .alignright img,
 .alignright figcaption {
-  float: right;
-  margin-left: 1.5em;
+	float: right;
+	margin-left: 1.5em;
 }
 
 .aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .alignwide {
-  max-width: 1070px;
+	max-width: 1070px;
 }
 
 .alignfull {
-  max-width: 100%;
+	max-width: 100%;
 }

@@ -2,23 +2,23 @@
 .kelpie-icon-button {
 	align-items: center;
 	background: transparent;
-	border: none;
+	border: 0;
 	color: get($colors, "text", "inverse-light");
 	display: flex;
 	height: 2.4rem;
 	justify-content: center;
 	overflow: visible;
 	position: relative;
-    
-    svg {
-        display: block;
-        position: relative;
-        z-index: 1;
-    }
 
-    path {
-        fill: currentColor;
-        opacity: 0.8;
+	svg {
+		display: block;
+		position: relative;
+		z-index: 1;
+	}
+
+	path {
+		fill: currentColor;
+		opacity: 0.8;
 	}
 
 	&:focus .kelpie-icon-button-label,
@@ -28,11 +28,12 @@
 }
 
 .kelpie-icon-button-label {
+
 	@include typography(interface, small);
 	color: inherit;
 	position: absolute;
 	top: calc(100% + 0.5rem);
-	width: auto;
 	white-space: nowrap;
+	width: auto;
 	word-break: break-all;
 }

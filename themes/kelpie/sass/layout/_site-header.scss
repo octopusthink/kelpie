@@ -2,7 +2,7 @@
 # Site Header
 --------------------------------------------------------------*/
 .site-header {
-	background: get($colors, "layout", "header-background" );
+	background: get($colors, "layout", "header-background");
 	color: get($colors, "layout", "header-text");
 	padding: get($site, "padding");
 	position: relative;
@@ -22,30 +22,33 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 }
 
 .site-logo {
+
 	a {
 		display: block;
 	}
 
 	img {
-		max-height: 6rem;
 		margin: 0 auto;
+		max-height: 6rem;
 		width: auto;
 	}
 }
 
 .site-title {
+
 	@include typography(headings, medium);
 	color: inherit;
 	margin: 0;
 
 	a {
-		text-decoration: none;
 		color: inherit;
 		display: block;
+		text-decoration: none;
 	}
 }
 
 .site-description {
+
 	@include typography(subtitles, small);
 	color: inherit;
 	display: none;
@@ -57,9 +60,9 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 /* Search Toggle ----------------------------- */
 .search-toggle {
-	position: absolute;
 	bottom: 0;
 	left: 0;
+	position: absolute;
 	top: 0;
 }
 
@@ -69,5 +72,4 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	max-width: 2.3rem;
 	width: 2.3rem;
 }
-
 

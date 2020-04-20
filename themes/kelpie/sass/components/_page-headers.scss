@@ -1,14 +1,15 @@
 /* Page titles: the primary title of the page. */
 .kelpie-page-header {
 	display: grid;
-	grid-gap: get( $spacing, 'xs' );
-	margin: 0 auto get( $spacing, 'l' );
-	max-width: get( $site, 'max-content-width' );
-	padding: get( $spacing, 'm' );
+	grid-gap: get($spacing, "xs");
+	margin: 0 auto get($spacing, "l");
+	max-width: get($site, "max-content-width");
+	padding: get($spacing, "m");
 	text-align: center;
 
 	.kelpie-page-title {
+
 		@include typography( titles );
-		margin-bottom: get( $spacing, 'xs' );
+		margin-bottom: get($spacing, "xs");
 	}
 }

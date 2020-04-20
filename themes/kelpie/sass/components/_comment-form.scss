@@ -1,12 +1,13 @@
 /* Post a comment form ---------------------------- */
 .comment-respond {
-	margin: 0 auto get( $spacing, 'l' );
-	max-width: get( $site, 'max-content-width' );
+	margin: 0 auto get($spacing, "l");
+	max-width: get($site, "max-content-width");
 }
 
 // "You are logged in as..." helper text.
 .comment-respond .comment-notes,
 .comment-respond .logged-in-as {
+
 	@include typography( body, small );
 
 	a {
@@ -20,10 +21,12 @@
 	}
 }
 
-// Not sure offhand where or when this shows up, so it may require additional styling.
+// Not sure offhand where or when this shows up, so it may require additional
+// styling.
 .comment-respond p {
+
 	@include typography( body, small );
-	margin-bottom: get( $spacing, 's' );
+	margin-bottom: get($spacing, "s");
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -38,13 +41,13 @@
 	display: block;
 }
 
-.comment-respond input[type='checkbox'] + label {
+.comment-respond input[type="checkbox"] + label {
 	font-size: 1.5rem;
 	line-height: 1.25;
 }
 
-.comment-respond input[type='text'],
-.comment-respond input[type='email'],
+.comment-respond input[type="text"],
+.comment-respond input[type="email"],
 .comment-respond textarea {
 	margin-bottom: 0;
 }
@@ -59,12 +62,14 @@
 
 // "Comments are closed" text.
 .comments-closed {
+
 	@include typography( metadata, medium );
-	margin-bottom: get( $spacing, 'm' );
+	margin-bottom: get($spacing, "m");
 }
 
-/* Post a response to an existing comment, maybe? ---------------------------- */
+/* Post a response to an existing comment, maybe? */
 .comment-reply-title small {
+
 	@include typography( body, small );
 	display: block;
 	white-space: nowrap;

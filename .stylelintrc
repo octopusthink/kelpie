@@ -1,0 +1,22 @@
+{
+  "extends": ["stylelint-config-sass-guidelines", "stylelint-config-wordpress"],
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "font-weight-notation": null,
+    "max-line-length": null,
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "scss/at-rule-no-unknown": true,
+    "scss/at-import-partial-extension-blacklist": null,
+    "selector-class-pattern": null,
+    "selector-max-compound-selectors": null,
+    "selector-max-id": null,
+    "selector-no-qualifying-type": null,
+    "property-no-vendor-prefix": null,
+    "selector-no-vendor-prefix": null,
+    "max-nesting-depth": null
+  }
+}

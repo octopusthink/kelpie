@@ -6,19 +6,21 @@
 	display: grid;
 	grid-gap: get($spacing, "m");
 	margin: 0 auto get($spacing, "l");
-    max-width: calc(4.8rem +  #{get($site, "max-content-width")});
+	max-width: calc(4.8rem + #{get($site, "max-content-width")});
 
 	@media screen and (min-width: 640px) {
 		grid-template-columns: 1fr 1fr;
 	}
 
 	.meta-nav {
+
 		@include typography(metadata, medium);
-		display: flex;
 		align-items: center;
+		display: flex;
 	}
 
 	.post-title {
+
 		@include typography(subtitles, small);
 		display: block;
 	}
