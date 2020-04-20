@@ -218,6 +218,15 @@ function kelpie_scripts() {
 add_action( 'wp_enqueue_scripts', 'kelpie_scripts' );
 
 /**
+ * Include a skip to content link at the top of the page so that users can bypass the menu.
+ */
+function kelpie_skip_link() {
+	echo '<a class="skip-link screen-reader-text" href="#primary">' . esc_html__( 'Skip to content', 'kelpie' ) . '</a>';
+}
+
+add_action( 'wp_body_open', 'kelpie_skip_link', 5 );
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
