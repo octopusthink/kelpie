@@ -3,8 +3,8 @@
 --------------------------------------------------------------*/
 
 .kelpie-comments-wrapper {
-	margin: 0 auto get( $spacing, 'l' );
-	max-width: get( $site, 'max-content-width' );
+	margin: 0 auto get($spacing, "l");
+	max-width: get($site, "max-content-width");
 }
 
 /* Comment Item ----------------------------- */

@@ -1,14 +1,14 @@
 // Import all our variables, mixins, and functions.
-@import 'abstracts/**/*.scss';
+@import "abstracts/**/*.scss";
 
 // Start with nice, clean base styles.
-@import 'base/**/*.scss';
+@import "base/**/*.scss";
 
 // Editor styles.
-@import 'editor-styles/**/*.scss';
+@import "editor-styles/**/*.scss";
 
 // Gutenberg blocks.
-@import 'blocks/**/*.scss';
+@import "blocks/**/*.scss";
 
 // Editor overrides & adjustments.
-@import 'editor-only/**/*.scss';
+@import "editor-only/**/*.scss";
