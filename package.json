@@ -41,6 +41,9 @@
 	],
 	"scripts": {
 		"build": "webpack --mode production",
+		"lint": "npm run lint:js && npm run lint:styles && composer lint",
+		"lint:js": "npm run prettier",
+		"lint:styles": "npm run stylelint",
 		"prettier": "prettier .",
 		"prettier:fix": "prettier . --write",
 		"stylelint": "stylelint **/*.scss",
