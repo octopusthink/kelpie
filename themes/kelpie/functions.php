@@ -127,6 +127,16 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 			'editor-color-palette',
 			array(
 				array(
+					'name'  => __( 'Primary White', 'varia' ),
+					'slug'  => 'primary-white',
+					'color' => '#fcebf4',
+				),
+				array(
+					'name'  => __( 'Primary Light', 'varia' ),
+					'slug'  => 'primary-light',
+					'color' => '#f19dca',
+				),
+				array(
 					'name'  => __( 'Primary', 'varia' ),
 					'slug'  => 'primary',
 					'color' => '#e33592',
@@ -137,14 +147,14 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 					'color' => '#b32973',
 				),
 				array(
-					'name'  => __( 'Primary Light', 'varia' ),
-					'slug'  => 'primary-light',
-					'color' => '#f19dca',
+					'name'  => __( 'Primary Black', 'varia' ),
+					'slug'  => 'primary-black',
+					'color' => '#6a1844',
 				),
 				array(
-					'name'  => __( 'Secondary', 'varia' ),
-					'slug'  => 'secondary',
-					'color' => '#00a8b4',
+					'name'  => __( 'Secondary White', 'varia' ),
+					'slug'  => 'secondary-white',
+					'color' => '#e2f5f6',
 				),
 				array(
 					'name'  => __( 'Secondary Light', 'varia' ),
@@ -152,9 +162,19 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 					'color' => '#76d0d6',
 				),
 				array(
+					'name'  => __( 'Secondary', 'varia' ),
+					'slug'  => 'secondary',
+					'color' => '#00a8b4',
+				),
+				array(
 					'name'  => __( 'Secondary Dark', 'varia' ),
 					'slug'  => 'secondary-dark',
 					'color' => '#00858e',
+				),
+				array(
+					'name'  => __( 'Secondary Black', 'varia' ),
+					'slug'  => 'secondary-black',
+					'color' => '#004f54',
 				),
 				array(
 					'name'  => __( 'Black', 'varia' ),
@@ -216,6 +236,15 @@ function kelpie_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'kelpie_scripts' );
+
+/**
+ * Enqueue assets for the block editor.
+ * This is a good place to load fonts!
+ */
+function kelpie_editor_scripts_styles() {
+
+}
+add_action( 'enqueue_block_editor_assets', 'kelpie_editor_scripts_styles' );
 
 /**
  * Include a skip to content link at the top of the page so that users can bypass the menu.
