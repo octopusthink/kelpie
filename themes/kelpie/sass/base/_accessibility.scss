@@ -48,32 +48,34 @@
 /* Skip Link --------------------------------- */
 
 .skip-link {
-  left: -9999rem;
-  top: 0;
-  z-index: 999999999;
-	
-  &:focus {
-	@include typography('interface', 'large');
-	background: get($palette, 'neutral', 'black');
-	box-shadow: none;
-	color: get($colors, 'interactive', 'focus');
-	border-bottom: 0.2rem solid;
-	display: block;
-	left: 0;
-	right: 0;
-	width: 100%;
-	text-align: center;
-	padding-left: get($spacing, 'm');
-	padding-right: get($spacing, 'm');
-	padding-bottom: get($spacing, 's');
-	padding-top: get($spacing, 's');
-	z-index: 100000;
-}
+	left: -9999rem;
+	top: 0;
+	z-index: 999999999;
+
+	&:focus {
+
+		@include typography("interface", "large");
+		background: get($palette, "neutral", "black");
+		border-bottom: 0.2rem solid;
+		box-shadow: none;
+		color: get($colors, "interactive", "focus");
+		display: block;
+		left: 0;
+		padding-bottom: get($spacing, "s");
+		padding-left: get($spacing, "m");
+		padding-right: get($spacing, "m");
+		padding-top: get($spacing, "s");
+		right: 0;
+		text-align: center;
+		width: 100%;
+		z-index: 100000;
+	}
 }
 
 /* Accessibility Settings -------------------- */
 
-@media ( prefers-reduced-motion: reduce ) {
+@media (prefers-reduced-motion: reduce) {
+
 	* {
 		animation-duration: 0s !important;
 		transition-duration: 0s !important;
