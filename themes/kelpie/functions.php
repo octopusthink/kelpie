@@ -138,7 +138,7 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 				),
 				array(
 					'name'  => __( 'Primary', 'varia' ),
-					'slug'  => 'primary',
+					'slug'  => 'primary-default',
 					'color' => '#e33592',
 				),
 				array(
@@ -163,7 +163,7 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 				),
 				array(
 					'name'  => __( 'Secondary', 'varia' ),
-					'slug'  => 'secondary',
+					'slug'  => 'secondary-default',
 					'color' => '#00a8b4',
 				),
 				array(
