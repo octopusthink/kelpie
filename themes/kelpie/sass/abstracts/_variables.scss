@@ -118,7 +118,6 @@ $spacing: (
  * how elements are sized & within the available viewport space.
  */
 $site: (
-	"expanded-menu-breakpoint": 640px, // At this point, we show a full menu.
 	"max-site-width": 160rem, // 1600px. Beyond this, we'll block out the edges of the screen.
 	// If you need to change this width, also be sure to change set_post_thumbnail_size in functions.php
 	"max-content-width": 56rem, // 560px. Used for content and Gutenberg blocks.
@@ -131,8 +130,8 @@ $site: (
  * Chances are we very rarely need this many.
  */
 $breakpoints: (
-	"phone": 400px,
-	"phone-wide": 480px,
+	"mobile": 400px,
+	"mobile-wide": 480px,
 	"phablet": 560px,
 	"tablet-small": 640px,
 	"tablet": 768px,

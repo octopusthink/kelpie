@@ -3,18 +3,18 @@
 --------------------------------------------------------------*/
 .posts-navigation .nav-links {
 	display: grid;
-	grid-gap: get($spacing, "m");
-	margin: 0 auto get($spacing, "l");
-	max-width: calc(4.8rem + #{get($site, "max-content-width")});
+	grid-gap: get($spacing, 'm');
+	margin: 0 auto get($spacing, 'l');
+	max-width: calc(4.8rem + #{get($site, 'max-content-width')});
 
-	@media screen and (min-width: 640px) {
+	@include media('tablet-small') {
 		grid-template-columns: 1fr 1fr;
 	}
 
 	.nav-previous,
 	.nav-next {
 
-		@include typography( metadata, medium );
+		@include typography('metadata', 'medium');
 		align-items: center;
 		display: flex;
 	}

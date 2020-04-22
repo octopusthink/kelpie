@@ -10,8 +10,7 @@
 }
 
 // Show expanded menu at larger screen sizes.
-@media (min-width: get($site, "expanded-menu-breakpoint")) {
-
+@include media('tablet-small') {
 	.header-navigation-wrapper {
 		align-items: center;
 		display: flex;
@@ -212,7 +211,6 @@
  * These rules are supported by all browsers (>IE11) and when JS is disabled.
  */
 @media (any-pointer: coarse) {
-
 	.expanded-menu > li.menu-item-has-children > a {
 		margin-right: 2rem;
 		padding-right: 0;
