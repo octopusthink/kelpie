@@ -1,18 +1,24 @@
 /* Post taxonomies */
 .kelpie-post-taxonomies {
-	display: grid;
-	grid-gap: get($spacing, "xxs");
-}
-
-.entry-categories {
-
 	@include typography(metadata, medium);
+	color: get($colors, 'text', 'light');
+	display: grid;
+	grid-gap: get($spacing, 'xxs');
+
+	a {
+		color: inherit;
+	
+		&:hover {
+			@include subtle-link-underline();
+		}
+
+		&:focus {
+			@include focus-ring();
+		}
+	}
 }
 
 .entry-tags {
-
-	@include typography(metadata, medium);
-
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -20,8 +26,8 @@
 }
 
 .entry-tag {
-	padding-left: get($spacing, "hairline");
-	padding-right: get($spacing, "hairline");
-	padding-top: get($spacing, "hairline");
+	padding-left: get($spacing, 'hairline');
+	padding-right: get($spacing, 'hairline');
+	padding-top: get($spacing, 'hairline');
 }
 

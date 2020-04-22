@@ -9,9 +9,21 @@
 .post-author,
 .post-date,
 .post-comment-link {
+	@include typography('metadata', 'medium');
+	color: get($colors, 'text', 'light');
+	margin-bottom: get($spacing, 'xxs');
+	padding-left: get($spacing, 'xxs');
+	padding-right: get($spacing, 'xxs');
+	
+	a {
+		color: inherit;
+	
+		&:hover {
+			@include subtle-link-underline();
+		}
 
-	@include typography(metadata, medium);
-	margin-bottom: get($spacing, "xxs");
-	padding-left: get($spacing, "xxs");
-	padding-right: get($spacing, "xxs");
+		&:focus {
+			@include focus-ring();
+		}
+	}
 }

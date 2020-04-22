@@ -26,6 +26,14 @@
 
 	a {
 		color: inherit;
+
+		&:hover {
+			@include subtle-link-underline();
+		}
+
+		&:focus {
+			@include focus-ring();
+		}
 	}
 }
 

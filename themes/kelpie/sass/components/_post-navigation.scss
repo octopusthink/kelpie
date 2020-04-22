@@ -20,7 +20,7 @@
 
 	.post-title {
 		@include typography(subtitles, small);
-		display: block;
+		display: inline-block;
 	}
 
 	.nav-previous {
@@ -33,7 +33,7 @@
 		}
 
 		.post-title {
-			padding-left: 2.4rem;
+			margin-left: 2.4rem;
 		}
 	}
 
@@ -47,7 +47,24 @@
 		}
 
 		.post-title {
-			padding-right: 2.4rem;
+			margin-right: 2.4rem;
+		}
+	}
+
+	.nav-previous a,
+	.nav-next a {
+		display: block;
+
+		&:hover,
+		&:active {
+			.post-title {
+				@include subtle-link-underline;
+				color: get($colors, 'interactive', 'hover');
+			}
+		}
+
+		&:focus {
+			@include focus-ring();
 		}
 	}
 }

@@ -16,7 +16,7 @@
 }
 
 // A link with a more subdued underline effect, often used in footer areas.
-@mixin subtle-link-underline($color: 'currentColor') {
+@mixin subtle-link-underline($color: currentColor) {
 	box-shadow: 0 0.2rem $color;
 }
 
