@@ -46,6 +46,7 @@ big {
 		}
 
 		&:focus {
+
 			@include focus-ring;
 		}
 	}

@@ -60,3 +60,21 @@ function kelpie_infinite_scroll_render() {
 		endif;
 	}
 }
+
+
+/**
+ * Remove CSS styles used by Jetpack.
+ * This requires a bunch of different calls because Jetpack hates me.
+ */
+add_filter( 'jetpack_sharing_counts', '__return_false', 99 );
+add_filter( 'jetpack_implode_frontend_css', '__return_false', 99 );
+
+function kelpie_remove_sharedaddy_css() {
+	remove_action( 'wp_head', 'sharing_add_header', 1 );
+}
+add_action( 'template_redirect', 'kelpie_remove_sharedaddy_css' );
+
+function kelpie_nix_jetpack_css() {
+	wp_deregister_style( 'grunion.css' ); // Grunion contact form
+}
+add_action( 'wp_print_styles', 'kelpie_nix_jetpack_css' );

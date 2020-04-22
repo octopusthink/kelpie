@@ -19,6 +19,9 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	<?php if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) : ?>
+		<script src="http://localhost:35729/livereload.js"></script>
+	<?php endif; ?>
 </head>
 
 <body <?php body_class(); ?>>

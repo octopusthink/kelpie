@@ -1,0 +1,46 @@
+/* Contact info ---------------------------- */
+.wp-block-jetpack-contact-info {
+    @include content-block();
+    @include typography(body, large);
+}
+
+/* Contact form ---------------------------- */
+.contact-form {
+    @include content-block();
+
+    .grunion-field-label {
+        @include label();
+    }
+
+    // "Required" text.
+    .grunion-field-label span {
+        color: get($colors, 'text', 'light');
+        margin-left: get($spacing, 'hairline');
+    }
+
+    .grunion-field-wrap {
+        margin-bottom: get($spacing, 'xs');
+    }
+
+    input[type="text"], 
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    textarea {
+        @include textfield();
+    }
+
+    textarea {
+        height: 16rem;
+    }
+
+    .contact-submit {
+        text-align: center;
+    }
+
+    .pushbutton-wide {
+        @include button();
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
