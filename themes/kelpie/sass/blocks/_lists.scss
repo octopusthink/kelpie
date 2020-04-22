@@ -1,19 +1,24 @@
 /*--------------------------------------------------------------
-# List
+# Lists
 --------------------------------------------------------------*/
 .kelpie-page-content ul,
 .kelpie-page-content ol,
 .wp-block ul,
 .wp-block ol {
-
 	@include typography( body );
 	@include content-block();
 	list-style-position: outside;
 
+	// Nested lists.
 	ul,
 	ol {
+		margin-left: get( $spacing, 'xs' );
 		margin-bottom: 0;
-		margin-left: get($spacing, "xs");
+	}
+
+	// Indent on mobile so we don't jam up against the border.
+	@include media('tablet-small', 'max') {
+		margin-left: get($spacing, 'xs');
 	}
 }
 
@@ -22,7 +27,7 @@
 	h1, h2, h3, h4, h5, h6 {
 		& + ol,
 		& + ul {
-			margin-top: -#{get($spacing, 'xs')};
+			margin-top: -#{get($spacing, 'xxs')};
 		}
 	}
 }
