@@ -81,7 +81,7 @@ $colors: (
 	"interactive": (
 		"background": get($palette, "primary", "dark"),
 		"border": get($palette, "primary", "default"),
-		"text": get($palette, "primary", "default"),
+		"text": get($palette, "neutral", "black"),
 		"focus": get($palette, "primary", "light"),
 		"hover": get($palette, "secondary", "default"),
 	),

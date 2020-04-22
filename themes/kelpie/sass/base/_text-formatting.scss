@@ -32,21 +32,16 @@ big {
 ## Links
 --------------------------------------------------------------*/
 .kelpie-page-content {
-
 	a:not(.wp-block-button__link) {
-		color: get($colors, "interactive", "text");
-		text-decoration: underline;
-		text-decoration-color: get($colors, "interactive", "border");
-		text-decoration-thickness: 0.2rem;
-		text-underline-offset: 0.4rem;
+		color: get($colors, 'interactive', 'text');
+		@include colored-link-underline();
 
 		&:hover,
 		&:active {
-			text-decoration-color: get($colors, "interactive", "hover");
+			@include colored-link-underline-hover();
 		}
 
 		&:focus {
-
 			@include focus-ring;
 		}
 	}
