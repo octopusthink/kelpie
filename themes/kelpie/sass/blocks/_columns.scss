@@ -1,0 +1,19 @@
+/*--------------------------------------------------------------
+# Columns block
+--------------------------------------------------------------*/
+.wp-block-columns {
+    @include content-block();
+}
+
+// Increase default spacing between columns.
+@media (min-width: 600px) and (max-width: 781px) {
+    .wp-block-column:nth-child(even) {
+        margin-left: get($spacing, 'xl');
+    } 
+}
+
+@media (min-width: 782px) {
+    .wp-block-column:not(:first-child) {
+        margin-left: get($spacing, 'xl');
+    }
+}

@@ -46,13 +46,15 @@
 		max-width: get($site, "max-content-width");
 	}
 
-	// Headings that follow a paragraph get a little extra spacing.
-	p + h1,
-	p + h2,
-	p + h3,
-	p + h4,
-	p + h5,
-	p + h6 {
-		margin-top: get($spacing, "l");
+	// Headings that follow a text block get a little extra spacing.
+	p, ul, ol {
+		& + h1,
+		& + h2,
+		& + h3,
+		& + h4,
+		& + h5,
+		& + h6 {
+			margin-top: get( $spacing, 'l' );
+		}
 	}
 }
