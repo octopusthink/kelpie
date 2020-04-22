@@ -12,6 +12,7 @@ dist/
 *.map
 themes/kelpie/style.js
 themes/kelpie/style-editor.js
+*.asset.php
 
 # Theme and Plugin handling
 #
