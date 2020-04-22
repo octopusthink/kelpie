@@ -3,16 +3,16 @@
 --------------------------------------------------------------*/
 .wp-block-group {
 	@include content-block();
-	margin-bottom: get($spacing, "xl");
-
-	&.has-background {
-        padding-left: get($spacing, "s");
-        padding-right: get($spacing, "s");
+	margin-bottom: get($spacing, 'xl');
+    
+    &.has-background {
+        padding-left: get($spacing, "xs");
+        padding-right: get($spacing, "xs");
         padding-top: get($spacing, "xl");
         padding-bottom: get($spacing, "xl");
 
-		@include media("tablet") {
-			padding: get($spacing, "xxl");
-		}
-	}
+        @include media('tablet') {
+            padding: get($spacing, "xxl");
+        }
+    }
 }
