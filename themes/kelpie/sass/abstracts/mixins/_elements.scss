@@ -1,62 +1,60 @@
 // Apply button styles.
 @mixin button( $color: default, $style: default, $size: medium ) {
-
 	@include typography( interface, medium );
 	border: 0;
 	border-radius: 0;
-	color: get($colors, "text", "inverse-light");
+	color: get($colors, 'text', 'inverse-light');
 	cursor: pointer;
 	display: inline-block;
 	margin: 0;
 	outline: none;
-	padding: get($spacing, "xs") get($spacing, "m");
+	padding: get($spacing, 'xs') get($spacing, 'l');
 	position: relative;
 	text-align: center;
 	text-decoration: none;
 	top: 0;
 	transition: all 200ms ease-out;
 
-	@if $color == "default" {
-		background: get($colors, "interactive", "background");
+	@if $color == 'default' {
+		background: get($colors, 'interactive', 'background');
 	}
 
 	&:hover {
-		background: get($colors, "interactive", "hover");
+		background: get($colors, 'interactive', 'hover');
 	}
 
 	&:active {
-		background: get($colors, "interactive", "hover");
+		background: get($colors, 'interactive', 'hover');
 	}
 
 	&:focus {
-
 		@include focus-ring();
 		outline: none;
 	}
 }
 
 @mixin textfield() {
-
 	@include typography( body );
-	border: 2px solid get($colors, "borders", "default");
-	padding: get($spacing, "xs") get($spacing, "xs");
+	border: 2px solid get($colors, 'borders', 'default');
+	padding: get( $spacing, 'xxs' ) get( $spacing, 'xxs' );
+	width: 100%;
 
 	&:focus {
-
 		@include focus-ring();
-		border-color: get($colors, "interactive", "background");
+		border-color: get($colors, 'interactive', 'background');
 	}
 }
 
 @mixin label() {
-
 	@include typography( interface, small );
+	display: block;
+	margin-bottom: get($spacing, 'hairline');
 }
 
 // Style content blocks within pages so they're consistently spaced.
 @mixin content-block() {
-	margin: 0 auto get($spacing, "s");
-	max-width: get($site, "max-content-width");
+	margin: 0 auto get($spacing, 's');
+	max-width: get($site, 'max-content-width');
 
 	&.alignwide {
 		max-width: 1070px;
