@@ -1,8 +1,7 @@
 /*--------------------------------------------------------------
-## Images
+## Captions: used for Image, Audio, Video, Gallery blocks.
 --------------------------------------------------------------*/
-.wp-block-image figcaption {
-
+figcaption {
 	@include typography(body, small);
 	@include content-block();
 	text-align: center;
