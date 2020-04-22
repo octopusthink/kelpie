@@ -141,7 +141,7 @@ $breakpoints: (
 	"desktop-wide": 1440px,
 );
 
-/* Typography
+/* Typography 
  *
  * These variables determine how typography is applied across the site.
  * Several "styles" are configurable here to apply typographic treatments
@@ -149,10 +149,13 @@ $breakpoints: (
  * See design-tokens/typography.scss for full implementation.
  * The easiest way to use this is to determine a base size and a scale modifier,
  * and Kelpie will generate a type scale to use, but these values can also be
- * overridden as needed.
+ * overridden as needed. 
  */
-$typescale-base: 1.6rem; // Base font size. 1rem = 10px, so 1.6rem = 16px.
-$typescale-modifier: 1.25; // Scale modifier to determine steps in type scale. use a larger value for more contrast, and a smaller value for less contrast.
+$typescale-mobile-base: 1.6rem; // Base font size. 1rem = 10px, so 1.6rem = 16px.
+$typescale-mobile-modifier: 1.125; // Scale modifier to determine steps in type scale. use a larger value for more contrast, and a smaller value for less contrast.
+
+$typescale-desktop-base: 1.8rem; // Base font size. 1rem = 10px, so 1.6rem = 16px.
+$typescale-desktop-modifier: 1.25; // Scale modifier to determine steps in type scale. use a larger value for more contrast, and a smaller value for less contrast.
 
 $typography: (
 	"body":  (
@@ -208,15 +211,26 @@ $typography: (
 		weight: 500,
 		text-transform: uppercase,
 	),
-	"sizes": (
-		"xs": ($typescale-base / $typescale-modifier / $typescale-modifier),
-		"s": ($typescale-base / $typescale-modifier),
-		"base": $typescale-base,
-		"m": ($typescale-base * $typescale-modifier),
-		"l": ($typescale-base * $typescale-modifier * $typescale-modifier),
-		"xl": ($typescale-base * $typescale-modifier * $typescale-modifier * $typescale-modifier),
-		"xxl": ($typescale-base * $typescale-modifier * $typescale-modifier * $typescale-modifier * $typescale-modifier),
-		"xxxl": ($typescale-base * $typescale-modifier * $typescale-modifier * $typescale-modifier * $typescale-modifier * $typescale-modifier),
-		"xxxxl": ($typescale-base * $typescale-modifier * $typescale-modifier * $typescale-modifier * $typescale-modifier * $typescale-modifier * $typescale-modifier),
+    "scale-mobile": (
+        "xs": ($typescale-mobile-base / $typescale-mobile-modifier / $typescale-mobile-modifier),
+        "s": ($typescale-mobile-base / $typescale-mobile-modifier),
+        "base": $typescale-mobile-base,
+        "m": ($typescale-mobile-base * $typescale-mobile-modifier),
+        "l": ($typescale-mobile-base * $typescale-mobile-modifier * $typescale-mobile-modifier),
+        "xl": ($typescale-mobile-base * $typescale-mobile-modifier * $typescale-mobile-modifier * $typescale-mobile-modifier),
+        "xxl": ($typescale-mobile-base * $typescale-mobile-modifier * $typescale-mobile-modifier * $typescale-mobile-modifier * $typescale-mobile-modifier),
+        "xxxl": ($typescale-mobile-base * $typescale-mobile-modifier * $typescale-mobile-modifier * $typescale-mobile-modifier * $typescale-mobile-modifier * $typescale-mobile-modifier),
+        "xxxxl": ($typescale-mobile-base * $typescale-mobile-modifier * $typescale-mobile-modifier * $typescale-mobile-modifier * $typescale-mobile-modifier * $typescale-mobile-modifier * $typescale-mobile-modifier),
+	),
+    "scale-desktop": (
+        "xs": ($typescale-desktop-base / $typescale-desktop-modifier / $typescale-desktop-modifier),
+        "s": ($typescale-desktop-base / $typescale-desktop-modifier),
+        "base": $typescale-desktop-base,
+        "m": ($typescale-desktop-base * $typescale-desktop-modifier),
+        "l": ($typescale-desktop-base * $typescale-desktop-modifier * $typescale-desktop-modifier),
+        "xl": ($typescale-desktop-base * $typescale-desktop-modifier * $typescale-desktop-modifier * $typescale-desktop-modifier),
+        "xxl": ($typescale-desktop-base * $typescale-desktop-modifier * $typescale-desktop-modifier * $typescale-desktop-modifier * $typescale-desktop-modifier),
+        "xxxl": ($typescale-desktop-base * $typescale-desktop-modifier * $typescale-desktop-modifier * $typescale-desktop-modifier * $typescale-desktop-modifier * $typescale-desktop-modifier),
+        "xxxxl": ($typescale-desktop-base * $typescale-desktop-modifier * $typescale-desktop-modifier * $typescale-desktop-modifier * $typescale-desktop-modifier * $typescale-desktop-modifier * $typescale-desktop-modifier),
 	),
 );
