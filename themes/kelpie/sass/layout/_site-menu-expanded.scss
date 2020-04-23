@@ -48,7 +48,7 @@
 	&::after {
 		background-color: currentColor;
 		bottom: calc(50% - 0.1rem);
-		content: "";
+		content: '';
 		display: block;
 		left: 0;
 		position: absolute;
@@ -67,21 +67,24 @@
 
 // Menu items.
 .expanded-menu .menu-item {
-
 	@include typography(interface);
-	margin-right: get($spacing, "s");
-	margin-top: get($spacing, "xs");
+	margin-right: get($spacing, 's');
+	margin-top: get($spacing, 'xs');
 	position: relative;
 
 	a {
-		color: get($colors, "layout", "header-text");
+		color: get($colors, 'layout', 'header-text');
 		display: block;
 		text-decoration: none;
 
 		&:hover,
-		&:focus {
-			color: get($colors, "interactive", "hover");
+		&:active {
+			color: get($colors, 'interactive', 'hover');
 			text-decoration: underline;
+		}
+
+		&:focus {
+			@include focus-ring();
 		}
 	}
 }
@@ -103,10 +106,10 @@
 
 // Sub-menus.
 .expanded-menu .sub-menu {
-	background: get($colors, "layout", "submenu-background");
+	background: get($colors, 'layout', 'submenu-background');
 	border-radius: 0.4rem;
 	opacity: 0;
-	padding: get($spacing, "xxs") 0;
+	padding: get($spacing, 'xxs') 0;
 	position: absolute;
 	right: 9999rem;
 	top: calc(100% + 2rem);
@@ -118,7 +121,7 @@
 	&::before,
 	&::after {
 		bottom: 100%;
-		content: "";
+		content: '';
 		display: block;
 		position: absolute;
 	}
@@ -131,7 +134,7 @@
 
 	&::after {
 		border: 0.8rem solid transparent;
-		border-bottom-color: get($colors, "layout", "submenu-background");
+		border-bottom-color: get($colors, 'layout', 'submenu-background');
 		right: 1.8rem;
 	}
 
@@ -141,9 +144,9 @@
 		a {
 			background: transparent;
 			border: 0;
-			color: get($colors, "layout", "submenu-text");
+			color: get($colors, 'layout', 'submenu-text');
 			display: block;
-			padding: get($spacing, "xxs") get($spacing, "xs");
+			padding: get($spacing, 'xxs') get($spacing, 'xs');
 			transition: background-color 0.15s linear;
 			width: 100%;
 		}
@@ -187,7 +190,7 @@
 		border-bottom-color: transparent;
 
 		/*rtl:ignore*/
-		border-left-color: get($colors, "layout", "submenu-background");
+		border-left-color: get($colors, 'layout', 'submenu-background');
 		bottom: auto;
 		right: -1.6rem;
 		top: 2rem;

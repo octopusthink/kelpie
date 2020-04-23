@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 // Modal that contains the menu.
 .menu-modal {
-	background: get($colors, "layout", "modal-menu-background");
+	background: get($colors, 'layout', 'modal-menu-background');
 	bottom: 0;
 	display: none;
 	left: -99999rem;
@@ -41,7 +41,7 @@
 
 // Inner wrapper elements.
 .menu-modal-inner {
-	background: get($colors, "layout", "site-header");
+	background: get($colors, 'layout', 'site-header');
 	display: flex;
 	justify-content: stretch;
 	overflow: auto;
@@ -61,14 +61,14 @@
 	color: inherit;
 }
 
-// "Close menu" toggle
+// 'Close menu' toggle
 .kelpie-close-nav-toggle-wrapper {
 	align-items: center;
-	color: get($colors, "layout", "modal-menu-text");
+	color: get($colors, 'layout', 'modal-menu-text');
 	display: flex;
 	height: 8rem;
 	justify-content: flex-end;
-	padding: get($site, "padding");
+	padding: get($site, 'padding');
 }
 
 // Menu within the modal.
@@ -87,7 +87,7 @@
 .modal-menu .menu-item {
 
 	@include typography(interface, large);
-	border-color: get($colors, "borders", "inverse-dark");
+	border-color: get($colors, 'borders', 'inverse-dark');
 	border-style: solid;
 	border-width: 0.1rem 0 0;
 	display: flex;
@@ -101,16 +101,32 @@
 	}
 
 	a {
-		color: get($colors, "layout", "modal-menu-text");
+		color: get($colors, 'layout', 'modal-menu-text');
 		display: block;
-		padding: get($spacing, "s");
+		padding: get($spacing, 's');
 		text-decoration: none;
 		width: 100%;
 
-		&:focus,
-		&:hover {
-			color: get($colors, "interactive", "hover");
+		&:hover,
+		&:active {
+			color: get($colors, 'interactive', 'hover');
 			text-decoration: underline;
+		}
+
+		&:focus {
+			outline: 0;
+			position: relative;
+
+			&::before {
+				@include focus-ring();
+				display: block;
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0.3rem;
+				bottom: 0;
+				left: 0.3rem;
+			}
 		}
 	}
 }
@@ -123,7 +139,7 @@
 
 // Sub-menu
 .sub-menu-toggle {
-	border-left: 0.1rem solid get($colors, "borders", "inverse-dark");
+	border-left: 0.1rem solid get($colors, 'borders', 'inverse-dark');
 	flex-shrink: 0;
 	margin: 1rem 0;
 	padding: 0 2.5rem;

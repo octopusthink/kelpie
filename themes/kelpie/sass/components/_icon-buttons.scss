@@ -21,14 +21,29 @@
 		opacity: 0.8;
 	}
 
-	&:focus .kelpie-icon-button-label,
-	&:hover .kelpie-icon-button-label {
+	&:hover .kelpie-icon-button-label,
+	&:active .kelpie-icon-button-label {
 		text-decoration: underline;
+	}
+
+	&:focus {
+		position: relative;
+		outline: 0;
+		
+		&::before {
+			@include focus-ring();
+			display: block;
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: -2.4rem;
+		}
 	}
 }
 
 .kelpie-icon-button-label {
-
 	@include typography(interface, small);
 	color: inherit;
 	position: absolute;
