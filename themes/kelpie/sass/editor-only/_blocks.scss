@@ -1,0 +1,47 @@
+// Use ems for spacing in the editor context.
+.wp-block > * {
+	margin-bottom: rems-to-pixels(get( $spacing, 's' ));
+	max-width: none;
+}
+
+// Adjust spacing of groups.
+.wp-block-group {
+	margin-bottom: rems-to-pixels(get($spacing, 'xl'));
+	max-width: none;
+    
+    &.has-background {
+        padding-left: rems-to-pixels(get($spacing, 'xs'));
+        padding-right: rems-to-pixels(get($spacing, 'xs'));
+        padding-top: rems-to-pixels(get($spacing, 'xl'));
+        padding-bottom: rems-to-pixels(get($spacing, 'xl'));
+
+        @include media('tablet') {
+            padding: rems-to-pixels(get($spacing, 'xxl'));
+        }
+	}
+	
+	.wp-block-group__inner-container {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rems-to-pixels(get( $site, 'max-content-width' ));
+	}
+}
+
+// Buttons.
+.wp-block-button__link {
+	@include font-size-editor('interface', 'medium');
+	padding: rems-to-pixels(get( $spacing, 'xs' )) rems-to-pixels(get( $spacing, 'l' ));
+	margin-top: rems-to-pixels(get($spacing, 'xs'));
+	margin-bottom: rems-to-pixels(get($spacing, 'xs'));
+}
+
+// Brute-force things a bit for Jetpack's contact form.
+.jetpack-submit-button .wp-block-button__link {
+	margin-top: 0;
+}
+
+// Style contact info block a wee bit.
+.jetpack-contact-info-block {
+	@include typography();
+	@include font-size-editor();
+}

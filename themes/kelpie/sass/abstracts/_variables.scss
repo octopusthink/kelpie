@@ -150,9 +150,9 @@ $breakpoints: (
  * and Kelpie will generate a type scale to use, but these values can also be
  * overridden as needed. 
  */
+$ems-multiplier: 1.229375; // Used to convert from rems to ems.
 $typescale-mobile-base: 1.6rem; // Base font size. 1rem = 10px, so 1.6rem = 16px.
 $typescale-mobile-modifier: 1.125; // Scale modifier to determine steps in type scale. use a larger value for more contrast, and a smaller value for less contrast.
-
 $typescale-desktop-base: 1.8rem; // Base font size. 1rem = 10px, so 1.6rem = 16px.
 $typescale-desktop-modifier: 1.25; // Scale modifier to determine steps in type scale. use a larger value for more contrast, and a smaller value for less contrast.
 

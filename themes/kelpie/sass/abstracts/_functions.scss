@@ -6,9 +6,8 @@
  * get($spacing, "m");
  */
 @function get( $map, $keys... ) {
-
 	@each $key in $keys {
-		$map: map-get($map, $key);
+		$map: map-get( $map, $key );
 	}
 
 	@return $map;
@@ -21,11 +20,32 @@
  * @return {Number} - Unitless number
  */
 @function strip-unit( $number ) {
-
-	@if type-of( $number ) == "number" and not unitless( $number ) {
-
+	@if type-of( $number ) == 'number' and not unitless( $number ) {
 		@return $number / ( $number * 0 + 1 );
 	}
-
 	@return $number;
+}
+
+/**
+ * Convert rems to ems. 
+ * We typically use this to style elements in the editor, 
+ * which doesn't translate rems properly.
+ *
+ * @param {String} $value - Value in rems to convert.
+ * @return {String} - Value in ems.
+ */
+@function rems-to-ems( $value ) {
+	@return #{strip-unit( $value )  * $ems-multiplier}em;
+}
+
+/**
+ * Convert rems to pixels. 
+ * We typically use this to style elements in the editor, 
+ * which doesn't translate rems properly.
+ *
+ * @param {String} $value - Value in rems to convert.
+ * @return {String} - Value in pixels.
+ */
+@function rems-to-pixels( $value ) {
+	@return #{strip-unit( $value )  * 10}px;
 }
