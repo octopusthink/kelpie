@@ -6,10 +6,23 @@
 	max-width: get($site, "max-content-width");
 
 	.entry-title {
-
 		@include typography( headings, medium );
 		margin: 0 auto get($spacing, "s");
 		text-align: center;
+
+		a {
+			color: inherit;
+			display: block;
+		
+			&:hover,
+			&:active {
+				color: get($colors, 'interactive', 'hover');
+			}
+
+			&:focus {
+				@include focus-ring();
+			}
+		}
 	}
 
 	.kelpie-post-meta {
