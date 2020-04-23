@@ -1,5 +1,4 @@
 /* Expanded (desktop) menu ------------------------- */
-
 .header-navigation-wrapper {
 	display: none;
 }
@@ -11,11 +10,11 @@
 
 // Show expanded menu at larger screen sizes.
 @include media('tablet-small') {
+
 	.header-navigation-wrapper {
 		align-items: center;
 		display: flex;
 	}
-
 	.expanded-menu-wrapper {
 		display: block;
 		width: 100%;
@@ -27,7 +26,6 @@
 		display: none !important;
 	}
 }
-
 .expanded-menu {
 	display: flex;
 	flex-wrap: wrap;
@@ -43,7 +41,6 @@
 	position: absolute;
 	transform: rotate(-45deg);
 	width: 1.3rem;
-
 	&::before,
 	&::after {
 		background-color: currentColor;
@@ -53,12 +50,10 @@
 		left: 0;
 		position: absolute;
 	}
-
 	&::before {
 		height: 0.9rem;
 		width: 0.2rem;
 	}
-
 	&::after {
 		height: 0.2rem;
 		width: 0.9rem;
@@ -71,18 +66,15 @@
 	margin-right: get($spacing, 's');
 	margin-top: get($spacing, 'xs');
 	position: relative;
-
 	a {
 		color: get($colors, 'layout', 'header-text');
 		display: block;
 		text-decoration: none;
-
 		&:hover,
 		&:active {
 			color: get($colors, 'interactive', 'hover');
 			text-decoration: underline;
 		}
-
 		&:focus {
 			@include focus-ring();
 		}
@@ -93,11 +85,9 @@
 .expanded-menu .current_page_ancestor {
 	text-decoration: underline;
 }
-
 .expanded-menu .current-menu-item > a,
 .expanded-menu .current-menu-item > .link-icon-wrapper > a {
 	text-decoration: underline;
-
 	&:hover,
 	&:focus {
 		text-decoration: none;
@@ -117,7 +107,6 @@
 	transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
 	width: 20rem;
 	z-index: 1;
-
 	&::before,
 	&::after {
 		bottom: 100%;
@@ -125,22 +114,18 @@
 		display: block;
 		position: absolute;
 	}
-
 	&::before {
 		height: 2rem;
 		left: 0;
 		right: 0;
 	}
-
 	&::after {
 		border: 0.8rem solid transparent;
 		border-bottom-color: get($colors, 'layout', 'submenu-background');
 		right: 1.8rem;
 	}
-
 	.menu-item {
 		margin: 0;
-
 		a {
 			background: transparent;
 			border: 0;
@@ -162,11 +147,9 @@
 	transform: translateY(0);
 	transition: opacity 0.15s linear, transform 0.15s linear;
 }
-
 .expanded-menu .sub-menu .menu-item-has-children > a {
 	padding-right: 4.5rem;
 }
-
 .expanded-menu .sub-menu .menu-item-has-children .icon {
 	position: absolute;
 	right: 1.5rem;
@@ -176,7 +159,6 @@
 // Multi-nested menus. Try to avoid these if at all possible!
 .expanded-menu .sub-menu .sub-menu {
 	top: -1rem;
-
 	&::before {
 		bottom: 0;
 		height: auto;
@@ -185,7 +167,6 @@
 		top: 0;
 		width: 2rem;
 	}
-
 	&::after {
 		border-bottom-color: transparent;
 
@@ -196,12 +177,9 @@
 		top: 2rem;
 	}
 }
-
-
 .rtl .expanded-menu .sub-menu .sub-menu::after {
 	transform: rotate(180deg);
 }
-
 .expanded-menu .sub-menu .menu-item-has-children:hover > .sub-menu,
 .expanded-menu .sub-menu .menu-item-has-children:focus > .sub-menu,
 .expanded-menu .sub-menu .menu-item-has-children.focus > .sub-menu {
@@ -214,11 +192,11 @@
  * These rules are supported by all browsers (>IE11) and when JS is disabled.
  */
 @media (any-pointer: coarse) {
+
 	.expanded-menu > li.menu-item-has-children > a {
 		margin-right: 2rem;
 		padding-right: 0;
 	}
-
 	.expanded-menu ul li.menu-item-has-children > a {
 		margin-right: 4.5rem;
 		padding-right: 0;
@@ -231,7 +209,6 @@
 	margin-right: 2rem;
 	padding-right: 0;
 }
-
 .touch-enabled .expanded-menu ul li.menu-item-has-children > a {
 	margin-right: 4.5rem;
 	padding-right: 0;

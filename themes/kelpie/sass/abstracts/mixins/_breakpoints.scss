@@ -1,13 +1,10 @@
 // Output a media query according to our defined breakpoints.
 @mixin media($width, $type: min) {
-
 	@if map_has_key($breakpoints, $width) {
 		$width: map_get($breakpoints, $width);
-
 		@if $type == max {
 			$width: $width - 1px;
 		}
-
 		@media only screen and (#{$type}-width: $width) {
 			@content;
 		}

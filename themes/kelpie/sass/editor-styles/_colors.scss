@@ -5,13 +5,14 @@
 @each $name, $color in get($palette, 'primary') {
 	.has-primary-#{$name}-background-color {
 		background-color: $color;
-		
 		&:not(.has-text-color) {
 			@if $name == 'white' or $name == 'light' {
 				color: get($palette, 'primary', 'black');
-			} @else if $name == 'default' {
+			}
+			@else if $name == 'default' {
 				color: get($palette, 'neutral', 'white');
-			} @else {
+			}
+			@else {
 				color: get($palette, 'primary', 'white');
 			}
 		}
@@ -22,13 +23,14 @@
 @each $name, $color in get($palette, 'secondary') {
 	.has-secondary-#{$name}-background-color {
 		background-color: $color;
-		
 		&:not(.has-text-color) {
 			@if $name == 'white' or $name == 'light' {
 				color: get($palette, 'secondary', 'black');
-			} @else if $name == 'default' {
+			}
+			@else if $name == 'default' {
 				color: get($palette, 'neutral', 'black');
-			} @else {
+			}
+			@else {
 				color: get($palette, 'secondary', 'white');
 			}
 		}
@@ -37,18 +39,15 @@
 
 // Generate background & text colours for black and white backgrounds.
 .has-black-background-color {
-	background-color: get($palette, "neutral", "black");
-
+	background-color: get($palette, 'neutral', 'black');
 	&:not(.has-text-color) {
-		color: get($palette, "neutral", "grey100");
+		color: get($palette, 'neutral', 'grey100');
 	}
 }
-
 .has-white-background-color {
-	background-color: get($palette, "neutral", "white");
-
+	background-color: get($palette, 'neutral', 'white');
 	&:not(.has-text-color) {
-		color: get($palette, "neutral", "grey900");
+		color: get($palette, 'neutral', 'grey900');
 	}
 }
 
@@ -57,6 +56,7 @@
 .has-background,
 .kelpie-page-content .has-background,
 .wp-block .has-background {
+
 	p,
 	h1,
 	h2,
@@ -66,11 +66,9 @@
 	h6 {
 		color: inherit;
 	}
-
 	a:not(.wp-block-button__link) {
 		color: inherit;
 		text-decoration-color: currentColor;
-
 		&:hover {
 			text-decoration-color: transparent;
 		}
@@ -79,23 +77,22 @@
 
 // Generate text colours for primary palette.
 @each $name, $color in get($palette, 'primary') {
-  .has-primary-#{$name}-color {
-	color: $color;
-  }
+	.has-primary-#{$name}-color {
+		color: $color;
+	}
 }
 
 // Generate text colours for secondary palette.
 @each $name, $color in get($palette, 'secondary') {
-  .has-secondary-#{$name}-color {
-	color: $color;
-  }
+	.has-secondary-#{$name}-color {
+		color: $color;
+	}
 }
 
 // Black and white colour classes.
 .has-black-color {
 	color: get($palette, 'neutral', 'black');
 }
-
 .has-white-color {
 	color: get($palette, 'neutral', 'white');
 }

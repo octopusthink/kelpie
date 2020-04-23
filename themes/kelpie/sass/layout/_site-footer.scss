@@ -6,35 +6,28 @@
 	color: get($colors, 'layout', 'footer-text');
 	padding: get($site, 'padding');
 }
-
 .footer-social-wrapper {
 	margin-bottom: get($spacing, 'm');
 	margin-top: get($spacing, 'm');
 }
-
 .site-info {
 	@include typography(body, small);
 	color: inherit;
 	text-align: center;
-
 	a {
 		@include subtle-link-underline();
 		color: inherit;
-
 		&:hover,
 		&:active {
 			@include remove-underline();
 		}
-
 		&:focus {
 			@include focus-ring();
 		}
 	}
-
 	.footer-copyright {
 		margin: 0 0 get($spacing, 'hairline');
 	}
-
 	.powered-by-wordpress {
 		margin: 0 0 get($spacing, 'xs');
 	}

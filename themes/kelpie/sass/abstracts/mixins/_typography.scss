@@ -1,73 +1,59 @@
 // Apply type styles to elements using this mixin.
-@mixin typography( $class: body, $size: medium ) {
-	@include font-size( $class, $size );
-	color: get( $typography, $class, 'color' );
-	font-family: get( $typography, $class, 'font-family' );
-	font-style: get( $typography, $class, 'font-style' );
-	font-weight: get( $typography, $class, 'weight' );
-	letter-spacing: get( $typography, $class, 'letter-spacing' );
-	line-height: get( $typography, $class, 'line-height' );
-	text-transform: get( $typography, $class, 'text-transform' );
+@mixin typography($class: body, $size: medium) {
+	@include font-size($class, $size);
+	color: get($typography, $class, 'color');
+	font-family: get($typography, $class, 'font-family');
+	font-style: get($typography, $class, 'font-style');
+	font-weight: get($typography, $class, 'weight');
+	letter-spacing: get($typography, $class, 'letter-spacing');
+	line-height: get($typography, $class, 'line-height');
+	text-transform: get($typography, $class, 'text-transform');
 }
 
 // Generate font size and line-height.
-@mixin font-size( $class: body, $size: medium ) {
+@mixin font-size($class: body, $size: medium) {
 	@if $class == body and $size == small {
 		@include responsive-font-size('s');
 	}
-
 	@if $class == body and $size == medium {
 		@include responsive-font-size('base');
 	}
-
 	@if $class == body and $size == large {
 		@include responsive-font-size('m');
 	}
-
 	@if $class == headings and $size == small {
 		@include responsive-font-size('xl');
 	}
-
 	@if $class == headings and $size == medium {
 		@include responsive-font-size('xxl');
 	}
-
 	@if $class == headings and $size == large {
 		@include responsive-font-size('xxxl');
 	}
-
 	@if $class == titles {
 		@include responsive-font-size('xxxxl');
 	}
-
 	@if $class == subtitles and $size == small {
 		@include responsive-font-size('m');
 	}
-
 	@if $class == subtitles and $size == large {
 		@include responsive-font-size('l');
 	}
-
 	@if $class == interface and $size == small {
 		@include responsive-font-size('s');
 	}
-
 	@if $class == interface and $size == medium {
 		@include responsive-font-size('base');
 	}
-
 	@if $class == interface and $size == large {
 		@include responsive-font-size('m');
 	}
-
 	@if $class == metadata and $size == small {
 		@include responsive-font-size('xs');
 	}
-
 	@if $class == metadata and $size == medium {
 		@include responsive-font-size('s');
 	}
-
 	@if $class == metadata and $size == large {
 		@include responsive-font-size('m');
 	}
@@ -75,79 +61,62 @@
 
 // Output font sizes for the breakpoint we're using.
 @mixin responsive-font-size($size) {
-	font-size: get( $typography, 'scale-mobile', $size );
-
+	font-size: get($typography, 'scale-mobile', $size);
 	@include media('tablet-small') {
-		font-size: get( $typography, 'scale-desktop', $size );
+		font-size: get($typography, 'scale-desktop', $size);
 	}
 }
 
 // The editor context is weird, and sizing fonts in rems doesn't work as expected, so we use ems instead, and convert the numbers.
 @mixin responsive-font-size-editor($size) {
-	font-size: rems-to-ems(get($typography, 'scale-mobile', $size ));
-
+	font-size: rems-to-ems(get($typography, 'scale-mobile', $size));
 	@include media('tablet-small') {
-		font-size: rems-to-ems(get($typography, 'scale-desktop', $size ));
+		font-size: rems-to-ems(get($typography, 'scale-desktop', $size));
 	}
 }
-
-@mixin font-size-editor( $class: body, $size: medium ) {
+@mixin font-size-editor($class: body, $size: medium) {
 	@if $class == body and $size == medium {
 		@include responsive-font-size-editor('base');
 	}
-
 	@if $class == body and $size == small {
 		@include responsive-font-size-editor('s');
 	}
-
 	@if $class == body and $size == large {
 		@include responsive-font-size-editor('m');
 	}
-
 	@if $class == headings and $size == small {
 		@include responsive-font-size-editor('xl');
 	}
-
 	@if $class == headings and $size == medium {
 		@include responsive-font-size-editor('xxl');
 	}
-
 	@if $class == headings and $size == large {
 		@include responsive-font-size-editor('xxxl');
 	}
-
 	@if $class == titles {
 		@include responsive-font-size-editor('xxxxl');
 	}
-
 	@if $class == subtitles and $size == small {
 		@include responsive-font-size-editor('m');
 	}
-
 	@if $class == subtitles and $size == large {
 		@include responsive-font-size-editor('l');
 	}
-
 	@if $class == interface and $size == small {
 		@include responsive-font-size-editor('s');
 	}
-
 	@if $class == interface and $size == medium {
 		@include responsive-font-size-editor('base');
 	}
-
 	@if $class == interface and $size == large {
 		@include responsive-font-size-editor('m');
 	}
-
 	@if $class == metadata and $size == small {
 		@include responsive-font-size-editor('xs');
 	}
-
 	@if $class == metadata and $size == medium {
 		@include responsive-font-size-editor('s');
 	}
-
 	@if $class == metadata and $size == large {
 		@include responsive-font-size-editor('m');
 	}

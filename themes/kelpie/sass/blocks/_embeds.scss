@@ -1,14 +1,12 @@
 /*--------------------------------------------------------------
 ## Embeds
 --------------------------------------------------------------*/
-
 .wp-block-embed.type-video > .wp-block-embed__wrapper {
 	height: 0;
 	padding-top: 56.25%;
 	position: relative;
 	width: 100%;
 }
-
 .wp-block-embed.type-video > .wp-block-embed__wrapper > iframe {
 	bottom: 0;
 	height: 100%;

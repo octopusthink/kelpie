@@ -5,7 +5,6 @@
 	justify-content: center;
 	list-style-type: none;
 }
-
 .post-author,
 .post-date,
 .post-comment-link {
@@ -14,14 +13,11 @@
 	margin-bottom: get($spacing, 'xxs');
 	padding-left: get($spacing, 'xxs');
 	padding-right: get($spacing, 'xxs');
-	
 	a {
 		color: inherit;
-	
 		&:hover {
 			@include subtle-link-underline();
 		}
-
 		&:focus {
 			@include focus-ring();
 		}

@@ -4,15 +4,13 @@
 .wp-block-group {
 	@include content-block();
 	margin-bottom: get($spacing, 'xl');
-    
-    &.has-background {
-        padding-left: get($spacing, "xs");
-        padding-right: get($spacing, "xs");
-        padding-top: get($spacing, "xl");
-        padding-bottom: get($spacing, "xl");
-
-        @include media('tablet') {
-            padding: get($spacing, "xxl");
-        }
-    }
+	&.has-background {
+		padding-bottom: get($spacing, 'xl');
+		padding-left: get($spacing, 'xs');
+		padding-right: get($spacing, 'xs');
+		padding-top: get($spacing, 'xl');
+		@include media('tablet') {
+			padding: get($spacing, 'xxl');
+		}
+	}
 }

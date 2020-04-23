@@ -2,38 +2,33 @@
 # Post excerpts
 --------------------------------------------------------------*/
 .kelpie-post-excerpt {
-	margin: 0 auto get($spacing, "xxl");
-	max-width: get($site, "max-content-width");
-
+	margin: 0 auto get($spacing, 'xxl');
+	max-width: get($site, 'max-content-width');
 	.entry-title {
-		@include typography( headings, medium );
-		margin: 0 auto get($spacing, "s");
+		@include typography(headings, medium);
+		margin: 0 auto get($spacing, 's');
 		text-align: center;
-
 		a {
 			color: inherit;
 			display: block;
-		
 			&:hover,
 			&:active {
 				color: get($colors, 'interactive', 'hover');
 			}
-
 			&:focus {
 				@include focus-ring();
 			}
 		}
 	}
-
 	.kelpie-post-meta {
-		margin-bottom: get($spacing, "s");
+		margin-bottom: get($spacing, 's');
 	}
 }
 
 // Post thumbnails
 .kelpie-post-excerpt-thumbnail {
-	margin-bottom: get($spacing, "m");
-	margin-left: -#{get($spacing, "m")};
-	margin-right: -#{get($spacing, "m")};
-	width: calc(100% + #{get($spacing, "m")} * 2);
+	margin-bottom: get($spacing, 'm');
+	margin-left: -#{get($spacing, 'm')};
+	margin-right: -#{get($spacing, 'm')};
+	width: calc(100% + #{get($spacing, 'm')} * 2);
 }

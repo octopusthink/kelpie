@@ -6,11 +6,9 @@
 	margin: 0 auto;
 	max-width: get($site, 'max-content-width');
 	width: 100%;
-
 	.menu-item {
 		margin-right: get($spacing, 'xxs');
 	}
-
 	a {
 		align-items: center;
 		background: get($colors, 'interactive', 'text');
@@ -23,7 +21,6 @@
 		text-decoration: none;
 		transition: transform 0.15s ease-in-out;
 		width: 4.4rem;
-
 		&:hover,
 		&:active {
 			background: get($colors, 'interactive', 'hover');
@@ -31,10 +28,9 @@
 			text-decoration: none;
 			transform: scale(1.1);
 		}
-
 		&:focus {
-			background: get($colors, 'interactive', 'background');
 			@include focus-ring();
+			background: get($colors, 'interactive', 'background');
 		}
 	}
 }

@@ -1,21 +1,18 @@
 /* Post a comment form ---------------------------- */
 .comment-respond {
-	margin: 0 auto get( $spacing, 'l' );
-	max-width: get( $site, 'max-content-width' );
+	margin: 0 auto get($spacing, 'l');
+	max-width: get($site, 'max-content-width');
 }
 
-// "You are logged in as..." helper text.
+// 'You are logged in as...' helper text.
 .comment-respond .comment-notes,
 .comment-respond .logged-in-as {
-	@include typography( body, small );
-
+	@include typography(body, small);
 	a {
 		color: inherit;
-
 		&:hover {
 			@include subtle-link-underline();
 		}
-
 		&:focus {
 			@include focus-ring();
 		}
@@ -24,8 +21,8 @@
 
 // Not sure offhand where or when this shows up, so it may require additional styling.
 .comment-respond p {
-	@include typography( body, small );
-	margin-bottom: get( $spacing, 's' );
+	@include typography(body, small);
+	margin-bottom: get($spacing, 's');
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -40,19 +37,17 @@
 .comment-respond label {
 	@include label();
 }
-
 .comment-respond input[type='text'],
 .comment-respond input[type='email'],
 .comment-respond input[type='url'],
 .comment-respond textarea {
 	@include textfield();
 }
-
 .comment-respond textarea {
 	height: 16rem;
 }
 
-// "Save my information" checkbox
+// 'Save my information' checkbox
 .comment-respond input[type='checkbox'] + label {
 	padding-left: get($spacing, 'hairline');
 }
@@ -65,14 +60,14 @@
 	margin-right: auto;
 }
 
-// "Comments are closed" text.
+// 'Comments are closed' text.
 .comments-closed {
 	@include typography('metadata', 'medium');
 	margin-bottom: get($spacing, 'm');
 	text-align: center;
 }
 
-// "Leave a reply"
+// 'Leave a reply'
 .comment-reply-title {
 	@include typography('headings', 'small');
 }
@@ -81,21 +76,17 @@
 .comment .comment-reply-title {
 	margin-top: get($spacing, 's');
 }
-
 .comment-reply-title small {
 	@include typography('body', 'small');
 	display: inline-block;
 	white-space: nowrap;
 }
-
 #cancel-comment-reply-link {
 	color: inherit;
-
-		&:hover {
-			@include subtle-link-underline();
-		}
-
-		&:focus {
-			@include focus-ring();
-		}
+	&:hover {
+		@include subtle-link-underline();
+	}
+	&:focus {
+		@include focus-ring();
+	}
 }

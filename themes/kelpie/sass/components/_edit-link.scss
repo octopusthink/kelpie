@@ -2,19 +2,16 @@
 .kelpie-edit-link {
 	@include typography(metadata, medium);
 	color: get($colors, 'text', 'light');
-	margin: 0 auto get($spacing, "l");
-	margin-top: get($spacing, "m");
-	max-width: get($site, "max-content-width");
-	padding-top: get($spacing, "s");
+	margin: 0 auto get($spacing, 'l');
+	margin-top: get($spacing, 'm');
+	max-width: get($site, 'max-content-width');
+	padding-top: get($spacing, 's');
 	text-align: center;
-
 	a {
 		color: inherit;
-	
 		&:hover {
 			@include subtle-link-underline();
 		}
-
 		&:focus {
 			@include focus-ring();
 		}

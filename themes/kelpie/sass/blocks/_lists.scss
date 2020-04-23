@@ -5,29 +5,38 @@
 .kelpie-page-content ol,
 .wp-block ul,
 .wp-block ol {
-	@include typography( body );
+	@include typography(body);
 	@include content-block();
 	list-style-position: outside;
+
+	// Indent on mobile so we don't jam up against the border.
+	@include media('tablet-small', 'max') {
+		margin-left: get($spacing, 'xs');
+	}
 
 	// Nested lists.
 	ul,
 	ol {
-		margin-left: get( $spacing, 'xs' );
 		margin-bottom: 0;
-	}
-
-	// Indent on mobile so we don't jam up against the border.
-	@include media('tablet-small', 'max') {
 		margin-left: get($spacing, 'xs');
 	}
 }
 
 // When a list comes directly after a heading, tighten up the spacing.
 .kelpie-page-content {
-	h1, h2, h3, h4, h5, h6 {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+
+		/* stylelint-disable scss/selector-no-redundant-nesting-selector */
 		& + ol,
 		& + ul {
 			margin-top: -#{get($spacing, 'xxs')};
 		}
+		/* stylelint-enable scss/selector-no-redundant-nesting-selector */
 	}
 }
