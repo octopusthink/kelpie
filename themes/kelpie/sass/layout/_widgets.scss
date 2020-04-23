@@ -4,15 +4,12 @@
 .widget-area {
 	width: 25%;
 }
-
 .widget {
-	margin-bottom: get($spacing, "m");
+	margin-bottom: get($spacing, 'm');
 }
-
 .widgettitle,
 .widget-title {
-
-	@include typography( metadata, large );
+	@include typography(metadata, large);
 }
 
 /* Make sure select elements fit in widgets. */

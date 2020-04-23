@@ -4,17 +4,15 @@
 .kelpie-page-content blockquote,
 .wp-block-pullquote,
 .wp-block-quote {
-
 	@include content-block();
 	border: 0;
 	padding: 0;
 	position: relative;
-
 	&::before {
-		color: get($colors, "text", "light");
-		content: "“";
+		color: get($colors, 'text', 'light');
+		content: '“';
 		display: block;
-		font-family: Georgia, "Times New Roman", Times, serif;
+		font-family: Georgia, 'Times New Roman', Times, serif;
 		font-size: 12rem;
 		font-weight: bold;
 		left: -4rem;
@@ -23,36 +21,28 @@
 		top: -4rem;
 		z-index: 0;
 	}
-
 	p {
-
-		@include typography( body, large );
-		color: get($colors, "text", "light");
-		margin-bottom: get($spacing, "xs");
+		@include typography(body, large);
+		color: get($colors, 'text', 'light');
+		margin-bottom: get($spacing, 'xs');
 		position: relative;
 		z-index: 1;
 	}
-
 	cite {
-
-		@include typography( metadata, small );
+		@include typography(metadata, small);
 	}
 }
 
 /*--------------------------------------------------------------
-## "Standard" Quote
+## 'Standard' Quote
 --------------------------------------------------------------*/
-
 .wp-block-quote {
 
 	&.is-large {
-
 		@include content-block();
 		padding: 0; // Reset default styling provided by Gutenberg.
-
 		p {
-
-			@include typography( subtitles, large );
+			@include typography(subtitles, large);
 		}
 	}
 }

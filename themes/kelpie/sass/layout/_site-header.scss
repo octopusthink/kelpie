@@ -2,9 +2,9 @@
 # Site Header
 --------------------------------------------------------------*/
 .site-header {
-	background: get($colors, "layout", "header-background");
-	color: get($colors, "layout", "header-text");
-	padding: get($site, "padding");
+	background: get($colors, 'layout', 'header-background');
+	color: get($colors, 'layout', 'header-text');
+	padding: get($site, 'padding');
 	position: relative;
 }
 
@@ -15,40 +15,32 @@
 	justify-content: center;
 	text-align: center;
 }
-
 body:not(.enable-search-modal) .kelpie-menu-bar {
 	justify-content: space-between;
 	text-align: left;
 }
-
 .site-logo {
 
 	a {
 		display: block;
 	}
-
 	img {
 		margin: 0 auto;
 		max-height: 6rem;
 		width: auto;
 	}
 }
-
 .site-title {
-
 	@include typography(headings, medium);
 	color: inherit;
 	margin: 0;
-
 	a {
 		color: inherit;
 		display: block;
 		text-decoration: none;
 	}
 }
-
 .site-description {
-
 	@include typography(subtitles, small);
 	color: inherit;
 	display: none;
@@ -65,7 +57,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 	position: absolute;
 	top: 0;
 }
-
 .search-toggle .kelpie-toggle-icon,
 .search-toggle svg {
 	height: 2.5rem;

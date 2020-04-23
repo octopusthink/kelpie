@@ -6,7 +6,6 @@
 html {
 	box-sizing: border-box;
 }
-
 *,
 *::before,
 *::after {
@@ -14,7 +13,6 @@ html {
 	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
-
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -27,9 +25,12 @@ html {
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
-object {
+object,
+img {
+	height: auto;
 	max-width: 100%;
 }
+
 
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {

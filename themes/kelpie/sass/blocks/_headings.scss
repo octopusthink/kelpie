@@ -5,56 +5,50 @@
 .wp-block {
 
 	h1 {
-
-		@include typography( titles );
-		margin: 0 auto get($spacing, "s");
-		max-width: get($site, "max-content-width");
+		@include typography(titles);
+		margin: 0 auto get($spacing, 's');
+		max-width: get($site, 'max-content-width');
 	}
-
 	h2 {
-
-		@include typography( headings, large );
-		margin: 0 auto get($spacing, "s");
-		max-width: get($site, "max-content-width");
+		@include typography(headings, large);
+		margin: 0 auto get($spacing, 's');
+		max-width: get($site, 'max-content-width');
 	}
-
 	h3 {
-
-		@include typography( headings, medium );
-		margin: 0 auto get($spacing, "s");
-		max-width: get($site, "max-content-width");
+		@include typography(headings, medium);
+		margin: 0 auto get($spacing, 's');
+		max-width: get($site, 'max-content-width');
 	}
-
 	h4 {
-
-		@include typography( headings, small );
-		margin: 0 auto get($spacing, "s");
-		max-width: get($site, "max-content-width");
+		@include typography(headings, small);
+		margin: 0 auto get($spacing, 's');
+		max-width: get($site, 'max-content-width');
 	}
-
 	h5 {
-
-		@include typography( subtitles, large );
-		margin: 0 auto get($spacing, "s");
-		max-width: get($site, "max-content-width");
+		@include typography(subtitles, large);
+		margin: 0 auto get($spacing, 's');
+		max-width: get($site, 'max-content-width');
 	}
-
 	h6 {
-
-		@include typography( subtitles, small );
-		margin: 0 auto get($spacing, "s");
-		max-width: get($site, "max-content-width");
+		@include typography(subtitles, small);
+		margin: 0 auto get($spacing, 's');
+		max-width: get($site, 'max-content-width');
 	}
 
 	// Headings that follow a text block get a little extra spacing.
-	p, ul, ol {
+	p,
+	ul,
+	ol {
+
+		/* stylelint-disable scss/selector-no-redundant-nesting-selector */
 		& + h1,
 		& + h2,
 		& + h3,
 		& + h4,
 		& + h5,
 		& + h6 {
-			margin-top: get( $spacing, 'l' );
+			margin-top: get($spacing, 'l');
 		}
+		/* stylelint-enable scss/selector-no-redundant-nesting-selector */
 	}
 }

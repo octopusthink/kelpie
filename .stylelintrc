@@ -17,6 +17,9 @@
     "selector-no-qualifying-type": null,
     "property-no-vendor-prefix": null,
     "selector-no-vendor-prefix": null,
-    "max-nesting-depth": null
+    "max-nesting-depth": 3,
+    "at-rule-empty-line-before": "never",
+    "string-quotes": "single",
+    "rule-empty-line-before": ["never", {except: "first-nested"}],
   }
 }

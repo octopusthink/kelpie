@@ -3,32 +3,41 @@
 	align-items: center;
 	background: transparent;
 	border: 0;
-	color: get($colors, "text", "inverse-light");
+	color: get($colors, 'text', 'inverse-light');
 	display: flex;
 	height: 2.4rem;
 	justify-content: center;
 	overflow: visible;
 	position: relative;
-
 	svg {
 		display: block;
 		position: relative;
 		z-index: 1;
 	}
-
 	path {
 		fill: currentColor;
 		opacity: 0.8;
 	}
-
-	&:focus .kelpie-icon-button-label,
-	&:hover .kelpie-icon-button-label {
+	&:hover .kelpie-icon-button-label,
+	&:active .kelpie-icon-button-label {
 		text-decoration: underline;
 	}
+	&:focus {
+		outline: 0;
+		position: relative;
+		&::before {
+			@include focus-ring();
+			bottom: -2.4rem;
+			content: '';
+			display: block;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
 }
-
 .kelpie-icon-button-label {
-
 	@include typography(interface, small);
 	color: inherit;
 	position: absolute;

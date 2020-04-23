@@ -22,19 +22,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
 // Import all our variables, mixins, and functions.
-@import "abstracts/**/*.scss";
+@import 'abstracts/**/*.scss';
 
 // Start with nice, clean base styles.
-@import "base/**/*.scss";
+@import 'base/**/*.scss';
 
 // Layout components.
-@import "layout/**/*.scss";
+@import 'layout/**/*.scss';
 
 // Modular components.
-@import "components/**/*.scss";
+@import 'components/**/*.scss';
 
 // Editor styles.
-@import "editor-styles/**/*.scss";
+@import 'editor-styles/**/*.scss';
 
 // Gutenberg blocks.
-@import "blocks/**/*.scss";
+@import 'blocks/**/*.scss';

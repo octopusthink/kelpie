@@ -3,22 +3,17 @@
 --------------------------------------------------------------*/
 .search-form {
 	display: flex;
-	margin-bottom: get($spacing, "m");
+	margin-bottom: get($spacing, 'm');
 	width: 100%;
-
 	label {
 		flex-grow: 1;
 	}
 }
-
 .search-field {
-
 	@include textfield();
 	width: 100%;
 }
-
 .search-submit {
-
 	@include button();
 	margin-left: -2px; // To put the input + button together.
 }

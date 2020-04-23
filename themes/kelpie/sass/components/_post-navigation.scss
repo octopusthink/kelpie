@@ -4,52 +4,56 @@
 // Singular navigation
 .post-navigation .nav-links {
 	display: grid;
-	grid-gap: get($spacing, "m");
-	margin: 0 auto get($spacing, "l");
-	max-width: calc(4.8rem + #{get($site, "max-content-width")});
-
-	@media screen and (min-width: 640px) {
+	grid-gap: get($spacing, 'm');
+	margin: 0 auto get($spacing, 'l');
+	max-width: calc(4.8rem + #{get($site, 'max-content-width')});
+	@include media('tablet-small') {
 		grid-template-columns: 1fr 1fr;
 	}
-
 	.meta-nav {
-
 		@include typography(metadata, medium);
 		align-items: center;
 		display: flex;
 	}
-
 	.post-title {
-
 		@include typography(subtitles, small);
-		display: block;
+		display: inline-block;
 	}
-
 	.nav-previous {
 		justify-self: flex-start;
 		text-align: left;
 		width: 100%;
-
 		.meta-nav {
 			justify-content: flex-start;
 		}
-
 		.post-title {
-			padding-left: 2.4rem;
+			margin-left: 2.4rem;
 		}
 	}
-
 	.nav-next {
 		justify-self: flex-end;
 		text-align: right;
 		width: 100%;
-
 		.meta-nav {
 			justify-content: flex-end;
 		}
-
 		.post-title {
-			padding-right: 2.4rem;
+			margin-right: 2.4rem;
+		}
+	}
+	.nav-previous a,
+	.nav-next a {
+		display: block;
+		&:hover,
+		&:active {
+
+			.post-title {
+				@include subtle-link-underline;
+				color: get($colors, 'interactive', 'hover');
+			}
+		}
+		&:focus {
+			@include focus-ring();
 		}
 	}
 }

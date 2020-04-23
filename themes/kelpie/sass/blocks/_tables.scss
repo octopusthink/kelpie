@@ -3,34 +3,28 @@
 --------------------------------------------------------------*/
 .kelpie-page-content table,
 .wp-block-table {
-
 	@include content-block();
-	@include typography("body", "small");
+	@include typography('body', 'small');
 	overflow-x: auto;
 	width: 100%;
-
 	table {
 		border-collapse: collapse;
 		width: 100%;
 	}
-
 	thead {
-
-		@include typography("metadata", "small");
-		border-bottom: 1px solid get($colors, "borders", "default");
+		@include typography('metadata', 'small');
+		border-bottom: 1px solid get($colors, 'borders', 'default');
 		text-align: left;
 	}
-
 	tfoot {
-		border-top: 1px solid get($colors, "borders", "default");
+		border-top: 1px solid get($colors, 'borders', 'default');
 		font-weight: bolder;
 	}
-
 	td,
 	th {
-		padding-bottom: get($spacing, "xxs");
+		padding-bottom: get($spacing, 'xxs');
 		padding-left: 0;
-		padding-right: get($spacing, "xxs");
-		padding-top: get($spacing, "xxs");
+		padding-right: get($spacing, 'xxs');
+		padding-top: get($spacing, 'xxs');
 	}
 }

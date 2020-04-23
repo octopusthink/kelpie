@@ -2,18 +2,22 @@
 # Columns block
 --------------------------------------------------------------*/
 .wp-block-columns {
-    @include content-block();
+	@include content-block();
 }
 
 // Increase default spacing between columns.
 @media (min-width: 600px) and (max-width: 781px) {
-    .wp-block-column:nth-child(even) {
-        margin-left: get($spacing, 'xl');
-    } 
-}
 
+	.wp-block-column {
+		flex-basis: calc(50% - #{get($spacing, 'm')}) !important;
+	}
+	.wp-block-column:nth-child(even) {
+		margin-left: get($spacing, 'm');
+	}
+}
 @media (min-width: 782px) {
-    .wp-block-column:not(:first-child) {
-        margin-left: get($spacing, 'xl');
-    }
+
+	.wp-block-column:not(:first-child) {
+		margin-left: get($spacing, 'xl');
+	}
 }

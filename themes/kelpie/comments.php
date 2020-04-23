@@ -108,10 +108,6 @@ if ( $comments ) {
 
 if ( comments_open() || pings_open() ) {
 
-	if ( $comments ) {
-		echo '<hr class="styled-separator is-style-wide" aria-hidden="true" />';
-	}
-
 	comment_form(
 		array(
 			'class_form'         => 'section-inner thin max-percentage',
@@ -121,10 +117,6 @@ if ( comments_open() || pings_open() ) {
 	);
 
 } elseif ( is_single() ) {
-
-	if ( $comments ) {
-		echo '<hr class="styled-separator is-style-wide" aria-hidden="true" />';
-	}
 
 	?>
 

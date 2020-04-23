@@ -16,7 +16,6 @@
 		as they would appear visually.
 	*/
 }
-
 .screen-reader-text:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
@@ -40,31 +39,28 @@
 }
 
 /* Do not show the outline on the skip link target. */
-#primary[tabindex="-1"]:focus {
+#primary[tabindex='-1']:focus {
 	outline: 0;
 }
 
 
 /* Skip Link --------------------------------- */
-
 .skip-link {
 	left: -9999rem;
 	top: 0;
 	z-index: 999999999;
-
 	&:focus {
-
-		@include typography("interface", "large");
-		background: get($palette, "neutral", "black");
+		@include typography('interface', 'large');
+		background: get($palette, 'neutral', 'black');
 		border-bottom: 0.2rem solid;
 		box-shadow: none;
-		color: get($colors, "interactive", "focus");
+		color: get($colors, 'interactive', 'focus');
 		display: block;
 		left: 0;
-		padding-bottom: get($spacing, "s");
-		padding-left: get($spacing, "m");
-		padding-right: get($spacing, "m");
-		padding-top: get($spacing, "s");
+		padding-bottom: get($spacing, 's');
+		padding-left: get($spacing, 'm');
+		padding-right: get($spacing, 'm');
+		padding-top: get($spacing, 's');
 		right: 0;
 		text-align: center;
 		width: 100%;
@@ -73,7 +69,6 @@
 }
 
 /* Accessibility Settings -------------------- */
-
 @media (prefers-reduced-motion: reduce) {
 
 	* {
