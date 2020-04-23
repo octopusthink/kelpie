@@ -11,11 +11,13 @@
 
 	a {
 		color: inherit;
-		text-decoration: none;
 
-		&:hover,
+		&:hover {
+			@include subtle-link-underline();
+		}
+
 		&:focus {
-			text-decoration: underline;
+			@include focus-ring();
 		}
 	}
 }
@@ -65,23 +67,35 @@
 
 // "Comments are closed" text.
 .comments-closed {
-	@include typography( metadata, medium );
-	margin-bottom: get( $spacing, 'm' );
+	@include typography('metadata', 'medium');
+	margin-bottom: get($spacing, 'm');
 	text-align: center;
 }
 
-/* Post a response to an existing comment, maybe? ---------------------------- */
+// "Leave a reply"
+.comment-reply-title {
+	@include typography('headings', 'small');
+}
+
+// Reply to an existing comment.
+.comment .comment-reply-title {
+	margin-top: get($spacing, 's');
+}
+
 .comment-reply-title small {
-	@include typography( body, small );
-	display: block;
+	@include typography('body', 'small');
+	display: inline-block;
 	white-space: nowrap;
 }
 
-.comment-reply-title small a {
-	text-decoration: none;
+#cancel-comment-reply-link {
+	color: inherit;
 
-	&:focus,
-	&:hover {
-		text-decoration: underline;
-	}
+		&:hover {
+			@include subtle-link-underline();
+		}
+
+		&:focus {
+			@include focus-ring();
+		}
 }

@@ -3,15 +3,15 @@
 --------------------------------------------------------------*/
 
 .kelpie-comments-wrapper {
-	margin: 0 auto get($spacing, "l");
-	max-width: get($site, "max-content-width");
+	margin: 0 auto get($spacing, 'l');
+	max-width: get($site, 'max-content-width');
 }
 
 /* Comment Item ----------------------------- */
 
 // Comment container
 .comment {
-	margin-bottom: get($spacing, "l");
+	margin-bottom: get($spacing, 'l');
 }
 
 // Comment meta container
@@ -19,7 +19,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-bottom: get($spacing, "s");
+	margin-bottom: get($spacing, 's');
 	min-height: 8rem;
 	padding-left: 9.2rem; // To account for avatars!
 	position: relative;
@@ -84,7 +84,6 @@
 
 // Comment footer
 .comment-footer-meta {
-
 	@include typography( metadata, medium );
 	align-items: center;
 	display: flex;
@@ -93,26 +92,35 @@
 }
 
 .comment-reply-link {
-	background-color: get($colors, "interactive", "background");
-	color: get($colors, "text", "inverse");
+	background-color: get($colors, 'interactive', 'background');
+	color: get($colors, 'text', 'inverse');
 	display: block;
-	padding: get($spacing, "xxs");
+	padding: get($spacing, 'xxs');
+
+	&:hover,
+	&:active {
+		background-color: get($colors, 'interactive', 'hover');
+	}
+
+	&:focus {
+		@include focus-ring();
+	}
 }
 
 .by-post-author {
 	display: block;
-	padding-left: get($spacing, "hairline");
+	padding-left: get($spacing, 'hairline');
 }
 
 // Space out a threaded comment.
 .parent .comment:first-of-type {
-	margin-top: get($spacing, "m");
+	margin-top: get($spacing, 'm');
 }
 
 // Nested comments.
 .comment .comment {
-	border-left: 2px solid get($colors, "borders", "light");
-	padding-left: get($spacing, "s");
+	border-left: 2px solid get($colors, 'borders', 'light');
+	padding-left: get($spacing, 's');
 }
 
 /* Hide pingback & trackbacks ------------------------- */
