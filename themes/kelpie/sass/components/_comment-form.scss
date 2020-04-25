@@ -8,11 +8,14 @@
 .comment-respond .comment-notes,
 .comment-respond .logged-in-as {
 	@include typography(body, small);
+
 	a {
 		color: inherit;
+
 		&:hover {
 			@include subtle-link-underline();
 		}
+
 		&:focus {
 			@include focus-ring();
 		}
@@ -37,12 +40,14 @@
 .comment-respond label {
 	@include label();
 }
+
 .comment-respond input[type='text'],
 .comment-respond input[type='email'],
 .comment-respond input[type='url'],
 .comment-respond textarea {
 	@include textfield();
 }
+
 .comment-respond textarea {
 	height: 16rem;
 }
@@ -76,16 +81,20 @@
 .comment .comment-reply-title {
 	margin-top: get($spacing, 's');
 }
+
 .comment-reply-title small {
 	@include typography('body', 'small');
 	display: inline-block;
 	white-space: nowrap;
 }
+
 #cancel-comment-reply-link {
 	color: inherit;
+
 	&:hover {
 		@include subtle-link-underline();
 	}
+
 	&:focus {
 		@include focus-ring();
 	}

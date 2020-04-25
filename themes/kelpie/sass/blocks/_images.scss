@@ -1,20 +1,25 @@
 /*--------------------------------------------------------------
 # Image block
 --------------------------------------------------------------*/
+
 .wp-block-image {
 	@include content-block();
 	margin-bottom: get($spacing, 'm');
 	margin-top: get($spacing, 'm');
+
 	img {
 		display: block;
 	}
+
 	&.alignleft,
 	&.alignright {
 		width: 100%;
 	}
+
 	&.alignfull img {
 		width: 100vw;
 	}
+
 	&.alignleft img,
 	&.alignright img,
 	&.alignright figcaption {

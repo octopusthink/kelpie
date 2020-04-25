@@ -1,12 +1,15 @@
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
+
 .widget-area {
 	width: 25%;
 }
+
 .widget {
 	margin-bottom: get($spacing, 'm');
 }
+
 .widgettitle,
 .widget-title {
 	@include typography(metadata, large);

@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # Blockquotes
 --------------------------------------------------------------*/
+
 .kelpie-page-content blockquote,
 .wp-block-pullquote,
 .wp-block-quote {
@@ -8,6 +9,7 @@
 	border: 0;
 	padding: 0;
 	position: relative;
+
 	&::before {
 		color: get($colors, 'text', 'light');
 		content: '“';
@@ -21,6 +23,7 @@
 		top: -4rem;
 		z-index: 0;
 	}
+
 	p {
 		@include typography(body, large);
 		color: get($colors, 'text', 'light');
@@ -28,6 +31,7 @@
 		position: relative;
 		z-index: 1;
 	}
+
 	cite {
 		@include typography(metadata, small);
 	}
@@ -36,11 +40,12 @@
 /*--------------------------------------------------------------
 ## 'Standard' Quote
 --------------------------------------------------------------*/
-.wp-block-quote {
 
+.wp-block-quote {
 	&.is-large {
 		@include content-block();
 		padding: 0; // Reset default styling provided by Gutenberg.
+
 		p {
 			@include typography(subtitles, large);
 		}

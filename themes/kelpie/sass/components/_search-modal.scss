@@ -3,6 +3,7 @@
 
 /*	6. Search Modal
 /* -------------------------------------------------------------------------- */
+
 .search-modal {
 	background: rgba(0, 0, 0, 0.2);
 	bottom: 0;
@@ -15,35 +16,40 @@
 	width: 100%;
 	z-index: 999;
 }
+
 .admin-bar .search-modal.active {
 	top: 32px;
 }
 @media (max-width: 782px) {
-
 	.admin-bar .search-modal.active {
 		top: 46px;
 	}
 }
+
 .search-modal-inner {
 	background: #fff;
 	transform: translateY(-100%);
 	transition: transform 0.15s linear, box-shadow 0.15s linear;
 }
+
 .search-modal-inner .section-inner {
 	display: flex;
 	justify-content: space-between;
 	max-width: 168rem;
 }
+
 .search-modal.active {
 	left: 0;
 	opacity: 1;
 	transition: opacity 0.2s linear;
 }
+
 .search-modal.active .search-modal-inner {
 	box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.08);
 	transform: translateY(0);
 	transition: transform 0.25s ease-in-out, box-shadow 0.1s 0.25s linear;
 }
+
 button.search-untoggle {
 	align-items: center;
 	display: flex;
@@ -52,17 +58,21 @@ button.search-untoggle {
 	margin-right: -2.5rem;
 	padding: 0 2.5rem;
 }
+
 .search-modal button.search-untoggle {
 	color: inherit;
 }
+
 .search-modal.active .search-untoggle {
 	animation: popIn both 0.3s 0.2s;
 }
+
 .search-untoggle svg {
 	height: 1.5rem;
 	transition: transform 0.15s ease-in-out;
 	width: 1.5rem;
 }
+
 .search-untoggle:focus svg,
 .search-untoggle:hover svg {
 	transform: scale(1.15);
@@ -75,6 +85,7 @@ button.search-untoggle {
 	position: relative;
 	width: 100%;
 }
+
 .search-modal .search-field {
 	background: none;
 	border: 0;
@@ -88,22 +99,27 @@ button.search-untoggle {
 	padding: 0 0 0 2rem;
 	width: calc(100% + 2rem);
 }
+
 .search-modal .search-field::-webkit-input-placeholder {
 	color: inherit;
 }
+
 .search-modal .search-field:-ms-input-placeholder {
 	color: inherit;
 }
+
 .search-modal .search-field::-moz-placeholder {
 	color: inherit;
 	line-height: 4;
 }
+
 .search-modal .search-submit {
 	position: absolute;
 	right: -9999rem;
 	top: 50%;
 	transform: translateY(-50%);
 }
+
 .search-modal .search-submit:focus {
 	right: 0;
 }
@@ -121,26 +137,30 @@ button.search-untoggle {
 	top: 0;
 	z-index: 2;
 }
+
 .overlay-header .header-inner {
 	color: #fff;
 }
+
 .overlay-header .site-description,
 .overlay-header .toggle {
 	color: inherit;
 }
+
 .overlay-header .header-inner .toggle-wrapper::before {
 	background-color: currentColor;
 	opacity: 0.25;
 }
+
 .admin-bar.overlay-header #site-header {
 	top: 32px;
 }
 @media (max-width: 782px) {
-
 	.admin-bar.overlay-header #site-header {
 		top: 46px;
 	}
 }
+
 .overlay-header .kelpie-toggle-text {
 	color: inherit;
 }

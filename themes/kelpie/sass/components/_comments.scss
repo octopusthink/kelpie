@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+
 .kelpie-comments-wrapper {
 	margin: 0 auto get($spacing, 'l');
 	max-width: get($site, 'max-content-width');
@@ -22,11 +23,14 @@
 	min-height: 8rem;
 	padding-left: 9.2rem; // To account for avatars!
 	position: relative;
+
 	a {
 		color: inherit;
+
 		&:hover {
 			@include subtle-link-underline();
 		}
+
 		&:focus {
 			@include focus-ring();
 		}
@@ -45,8 +49,10 @@
 // Author name
 .comment-author {
 	@include typography(metadata, medium);
+
 	a {
 		text-decoration: none;
+
 		&:hover,
 		&:focus {
 			text-decoration: none;
@@ -57,8 +63,10 @@
 // Date posted
 .comment-metadata {
 	@include typography(subtitles, small);
+
 	a {
 		text-decoration: none;
+
 		&:hover,
 		&:focus {
 			text-decoration: none;
@@ -79,19 +87,23 @@
 	flex-wrap: wrap;
 	margin: 1.5rem 0 -1rem -1.5rem;
 }
+
 .comment-reply-link {
 	background-color: get($colors, 'interactive', 'background');
 	color: get($colors, 'text', 'inverse');
 	display: block;
 	padding: get($spacing, 'xxs');
+
 	&:hover,
 	&:active {
 		background-color: get($colors, 'interactive', 'hover');
 	}
+
 	&:focus {
 		@include focus-ring();
 	}
 }
+
 .by-post-author {
 	display: block;
 	padding-left: get($spacing, 'hairline');

@@ -7,6 +7,7 @@
 /* Contact form ---------------------------- */
 .contact-form {
 	@include content-block();
+
 	.grunion-field-label {
 		@include label();
 	}
@@ -16,9 +17,11 @@
 		color: get($colors, 'text', 'light');
 		margin-left: get($spacing, 'hairline');
 	}
+
 	.grunion-field-wrap {
 		margin-bottom: get($spacing, 'xs');
 	}
+
 	input[type='text'],
 	input[type='email'],
 	input[type='tel'],
@@ -26,12 +29,15 @@
 	textarea {
 		@include textfield();
 	}
+
 	textarea {
 		height: 16rem;
 	}
+
 	.contact-submit {
 		text-align: center;
 	}
+
 	.pushbutton-wide {
 		@include button();
 		margin-left: auto;

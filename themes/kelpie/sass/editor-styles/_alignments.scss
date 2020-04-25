@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
+
 .alignleft img,
 .alignright img,
 .alignleft figcaption,
@@ -8,31 +9,38 @@
 	max-width: 50%;
 	width: 50%;
 }
+
 .alignleft figcaption {
 	clear: left;
 }
+
 .alignright figcaption {
 	clear: right;
 }
+
 .alignleft img,
 .alignleft figcaption {
 	float: left;
 	margin-right: 1.5em;
 }
+
 .alignright img,
 .alignright figcaption {
 	float: right;
 	margin-left: 1.5em;
 }
+
 .aligncenter {
 	clear: both;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
+
 .alignwide {
 	max-width: 1070px;
 }
+
 .alignfull {
 	max-width: 100%;
 }

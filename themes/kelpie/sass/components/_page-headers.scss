@@ -6,6 +6,7 @@
 	max-width: get($site, 'max-content-width');
 	padding: get($spacing, 'm');
 	text-align: center;
+
 	.kelpie-page-title {
 		@include typography(titles);
 		margin-bottom: get($spacing, 'xs');

@@ -1,9 +1,11 @@
 /*--------------------------------------------------------------
 # Group block
 --------------------------------------------------------------*/
+
 .wp-block-group {
 	@include content-block();
 	margin-bottom: get($spacing, 'xl');
+
 	&.has-background {
 		padding-bottom: get($spacing, 'xl');
 		padding-left: get($spacing, 'xs');

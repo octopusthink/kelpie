@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 ## Captions: used for Image, Audio, Video, Gallery blocks.
 --------------------------------------------------------------*/
+
 figcaption {
 	@include typography(body, small);
 	@include content-block();

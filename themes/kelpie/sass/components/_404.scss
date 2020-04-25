@@ -1,12 +1,13 @@
 /*--------------------------------------------------------------
 # 404 Page
 --------------------------------------------------------------*/
+
 .kelpie-404-widgets {
 	margin: 0 auto get($spacing, 'xxl');
 	max-width: get($site, 'max-content-width');
 }
-.kelpie-404-widgets {
 
+.kelpie-404-widgets {
 	.widgettitle,
 	.widget-title {
 		@include typography(metadata, large);

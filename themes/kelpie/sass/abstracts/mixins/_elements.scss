@@ -17,12 +17,15 @@
 	@if $color == 'default' {
 		background: get($colors, 'interactive', 'background');
 	}
+
 	&:hover {
 		background: get($colors, 'interactive', 'hover');
 	}
+
 	&:active {
 		background: get($colors, 'interactive', 'hover');
 	}
+
 	&:focus {
 		@include focus-ring();
 		outline: none;
@@ -33,6 +36,7 @@
 	border: 2px solid get($colors, 'borders', 'default');
 	padding: get($spacing, 'xxs') get($spacing, 'xxs');
 	width: 100%;
+
 	&:focus {
 		@include focus-ring();
 		border-color: get($colors, 'interactive', 'background');
@@ -48,9 +52,11 @@
 @mixin content-block() {
 	margin: 0 auto get($spacing, 's');
 	max-width: get($site, 'max-content-width');
+
 	&.alignwide {
 		max-width: 1070px;
 	}
+
 	&.alignfull {
 		max-width: 100%;
 	}

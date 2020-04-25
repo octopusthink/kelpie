@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # Quotes
 --------------------------------------------------------------*/
+
 .kelpie-page-content p,
 .wp-block-paragraph {
 	@include typography(body);
@@ -10,6 +11,7 @@
 	&.has-small-font-size {
 		@include font-size(body, small);
 	}
+
 	&.has-large-font-size {
 		@include font-size(body, large);
 	}
