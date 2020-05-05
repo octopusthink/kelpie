@@ -31,17 +31,21 @@
 		outline: none;
 	}
 }
+
 @mixin textfield() {
 	@include typography(body);
 	border: 2px solid get($colors, 'borders', 'default');
+	border-radius: 0;
 	padding: get($spacing, 'xxs') get($spacing, 'xxs');
 	width: 100%;
+	-webkit-appearance: none;
 
 	&:focus {
 		@include focus-ring();
 		border-color: get($colors, 'interactive', 'background');
 	}
 }
+
 @mixin label() {
 	@include typography(interface, small);
 	display: block;
