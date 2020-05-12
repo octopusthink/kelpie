@@ -10,6 +10,7 @@
 			@if $name == 'white' or $name == 'light' {
 				color: get($palette, 'primary', 'black');
 			}
+
 			@else if $name == 'default' {
 				color: get($palette, 'neutral', 'white');
 			}
@@ -29,6 +30,7 @@
 			@if $name == 'white' or $name == 'light' {
 				color: get($palette, 'secondary', 'black');
 			}
+
 			@else if $name == 'default' {
 				color: get($palette, 'neutral', 'black');
 			}

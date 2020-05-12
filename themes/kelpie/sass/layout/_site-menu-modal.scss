@@ -32,6 +32,7 @@
 .admin-bar .menu-modal {
 	top: 32px;
 }
+
 @media (max-width: 782px) {
 	.admin-bar .menu-modal {
 		top: 46px;
@@ -224,6 +225,7 @@
 	border-bottom-width: 0.1rem;
 	border-top-color: transparent;
 }
+
 @media (prefers-reduced-motion: reduce) {
 	.menu-wrapper.is-animating .menu-item,
 	.menu-wrapper.is-animating .toggling-target {

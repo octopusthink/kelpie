@@ -62,6 +62,7 @@
 // Output font sizes for the breakpoint we're using.
 @mixin responsive-font-size($size) {
 	font-size: get($typography, 'scale-mobile', $size);
+
 	@include media('tablet-small') {
 		font-size: get($typography, 'scale-desktop', $size);
 	}
@@ -70,6 +71,7 @@
 // The editor context is weird, and sizing fonts in rems doesn't work as expected, so we use ems instead, and convert the numbers.
 @mixin responsive-font-size-editor($size) {
 	font-size: rems-to-ems(get($typography, 'scale-mobile', $size));
+
 	@include media('tablet-small') {
 		font-size: rems-to-ems(get($typography, 'scale-desktop', $size));
 	}

@@ -18,8 +18,28 @@
     "property-no-vendor-prefix": null,
     "selector-no-vendor-prefix": null,
     "max-nesting-depth": 3,
-    "at-rule-empty-line-before": "never",
+    "at-rule-empty-line-before": [
+      "always", 
+      {
+        except: [
+          "after-same-name", 
+          "blockless-after-blockless", 
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ]
+      }
+    ],
     "string-quotes": "single",
-    "rule-empty-line-before": ["always", {except: ["first-nested", "after-single-line-comment"]}],
+    "rule-empty-line-before": [
+      "always", 
+      {
+        except: [
+          "first-nested", 
+          "after-single-line-comment"
+        ]
+      }
+    ],
   }
 }

@@ -14,6 +14,7 @@
 		padding-left: rems-to-pixels(get($spacing, 'xs'));
 		padding-right: rems-to-pixels(get($spacing, 'xs'));
 		padding-top: rems-to-pixels(get($spacing, 'xl'));
+
 		@include media('tablet') {
 			padding: rems-to-pixels(get($spacing, 'xxl'));
 		}

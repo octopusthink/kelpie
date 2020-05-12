@@ -9,6 +9,7 @@
 	@each $key in $keys {
 		$map: map-get($map, $key);
 	}
+
 	@return $map;
 }
 
@@ -22,6 +23,7 @@
 	@if type-of($number) == 'number' and not unitless($number) {
 		@return $number / ($number * 0 + 1);
 	}
+
 	@return $number;
 }
 

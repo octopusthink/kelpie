@@ -11,6 +11,7 @@
 		padding-left: get($spacing, 'xs');
 		padding-right: get($spacing, 'xs');
 		padding-top: get($spacing, 'xl');
+
 		@include media('tablet') {
 			padding: get($spacing, 'xxl');
 		}
