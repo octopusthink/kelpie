@@ -95,7 +95,7 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 		add_theme_support( 'editor-styles' );
 
 		// Enqueue editor styles.
-		add_editor_style( 'style-editor.css' );
+		add_editor_style( 'assets/style-editor.css' );
 
 		// Add custom editor font sizes.
 		add_theme_support(
@@ -225,6 +225,43 @@ function kelpie_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_style( 'kelpie-style', get_stylesheet_uri(), array(), $theme_version );
+
+	if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) {
+		wp_enqueue_script( 'webpackdev-livereload', '//localhost:35729/livereload.js', array(), $theme_version, false );
+	}
+
+	// Register our editor JS.
+	$block_js_path = get_stylesheet_directory_uri() . '/assets/js/editor.js';
+	wp_register_script(
+		'kelpie-editor',
+		$block_js_path,
+		array(
+			'wp-blocks',
+			'wp-compose',
+			'wp-data',
+			'wp-i18n',
+		),
+		wp_get_theme()->get( 'Version' ),
+		false
+	);
+	// To use this script, include it as an editor script when registering your
+	// block in PHP:
+	// register_block_type(
+	// 	'your-theme/block-name',
+	// 	array(
+	// 		'editor_script'   => 'kelpie-editor',
+	// 	)
+	// );
+
+	// Register our frontend JS.
+	$frontend_js_path = get_stylesheet_directory_uri() . '/assets/js/frontend.js';
+	wp_enqueue_script(
+		'kelpie-frontend',
+		$frontend_js_path,
+		array( 'wp-element' ),
+		wp_get_theme()->get( 'Version' ),
+		false
+	);
 
 	wp_enqueue_script( 'kelpie-js', get_template_directory_uri() . '/js/index.js', array(), $theme_version, false );
 	wp_script_add_data( 'kelpie-js', 'async', true );

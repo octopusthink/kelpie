@@ -4,7 +4,7 @@ const path = require('path');
 const globImporter = require('node-sass-glob-importer');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WebpackRTLPlugin = require('webpack-rtl-plugin');
+// const WebpackRTLPlugin = require('webpack-rtl-plugin');
 const WordPressDependencyExtractionWebpackPlugin = require('@wordpress/dependency-extraction-webpack-plugin');
 
 const THEME_NAME = 'kelpie';
@@ -12,9 +12,10 @@ const THEME_NAME = 'kelpie';
 const webpackConfig = {
 	devtool: devMode ? 'source-map' : 'cheap-eval-source-map',
 	entry: {
-		// './src/js/index.js',
+		'assets/js/editor': `./themes/${THEME_NAME}/js/editor.js`,
+		'assets/js/frontend': `./themes/${THEME_NAME}/js/frontend.js`,
 		style: `./themes/${THEME_NAME}/sass/style.scss`,
-		'style-editor': `./themes/${THEME_NAME}/sass/style-editor.scss`,
+		'assets/css/style-editor': `./themes/${THEME_NAME}/sass/style-editor.scss`,
 	},
 	output: {
 		filename: '[name].js',
@@ -24,13 +25,13 @@ const webpackConfig = {
 	},
 	module: {
 		rules: [
-			// {
-			// 	test: /\.js$/,
-			// 	exclude: /node_modules/,
-			// 	use: {
-			// 		loader: 'babel-loader'
-			// 	}
-			// },
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+				},
+			},
 			{
 				test: /\.css$/,
 				use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader'],
@@ -61,23 +62,23 @@ const webpackConfig = {
 		new MiniCssExtractPlugin({
 			filename: '[name].css',
 		}),
-		new WebpackRTLPlugin({
-			diffOnly: true,
-			filename: 'style-rtl.css',
-			options: {
-				options: {
-					autoRename: false,
-					autoRenameStrict: false,
-					blacklist: {},
-					clean: true,
-					greedy: false,
-					processUrls: false,
-					stringMap: [],
-				},
-				plugins: [],
-				map: false,
-			},
-		}),
+		// new WebpackRTLPlugin({
+		// 	diffOnly: true,
+		// 	filename: 'assets/style-rtl.css',
+		// 	options: {
+		// 		options: {
+		// 			autoRename: false,
+		// 			autoRenameStrict: false,
+		// 			blacklist: {},
+		// 			clean: true,
+		// 			greedy: false,
+		// 			processUrls: false,
+		// 			stringMap: [],
+		// 		},
+		// 		plugins: [],
+		// 		map: false,
+		// 	},
+		// }),
 	],
 	watch: devMode,
 };

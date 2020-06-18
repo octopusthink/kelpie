@@ -11,8 +11,10 @@ vendor
 dist/
 *.map
 themes/kelpie/style.js
-themes/kelpie/style-editor.js
-*.asset.php
+themes/kelpie/style.asset.php
+themes/kelpie/assets/css/*.js
+themes/kelpie/assets/css/*.asset.php
+themes/kelpie/assets/js/*.asset.php
 
 # Theme and Plugin handling
 #
@@ -26,7 +28,6 @@ themes/kelpie/style-editor.js
 # !themes/twentyseventeen
 #
 plugins/*
-
 
 mu-plugins/*
 !mu-plugins/mu-autoloader.php
