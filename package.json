@@ -41,7 +41,7 @@
 		"extends @wordpress/browserslist-config"
 	],
 	"scripts": {
-		"build": "webpack --mode production",
+		"build": "NODE_ENV=production webpack --mode production",
 		"lint": "npm run lint:js && npm run lint:styles && composer lint",
 		"lint:js": "npm run prettier",
 		"lint:styles": "npm run stylelint",
