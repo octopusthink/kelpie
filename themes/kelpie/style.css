@@ -140,7 +140,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   z-index: 999999999; }
   .skip-link:focus {
     font-size: 1.8rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -856,7 +855,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: #f8f9fa; }
+  background-color: #f8f9fa;
+  color: #3b3f45; }
 
 .site-main {
   background-color: #fff;
@@ -980,18 +980,8 @@ a {
   margin-top: 3.2rem; }
 
 .site-info {
-  font-size: 1.42222rem;
-  color: #3b3f45;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.6;
   color: inherit;
   text-align: center; }
-  @media only screen and (min-width: 640px) {
-    .site-info {
-      font-size: 1.44rem; } }
   .site-info a {
     box-shadow: 0 0.2rem currentColor;
     color: inherit; }
@@ -1001,9 +991,27 @@ a {
       box-shadow: 0 0 0 0.3rem #f19dca;
       outline: 0; }
   .site-info .footer-copyright {
-    margin: 0 0 0.4rem; }
+    font-size: 1.42222rem;
+    font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.6;
+    margin-bottom: 0.4rem; }
+    @media only screen and (min-width: 640px) {
+      .site-info .footer-copyright {
+        font-size: 1.44rem; } }
   .site-info .powered-by-wordpress {
-    margin: 0 0 1.6rem; }
+    font-size: 1.42222rem;
+    font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.6;
+    margin-bottom: 1.6rem; }
+    @media only screen and (min-width: 640px) {
+      .site-info .powered-by-wordpress {
+        font-size: 1.44rem; } }
 
 /*--------------------------------------------------------------
 # Site Header
@@ -1034,7 +1042,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-title {
   font-size: 2.56289rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -1053,7 +1060,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .site-description {
   font-size: 1.8rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1129,7 +1135,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .expanded-menu .menu-item {
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1331,7 +1336,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .modal-menu .menu-item {
   font-size: 1.8rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1461,7 +1465,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .menu-copyright {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1492,7 +1495,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 .widgettitle,
 .widget-title {
   font-size: 1.8rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1518,7 +1520,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 .kelpie-404-widgets .widgettitle,
 .kelpie-404-widgets .widget-title {
   font-size: 1.8rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1545,7 +1546,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   .posts-navigation .nav-links .nav-previous,
   .posts-navigation .nav-links .nav-next {
     font-size: 1.42222rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -1584,7 +1584,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 --------------------------------------------------------------*/
 .kelpie-archive-type {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1622,7 +1621,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 .comment-respond .comment-notes,
 .comment-respond .logged-in-as {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1645,7 +1643,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .comment-respond p {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1664,7 +1661,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .comment-respond label {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1682,7 +1678,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 .comment-respond input[type='url'],
 .comment-respond textarea {
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1715,7 +1710,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .comment-respond .submit {
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1753,7 +1747,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .comments-closed {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1768,7 +1761,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .comment-reply-title {
   font-size: 2.27812rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -1784,7 +1776,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .comment-reply-title small {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1870,7 +1861,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .comment-author {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1887,7 +1877,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .comment-metadata {
   font-size: 1.8rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1904,7 +1893,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .comment-content {
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1916,7 +1904,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .comment-footer-meta {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1961,7 +1948,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 /* Edit link (appears at the bottom of posts and pages */
 .kelpie-edit-link {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -2022,7 +2008,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .kelpie-icon-button-label {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -2065,7 +2050,6 @@ that were hidden (via .neverending) before.
   text-align: center; }
   .kelpie-page-header .kelpie-page-title {
     font-size: 3.24366rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -2085,7 +2069,6 @@ that were hidden (via .neverending) before.
   max-width: 56rem; }
   .kelpie-post-excerpt .entry-title {
     font-size: 2.56289rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -2125,7 +2108,6 @@ that were hidden (via .neverending) before.
 .post-date,
 .post-comment-link {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -2168,7 +2150,6 @@ that were hidden (via .neverending) before.
       grid-template-columns: 1fr 1fr; } }
   .post-navigation .nav-links .meta-nav {
     font-size: 1.42222rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -2182,7 +2163,6 @@ that were hidden (via .neverending) before.
         font-size: 1.44rem; } }
   .post-navigation .nav-links .post-title {
     font-size: 1.8rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -2225,7 +2205,6 @@ that were hidden (via .neverending) before.
 /* Post taxonomies */
 .kelpie-post-taxonomies {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -2269,7 +2248,6 @@ that were hidden (via .neverending) before.
 
 .search-field {
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -2291,7 +2269,6 @@ that were hidden (via .neverending) before.
 
 .search-submit {
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -2664,7 +2641,6 @@ button.search-untoggle {
 
 .wp-block-button__link {
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -2704,7 +2680,6 @@ button.search-untoggle {
 --------------------------------------------------------------*/
 figcaption {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -2850,7 +2825,6 @@ figcaption {
 --------------------------------------------------------------*/
 h1 {
   font-size: 3.24366rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -2865,7 +2839,6 @@ h1 {
 
 h2 {
   font-size: 2.88325rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -2880,7 +2853,6 @@ h2 {
 
 h3 {
   font-size: 2.56289rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -2895,7 +2867,6 @@ h3 {
 
 h4 {
   font-size: 2.27812rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -2910,7 +2881,6 @@ h4 {
 
 h5 {
   font-size: 2.025rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -2925,7 +2895,6 @@ h5 {
 
 h6 {
   font-size: 1.8rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -2992,7 +2961,6 @@ ol {
   margin: 0 auto 2.4rem;
   max-width: 56rem;
   font-size: 1.8rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -3016,7 +2984,6 @@ ol {
     max-width: 100%; }
   .contact-form .grunion-field-label {
     font-size: 1.42222rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -3039,7 +3006,6 @@ ol {
   .contact-form input[type='url'],
   .contact-form textarea {
     font-size: 1.6rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -3071,7 +3037,6 @@ ol {
     text-align: center; }
   .contact-form .pushbutton-wide {
     font-size: 1.6rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -3121,7 +3086,6 @@ ul.wp-block-latest-posts .is-grid.alignwide {
 ul,
 ol {
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -3185,7 +3149,6 @@ h6 {
 p,
 .wp-block-paragraph {
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -3249,7 +3212,6 @@ p > code {
   margin: 0 auto 2.4rem;
   max-width: 56rem;
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -3300,7 +3262,6 @@ blockquote,
   .wp-block-pullquote p,
   .wp-block-quote p {
     font-size: 1.8rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -3319,7 +3280,6 @@ blockquote,
   .wp-block-pullquote cite,
   .wp-block-quote cite {
     font-size: 1.2642rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -3345,7 +3305,6 @@ blockquote,
     max-width: 100%; }
   .wp-block-quote.is-large p {
     font-size: 2.025rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -3383,7 +3342,6 @@ table,
   margin: 0 auto 2.4rem;
   max-width: 56rem;
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -3408,7 +3366,6 @@ table,
   table thead,
   .wp-block-table thead {
     font-size: 1.2642rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 500;

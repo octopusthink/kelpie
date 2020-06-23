@@ -8,6 +8,7 @@ html {
 
 body {
 	background-color: get($colors, 'layout', 'page-background');
+	color: get($colors, 'text', 'default');
 }
 
 .site-main {

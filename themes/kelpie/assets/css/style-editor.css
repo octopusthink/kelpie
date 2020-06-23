@@ -118,7 +118,6 @@
   z-index: 999999999; }
   .skip-link:focus {
     font-size: 1.8rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -834,7 +833,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: #f8f9fa; }
+  background-color: #f8f9fa;
+  color: #3b3f45; }
 
 .site-main {
   background-color: #fff;
@@ -1111,7 +1111,6 @@ a {
 
 .wp-block-button__link {
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1151,7 +1150,6 @@ a {
 --------------------------------------------------------------*/
 figcaption {
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1297,7 +1295,6 @@ figcaption {
 --------------------------------------------------------------*/
 h1 {
   font-size: 3.24366rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1312,7 +1309,6 @@ h1 {
 
 h2 {
   font-size: 2.88325rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -1327,7 +1323,6 @@ h2 {
 
 h3 {
   font-size: 2.56289rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -1342,7 +1337,6 @@ h3 {
 
 h4 {
   font-size: 2.27812rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -1357,7 +1351,6 @@ h4 {
 
 h5 {
   font-size: 2.025rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1372,7 +1365,6 @@ h5 {
 
 h6 {
   font-size: 1.8rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1439,7 +1431,6 @@ ol {
   margin: 0 auto 2.4rem;
   max-width: 56rem;
   font-size: 1.8rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1463,7 +1454,6 @@ ol {
     max-width: 100%; }
   .contact-form .grunion-field-label {
     font-size: 1.42222rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -1486,7 +1476,6 @@ ol {
   .contact-form input[type='url'],
   .contact-form textarea {
     font-size: 1.6rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -1518,7 +1507,6 @@ ol {
     text-align: center; }
   .contact-form .pushbutton-wide {
     font-size: 1.6rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -1568,7 +1556,6 @@ ul.wp-block-latest-posts .is-grid.alignwide {
 ul,
 ol {
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1632,7 +1619,6 @@ h6 {
 p,
 .wp-block-paragraph {
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1696,7 +1682,6 @@ p > code {
   margin: 0 auto 2.4rem;
   max-width: 56rem;
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1747,7 +1732,6 @@ blockquote,
   .wp-block-pullquote p,
   .wp-block-quote p {
     font-size: 1.8rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -1766,7 +1750,6 @@ blockquote,
   .wp-block-pullquote cite,
   .wp-block-quote cite {
     font-size: 1.2642rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -1792,7 +1775,6 @@ blockquote,
     max-width: 100%; }
   .wp-block-quote.is-large p {
     font-size: 2.025rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -1830,7 +1812,6 @@ table,
   margin: 0 auto 2.4rem;
   max-width: 56rem;
   font-size: 1.42222rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1855,7 +1836,6 @@ table,
   table thead,
   .wp-block-table thead {
     font-size: 1.2642rem;
-    color: #3b3f45;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -1921,7 +1901,6 @@ table,
 
 .jetpack-contact-info-block {
   font-size: 1.6rem;
-  color: #3b3f45;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
