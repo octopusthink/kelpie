@@ -60,9 +60,7 @@
 
 // If our element has a background, child blocks should inherit the text colour.
 // This ensures that everything remains readable. Yay!
-.has-background,
-.kelpie-page-content .has-background,
-.wp-block .has-background {
+.has-background {
 	p,
 	h1,
 	h2,

@@ -2,7 +2,7 @@
 ## Tables
 --------------------------------------------------------------*/
 
-.kelpie-page-content table,
+table,
 .wp-block-table {
 	@include content-block();
 	@include typography('body', 'small');

@@ -2,10 +2,8 @@
 # Lists
 --------------------------------------------------------------*/
 
-.kelpie-page-content ul,
-.kelpie-page-content ol,
-.wp-block ul,
-.wp-block ol {
+ul,
+ol {
 	@include typography(body);
 	@include content-block();
 	list-style-position: outside;
@@ -24,19 +22,17 @@
 }
 
 // When a list comes directly after a heading, tighten up the spacing.
-.kelpie-page-content {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 
-		/* stylelint-disable scss/selector-no-redundant-nesting-selector */
-		& + ol,
-		& + ul {
-			margin-top: -#{get($spacing, 'xxs')};
-		}
-		/* stylelint-enable scss/selector-no-redundant-nesting-selector */
+	/* stylelint-disable scss/selector-no-redundant-nesting-selector */
+	& + ol,
+	& + ul {
+		margin-top: -#{get($spacing, 'xxs')};
 	}
+	/* stylelint-enable scss/selector-no-redundant-nesting-selector */
 }
