@@ -120,7 +120,8 @@ $spacing: (
 $site: (
 	'max-site-width': 160rem, // 1600px. Beyond this, we'll block out the edges of the screen.
 	// If you need to change this width, also be sure to change set_post_thumbnail_size in functions.php
-	'max-content-width': 56rem, // 560px. Used for content and Gutenberg blocks.
+	'max-content-width': 56rem, // 560px. Used for content and editor blocks.
+	'wide-content-width': 104rem, // 1040px. Use for wide-width editor blocks.
 	'padding': 1.6rem, // 16px, used to determine the minimum padding around the whole site content.
 );
 

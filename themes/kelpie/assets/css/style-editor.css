@@ -974,7 +974,7 @@ a {
   margin-right: auto; }
 
 .alignwide {
-  max-width: 1070px; }
+  max-width: 104rem; }
 
 .alignfull {
   max-width: 100%; }
@@ -1106,7 +1106,7 @@ a {
   justify-content: center; }
   .wp-block-buttons.alignwide,
   .wp-block-button.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   .wp-block-buttons.alignfull,
   .wp-block-button.alignfull {
     max-width: 100%; }
@@ -1174,7 +1174,7 @@ figcaption {
     figcaption {
       font-size: 1.44rem; } }
   figcaption.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   figcaption.alignfull {
     max-width: 100%; }
 
@@ -1198,7 +1198,7 @@ figcaption {
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   .wp-block-columns.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   .wp-block-columns.alignfull {
     max-width: 100%; }
 
@@ -1290,7 +1290,7 @@ figcaption {
   max-width: 56rem;
   margin-bottom: 6.4rem; }
   .wp-block-group.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   .wp-block-group.alignfull {
     max-width: 100%; }
   .wp-block-group.has-background {
@@ -1423,7 +1423,7 @@ ol {
   margin-bottom: 3.2rem;
   margin-top: 3.2rem; }
   .wp-block-image.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   .wp-block-image.alignfull {
     max-width: 100%; }
   .wp-block-image img {
@@ -1449,7 +1449,7 @@ ol {
   letter-spacing: 0;
   line-height: 1.6; }
   .wp-block-jetpack-contact-info.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   .wp-block-jetpack-contact-info.alignfull {
     max-width: 100%; }
   @media only screen and (min-width: 640px) {
@@ -1461,7 +1461,7 @@ ol {
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   .contact-form.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   .contact-form.alignfull {
     max-width: 100%; }
   .contact-form .grunion-field-label {
@@ -1583,7 +1583,7 @@ ol {
       font-size: 1.8rem; } }
   ul.alignwide,
   ol.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   ul.alignfull,
   ol.alignfull {
     max-width: 100%; }
@@ -1645,7 +1645,7 @@ p,
       font-size: 1.8rem; } }
   p.alignwide,
   .wp-block-paragraph.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   p.alignfull,
   .wp-block-paragraph.alignfull {
     max-width: 100%; }
@@ -1674,7 +1674,7 @@ p,
   line-height: 1.6;
   overflow: auto; }
   .wp-block-preformatted.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   .wp-block-preformatted.alignfull {
     max-width: 100%; }
 
@@ -1701,7 +1701,7 @@ p > code {
   letter-spacing: 0;
   line-height: 1.6; }
   .wp-block-verse.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   .wp-block-verse.alignfull {
     max-width: 100%; }
   @media only screen and (min-width: 640px) {
@@ -1722,7 +1722,7 @@ blockquote,
   blockquote.alignwide,
   .wp-block-pullquote.alignwide,
   .wp-block-quote.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   blockquote.alignfull,
   .wp-block-pullquote.alignfull,
   .wp-block-quote.alignfull {
@@ -1783,7 +1783,7 @@ blockquote,
   max-width: 56rem;
   padding: 0; }
   .wp-block-quote.is-large.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   .wp-block-quote.is-large.alignfull {
     max-width: 100%; }
   .wp-block-quote.is-large p {
@@ -1813,7 +1813,7 @@ blockquote,
   margin: 3em auto;
   padding: 0; }
   .wp-block-separator.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   .wp-block-separator.alignfull {
     max-width: 100%; }
 
@@ -1834,7 +1834,7 @@ table,
   width: 100%; }
   table.alignwide,
   .wp-block-table.alignwide {
-    max-width: 1070px; }
+    max-width: 104rem; }
   table.alignfull,
   .wp-block-table.alignfull {
     max-width: 100%; }

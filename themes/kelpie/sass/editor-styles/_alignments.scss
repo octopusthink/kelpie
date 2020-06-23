@@ -38,7 +38,7 @@
 }
 
 .alignwide {
-	max-width: 1070px;
+	max-width: get($site, 'wide-content-width');;
 }
 
 .alignfull {
