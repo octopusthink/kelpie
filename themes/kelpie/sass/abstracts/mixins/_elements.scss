@@ -33,7 +33,6 @@
 		outline: none;
 	}
 }
-
 @mixin textfield() {
 	@include typography(body);
 	-webkit-appearance: none;
@@ -47,7 +46,6 @@
 		border-color: get($colors, 'interactive', 'background');
 	}
 }
-
 @mixin label() {
 	@include typography(interface, small);
 	display: block;
@@ -60,7 +58,7 @@
 	max-width: get($site, 'max-content-width');
 
 	&.alignwide {
-		max-width: get($site, 'wide-content-width');;
+		max-width: get($site, 'wide-content-width');
 	}
 
 	&.alignfull {

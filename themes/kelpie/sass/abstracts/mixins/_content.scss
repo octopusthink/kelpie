@@ -4,7 +4,7 @@
 	max-width: get($site, 'max-content-width');
 
 	&.alignwide {
-		max-width: get($site, 'wide-content-width');;
+		max-width: get($site, 'wide-content-width');
 	}
 
 	&.alignfull {

@@ -24,6 +24,22 @@ npm start
 
 Any changes you make to files in the `scss` folder will automatically be compiled. It's best to avoid making changes to `style.css` directly and instead modifying the source `.scss` files.
 
+## Linting SCSS files
+
+To keep SCSS sources consistent and readable, we use stylelint. To check that your styles pass the linter, run:
+
+```bash
+npm run stylelint
+```
+
+Most issues can be fixed automatically:
+
+```bash
+npm run stylelint:fix
+```
+
+Rules for the style linter follow a combination of best practises and WordPress conventions. See `.stylelintrc` for details.
+
 ## Run PHP CodeSniffer
 
 To ensure PHP is meeting the [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/), install [composer](https://getcomposer.org/) on your machine and run `composer install` to install the dependencies needed for the linter. Then run:
