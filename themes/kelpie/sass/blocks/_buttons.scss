@@ -2,7 +2,8 @@
 # Buttons
 --------------------------------------------------------------*/
 
-.wp-block-buttons {
+.wp-block-buttons,
+.wp-block-button {
 	@include content-block();
 	display: flex;
 	justify-content: center;
@@ -16,8 +17,13 @@
 	}
 }
 
-.wp-block-button__link {
+/* Force a reset by styling the <a> element directly. */
+a.wp-block-button__link {
 	@include button('none');
+
+	&:hover {
+		@include remove-underline();
+	}
 }
 
 .wp-block-button__link:not(.has-background) {

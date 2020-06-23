@@ -1,5 +1,6 @@
 // Apply button styles.
 @mixin button($color: default, $style: default, $size: medium) {
+	@include remove-underline();
 	@include typography(interface, medium);
 	border: 0;
 	border-radius: 0;

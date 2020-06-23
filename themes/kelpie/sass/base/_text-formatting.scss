@@ -34,15 +34,19 @@ big {
 --------------------------------------------------------------*/
 
 a {
+	text-decoration: none;
+
+	&:focus {
+		@include focus-ring;
+	}
+}
+
+.kelpie-page-content a {
 	@include colored-link-underline();
 	color: get($colors, 'interactive', 'text');
 
 	&:hover,
 	&:active {
 		@include colored-link-underline-hover();
-	}
-
-	&:focus {
-		@include focus-ring;
 	}
 }

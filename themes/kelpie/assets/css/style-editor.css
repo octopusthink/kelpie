@@ -875,13 +875,16 @@ big {
 ## Links
 --------------------------------------------------------------*/
 a {
-  box-shadow: 0 0.2rem #e33592;
-  color: #181b1c; }
-  a:hover, a:active {
-    box-shadow: 0 0.2rem #00a8b4; }
+  text-decoration: none; }
   a:focus {
     box-shadow: 0 0 0 0.3rem #f19dca;
     outline: 0; }
+
+.kelpie-page-content a {
+  box-shadow: 0 0.2rem #e33592;
+  color: #181b1c; }
+  .kelpie-page-content a:hover, .kelpie-page-content a:active {
+    box-shadow: 0 0.2rem #00a8b4; }
 
 /* stylint-disable */
 /*--------------------------------------------------------------
@@ -1095,21 +1098,28 @@ a {
 /*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
-.wp-block-buttons {
+.wp-block-buttons,
+.wp-block-button {
   margin: 0 auto 2.4rem;
   max-width: 56rem;
   display: flex;
   justify-content: center; }
-  .wp-block-buttons.alignwide {
+  .wp-block-buttons.alignwide,
+  .wp-block-button.alignwide {
     max-width: 1070px; }
-  .wp-block-buttons.alignfull {
+  .wp-block-buttons.alignfull,
+  .wp-block-button.alignfull {
     max-width: 100%; }
-  .wp-block-buttons.alignleft {
+  .wp-block-buttons.alignleft,
+  .wp-block-button.alignleft {
     justify-content: flex-start; }
-  .wp-block-buttons.alignright {
+  .wp-block-buttons.alignright,
+  .wp-block-button.alignright {
     justify-content: flex-end; }
 
-.wp-block-button__link {
+/* Force a reset by styling the <a> element directly. */
+a.wp-block-button__link {
+  box-shadow: none;
   font-size: 1.6rem;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
@@ -1131,16 +1141,18 @@ a {
   top: 0;
   transition: all 200ms ease-out; }
   @media only screen and (min-width: 640px) {
-    .wp-block-button__link {
+    a.wp-block-button__link {
       font-size: 1.8rem; } }
-  .wp-block-button__link:hover {
+  a.wp-block-button__link:hover {
     background: #00a8b4; }
-  .wp-block-button__link:active {
+  a.wp-block-button__link:active {
     background: #00a8b4; }
-  .wp-block-button__link:focus {
+  a.wp-block-button__link:focus {
     box-shadow: 0 0 0 0.3rem #f19dca;
     outline: 0;
     outline: none; }
+  a.wp-block-button__link:hover {
+    box-shadow: none; }
 
 .wp-block-button__link:not(.has-background) {
   background: #b32973; }
@@ -1506,6 +1518,7 @@ ol {
   .contact-form .contact-submit {
     text-align: center; }
   .contact-form .pushbutton-wide {
+    box-shadow: none;
     font-size: 1.6rem;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
     font-style: normal;
