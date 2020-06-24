@@ -8,6 +8,21 @@ Kelpie aims to avoid the whack-a-mole process of building WordPress themes by re
 
 This is very much an experiment-in-progress. If you're interested in using Kelpie for your own projects, do feel free, but keep in mind that it is extremely experimental at the moment.
 
+## Getting Started
+
+1. Copy all files except the following: *.lock  etc etc
+2. Un-ignore
+3. Run a find-and-replace to get all instances of "Kelpie" and "kelpie" (case-sensitive!)
+4. Find-and-replace 'octopusthink' with 'a8cteam51'.
+5. Make sure to change the files names as well (in classes dir)
+6. Run `npm install` and `composer install` .
+7. Replace metadata at top of style.scss
+8. Replace metadata in composer.json and package.json
+
+
+9.  Have at it! I always start by swapping out colours, then typography. Make sure to change functions.php to reflect your final colours & font sizes!
+
+
 ## Local Development
 
 Once you've set up a local development environment, you're ready to start working on the code. You'll want to start by installing dependencies:
@@ -24,7 +39,7 @@ npm start
 
 Any changes you make to files in the `scss` folder will automatically be compiled. It's best to avoid making changes to `style.css` directly and instead modifying the source `.scss` files.
 
-## Linting SCSS files
+## Linting SCSS Files
 
 To keep SCSS sources consistent and readable, we use stylelint. To check that your styles pass the linter, run:
 

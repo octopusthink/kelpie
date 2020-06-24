@@ -1330,6 +1330,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .modal-menu {
   left: calc(50% - 50vw);
+  margin: 0;
   position: relative;
   width: 100vw; }
   .modal-menu .ancestor-wrapper {
