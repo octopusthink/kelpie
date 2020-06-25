@@ -1491,7 +1491,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 # Widgets
 --------------------------------------------------------------*/
 .widget-area {
-  width: 25%; }
+  width: 100%; }
 
 .widget {
   margin-bottom: 3.2rem; }
