@@ -1035,49 +1035,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   justify-content: space-between;
   text-align: left; }
 
-.site-logo a {
-  display: block; }
-
-.site-logo img {
-  margin: 0 auto;
-  max-height: 6rem;
-  width: auto; }
-
-.site-title {
-  font-size: 2.56289rem;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
-  text-transform: normal;
-  color: inherit;
-  margin: 0; }
-  @media only screen and (min-width: 640px) {
-    .site-title {
-      font-size: 4.39453rem; } }
-  .site-title a {
-    color: inherit;
-    display: block;
-    text-decoration: none; }
-
-.site-description {
-  font-size: 1.8rem;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: -0.015em;
-  line-height: 1.2;
-  text-transform: normal;
-  color: inherit;
-  display: none;
-  margin: 0;
-  opacity: 0.5;
-  word-wrap: break-word; }
-  @media only screen and (min-width: 640px) {
-    .site-description {
-      font-size: 2.25rem; } }
-
 /* Search Toggle ----------------------------- */
 .search-toggle {
   bottom: 0;
@@ -2431,6 +2388,52 @@ button.search-untoggle {
 
 .overlay-header .kelpie-toggle-text {
   color: inherit; }
+
+/*--------------------------------------------------------------
+# Site Branding
+--------------------------------------------------------------*/
+.site-logo a {
+  display: block; }
+
+.site-logo img {
+  margin: 0 auto;
+  max-height: 6rem;
+  width: auto; }
+
+.site-title {
+  font-size: 2.56289rem;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  text-transform: normal;
+  color: inherit;
+  margin: 0; }
+  @media only screen and (min-width: 640px) {
+    .site-title {
+      font-size: 4.39453rem; } }
+  .site-title a {
+    color: inherit;
+    display: block;
+    text-decoration: none; }
+
+.site-description {
+  font-size: 1.8rem;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  text-transform: normal;
+  color: inherit;
+  display: none;
+  margin: 0;
+  opacity: 0.5;
+  word-wrap: break-word; }
+  @media only screen and (min-width: 640px) {
+    .site-description {
+      font-size: 2.25rem; } }
 
 /* Social Icons ------------------------------ */
 .social-icons {

@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+# Site Branding
+--------------------------------------------------------------*/
+
+.site-logo {
+	a {
+		display: block;
+	}
+
+	img {
+		margin: 0 auto;
+		max-height: 6rem;
+		width: auto;
+	}
+}
+
+.site-title {
+	@include typography(headings, medium);
+	color: inherit;
+	margin: 0;
+
+	a {
+		color: inherit;
+		display: block;
+		text-decoration: none;
+	}
+}
+
+.site-description {
+	@include typography(subtitles, small);
+	color: inherit;
+	display: none;
+	margin: 0;
+	opacity: 0.5;
+	word-wrap: break-word;
+}
