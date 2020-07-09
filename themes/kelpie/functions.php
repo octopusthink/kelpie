@@ -95,7 +95,7 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 		add_theme_support( 'editor-styles' );
 
 		// Enqueue editor styles.
-		add_editor_style( 'assets/style-editor.css' );
+		add_editor_style( 'assets/css/style-editor.css' );
 
 		// Add custom editor font sizes.
 		add_theme_support(
