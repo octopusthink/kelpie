@@ -149,6 +149,99 @@
     transition-duration: 0s !important; } }
 
 /*--------------------------------------------------------------
+# Used to style form elements.
+--------------------------------------------------------------*/
+input,
+select,
+textarea {
+  font-size: 1.6rem;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6;
+  -webkit-appearance: none;
+  border: 2px solid #dee0e5;
+  border-radius: 0;
+  padding: 0.8rem 0.8rem;
+  width: 100%; }
+  @media only screen and (min-width: 640px) {
+    input,
+    select,
+    textarea {
+      font-size: 1.8rem; } }
+  input:focus,
+  select:focus,
+  textarea:focus {
+    box-shadow: 0 0 0 0.3rem #f19dca;
+    outline: 0;
+    border-color: #b32973; }
+
+label {
+  font-size: 1.42222rem;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  text-transform: normal;
+  display: block;
+  margin-bottom: 0.4rem; }
+  @media only screen and (min-width: 640px) {
+    label {
+      font-size: 1.44rem; } }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  box-shadow: none;
+  font-size: 1.6rem;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  text-transform: normal;
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  outline: none;
+  padding: 1.6rem 4.8rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  transition: all 200ms ease-out;
+  background: #b32973; }
+  @media only screen and (min-width: 640px) {
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+      font-size: 1.8rem; } }
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    background: #00a8b4; }
+  button:active,
+  input[type="button"]:active,
+  input[type="reset"]:active,
+  input[type="submit"]:active {
+    background: #00a8b4; }
+  button:focus,
+  input[type="button"]:focus,
+  input[type="reset"]:focus,
+  input[type="submit"]:focus {
+    box-shadow: 0 0 0 0.3rem #f19dca;
+    outline: 0;
+    outline: none; }
+
+/*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 html {

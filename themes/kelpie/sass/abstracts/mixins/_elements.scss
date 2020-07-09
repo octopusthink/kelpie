@@ -1,4 +1,4 @@
-// Apply button styles.
+// Button styles.
 @mixin button($color: default, $style: default, $size: medium) {
 	@include remove-underline();
 	@include typography(interface, medium);
@@ -33,6 +33,8 @@
 		outline: none;
 	}
 }
+
+// Text field styles.
 @mixin textfield() {
 	@include typography(body);
 	-webkit-appearance: none;
@@ -46,13 +48,15 @@
 		border-color: get($colors, 'interactive', 'background');
 	}
 }
+
+// Labels for text fields.
 @mixin label() {
 	@include typography(interface, small);
 	display: block;
 	margin-bottom: get($spacing, 'hairline');
 }
 
-// Style content blocks within pages so they're consistently spaced.
+// Style blocks of text or other content within pages so they're consistently sizes and spaced.
 @mixin content-block() {
 	margin: 0 auto get($spacing, 's');
 	max-width: get($site, 'max-content-width');

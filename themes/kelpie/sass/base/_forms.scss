@@ -1,0 +1,20 @@
+/*--------------------------------------------------------------
+# Used to style form elements.
+--------------------------------------------------------------*/
+
+input,
+select,
+textarea {
+	@include textfield();
+}
+
+label {
+	@include label();
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include button();
+}
