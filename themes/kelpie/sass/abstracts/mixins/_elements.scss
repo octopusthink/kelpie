@@ -4,7 +4,6 @@
 	@include typography(interface, medium);
 	border: 0;
 	border-radius: 0;
-	color: get($colors, 'text', 'inverse-light');
 	cursor: pointer;
 	display: inline-block;
 	margin: 0;
@@ -18,6 +17,7 @@
 
 	@if $color == 'default' {
 		background: get($colors, 'interactive', 'background');
+		color: get($colors, 'text', 'inverse-light');
 	}
 
 	&:hover {

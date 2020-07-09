@@ -227,7 +227,6 @@ input[type="submit"] {
   text-transform: normal;
   border: 0;
   border-radius: 0;
-  color: #fff;
   cursor: pointer;
   display: inline-block;
   margin: 0;
@@ -238,7 +237,8 @@ input[type="submit"] {
   text-decoration: none;
   top: 0;
   transition: all 200ms ease-out;
-  background: #b32973; }
+  background: #b32973;
+  color: #fff; }
   @media only screen and (min-width: 640px) {
     button,
     input[type="button"],
@@ -1768,7 +1768,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   text-transform: normal;
   border: 0;
   border-radius: 0;
-  color: #fff;
   cursor: pointer;
   display: inline-block;
   margin: 0;
@@ -1780,6 +1779,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   top: 0;
   transition: all 200ms ease-out;
   background: #b32973;
+  color: #fff;
   display: block;
   margin-left: auto;
   margin-right: auto; }
@@ -2323,7 +2323,6 @@ that were hidden (via .neverending) before.
   text-transform: normal;
   border: 0;
   border-radius: 0;
-  color: #fff;
   cursor: pointer;
   display: inline-block;
   margin: 0;
@@ -2335,6 +2334,7 @@ that were hidden (via .neverending) before.
   top: 0;
   transition: all 200ms ease-out;
   background: #b32973;
+  color: #fff;
   margin-left: -2px; }
   @media only screen and (min-width: 640px) {
     .search-submit {
@@ -2737,7 +2737,8 @@ button.search-untoggle {
     justify-content: flex-end; }
 
 /* Force a reset by styling the <a> element directly. */
-a.wp-block-button__link {
+.wp-block-button__link,
+.kelpie-page-content .wp-block-button__link {
   box-shadow: none;
   font-size: 1.6rem;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
@@ -2748,7 +2749,6 @@ a.wp-block-button__link {
   text-transform: normal;
   border: 0;
   border-radius: 0;
-  color: #fff;
   cursor: pointer;
   display: inline-block;
   margin: 0;
@@ -2760,21 +2760,29 @@ a.wp-block-button__link {
   top: 0;
   transition: all 200ms ease-out; }
   @media only screen and (min-width: 640px) {
-    a.wp-block-button__link {
+    .wp-block-button__link,
+    .kelpie-page-content .wp-block-button__link {
       font-size: 1.8rem; } }
-  a.wp-block-button__link:hover {
+  .wp-block-button__link:hover,
+  .kelpie-page-content .wp-block-button__link:hover {
     background: #00a8b4; }
-  a.wp-block-button__link:active {
+  .wp-block-button__link:active,
+  .kelpie-page-content .wp-block-button__link:active {
     background: #00a8b4; }
-  a.wp-block-button__link:focus {
+  .wp-block-button__link:focus,
+  .kelpie-page-content .wp-block-button__link:focus {
     box-shadow: 0 0 0 0.3rem #f19dca;
     outline: 0;
     outline: none; }
-  a.wp-block-button__link:hover {
+  .wp-block-button__link:hover,
+  .kelpie-page-content .wp-block-button__link:hover {
     box-shadow: none; }
 
 .wp-block-button__link:not(.has-background) {
   background: #b32973; }
+
+.wp-block-button__link:not(.has-text-color) {
+  color: #fff; }
 
 /*--------------------------------------------------------------
 ## Captions: used for Image, Audio, Video, Gallery blocks.
@@ -3146,42 +3154,15 @@ ol {
     height: 16rem; }
   .contact-form .contact-submit {
     text-align: center; }
-  .contact-form .pushbutton-wide {
-    box-shadow: none;
-    font-size: 1.6rem;
-    font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: -0.015em;
-    line-height: 1.2;
-    text-transform: normal;
-    border: 0;
-    border-radius: 0;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    margin: 0;
-    outline: none;
-    padding: 1.6rem 4.8rem;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    top: 0;
-    transition: all 200ms ease-out;
-    background: #b32973;
-    margin-left: auto;
-    margin-right: auto; }
-    @media only screen and (min-width: 640px) {
-      .contact-form .pushbutton-wide {
-        font-size: 1.8rem; } }
-    .contact-form .pushbutton-wide:hover {
-      background: #00a8b4; }
-    .contact-form .pushbutton-wide:active {
-      background: #00a8b4; }
-    .contact-form .pushbutton-wide:focus {
-      box-shadow: 0 0 0 0.3rem #f19dca;
-      outline: 0;
-      outline: none; }
+
+@media only screen and (min-width: 640px) {
+  .grunion-field-width-50-wrap {
+    width: 50%;
+    float: left;
+    padding-right: 0.8rem; }
+  .grunion-field-width-50-wrap + .grunion-field-width-50-wrap {
+    padding-right: 0;
+    padding-left: 0.8rem; } }
 
 /*--------------------------------------------------------------
 ## Latest Posts

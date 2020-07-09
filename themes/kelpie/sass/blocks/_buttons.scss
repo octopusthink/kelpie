@@ -18,7 +18,8 @@
 }
 
 /* Force a reset by styling the <a> element directly. */
-a.wp-block-button__link {
+.wp-block-button__link,
+.kelpie-page-content .wp-block-button__link  {
 	@include button('none');
 
 	&:hover {
@@ -28,4 +29,8 @@ a.wp-block-button__link {
 
 .wp-block-button__link:not(.has-background) {
 	background: get($colors, 'interactive', 'background');
+}
+
+.wp-block-button__link:not(.has-text-color) {
+	color: get($colors, 'text', 'inverse-light');
 }
