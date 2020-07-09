@@ -2,6 +2,12 @@
 ## Embeds
 --------------------------------------------------------------*/
 
+.wp-block-embed {
+	@include content-block();
+	margin-bottom: get($spacing, 'm');
+	margin-top: get($spacing, 'm');
+}
+
 .wp-block-embed.type-video > .wp-block-embed__wrapper {
 	height: 0;
 	padding-top: 56.25%;

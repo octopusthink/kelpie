@@ -1225,6 +1225,16 @@ figcaption {
 /*--------------------------------------------------------------
 ## Embeds
 --------------------------------------------------------------*/
+.wp-block-embed {
+  margin: 0 auto 2.4rem;
+  max-width: 56rem;
+  margin-bottom: 3.2rem;
+  margin-top: 3.2rem; }
+  .wp-block-embed.alignwide {
+    max-width: 104rem; }
+  .wp-block-embed.alignfull {
+    max-width: 100%; }
+
 .wp-block-embed.type-video > .wp-block-embed__wrapper {
   height: 0;
   padding-top: 56.25%;
