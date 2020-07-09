@@ -66,8 +66,7 @@
 	align-items: center;
 	color: get($colors, 'layout', 'modal-menu-text');
 	display: flex;
-	height: 8rem;
-	justify-content: flex-end;
+	justify-content: space-between;
 	padding: get($site, 'padding');
 }
 
@@ -87,18 +86,11 @@
 
 .modal-menu .menu-item {
 	@include typography(interface, large);
-	border-color: get($colors, 'borders', 'inverse-dark');
-	border-style: solid;
-	border-width: 0.1rem 0 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	line-height: 1;
 	margin: 0;
-
-	&:last-child {
-		border-bottom-width: 0.1rem;
-	}
 
 	a {
 		color: get($colors, 'layout', 'modal-menu-text');

@@ -31,15 +31,7 @@
 
 			<div class="kelpie-menu-bar">
 
-				<div class="site-branding">
-					<?php
-						// Site title or logo.
-						kelpie_site_logo();
-
-						// Site description.
-						kelpie_site_description();
-					?>
-				</div><!-- .header-titles -->
+				<?php get_template_part( 'template-parts/site-branding' ); ?>
 
 				<button class="kelpie-icon-button nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
 					<?php kelpie_the_theme_svg( 'menu' ); ?>
@@ -49,7 +41,7 @@
 				<div class="header-navigation-wrapper">
 					<?php if ( has_nav_menu( 'primary' ) ) : ?>
 						<nav class="expanded-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'kelpie' ); ?>" role="navigation">
-							<ul class="expanded-menu reset-list-style">
+							<ul class="expanded-menu">
 								<?php
 								if ( has_nav_menu( 'primary' ) ) :
 									wp_nav_menu(

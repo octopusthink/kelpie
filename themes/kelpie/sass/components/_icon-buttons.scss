@@ -3,16 +3,13 @@
 	align-items: center;
 	background: transparent;
 	border: 0;
-	color: get($colors, 'text', 'inverse-light');
+	color: inherit;
 	display: flex;
-	height: 2.4rem;
 	justify-content: center;
-	overflow: visible;
-	position: relative;
+	flex-direction: column;
 
 	svg {
 		display: block;
-		position: relative;
 		z-index: 1;
 	}
 
@@ -46,8 +43,6 @@
 .kelpie-icon-button-label {
 	@include typography(interface, small);
 	color: inherit;
-	position: absolute;
-	top: calc(100% + 0.5rem);
 	white-space: nowrap;
 	width: auto;
 	word-break: break-all;

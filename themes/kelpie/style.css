@@ -1324,8 +1324,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   align-items: center;
   color: #fff;
   display: flex;
-  height: 8rem;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 1.6rem; }
 
 .modal-menu {
@@ -1346,8 +1345,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   letter-spacing: -0.015em;
   line-height: 1.2;
   text-transform: normal;
-  border-style: solid;
-  border-width: 0.1rem 0 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -1356,8 +1353,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   @media only screen and (min-width: 640px) {
     .modal-menu .menu-item {
       font-size: 2.25rem; } }
-  .modal-menu .menu-item:last-child {
-    border-bottom-width: 0.1rem; }
   .modal-menu .menu-item a {
     color: #fff;
     display: block;
@@ -1981,15 +1976,12 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   align-items: center;
   background: transparent;
   border: 0;
-  color: #fff;
+  color: inherit;
   display: flex;
-  height: 2.4rem;
   justify-content: center;
-  overflow: visible;
-  position: relative; }
+  flex-direction: column; }
   .kelpie-icon-button svg {
     display: block;
-    position: relative;
     z-index: 1; }
   .kelpie-icon-button path {
     fill: currentColor;
@@ -2020,8 +2012,6 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   line-height: 1.2;
   text-transform: normal;
   color: inherit;
-  position: absolute;
-  top: calc(100% + 0.5rem);
   white-space: nowrap;
   width: auto;
   word-break: break-all; }

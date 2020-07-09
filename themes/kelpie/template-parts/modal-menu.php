@@ -18,6 +18,7 @@
 			<div class="menu-top">
 
 				<div class="kelpie-close-nav-toggle-wrapper">
+					<?php get_template_part( 'template-parts/site-branding' ); ?>
 					<button class="kelpie-icon-button mobile-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
 						<?php kelpie_the_theme_svg( 'x' ); ?>
 						<span class="kelpie-icon-button-label"><?php esc_html_e( 'Close', 'kelpie' ); ?></span>
@@ -49,7 +50,7 @@
 
 					<nav class="expanded-menu<?php echo esc_attr( $expanded_nav_classes ); ?>" aria-label="<?php esc_attr_e( 'Expanded', 'kelpie' ); ?>" role="navigation">
 
-						<ul class="modal-menu reset-list-style">
+						<ul class="modal-menu">
 							<?php
 							if ( has_nav_menu( 'expanded' ) ) {
 								wp_nav_menu(
@@ -74,7 +75,7 @@
 
 					<nav class="mobile-menu" aria-label="<?php esc_attr_e( 'Mobile', 'kelpie' ); ?>" role="navigation">
 
-						<ul class="modal-menu reset-list-style">
+						<ul class="modal-menu">
 
 						<?php
 						if ( $mobile_menu_location ) {
@@ -117,7 +118,7 @@
 				<?php if ( has_nav_menu( 'social' ) ) { ?>
 
 					<nav aria-label="<?php esc_attr_e( 'Expanded Social links', 'kelpie' ); ?>" role="navigation">
-						<ul class="social-menu reset-list-style social-icons fill-children-current-color">
+						<ul class="social-menu social-icons">
 
 							<?php
 							wp_nav_menu(

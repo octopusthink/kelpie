@@ -17,7 +17,7 @@
 
 	<?php if ( has_nav_menu( 'social' ) ) : ?>
 		<nav aria-label="<?php esc_attr_e( 'Social links', 'kelpie' ); ?>" class="footer-social-wrapper">
-			<ul class="social-menu footer-social reset-list-style social-icons fill-children-current-color">
+			<ul class="social-menu footer-social social-icons">
 				<?php
 				wp_nav_menu(
 					array(
