@@ -10,18 +10,72 @@ This is very much an experiment-in-progress. If you're interested in using Kelpi
 
 ## Getting Started
 
-1. Copy all files except the following: *.lock  etc etc
-2. Un-ignore
-3. Run a find-and-replace to get all instances of "Kelpie" and "kelpie" (case-sensitive!)
-4. Find-and-replace 'octopusthink' with 'a8cteam51'.
-5. Make sure to change the files names as well (in classes dir)
-6. Run `npm install` and `composer install` .
-7. Replace metadata at top of style.scss
-8. Replace metadata in composer.json and package.json
+### Get your files in order
+
+1. Download a copy of Kelpie from this repo using the "Clone" button. 
+2. Remove any *.lock files. (Eventually, we'll make a package available!)
+3. Rename any files with "kelpie" in the name to your theme's namespace. (This should be the main theme folder, plus the classes files in /classes.)
+4. Run a find-and-replace to get all instances of "Kelpie" and "kelpie" (case-sensitive!) with your theme name.
+5. Find-and-replace 'octopusthink' with your organisation's GitHub organisation.
+
+Eventually, the steps above will be replaced by some sort of automated system, but for the time being, we just aren't that fancy.
+
+### Install dependencies and get started!
+
+1. Run `npm install` and `composer install` .
+2. Replace metadata at top of style.scss
+3. Replace metadata in composer.json and package.json
+4. Run `npm start` to compile & watch SCSS files.
+
+### Start customising!
+
+Kelpie really aims to be as design-system-oriented as possible, meaning you can make a lot of progress just by changing a few variables. Here's what we recommend starting with:
+1. Open `abstract/variables.scss`. Here you'll find all your site variables.
+2. Start by swapping out the colours. Kelpie want you to have a primary palette composed of white-to-black shades, good for typography, borders, backgrounds, and other stuff you don't need to have high prominence. It also allows for two palettes of accent colours, used for links, buttons, and highlights—anything that warrants more attention. Providing a full range of white to black allows for more colour combinations. 
+
+You can then call these colours anywhere in your theme using their semantic names.
+
+Finally, you'll want to make these colours available in the editor, so that people can use them. Open up your functions.php and scroll down to // Editor colour palette, where you'll find the colours defined. You'll need to define these colour variables to match the base variables in your theme. Once that's done, Kelpie will output colour classes automically, so users will automatically be able to apply your colours to elements in the layout. 
+
+If you need to change the output of colour classes, you can do so by modifying `/editor-styles/_colors.scss`
+
+Set up typography
+
+First, you'll want to load fonts into your theme, assuming you're using webfonts. There's a function provided for this in functions.php again.
+
+Use the following bit of code:
+
+// enqueue web fonts
+wp_enqueue_style( 'kelpie-fonts', '[URL]', array(), '1.0' );
+
+Then, change your typography variables in variables.scss to refer to the correct typefaces.
+
+How the type scale works
 
 
-9.  Have at it! I always start by swapping out colours, then typography. Make sure to change functions.php to reflect your final colours & font sizes!
+## Set your content width
 
+Content width:
+
+this is the max-width applied to site content—paragraphs, images, etc. It should be set based on your typography for optimal line lengths.
+
+Set 'max-content-width': in variables
+$GLOBALS['content_width'] in functions.php
+
+
+
+
+3. Have at it! I always start by swapping out colours, then typography. Make sure to change functions.php to reflect your final colours & font sizes!
+
+
+TODO:
+
+- use consistent sizing for t-shirt variables! m or medium!
+- update README
+- clean up menu output
+- apply social menu styling in widget!
+- base styling for widget areas as well as kelpie-page-content
+- move branding scss into own sass file
 
 ## Local Development
 

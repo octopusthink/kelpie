@@ -2,7 +2,9 @@
 @import 'abstracts/**/*.scss';
 
 // Start with nice, clean base styles.
-@import 'base/**/*.scss';
+@import 'base/_wp-normalize.scss';
+@import 'base/_structure.scss';
+@import 'base/_text.scss';
 
 // Editor styles.
 @import 'editor-styles/**/*.scss';
