@@ -226,6 +226,8 @@ function kelpie_scripts() {
 
 	wp_enqueue_style( 'kelpie-style', get_stylesheet_uri(), array(), $theme_version );
 
+	//wp_enqueue_style( 'kelpie-fonts', '[URL]', array(), '1.0' );
+
 	if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) {
 		wp_enqueue_script( 'webpackdev-livereload', '//localhost:35729/livereload.js', array(), $theme_version, false );
 	}
@@ -276,10 +278,10 @@ add_action( 'wp_enqueue_scripts', 'kelpie_scripts' );
 
 /**
  * Enqueue assets for the block editor.
- * This is a good place to load fonts!
  */
 function kelpie_editor_scripts_styles() {
-
+	// Enqueue web fonts
+	//wp_enqueue_style( 'kelpie-fonts', '[URL]', array(), '1.0' );
 }
 add_action( 'enqueue_block_editor_assets', 'kelpie_editor_scripts_styles' );
 

@@ -1,6 +1,6 @@
 # Kelpie
 
-A block editor-friendly starter theme for WordPress. Alternatively: [Scottish water-horse spirits](https://en.wikipedia.org/wiki/Kelpie). 🦄
+A system-oriented and block editor-friendly starter theme for WordPress. Alternatively: [Scottish water-horse spirits](https://en.wikipedia.org/wiki/Kelpie). 🦄
 
 Kelpie is designed for agency-types building custom WordPress themes for clients. If you're looking to build a theme to distribute more widely, this may not be the right choice for you.
 
@@ -8,11 +8,11 @@ Kelpie aims to avoid the whack-a-mole process of building WordPress themes by re
 
 This is very much an experiment-in-progress. If you're interested in using Kelpie for your own projects, do feel free, but keep in mind that it is extremely experimental at the moment.
 
-## Getting Started
+## Building a site with Kelpie
 
-### Get your files in order
+### Getting started
 
-1. Download a copy of Kelpie from this repo using the "Clone" button. 
+1. Download a copy of Kelpie from this repo using the "Clone" button.
 2. Remove any *.lock files. (Eventually, we'll make a package available!)
 3. Rename any files with "kelpie" in the name to your theme's namespace. (This should be the main theme folder, plus the classes files in /classes.)
 4. Run a find-and-replace to get all instances of "Kelpie" and "kelpie" (case-sensitive!) with your theme name.
@@ -20,62 +20,43 @@ This is very much an experiment-in-progress. If you're interested in using Kelpi
 
 Eventually, the steps above will be replaced by some sort of automated system, but for the time being, we just aren't that fancy.
 
-### Install dependencies and get started!
+### Installing dependencies
+
+You'll need to have [npm](https://www.npmjs.com/get-npm) and [composer](https://getcomposer.org/download/) installed in order to compile CSS & JS and lint PHP, respectively. npm is required, composer is optional
 
 1. Run `npm install` and `composer install` .
 2. Replace metadata at top of style.scss
 3. Replace metadata in composer.json and package.json
 4. Run `npm start` to compile & watch SCSS files.
 
-### Start customising!
+### Using design tokens
 
-Kelpie really aims to be as design-system-oriented as possible, meaning you can make a lot of progress just by changing a few variables. Here's what we recommend starting with:
-1. Open `abstract/variables.scss`. Here you'll find all your site variables.
-2. Start by swapping out the colours. Kelpie want you to have a primary palette composed of white-to-black shades, good for typography, borders, backgrounds, and other stuff you don't need to have high prominence. It also allows for two palettes of accent colours, used for links, buttons, and highlights—anything that warrants more attention. Providing a full range of white to black allows for more colour combinations. 
+Kelpie takes a design-systems-oriented approach to WordPress themeing, meaning that it distills visual decisions into design tokens and applies them semantically to elements across the site. This means that it's relatively easy to change the look and feel of a site quite quickly by changing a few lines of code. You'll want to start with `abstract/variables.scss`, where you'll find all your site tokens.
 
-You can then call these colours anywhere in your theme using their semantic names.
+**Typography:** Kelpie comes with a mobile and a desktop type scale, each with a configurable base size and scale modifier. Typographic rules for different font classes can be set directly in the variables file.
 
-Finally, you'll want to make these colours available in the editor, so that people can use them. Open up your functions.php and scroll down to // Editor colour palette, where you'll find the colours defined. You'll need to define these colour variables to match the base variables in your theme. Once that's done, Kelpie will output colour classes automically, so users will automatically be able to apply your colours to elements in the layout. 
+Make sure to load your font files (if you're using webfonts) in your `functions.php` by loading them using the commented-out functions: `wp_enqueue_style( 'kelpie-fonts', '[URL]', array(), '1.0' );`
 
-If you need to change the output of colour classes, you can do so by modifying `/editor-styles/_colors.scss`
+Once your sizes are properly determined in your theme, you'll want to make sure you make them available in the editor as well by editing the `'editor-font-sizes'` section of `functions.php`. These sizes should match the sizes your type scale outputs.
 
-Set up typography
+**Spacing:** Kelpie uses an 8px grid for a harmonious vertical rhythm. It provides an assortment of sizing units from "hairline" (4px) to "xxl" (128px) to provide a consistent way of spacing components. Generally speaking, you won't want to change these all that much, although if you have a theme that calls for lots of whitespace, you may want to bump all the numbers.
 
-First, you'll want to load fonts into your theme, assuming you're using webfonts. There's a function provided for this in functions.php again.
+Kelpie also has a number of site-wide variables, such as max content width, max site width, overall padding, etc, that are used to keep consistent proportions across elements. These can be tweaked as appropriate for your typography. Finally, it also comes with a set of breakpoints that can easily be accessed via a `@include media('breakpoint-name')` mixin.
 
-Use the following bit of code:
+**Colours:** Kelpie has a neutral palette, composed of white-to-black shades. This is good for body copy, borders, backgrounds, and other elements that don't require high prominence. It also allows for two palettes of accent colours, used for links, buttons, and highlights—anything that warrants more attention. Providing tints and hues of these accent colours allows for better hover effects and more accessible colour combinations.
 
-// enqueue web fonts
-wp_enqueue_style( 'kelpie-fonts', '[URL]', array(), '1.0' );
+These colours are then applied to elements semantically using further variables, and can be applied to further elements in your theme semantically or using their named value.
 
-Then, change your typography variables in variables.scss to refer to the correct typefaces.
+Once your colours are set in your theme, be sure to make them available in the editor so that people can use them. `'editor-color-palette'` in `functions.php` will allow you to define these colour variables to match the base variables in your theme. Once that's done, Kelpie will output colour classes automically, so users will automatically be able to apply your colours to blocks.
 
-How the type scale works
+If you need to change the output of colour classes, you can do so by modifying `/blocks/_colors.scss`
 
-
-## Set your content width
-
-Content width:
-
-this is the max-width applied to site content—paragraphs, images, etc. It should be set based on your typography for optimal line lengths.
-
-Set 'max-content-width': in variables
-$GLOBALS['content_width'] in functions.php
-
-
-
-
-3. Have at it! I always start by swapping out colours, then typography. Make sure to change functions.php to reflect your final colours & font sizes!
-
-
-TODO:
-
-- use consistent sizing for t-shirt variables! m or medium!
-- update README
-- clean up menu output
-- apply social menu styling in widget!
-- base styling for widget areas as well as kelpie-page-content
-- move branding scss into own sass file
+**Other SCSS files:**
+`abstracts/mixins`: Reusable style classes that can be applied to multiple elements.
+`blocks`: Editor blocks & styles.
+`components`: Modular components (that aren't editor blocks, at least for now.)
+`editor-only`: Styles that only apply to the editor context.
+`layout`: Template & layout blocks.
 
 ## Local Development
 
