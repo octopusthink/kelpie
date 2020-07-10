@@ -43,13 +43,13 @@
 // Spacing rules for 50% width fields.
 @include media('tablet-small') {
 	.grunion-field-width-50-wrap {
-		width: 50%;
 		float: left;
 		padding-right: get($spacing, 'xxs');
+		width: 50%;
 	}
 
 	.grunion-field-width-50-wrap + .grunion-field-width-50-wrap {
-		padding-right: 0;
 		padding-left: get($spacing, 'xxs');
+		padding-right: 0;
 	}
 }

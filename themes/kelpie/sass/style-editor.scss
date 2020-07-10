@@ -2,9 +2,9 @@
 @import 'abstracts/**/*.scss';
 
 // Start with nice, clean base styles.
-@import 'base/_wp-normalize.scss';
-@import 'base/_structure.scss';
-@import 'base/_text.scss';
+@import 'base/wp-normalize';
+@import 'base/structure';
+@import 'base/text';
 
 // Gutenberg blocks.
 @import 'blocks/**/*.scss';

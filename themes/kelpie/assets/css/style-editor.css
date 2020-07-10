@@ -231,8 +231,8 @@ a {
   margin: 0 auto 2.4rem;
   max-width: 56rem;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: center; }
   .wp-block-buttons.alignwide {
     max-width: 104rem; }
   .wp-block-buttons.alignfull {
@@ -244,16 +244,16 @@ a {
 
 .wp-block-buttons .wp-block-button {
   margin-bottom: 0.8rem;
-  margin-right: 0.4rem;
-  margin-left: 0.4rem; }
+  margin-left: 0.4rem;
+  margin-right: 0.4rem; }
 
 .wp-block-buttons.alignright .wp-block-button {
   margin-left: 0.8rem;
   margin-right: 0; }
 
 .wp-block-buttons.alignleft .wp-block-button {
-  margin-right: 0.8rem;
-  margin-left: 0; }
+  margin-left: 0;
+  margin-right: 0.8rem; }
 
 .wp-block-button__link,
 .kelpie-page-content .wp-block-button__link {
@@ -793,12 +793,12 @@ ol {
 
 @media only screen and (min-width: 640px) {
   .grunion-field-width-50-wrap {
-    width: 50%;
     float: left;
-    padding-right: 0.8rem; }
+    padding-right: 0.8rem;
+    width: 50%; }
   .grunion-field-width-50-wrap + .grunion-field-width-50-wrap {
-    padding-right: 0;
-    padding-left: 0.8rem; } }
+    padding-left: 0.8rem;
+    padding-right: 0; } }
 
 /*--------------------------------------------------------------
 ## Latest Posts

@@ -214,9 +214,9 @@ label {
       font-size: 1.44rem; } }
 
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   box-shadow: none;
   font-size: 1.6rem;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
@@ -242,24 +242,24 @@ input[type="submit"] {
   color: #fff; }
   @media only screen and (min-width: 640px) {
     button,
-    input[type="button"],
-    input[type="reset"],
-    input[type="submit"] {
+    input[type='button'],
+    input[type='reset'],
+    input[type='submit'] {
       font-size: 1.8rem; } }
   button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
+  input[type='button']:hover,
+  input[type='reset']:hover,
+  input[type='submit']:hover {
     background: #00a8b4; }
   button:active,
-  input[type="button"]:active,
-  input[type="reset"]:active,
-  input[type="submit"]:active {
+  input[type='button']:active,
+  input[type='reset']:active,
+  input[type='submit']:active {
     background: #00a8b4; }
   button:focus,
-  input[type="button"]:focus,
-  input[type="reset"]:focus,
-  input[type="submit"]:focus {
+  input[type='button']:focus,
+  input[type='reset']:focus,
+  input[type='submit']:focus {
     box-shadow: 0 0 0 0.3rem #f19dca;
     outline: 0;
     outline: none; }
@@ -2030,8 +2030,8 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   border: 0;
   color: inherit;
   display: flex;
-  justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: center; }
   .kelpie-icon-button svg {
     display: block;
     z-index: 1; }
@@ -2608,8 +2608,8 @@ button.search-untoggle {
   margin: 0 auto 2.4rem;
   max-width: 56rem;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: center; }
   .wp-block-buttons.alignwide {
     max-width: 104rem; }
   .wp-block-buttons.alignfull {
@@ -2621,16 +2621,16 @@ button.search-untoggle {
 
 .wp-block-buttons .wp-block-button {
   margin-bottom: 0.8rem;
-  margin-right: 0.4rem;
-  margin-left: 0.4rem; }
+  margin-left: 0.4rem;
+  margin-right: 0.4rem; }
 
 .wp-block-buttons.alignright .wp-block-button {
   margin-left: 0.8rem;
   margin-right: 0; }
 
 .wp-block-buttons.alignleft .wp-block-button {
-  margin-right: 0.8rem;
-  margin-left: 0; }
+  margin-left: 0;
+  margin-right: 0.8rem; }
 
 .wp-block-button__link,
 .kelpie-page-content .wp-block-button__link {
@@ -3170,12 +3170,12 @@ ol {
 
 @media only screen and (min-width: 640px) {
   .grunion-field-width-50-wrap {
-    width: 50%;
     float: left;
-    padding-right: 0.8rem; }
+    padding-right: 0.8rem;
+    width: 50%; }
   .grunion-field-width-50-wrap + .grunion-field-width-50-wrap {
-    padding-right: 0;
-    padding-left: 0.8rem; } }
+    padding-left: 0.8rem;
+    padding-right: 0; } }
 
 /*--------------------------------------------------------------
 ## Latest Posts
