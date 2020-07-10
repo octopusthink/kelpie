@@ -2,11 +2,11 @@
 # Buttons
 --------------------------------------------------------------*/
 
-.wp-block-buttons,
-.wp-block-button {
+.wp-block-buttons {
 	@include content-block();
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 
 	&.alignleft {
 		justify-content: flex-start;
@@ -17,7 +17,25 @@
 	}
 }
 
-/* Force a reset by styling the <a> element directly. */
+// Apply even margins around individual buttons.
+.wp-block-buttons .wp-block-button {
+	margin-bottom: get($spacing, 'xxs');
+	margin-right: get($spacing, 'hairline');
+	margin-left: get($spacing, 'hairline');
+}
+
+.wp-block-buttons.alignright .wp-block-button {
+	margin-left: get($spacing, 'xxs');
+	margin-right: 0;
+}
+
+.wp-block-buttons.alignleft .wp-block-button {
+	margin-right: get($spacing, 'xxs');
+	margin-left: 0;
+}
+
+
+// Finally, style the button itself.
 .wp-block-button__link,
 .kelpie-page-content .wp-block-button__link  {
 	@include button('none');

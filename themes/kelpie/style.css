@@ -237,6 +237,7 @@ input[type="submit"] {
   text-decoration: none;
   top: 0;
   transition: all 200ms ease-out;
+  white-space: nowrap;
   background: #b32973;
   color: #fff; }
   @media only screen and (min-width: 640px) {
@@ -1778,6 +1779,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   text-decoration: none;
   top: 0;
   transition: all 200ms ease-out;
+  white-space: nowrap;
   background: #b32973;
   color: #fff;
   display: block;
@@ -2333,6 +2335,7 @@ that were hidden (via .neverending) before.
   text-decoration: none;
   top: 0;
   transition: all 200ms ease-out;
+  white-space: nowrap;
   background: #b32973;
   color: #fff;
   margin-left: -2px; }
@@ -2715,28 +2718,48 @@ button.search-untoggle {
   color: #fff; }
 
 /*--------------------------------------------------------------
+# Rules that apply to all editor blocks.
+--------------------------------------------------------------*/
+/* Block Alignments */
+.wp-block {
+  margin: 0 auto 2.4rem;
+  max-width: 56rem; }
+  .wp-block[data-align="wide"], .wp-block.alignwide {
+    max-width: 104rem; }
+  .wp-block[data-align="full"], .wp-block.alignfull {
+    max-width: none; }
+
+/*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
-.wp-block-buttons,
-.wp-block-button {
+.wp-block-buttons {
   margin: 0 auto 2.4rem;
   max-width: 56rem;
   display: flex;
-  justify-content: center; }
-  .wp-block-buttons.alignwide,
-  .wp-block-button.alignwide {
+  justify-content: center;
+  flex-wrap: wrap; }
+  .wp-block-buttons.alignwide {
     max-width: 104rem; }
-  .wp-block-buttons.alignfull,
-  .wp-block-button.alignfull {
+  .wp-block-buttons.alignfull {
     max-width: 100%; }
-  .wp-block-buttons.alignleft,
-  .wp-block-button.alignleft {
+  .wp-block-buttons.alignleft {
     justify-content: flex-start; }
-  .wp-block-buttons.alignright,
-  .wp-block-button.alignright {
+  .wp-block-buttons.alignright {
     justify-content: flex-end; }
 
-/* Force a reset by styling the <a> element directly. */
+.wp-block-buttons .wp-block-button {
+  margin-bottom: 0.8rem;
+  margin-right: 0.4rem;
+  margin-left: 0.4rem; }
+
+.wp-block-buttons.alignright .wp-block-button {
+  margin-left: 0.8rem;
+  margin-right: 0; }
+
+.wp-block-buttons.alignleft .wp-block-button {
+  margin-right: 0.8rem;
+  margin-left: 0; }
+
 .wp-block-button__link,
 .kelpie-page-content .wp-block-button__link {
   box-shadow: none;
@@ -2758,7 +2781,8 @@ button.search-untoggle {
   text-align: center;
   text-decoration: none;
   top: 0;
-  transition: all 200ms ease-out; }
+  transition: all 200ms ease-out;
+  white-space: nowrap; }
   @media only screen and (min-width: 640px) {
     .wp-block-button__link,
     .kelpie-page-content .wp-block-button__link {
