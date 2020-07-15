@@ -12,7 +12,7 @@
 
 .widgettitle,
 .widget-title {
-	@include typography(metadata, large);
+	@include typography('metadata', 'l');
 }
 
 /* Make sure select elements fit in widgets. */

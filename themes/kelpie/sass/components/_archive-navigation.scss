@@ -14,7 +14,7 @@
 
 	.nav-previous,
 	.nav-next {
-		@include typography('metadata', 'medium');
+		@include typography('metadata', 'm');
 		align-items: center;
 		display: flex;
 

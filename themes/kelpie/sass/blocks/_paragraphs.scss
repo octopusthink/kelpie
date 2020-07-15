@@ -4,15 +4,15 @@
 
 p,
 .wp-block-paragraph {
-	@include typography(body);
+	@include typography('body');
 	@include content-block();
 
 	// Gutenberg font-size utility classes
 	&.has-small-font-size {
-		@include font-size(body, small);
+		@include font-size('body', 's');
 	}
 
 	&.has-large-font-size {
-		@include font-size(body, large);
+		@include font-size('body', 'l');
 	}
 }

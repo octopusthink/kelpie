@@ -3,6 +3,6 @@
 --------------------------------------------------------------*/
 
 .kelpie-archive-type {
-	@include typography(metadata, medium);
+	@include typography('metadata', 'm');
 	display: block;
 }

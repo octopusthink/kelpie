@@ -85,7 +85,7 @@
 }
 
 .modal-menu .menu-item {
-	@include typography(interface, large);
+	@include typography('interface', 'l');
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
@@ -238,7 +238,7 @@
 }
 
 .menu-copyright {
-	@include typography(body, small);
+	@include typography('body', 's');
 	display: none;
 	margin: 0;
 }

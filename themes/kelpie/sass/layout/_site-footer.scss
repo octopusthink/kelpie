@@ -32,12 +32,12 @@
 	}
 
 	.footer-copyright {
-		@include typography(body, small);
+		@include typography('body', 's');
 		margin-bottom: get($spacing, 'hairline');
 	}
 
 	.powered-by-wordpress {
-		@include typography(body, small);
+		@include typography('body', 's');
 		margin-bottom: get($spacing, 'xs');
 	}
 }

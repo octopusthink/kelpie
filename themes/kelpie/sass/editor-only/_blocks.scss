@@ -29,7 +29,7 @@
 
 // Buttons.
 .wp-block-button__link {
-	@include font-size-editor('interface', 'medium');
+	@include font-size-editor('interface', 'm');
 	margin-bottom: rems-to-pixels(get($spacing, 'xs'));
 	margin-top: rems-to-pixels(get($spacing, 'xs'));
 	padding: rems-to-pixels(get($spacing, 'xs')) rems-to-pixels(get($spacing, 'l'));

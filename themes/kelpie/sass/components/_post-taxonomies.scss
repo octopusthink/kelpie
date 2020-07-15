@@ -1,6 +1,6 @@
 /* Post taxonomies */
 .kelpie-post-taxonomies {
-	@include typography(metadata, medium);
+	@include typography('metadata', 'm');
 	color: get($colors, 'text', 'light');
 	display: grid;
 	grid-gap: get($spacing, 'xxs');

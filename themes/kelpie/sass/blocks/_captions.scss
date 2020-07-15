@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 figcaption {
-	@include typography(body, small);
+	@include typography('body', 's');
 	@include content-block();
 	text-align: center;
 }

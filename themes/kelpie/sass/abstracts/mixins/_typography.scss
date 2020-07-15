@@ -1,5 +1,5 @@
 // Apply type styles to elements using this mixin.
-@mixin typography($class: body, $size: medium) {
+@mixin typography($class: body, $size: m) {
 	@include font-size($class, $size);
 	font-family: get($typography, $class, 'font-family');
 	font-style: get($typography, $class, 'font-style');
@@ -10,50 +10,50 @@
 }
 
 // Generate font size and line-height.
-@mixin font-size($class: body, $size: medium) {
-	@if $class == body and $size == small {
+@mixin font-size($class: body, $size: m) {
+	@if $class == body and $size == s {
 		@include responsive-font-size('s');
 	}
-	@if $class == body and $size == medium {
+	@if $class == body and $size == m {
 		@include responsive-font-size('base');
 	}
-	@if $class == body and $size == large {
+	@if $class == body and $size == l {
 		@include responsive-font-size('m');
 	}
-	@if $class == headings and $size == small {
+	@if $class == headings and $size == s {
 		@include responsive-font-size('xl');
 	}
-	@if $class == headings and $size == medium {
+	@if $class == headings and $size == m {
 		@include responsive-font-size('xxl');
 	}
-	@if $class == headings and $size == large {
+	@if $class == headings and $size == l {
 		@include responsive-font-size('xxxl');
 	}
 	@if $class == titles {
 		@include responsive-font-size('xxxxl');
 	}
-	@if $class == subtitles and $size == small {
+	@if $class == subtitles and $size == s {
 		@include responsive-font-size('m');
 	}
-	@if $class == subtitles and $size == large {
+	@if $class == subtitles and $size == l {
 		@include responsive-font-size('l');
 	}
-	@if $class == interface and $size == small {
+	@if $class == interface and $size == s {
 		@include responsive-font-size('s');
 	}
-	@if $class == interface and $size == medium {
+	@if $class == interface and $size == m {
 		@include responsive-font-size('base');
 	}
-	@if $class == interface and $size == large {
+	@if $class == interface and $size == l {
 		@include responsive-font-size('m');
 	}
-	@if $class == metadata and $size == small {
+	@if $class == metadata and $size == s {
 		@include responsive-font-size('xs');
 	}
-	@if $class == metadata and $size == medium {
+	@if $class == metadata and $size == m {
 		@include responsive-font-size('s');
 	}
-	@if $class == metadata and $size == large {
+	@if $class == metadata and $size == l {
 		@include responsive-font-size('m');
 	}
 }
@@ -75,50 +75,50 @@
 		font-size: rems-to-ems(get($typography, 'scale-desktop', $size));
 	}
 }
-@mixin font-size-editor($class: body, $size: medium) {
-	@if $class == body and $size == medium {
+@mixin font-size-editor($class: body, $size: m) {
+	@if $class == body and $size == m {
 		@include responsive-font-size-editor('base');
 	}
-	@if $class == body and $size == small {
+	@if $class == body and $size == s {
 		@include responsive-font-size-editor('s');
 	}
-	@if $class == body and $size == large {
+	@if $class == body and $size == l {
 		@include responsive-font-size-editor('m');
 	}
-	@if $class == headings and $size == small {
+	@if $class == headings and $size == s {
 		@include responsive-font-size-editor('xl');
 	}
-	@if $class == headings and $size == medium {
+	@if $class == headings and $size == m {
 		@include responsive-font-size-editor('xxl');
 	}
-	@if $class == headings and $size == large {
+	@if $class == headings and $size == l {
 		@include responsive-font-size-editor('xxxl');
 	}
 	@if $class == titles {
 		@include responsive-font-size-editor('xxxxl');
 	}
-	@if $class == subtitles and $size == small {
+	@if $class == subtitles and $size == s {
 		@include responsive-font-size-editor('m');
 	}
-	@if $class == subtitles and $size == large {
+	@if $class == subtitles and $size == l {
 		@include responsive-font-size-editor('l');
 	}
-	@if $class == interface and $size == small {
+	@if $class == interface and $size == s {
 		@include responsive-font-size-editor('s');
 	}
-	@if $class == interface and $size == medium {
+	@if $class == interface and $size == m {
 		@include responsive-font-size-editor('base');
 	}
-	@if $class == interface and $size == large {
+	@if $class == interface and $size == l {
 		@include responsive-font-size-editor('m');
 	}
-	@if $class == metadata and $size == small {
+	@if $class == metadata and $size == s {
 		@include responsive-font-size-editor('xs');
 	}
-	@if $class == metadata and $size == medium {
+	@if $class == metadata and $size == m {
 		@include responsive-font-size-editor('s');
 	}
-	@if $class == metadata and $size == large {
+	@if $class == metadata and $size == l {
 		@include responsive-font-size-editor('m');
 	}
 }

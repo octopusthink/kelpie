@@ -1,6 +1,6 @@
 /* Edit link (appears at the bottom of posts and pages */
 .kelpie-edit-link {
-	@include typography(metadata, medium);
+	@include typography('metadata', 'm');
 	color: get($colors, 'text', 'light');
 	margin: 0 auto get($spacing, 'l');
 	margin-top: get($spacing, 'm');

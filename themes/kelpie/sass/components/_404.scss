@@ -10,7 +10,7 @@
 .kelpie-404-widgets {
 	.widgettitle,
 	.widget-title {
-		@include typography(metadata, large);
+		@include typography('metadata', 'l');
 		margin-bottom: get($spacing, 's');
 	}
 }

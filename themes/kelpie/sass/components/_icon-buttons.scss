@@ -41,7 +41,7 @@
 }
 
 .kelpie-icon-button-label {
-	@include typography(interface, small);
+	@include typography('interface', 's');
 	color: inherit;
 	white-space: nowrap;
 	width: auto;

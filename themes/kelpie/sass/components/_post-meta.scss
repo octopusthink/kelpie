@@ -9,7 +9,7 @@
 .post-author,
 .post-date,
 .post-comment-link {
-	@include typography('metadata', 'medium');
+	@include typography('metadata', 'm');
 	color: get($colors, 'text', 'light');
 	margin-bottom: get($spacing, 'xxs');
 	padding-left: get($spacing, 'xxs');

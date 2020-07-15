@@ -7,7 +7,7 @@
 // 'You are logged in as...' helper text.
 .comment-respond .comment-notes,
 .comment-respond .logged-in-as {
-	@include typography(body, small);
+	@include typography('body', 's');
 
 	a {
 		color: inherit;
@@ -24,7 +24,7 @@
 
 // Not sure offhand where or when this shows up, so it may require additional styling.
 .comment-respond p {
-	@include typography(body, small);
+	@include typography('body', 's');
 	margin-bottom: get($spacing, 's');
 	margin-left: auto;
 	margin-right: auto;
@@ -67,14 +67,14 @@
 
 // 'Comments are closed' text.
 .comments-closed {
-	@include typography('metadata', 'medium');
+	@include typography('metadata', 'm');
 	margin-bottom: get($spacing, 'm');
 	text-align: center;
 }
 
 // 'Leave a reply'
 .comment-reply-title {
-	@include typography('headings', 'small');
+	@include typography('headings', 's');
 }
 
 // Reply to an existing comment.
@@ -83,7 +83,7 @@
 }
 
 .comment-reply-title small {
-	@include typography('body', 'small');
+	@include typography('body', 's');
 	display: inline-block;
 	white-space: nowrap;
 }

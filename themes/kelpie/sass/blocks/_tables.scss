@@ -5,7 +5,7 @@
 table,
 .wp-block-table {
 	@include content-block();
-	@include typography('body', 'small');
+	@include typography('body', 's');
 	overflow-x: auto;
 	width: 100%;
 
@@ -15,7 +15,7 @@ table,
 	}
 
 	thead {
-		@include typography('metadata', 'small');
+		@include typography('metadata', 's');
 		border-bottom: 1px solid get($colors, 'borders', 'default');
 		text-align: left;
 	}

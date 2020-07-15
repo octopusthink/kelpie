@@ -13,13 +13,13 @@
 	}
 
 	.meta-nav {
-		@include typography(metadata, medium);
+		@include typography('metadata', 'm');
 		align-items: center;
 		display: flex;
 	}
 
 	.post-title {
-		@include typography(subtitles, small);
+		@include typography('subtitles', 's');
 		display: inline-block;
 	}
 

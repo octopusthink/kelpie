@@ -3,37 +3,37 @@
 --------------------------------------------------------------*/
 
 h1 {
-	@include typography(titles);
+	@include typography('titles');
 	margin: 0 auto get($spacing, 's');
 	max-width: get($site, 'max-content-width');
 }
 
 h2 {
-	@include typography(headings, large);
+	@include typography('headings', 'l');
 	margin: 0 auto get($spacing, 's');
 	max-width: get($site, 'max-content-width');
 }
 
 h3 {
-	@include typography(headings, medium);
+	@include typography('headings', 'm');
 	margin: 0 auto get($spacing, 's');
 	max-width: get($site, 'max-content-width');
 }
 
 h4 {
-	@include typography(headings, small);
+	@include typography('headings', 's');
 	margin: 0 auto get($spacing, 's');
 	max-width: get($site, 'max-content-width');
 }
 
 h5 {
-	@include typography(subtitles, large);
+	@include typography('subtitles', 'l');
 	margin: 0 auto get($spacing, 's');
 	max-width: get($site, 'max-content-width');
 }
 
 h6 {
-	@include typography(subtitles, small);
+	@include typography('subtitles', 's');
 	margin: 0 auto get($spacing, 's');
 	max-width: get($site, 'max-content-width');
 }

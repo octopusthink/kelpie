@@ -7,7 +7,7 @@
 	max-width: get($site, 'max-content-width');
 
 	.entry-title {
-		@include typography(headings, medium);
+		@include typography('headings', 'm');
 		margin: 0 auto get($spacing, 's');
 		text-align: center;
 

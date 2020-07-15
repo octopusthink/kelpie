@@ -15,7 +15,7 @@
 }
 
 .site-title {
-	@include typography(headings, medium);
+	@include typography('headings', 'm');
 	color: inherit;
 	margin: 0;
 
@@ -27,7 +27,7 @@
 }
 
 .site-description {
-	@include typography(subtitles, small);
+	@include typography('subtitles', 's');
 	color: inherit;
 	display: none;
 	margin: 0;

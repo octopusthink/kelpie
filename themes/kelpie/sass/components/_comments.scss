@@ -48,7 +48,7 @@
 
 // Author name
 .comment-author {
-	@include typography(metadata, medium);
+	@include typography('metadata', 'm');
 
 	a {
 		text-decoration: none;
@@ -62,7 +62,7 @@
 
 // Date posted
 .comment-metadata {
-	@include typography(subtitles, small);
+	@include typography('subtitles', 's');
 
 	a {
 		text-decoration: none;
@@ -76,12 +76,12 @@
 
 // Comment body
 .comment-content {
-	@include typography(body, medium);
+	@include typography();
 }
 
 // Comment footer
 .comment-footer-meta {
-	@include typography(metadata, medium);
+	@include typography('metadata', 'm');
 	align-items: center;
 	display: flex;
 	flex-wrap: wrap;

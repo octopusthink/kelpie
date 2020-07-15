@@ -1,7 +1,7 @@
 /* Contact info ---------------------------- */
 .wp-block-jetpack-contact-info {
 	@include content-block();
-	@include typography(body, large);
+	@include typography('body', 'l');
 }
 
 /* Contact form ---------------------------- */

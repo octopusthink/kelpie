@@ -13,11 +13,11 @@ body {
 	@include font-size-editor();
 
 	&.has-small-font-size {
-		@include font-size-editor('body', 'small');
+		@include font-size-editor('body', 's');
 	}
 
 	&.has-large-font-size {
-		@include font-size-editor('body', 'large');
+		@include font-size-editor('body', 'l');
 	}
 }
 
@@ -37,36 +37,36 @@ body {
 	}
 
 	h2 {
-		@include font-size-editor('headings', 'large');
+		@include font-size-editor('headings', 'l');
 	}
 
 	h3 {
-		@include font-size-editor('headings', 'medium');
+		@include font-size-editor('headings', 'm');
 	}
 
 	h4 {
-		@include font-size-editor('headings', 'small');
+		@include font-size-editor('headings', 's');
 	}
 
 	h5 {
-		@include font-size-editor('subtitles', 'large');
+		@include font-size-editor('subtitles', 'l');
 	}
 
 	h6 {
-		@include font-size-editor('subtitles', 'small');
+		@include font-size-editor('subtitles', 's');
 	}
 }
 
 .wp-block-quote {
 	p {
-		@include font-size-editor('body', 'large');
+		@include font-size-editor('body', 'l');
 	}
 
 	cite {
-		@include font-size-editor('metadata', 'small');
+		@include font-size-editor('metadata', 's');
 	}
 
 	&.is-large p {
-		@include font-size-editor('subtitles', 'large');
+		@include font-size-editor('subtitles', 'l');
 	}
 }

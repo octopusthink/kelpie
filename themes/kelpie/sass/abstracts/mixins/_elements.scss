@@ -1,7 +1,7 @@
 // Button styles.
-@mixin button($color: default, $style: default, $size: medium) {
+@mixin button($color: default, $style: default, $size: 'm') {
 	@include remove-underline();
-	@include typography(interface, medium);
+	@include typography('interface', 'm');
 	border: 0;
 	border-radius: 0;
 	cursor: pointer;
@@ -37,7 +37,7 @@
 
 // Text field styles.
 @mixin textfield() {
-	@include typography(body);
+	@include typography('body');
 	-webkit-appearance: none;
 	border: 2px solid get($colors, 'borders', 'default');
 	border-radius: 0;
@@ -52,7 +52,7 @@
 
 // Labels for text fields.
 @mixin label() {
-	@include typography(interface, small);
+	@include typography('interface', 's');
 	display: block;
 	margin-bottom: get($spacing, 'hairline');
 }

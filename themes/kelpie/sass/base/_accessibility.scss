@@ -52,7 +52,7 @@
 	z-index: 999999999;
 
 	&:focus {
-		@include typography('interface', 'large');
+		@include typography('interface', 'l');
 		background: get($palette, 'neutral', 'black');
 		border-bottom: 0.2rem solid;
 		box-shadow: none;
