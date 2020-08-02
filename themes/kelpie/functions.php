@@ -196,9 +196,7 @@ if ( ! function_exists( 'kelpie_setup' ) ) :
 		// Add support for Global Styles.
 		add_theme_support(
 			'jetpack-global-styles',
-			[
-				'enable_theme_default' => true,
-			]
+			array( 'enable_theme_default' => true )
 		);
 	}
 endif;
