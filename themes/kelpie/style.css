@@ -1217,7 +1217,8 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
       font-size: 1.8rem; } }
   .expanded-menu .menu-item a {
     color: inherit;
-    display: block; }
+    display: block;
+    transition: all 200ms ease-in-out; }
     .expanded-menu .menu-item a:hover, .expanded-menu .menu-item a:active {
       box-shadow: 0 0.2rem currentColor;
       color: #00a8b4; }

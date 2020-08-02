@@ -74,6 +74,7 @@
 	a {
 		color: inherit;
 		display: block;
+		transition: all 200ms ease-in-out;
 
 		&:hover,
 		&:active {
