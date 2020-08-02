@@ -18,7 +18,7 @@
 
 .comments-pagination .page-numbers:focus,
 .comments-pagination .page-numbers:hover {
-	text-decoration: underline;
+	@include underline();
 }
 
 .comments-pagination .prev,

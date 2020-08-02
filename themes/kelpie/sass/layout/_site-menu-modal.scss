@@ -101,8 +101,8 @@
 
 		&:hover,
 		&:active {
+			@include underline();
 			color: get($colors, 'interactive', 'hover');
-			text-decoration: underline;
 		}
 
 		&:focus {
@@ -126,7 +126,7 @@
 // Current menu item highlighting.
 .modal-menu .current-menu-item > .ancestor-wrapper > a,
 .modal-menu .current_page_ancestor > .ancestor-wrapper > a {
-	text-decoration: underline;
+	@include underline();
 }
 
 // Sub-menu
@@ -245,7 +245,7 @@
 
 .menu-copyright a:focus,
 .menu-copyright a:hover {
-	text-decoration: underline;
+	@include underline();
 }
 
 .menu-bottom .social-menu {

@@ -42,11 +42,12 @@ a {
 }
 
 .kelpie-page-content a {
-	@include colored-link-underline();
+	@include underline( get($colors, 'interactive', 'border') );
 	color: get($colors, 'interactive', 'text');
+	transition: all 200ms ease-in-out;
 
 	&:hover,
 	&:active {
-		@include colored-link-underline-hover();
+		@include underline( get($colors, 'interactive', 'hover') );
 	}
 }

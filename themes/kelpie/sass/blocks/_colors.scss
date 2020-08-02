@@ -72,11 +72,11 @@
 	}
 
 	a:not(.wp-block-button__link) {
+		@include underline(currentColor);
 		color: inherit;
-		text-decoration-color: currentColor;
 
 		&:hover {
-			text-decoration-color: transparent;
+			@include remove-underline();
 		}
 	}
 }

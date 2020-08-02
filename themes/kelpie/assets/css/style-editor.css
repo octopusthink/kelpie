@@ -182,7 +182,8 @@ a {
 
 .kelpie-page-content a {
   box-shadow: 0 0.2rem #e33592;
-  color: #181b1c; }
+  color: #181b1c;
+  transition: all 200ms ease-in-out; }
   .kelpie-page-content a:hover, .kelpie-page-content a:active {
     box-shadow: 0 0.2rem #00a8b4; }
 
@@ -410,12 +411,10 @@ figcaption {
   color: inherit; }
 
 .has-background a:not(.wp-block-button__link) {
-  color: inherit;
-  -webkit-text-decoration-color: currentColor;
-          text-decoration-color: currentColor; }
+  box-shadow: 0 0.2rem currentColor;
+  color: inherit; }
   .has-background a:not(.wp-block-button__link):hover {
-    -webkit-text-decoration-color: transparent;
-            text-decoration-color: transparent; }
+    box-shadow: none; }
 
 .has-primary-white-color {
   color: #fcebf4; }

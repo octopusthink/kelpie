@@ -21,7 +21,7 @@
 
 	&:hover .kelpie-icon-button-label,
 	&:active .kelpie-icon-button-label {
-		text-decoration: underline;
+		@include underline();
 	}
 
 	&:focus {

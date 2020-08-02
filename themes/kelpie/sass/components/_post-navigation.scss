@@ -58,7 +58,7 @@
 		&:hover,
 		&:active {
 			.post-title {
-				@include subtle-link-underline;
+				@include underline;
 				color: get($colors, 'interactive', 'hover');
 			}
 		}

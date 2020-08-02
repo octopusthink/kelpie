@@ -72,14 +72,13 @@
 	position: relative;
 
 	a {
-		color: get($colors, 'layout', 'header-text');
+		color: inherit;
 		display: block;
-		text-decoration: none;
 
 		&:hover,
 		&:active {
+			@include underline();
 			color: get($colors, 'interactive', 'hover');
-			text-decoration: underline;
 		}
 
 		&:focus {
@@ -90,12 +89,12 @@
 
 // Current page.
 .expanded-menu .current_page_ancestor {
-	text-decoration: underline;
+	@include underline();
 }
 
 .expanded-menu .current-menu-item > a,
 .expanded-menu .current-menu-item > .link-icon-wrapper > a {
-	text-decoration: underline;
+	@include underline();
 
 	&:hover,
 	&:focus {

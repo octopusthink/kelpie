@@ -18,7 +18,7 @@
 	text-align: center;
 
 	a {
-		@include subtle-link-underline();
+		@include underline();
 		color: inherit;
 
 		&:hover,
@@ -51,7 +51,7 @@
 
 	.footer-copyright,
 	.powered-by-wordpress {
-		margin-right: get($spacing, 'hairline');
 		margin-left: get($spacing, 'hairline');
+		margin-right: get($spacing, 'hairline');
 	}
 }

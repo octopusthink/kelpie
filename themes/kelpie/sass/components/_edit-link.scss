@@ -12,7 +12,7 @@
 		color: inherit;
 
 		&:hover {
-			@include subtle-link-underline();
+			@include underline();
 		}
 
 		&:focus {

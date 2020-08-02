@@ -6,17 +6,7 @@
 
 // A standard link with coloured underline, typically used for text links
 // that warrant more attention.
-@mixin colored-link-underline($color: get($colors, 'interactive', 'border')) {
-	box-shadow: 0 0.2rem $color;
-}
-
-// A hover effect for above links, pulling underline up.
-@mixin colored-link-underline-hover($color: get($colors, 'interactive', 'hover')) {
-	box-shadow: 0 0.2rem $color;
-}
-
-// A link with a more subdued underline effect, often used in footer areas.
-@mixin subtle-link-underline($color: currentColor) {
+@mixin underline($color: currentColor) {
 	box-shadow: 0 0.2rem $color;
 }
 
