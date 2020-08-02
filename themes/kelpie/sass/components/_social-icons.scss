@@ -13,9 +13,9 @@
 
 	a {
 		align-items: center;
-		background: get($colors, 'interactive', 'text');
+		background: get($colors, 'interactive', 'background');
 		border-radius: 50%;
-		color: get($colors, 'text', 'inverse-light');
+		color: inherit;
 		display: flex;
 		height: 4.4rem;
 		justify-content: center;
@@ -26,7 +26,6 @@
 
 		&:hover,
 		&:active {
-			background: get($colors, 'interactive', 'hover');
 			color: inherit;
 			text-decoration: none;
 			transform: scale(1.1);
@@ -34,7 +33,6 @@
 
 		&:focus {
 			@include focus-ring();
-			background: get($colors, 'interactive', 'background');
 		}
 	}
 }

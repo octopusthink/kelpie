@@ -5,6 +5,7 @@
 .menu-modal {
 	background: get($colors, 'layout', 'modal-menu-background');
 	bottom: 0;
+	color: get($colors, 'layout', 'modal-menu-text');
 	display: none;
 	left: -99999rem;
 	opacity: 0;
@@ -93,7 +94,7 @@
 	margin: 0;
 
 	a {
-		color: get($colors, 'layout', 'modal-menu-text');
+		color: inherit;
 		display: block;
 		padding: get($spacing, 's');
 		text-decoration: none;
