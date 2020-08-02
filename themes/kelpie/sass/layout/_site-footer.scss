@@ -42,3 +42,16 @@
 	}
 }
 
+// Display footer credits side by side on larger screens.
+@include media ('tablet') {
+	.site-info {
+		display: flex;
+		justify-content: center;
+	}
+
+	.footer-copyright,
+	.powered-by-wordpress {
+		margin-right: get($spacing, 'hairline');
+		margin-left: get($spacing, 'hairline');
+	}
+}

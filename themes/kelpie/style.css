@@ -1110,6 +1110,15 @@ a {
       .site-info .powered-by-wordpress {
         font-size: 1.44rem; } }
 
+@media only screen and (min-width: 768px) {
+  .site-info {
+    display: flex;
+    justify-content: center; }
+  .footer-copyright,
+  .powered-by-wordpress {
+    margin-right: 0.4rem;
+    margin-left: 0.4rem; } }
+
 /*--------------------------------------------------------------
 # Site Header
 --------------------------------------------------------------*/
