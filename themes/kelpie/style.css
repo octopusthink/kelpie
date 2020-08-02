@@ -1084,10 +1084,11 @@ a {
   color: inherit;
   text-align: center; }
   .site-info a {
-    box-shadow: 0 0.2rem currentColor;
-    color: inherit; }
+    box-shadow: 0 0.2rem rgba(255, 255, 255, 0.25);
+    color: inherit;
+    transition: all 200ms ease-in-out; }
     .site-info a:hover, .site-info a:active {
-      box-shadow: none; }
+      box-shadow: 0 0.2rem rgba(255, 255, 255, 0.5); }
     .site-info a:focus {
       box-shadow: 0 0 0 0.3rem #f19dca;
       outline: 0; }

@@ -18,12 +18,13 @@
 	text-align: center;
 
 	a {
-		@include underline();
+		@include underline(rgba(get($colors, 'layout', 'footer-text'), 0.25));
 		color: inherit;
+		transition: all 200ms ease-in-out;
 
 		&:hover,
 		&:active {
-			@include remove-underline();
+			@include underline(rgba(get($colors, 'layout', 'footer-text'), 0.5));
 		}
 
 		&:focus {
