@@ -4,8 +4,7 @@
 	outline: 0;
 }
 
-// A standard link with coloured underline, typically used for text links
-// that warrant more attention.
+// A standard link with coloured underline, typically used for text links.
 @mixin underline($color: currentColor) {
 	box-shadow: 0 0.2rem $color;
 }

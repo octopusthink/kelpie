@@ -224,7 +224,9 @@ function kelpie_scripts() {
 
 	wp_enqueue_style( 'kelpie-style', get_stylesheet_uri(), array(), $theme_version );
 
+	/* phpcs:disable Squiz.PHP.CommentedOutCode.Found */
 	//wp_enqueue_style( 'kelpie-fonts', '[URL]', array(), '1.0' );
+	/* phpcs:enable Squiz.PHP.CommentedOutCode.Found */
 
 	if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) {
 		wp_enqueue_script( 'webpackdev-livereload', '//localhost:35729/livereload.js', array(), $theme_version, false );
@@ -244,14 +246,6 @@ function kelpie_scripts() {
 		wp_get_theme()->get( 'Version' ),
 		false
 	);
-	// To use this script, include it as an editor script when registering your
-	// block in PHP:
-	// register_block_type(
-	// 	'your-theme/block-name',
-	// 	array(
-	// 		'editor_script'   => 'kelpie-editor',
-	// 	)
-	// );
 
 	// Register our frontend JS.
 	$frontend_js_path = get_stylesheet_directory_uri() . '/assets/js/frontend.js';
@@ -278,8 +272,10 @@ add_action( 'wp_enqueue_scripts', 'kelpie_scripts' );
  * Enqueue assets for the block editor.
  */
 function kelpie_editor_scripts_styles() {
+	/* phpcs:disable Squiz.PHP.CommentedOutCode.Found */
 	// Enqueue web fonts
 	//wp_enqueue_style( 'kelpie-fonts', '[URL]', array(), '1.0' );
+	/* phpcs:enable Squiz.PHP.CommentedOutCode.Found */
 }
 add_action( 'enqueue_block_editor_assets', 'kelpie_editor_scripts_styles' );
 

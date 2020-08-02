@@ -180,11 +180,14 @@ a {
     box-shadow: 0 0 0 0.3rem #f19dca;
     outline: 0; }
 
-.kelpie-page-content a {
+.kelpie-page-content a,
+.wp-block a {
   box-shadow: 0 0.2rem #e33592;
   color: #181b1c;
   transition: all 200ms ease-in-out; }
-  .kelpie-page-content a:hover, .kelpie-page-content a:active {
+  .kelpie-page-content a:hover, .kelpie-page-content a:active,
+  .wp-block a:hover,
+  .wp-block a:active {
     box-shadow: 0 0.2rem #00a8b4; }
 
 /*--------------------------------------------------------------
@@ -1157,13 +1160,13 @@ table,
     max-width: 560px; }
 
 .wp-block-button__link {
-  font-size: 1.967em;
+  font-size: 16px;
   margin-bottom: 16px;
   margin-top: 16px;
   padding: 16px 48px; }
   @media only screen and (min-width: 640px) {
     .wp-block-button__link {
-      font-size: 2.21288em; } }
+      font-size: 18px; } }
 
 .jetpack-submit-button .wp-block-button__link {
   margin-top: 0; }
@@ -1175,46 +1178,46 @@ table,
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.6;
-  font-size: 1.967em; }
+  font-size: 16px; }
   @media only screen and (min-width: 640px) {
     .jetpack-contact-info-block {
       font-size: 1.8rem; } }
   @media only screen and (min-width: 640px) {
     .jetpack-contact-info-block {
-      font-size: 2.21288em; } }
+      font-size: 18px; } }
 
 body {
   background-color: #fff; }
 
 .editor-post-title__block {
-  font-size: 1.967em; }
+  font-size: 16px; }
   @media only screen and (min-width: 640px) {
     .editor-post-title__block {
-      font-size: 2.21288em; } }
+      font-size: 18px; } }
 
 .wp-block-paragraph {
-  font-size: 1.967em; }
+  font-size: 16px; }
   @media only screen and (min-width: 640px) {
     .wp-block-paragraph {
-      font-size: 2.21288em; } }
+      font-size: 18px; } }
   .wp-block-paragraph.has-small-font-size {
-    font-size: 1.74844em; }
+    font-size: 14.22222px; }
     @media only screen and (min-width: 640px) {
       .wp-block-paragraph.has-small-font-size {
-        font-size: 1.7703em; } }
+        font-size: 14.4px; } }
   .wp-block-paragraph.has-large-font-size {
-    font-size: 2.21288em; }
+    font-size: 18px; }
     @media only screen and (min-width: 640px) {
       .wp-block-paragraph.has-large-font-size {
-        font-size: 2.76609em; } }
+        font-size: 22.5px; } }
 
 .wp-block > ul,
 .wp-block > ol {
-  font-size: 1.967em; }
+  font-size: 16px; }
   @media only screen and (min-width: 640px) {
     .wp-block > ul,
     .wp-block > ol {
-      font-size: 2.21288em; } }
+      font-size: 18px; } }
   .wp-block > ul ul,
   .wp-block > ul ol,
   .wp-block > ol ul,
@@ -1222,58 +1225,58 @@ body {
     font-size: inherit; }
 
 .wp-block h1 {
-  font-size: 3.98767em; }
+  font-size: 32.43658px; }
   @media only screen and (min-width: 640px) {
     .wp-block h1 {
-      font-size: 8.44145em; } }
+      font-size: 68.66455px; } }
 
 .wp-block h2 {
-  font-size: 3.5446em; }
+  font-size: 28.83252px; }
   @media only screen and (min-width: 640px) {
     .wp-block h2 {
-      font-size: 6.75316em; } }
+      font-size: 54.93164px; } }
 
 .wp-block h3 {
-  font-size: 3.15075em; }
+  font-size: 25.62891px; }
   @media only screen and (min-width: 640px) {
     .wp-block h3 {
-      font-size: 5.40253em; } }
+      font-size: 43.94531px; } }
 
 .wp-block h4 {
-  font-size: 2.80067em; }
+  font-size: 22.78125px; }
   @media only screen and (min-width: 640px) {
     .wp-block h4 {
-      font-size: 4.32202em; } }
+      font-size: 35.15625px; } }
 
 .wp-block h5 {
-  font-size: 2.48948em; }
+  font-size: 20.25px; }
   @media only screen and (min-width: 640px) {
     .wp-block h5 {
-      font-size: 3.45762em; } }
+      font-size: 28.125px; } }
 
 .wp-block h6 {
-  font-size: 2.21288em; }
+  font-size: 18px; }
   @media only screen and (min-width: 640px) {
     .wp-block h6 {
-      font-size: 2.76609em; } }
+      font-size: 22.5px; } }
 
 .wp-block-quote p {
-  font-size: 2.21288em; }
+  font-size: 18px; }
   @media only screen and (min-width: 640px) {
     .wp-block-quote p {
-      font-size: 2.76609em; } }
+      font-size: 22.5px; } }
 
 .wp-block-quote cite {
-  font-size: 1.55417em; }
+  font-size: 12.64198px; }
   @media only screen and (min-width: 640px) {
     .wp-block-quote cite {
-      font-size: 1.41624em; } }
+      font-size: 11.52px; } }
 
 .wp-block-quote.is-large p {
-  font-size: 2.48948em; }
+  font-size: 20.25px; }
   @media only screen and (min-width: 640px) {
     .wp-block-quote.is-large p {
-      font-size: 3.45762em; } }
+      font-size: 28.125px; } }
 
 
 /*# sourceMappingURL=style-editor.css.map*/

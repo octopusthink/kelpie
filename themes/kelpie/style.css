@@ -996,11 +996,14 @@ a {
     box-shadow: 0 0 0 0.3rem #f19dca;
     outline: 0; }
 
-.kelpie-page-content a {
+.kelpie-page-content a,
+.wp-block a {
   box-shadow: 0 0.2rem #e33592;
   color: #181b1c;
   transition: all 200ms ease-in-out; }
-  .kelpie-page-content a:hover, .kelpie-page-content a:active {
+  .kelpie-page-content a:hover, .kelpie-page-content a:active,
+  .wp-block a:hover,
+  .wp-block a:active {
     box-shadow: 0 0.2rem #00a8b4; }
 
 /* stylint-disable */

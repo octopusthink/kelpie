@@ -41,7 +41,8 @@ a {
 	}
 }
 
-.kelpie-page-content a {
+.kelpie-page-content a,
+.wp-block a {
 	@include underline( get($colors, 'interactive', 'border') );
 	color: get($colors, 'interactive', 'text');
 	transition: all 200ms ease-in-out;
