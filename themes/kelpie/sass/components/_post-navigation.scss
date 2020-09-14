@@ -3,13 +3,12 @@
 --------------------------------------------------------------*/
 // Singular navigation
 .post-navigation .nav-links {
-	display: grid;
-	grid-gap: get($spacing, 'm');
 	margin: 0 auto get($spacing, 'l');
-	max-width: calc(4.8rem + #{get($site, 'max-content-width')});
+	max-width: 100%;
 
 	@include media('tablet-small') {
-		grid-template-columns: 1fr 1fr;
+		display: flex;
+		max-width: calc(4.8rem + #{get($site, 'max-content-width')});
 	}
 
 	.meta-nav {
@@ -28,6 +27,10 @@
 		text-align: left;
 		width: 100%;
 
+		@include media('tablet-small') {
+			margin-right: get($spacing, 's');
+		}
+
 		.meta-nav {
 			justify-content: flex-start;
 		}
@@ -42,6 +45,10 @@
 		text-align: right;
 		width: 100%;
 
+		@include media('tablet-small') {
+			margin-left: get($spacing, 's');
+		}
+
 		.meta-nav {
 			justify-content: flex-end;
 		}
@@ -54,11 +61,12 @@
 	.nav-previous a,
 	.nav-next a {
 		display: block;
+		color: get($colors, 'interactive', 'text');
 
 		&:hover,
 		&:active {
 			.post-title {
-				@include underline;
+				@include subtle-link-underline;
 				color: get($colors, 'interactive', 'hover');
 			}
 		}

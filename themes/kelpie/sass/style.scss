@@ -25,6 +25,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import 'abstracts/**/*.scss';
 
 // Start with nice, clean base styles.
+@import 'normalize/**/*.scss';
 @import 'base/**/*.scss';
 
 // Layout components.
