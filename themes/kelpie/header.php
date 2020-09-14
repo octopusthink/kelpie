@@ -33,10 +33,12 @@
 
 				<?php get_template_part( 'template-parts/site-branding' ); ?>
 
-				<button class="kelpie-icon-button nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
-					<?php kelpie_the_theme_svg( 'menu' ); ?>
-					<span class="kelpie-icon-button-label"><?php esc_html_e( 'Menu', 'kelpie' ); ?></span>
-				</button><!-- .nav-toggle -->
+				<?php if ( has_nav_menu( 'primary' ) ) : ?>
+					<button class="kelpie-icon-button nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+						<?php kelpie_the_theme_svg( 'menu' ); ?>
+						<span class="kelpie-icon-button-label"><?php esc_html_e( 'Menu', 'kelpie' ); ?></span>
+					</button><!-- .nav-toggle -->
+				<?php endif; ?>
 
 				<div class="header-navigation-wrapper">
 					<?php if ( has_nav_menu( 'primary' ) ) : ?>
