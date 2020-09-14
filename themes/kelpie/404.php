@@ -20,7 +20,7 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<div class="page-content kelpie-page-content">
-				<p><?php esc_html_e( 'Sorry! We couldn’t find the content youe’re looking for. You can search or browse the site below.', 'kelpie' ); ?></p>
+				<p><?php esc_html_e( 'Sorry! We couldn’t find the content you’re looking for. You can search or browse the site below.', 'kelpie' ); ?></p>
 			</div>
 
 			<div class="kelpie-404-widgets kelpie-page-content">
