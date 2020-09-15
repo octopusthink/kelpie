@@ -41,7 +41,9 @@ h6 {
 // Headings that follow a text block get a little extra spacing.
 p,
 ul,
-ol {
+ol,
+.wp-block-buttons,
+.wp-block-image {
 
 	/* stylelint-disable scss/selector-no-redundant-nesting-selector */
 	& + h1,

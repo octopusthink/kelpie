@@ -3097,7 +3097,9 @@ h6 {
 
 p,
 ul,
-ol {
+ol,
+.wp-block-buttons,
+.wp-block-image {
   /* stylelint-disable scss/selector-no-redundant-nesting-selector */
   /* stylelint-enable scss/selector-no-redundant-nesting-selector */ }
   p + h1,
@@ -3117,7 +3119,19 @@ ol {
   ol + h3,
   ol + h4,
   ol + h5,
-  ol + h6 {
+  ol + h6,
+  .wp-block-buttons + h1,
+  .wp-block-buttons + h2,
+  .wp-block-buttons + h3,
+  .wp-block-buttons + h4,
+  .wp-block-buttons + h5,
+  .wp-block-buttons + h6,
+  .wp-block-image + h1,
+  .wp-block-image + h2,
+  .wp-block-image + h3,
+  .wp-block-image + h4,
+  .wp-block-image + h5,
+  .wp-block-image + h6 {
     margin-top: 4.8rem; }
 
 /*--------------------------------------------------------------
