@@ -2318,9 +2318,20 @@ that were hidden (via .neverending) before.
 .search-form {
   display: flex;
   margin-bottom: 3.2rem;
+  margin: 0 auto 2.4rem;
+  max-width: 56rem;
+  text-align: center;
   width: 100%; }
+  .search-form.alignwide {
+    max-width: 104rem; }
+  .search-form.alignfull {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    max-width: calc(100% + 2 * 1.6rem); }
   .search-form label {
-    flex-grow: 1; }
+    flex-grow: 1;
+    margin-bottom: 0;
+    width: 100%; }
 
 .search-field {
   font-size: 1.6rem;
@@ -2343,7 +2354,7 @@ that were hidden (via .neverending) before.
     outline: 0;
     border-color: #b32973; }
 
-.search-submit {
+input[type="submit"].search-submit {
   box-shadow: none;
   font-size: 1.6rem;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
@@ -2368,16 +2379,18 @@ that were hidden (via .neverending) before.
   width: auto;
   background: #b32973;
   color: #fff;
-  margin-left: -2px; }
+  margin-left: -2px;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem; }
   @media only screen and (min-width: 640px) {
-    .search-submit {
+    input[type="submit"].search-submit {
       font-size: 1.8rem; } }
-  .search-submit:hover {
+  input[type="submit"].search-submit:hover {
     background: #00a8b4;
     color: #fff; }
-  .search-submit:active {
+  input[type="submit"].search-submit:active {
     background: #00a8b4; }
-  .search-submit:focus {
+  input[type="submit"].search-submit:focus {
     box-shadow: 0 0 0 0.3rem #f19dca;
     outline: 0;
     outline: none; }
