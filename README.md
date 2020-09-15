@@ -74,6 +74,12 @@ npm start
 
 Any changes you make to files in the `scss` folder will automatically be compiled. It's best to avoid making changes to `style.css` directly and instead modifying the source `.scss` files.
 
+Before pushing changes to production, run the build script:
+
+```bash
+npm run build
+```
+
 ## Linting SCSS Files
 
 To keep SCSS sources consistent and readable, we use stylelint. To check that your styles pass the linter, run:

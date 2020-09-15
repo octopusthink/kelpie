@@ -10,7 +10,7 @@ const WordPressDependencyExtractionWebpackPlugin = require('@wordpress/dependenc
 const THEME_NAME = 'kelpie';
 
 const webpackConfig = {
-	devtool: devMode ? 'source-map' : 'cheap-eval-source-map',
+	devtool: devMode ? 'source-map' : 'none',
 	entry: {
 		'assets/js/editor': `./themes/${THEME_NAME}/js/editor.js`,
 		'assets/js/frontend': `./themes/${THEME_NAME}/js/frontend.js`,

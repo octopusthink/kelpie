@@ -225,7 +225,8 @@ function kelpie_scripts() {
 	wp_enqueue_style( 'kelpie-style', get_stylesheet_uri(), array(), $theme_version );
 
 	/* phpcs:disable Squiz.PHP.CommentedOutCode.Found */
-	//wp_enqueue_style( 'kelpie-fonts', '[URL]', array(), '1.0' );
+	// Register custom fonts: enable if using!
+	// wp_enqueue_style( 'kelpie-fonts', '[URL]', array(), '1.0' );
 	/* phpcs:enable Squiz.PHP.CommentedOutCode.Found */
 
 	if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) {
@@ -247,15 +248,17 @@ function kelpie_scripts() {
 		false
 	);
 
-	// Register our frontend JS.
-	$frontend_js_path = get_stylesheet_directory_uri() . '/assets/js/frontend.js';
-	wp_enqueue_script(
-		'kelpie-frontend',
-		$frontend_js_path,
-		array( 'wp-element' ),
-		wp_get_theme()->get( 'Version' ),
-		false
-	);
+	/* phpcs:disable Squiz.PHP.CommentedOutCode.Found */
+	// Register our frontend JS: enable this if using!
+	// $frontend_js_path = get_stylesheet_directory_uri() . '/assets/js/frontend.js';
+	// wp_enqueue_script(
+	// 	'kelpie-frontend',
+	// 	$frontend_js_path,
+	// 	array( 'wp-element' ),
+	// 	wp_get_theme()->get( 'Version' ),
+	// 	false
+	// );
+	/* phpcs:enable Squiz.PHP.CommentedOutCode.Found */
 
 	wp_enqueue_script( 'kelpie-js', get_template_directory_uri() . '/js/index.js', array(), $theme_version, false );
 	wp_script_add_data( 'kelpie-js', 'async', true );
