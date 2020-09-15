@@ -2,6 +2,14 @@
 # Alignments
 --------------------------------------------------------------*/
 
+.alignleft {
+	margin-right: auto;
+}
+
+.alignright {
+	margin-left: auto;
+}
+
 .alignleft img,
 .alignright img,
 .alignleft figcaption,
@@ -42,5 +50,7 @@
 }
 
 .alignfull {
-	max-width: 100%;
+	margin-left: -#{get($site, 'padding')};
+	margin-right: -#{get($site, 'padding')};
+	width: calc(100% + 2 * #{get($site, 'padding')});
 }
