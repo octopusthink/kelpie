@@ -4,4 +4,12 @@
 
 .wp-block-media-text {
 	@include content-block();
+	@include extra-bottom-margin();
+}
+
+// Use the editor breakpoint here to keep things simpler.
+@include media('editor-breakpoint', 'max') {
+	.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+		padding-top: get($spacing, 'l');
+	}
 }
