@@ -6,6 +6,17 @@
 	@include content-block();
 	margin-bottom: get($spacing, 'm');
 	margin-top: get($spacing, 'm');
+
+	&.alignfull,
+	&.alignwide {
+		@include extra-bottom-margin();
+	}
+}
+
+// If it's the first child of a container block, remove the top margin.
+.wp-block-column > .wp-block-embed:first-child,
+.wp-block-group > .wp-block-embed:first-child {
+	margin-top: 0;
 }
 
 .wp-block-embed.type-video > .wp-block-embed__wrapper {

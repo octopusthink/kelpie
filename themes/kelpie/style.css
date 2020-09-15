@@ -2967,6 +2967,15 @@ figcaption {
     margin-left: -1.6rem;
     margin-right: -1.6rem;
     max-width: calc(100% + 2 * 1.6rem); }
+  .wp-block-embed.alignfull, .wp-block-embed.alignwide {
+    margin-bottom: 4.8rem; }
+    @media only screen and (min-width: 1024px) {
+      .wp-block-embed.alignfull, .wp-block-embed.alignwide {
+        margin-bottom: 12.8rem; } }
+
+.wp-block-column > .wp-block-embed:first-child,
+.wp-block-group > .wp-block-embed:first-child {
+  margin-top: 0; }
 
 .wp-block-embed.type-video > .wp-block-embed__wrapper {
   height: 0;
