@@ -268,7 +268,7 @@ a {
   font-weight: 500;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   border: 0;
   border-radius: 0;
   cursor: pointer;
@@ -586,7 +586,7 @@ h1 {
   font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 1;
-  text-transform: normal;
+  text-transform: none;
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   @media only screen and (min-width: 640px) {
@@ -600,7 +600,7 @@ h2 {
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   @media only screen and (min-width: 640px) {
@@ -614,7 +614,7 @@ h3 {
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   @media only screen and (min-width: 640px) {
@@ -628,7 +628,7 @@ h4 {
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   @media only screen and (min-width: 640px) {
@@ -642,7 +642,7 @@ h5 {
   font-weight: 400;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   @media only screen and (min-width: 640px) {
@@ -656,7 +656,7 @@ h6 {
   font-weight: 400;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   @media only screen and (min-width: 640px) {
@@ -695,13 +695,17 @@ ol {
   margin: 0 auto 2.4rem;
   max-width: 56rem;
   margin-bottom: 3.2rem;
-  margin-top: 3.2rem; }
+  margin-top: 3.2rem;
+  text-align: center; }
   .wp-block-image.alignwide {
     max-width: 104rem; }
   .wp-block-image.alignfull {
     max-width: 100%; }
   .wp-block-image img {
-    display: block; }
+    margin-left: auto;
+    margin-right: auto; }
+  .wp-block-image a {
+    box-shadow: none; }
   .wp-block-image.alignleft, .wp-block-image.alignright {
     width: 100%; }
   .wp-block-image.alignfull img {
@@ -745,7 +749,7 @@ ol {
     font-weight: 500;
     letter-spacing: -0.015em;
     line-height: 1.2;
-    text-transform: normal;
+    text-transform: none;
     display: block;
     margin-bottom: 0.4rem; }
     @media only screen and (min-width: 640px) {
@@ -1052,7 +1056,7 @@ blockquote,
     font-weight: 400;
     letter-spacing: -0.015em;
     line-height: 1.2;
-    text-transform: normal; }
+    text-transform: none; }
     @media only screen and (min-width: 640px) {
       .wp-block-quote.is-large p {
         font-size: 2.8125rem; } }

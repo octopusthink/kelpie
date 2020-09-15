@@ -878,7 +878,7 @@ a {
     font-weight: 500;
     letter-spacing: -0.015em;
     line-height: 1.2;
-    text-transform: normal;
+    text-transform: none;
     background: #181b1c;
     border-bottom: 0.2rem solid;
     box-shadow: none;
@@ -939,7 +939,7 @@ label {
   font-weight: 500;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   display: block;
   margin-bottom: 0.4rem; }
   @media only screen and (min-width: 640px) {
@@ -957,7 +957,7 @@ input[type='submit'] {
   font-weight: 500;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   border: 0;
   border-radius: 0;
   cursor: pointer;
@@ -1208,7 +1208,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   font-weight: 500;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   margin-right: 2.4rem;
   margin-top: 1.6rem;
   position: relative; }
@@ -1410,7 +1410,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   font-weight: 500;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -1655,6 +1655,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   letter-spacing: 0.015em;
   line-height: 1.2;
   text-transform: uppercase;
+  margin-bottom: 0.8rem;
   display: block; }
   @media only screen and (min-width: 640px) {
     .kelpie-archive-type {
@@ -1731,7 +1732,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   font-weight: 500;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   display: block;
   margin-bottom: 0.4rem; }
   @media only screen and (min-width: 640px) {
@@ -1781,7 +1782,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   font-weight: 500;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   border: 0;
   border-radius: 0;
   cursor: pointer;
@@ -1833,7 +1834,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.2;
-  text-transform: normal; }
+  text-transform: none; }
   @media only screen and (min-width: 640px) {
     .comment-reply-title {
       font-size: 3.51562rem; } }
@@ -1949,7 +1950,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   font-weight: 400;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal; }
+  text-transform: none; }
   @media only screen and (min-width: 640px) {
     .comment-metadata {
       font-size: 2.25rem; } }
@@ -2078,7 +2079,7 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   font-weight: 500;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   color: inherit;
   white-space: nowrap;
   width: auto;
@@ -2118,7 +2119,7 @@ that were hidden (via .neverending) before.
     font-weight: 400;
     letter-spacing: -0.025em;
     line-height: 1;
-    text-transform: normal;
+    text-transform: none;
     margin-bottom: 1.6rem; }
     @media only screen and (min-width: 640px) {
       .kelpie-page-header .kelpie-page-title {
@@ -2137,7 +2138,7 @@ that were hidden (via .neverending) before.
     font-weight: 600;
     letter-spacing: -0.025em;
     line-height: 1.2;
-    text-transform: normal;
+    text-transform: none;
     margin: 0 auto 2.4rem;
     text-align: center; }
     @media only screen and (min-width: 640px) {
@@ -2204,13 +2205,12 @@ that were hidden (via .neverending) before.
 # Post previous/next navigation
 --------------------------------------------------------------*/
 .post-navigation .nav-links {
-  display: grid;
-  grid-gap: 3.2rem;
   margin: 0 auto 4.8rem;
-  max-width: calc(4.8rem + 56rem); }
+  max-width: 100%; }
   @media only screen and (min-width: 640px) {
     .post-navigation .nav-links {
-      grid-template-columns: 1fr 1fr; } }
+      display: flex;
+      max-width: calc(4.8rem + 56rem); } }
   .post-navigation .nav-links .meta-nav {
     font-size: 1.42222rem;
     font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
@@ -2231,7 +2231,7 @@ that were hidden (via .neverending) before.
     font-weight: 400;
     letter-spacing: -0.015em;
     line-height: 1.2;
-    text-transform: normal;
+    text-transform: none;
     display: inline-block; }
     @media only screen and (min-width: 640px) {
       .post-navigation .nav-links .post-title {
@@ -2240,6 +2240,9 @@ that were hidden (via .neverending) before.
     justify-self: flex-start;
     text-align: left;
     width: 100%; }
+    @media only screen and (min-width: 640px) {
+      .post-navigation .nav-links .nav-previous {
+        margin-right: 2.4rem; } }
     .post-navigation .nav-links .nav-previous .meta-nav {
       justify-content: flex-start; }
     .post-navigation .nav-links .nav-previous .post-title {
@@ -2248,13 +2251,17 @@ that were hidden (via .neverending) before.
     justify-self: flex-end;
     text-align: right;
     width: 100%; }
+    @media only screen and (min-width: 640px) {
+      .post-navigation .nav-links .nav-next {
+        margin-left: 2.4rem; } }
     .post-navigation .nav-links .nav-next .meta-nav {
       justify-content: flex-end; }
     .post-navigation .nav-links .nav-next .post-title {
       margin-right: 2.4rem; }
   .post-navigation .nav-links .nav-previous a,
   .post-navigation .nav-links .nav-next a {
-    display: block; }
+    display: block;
+    color: #181b1c; }
     .post-navigation .nav-links .nav-previous a:hover .post-title, .post-navigation .nav-links .nav-previous a:active .post-title,
     .post-navigation .nav-links .nav-next a:hover .post-title,
     .post-navigation .nav-links .nav-next a:active .post-title {
@@ -2338,7 +2345,7 @@ that were hidden (via .neverending) before.
   font-weight: 500;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   border: 0;
   border-radius: 0;
   cursor: pointer;
@@ -2519,7 +2526,7 @@ button.search-untoggle {
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   color: inherit;
   margin: 0; }
   @media only screen and (min-width: 640px) {
@@ -2537,7 +2544,7 @@ button.search-untoggle {
   font-weight: 400;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   color: inherit;
   display: none;
   margin: 0;
@@ -2655,7 +2662,7 @@ button.search-untoggle {
   font-weight: 500;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   border: 0;
   border-radius: 0;
   cursor: pointer;
@@ -2973,7 +2980,7 @@ h1 {
   font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 1;
-  text-transform: normal;
+  text-transform: none;
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   @media only screen and (min-width: 640px) {
@@ -2987,7 +2994,7 @@ h2 {
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   @media only screen and (min-width: 640px) {
@@ -3001,7 +3008,7 @@ h3 {
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   @media only screen and (min-width: 640px) {
@@ -3015,7 +3022,7 @@ h4 {
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   @media only screen and (min-width: 640px) {
@@ -3029,7 +3036,7 @@ h5 {
   font-weight: 400;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   @media only screen and (min-width: 640px) {
@@ -3043,7 +3050,7 @@ h6 {
   font-weight: 400;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  text-transform: normal;
+  text-transform: none;
   margin: 0 auto 2.4rem;
   max-width: 56rem; }
   @media only screen and (min-width: 640px) {
@@ -3082,13 +3089,17 @@ ol {
   margin: 0 auto 2.4rem;
   max-width: 56rem;
   margin-bottom: 3.2rem;
-  margin-top: 3.2rem; }
+  margin-top: 3.2rem;
+  text-align: center; }
   .wp-block-image.alignwide {
     max-width: 104rem; }
   .wp-block-image.alignfull {
     max-width: 100%; }
   .wp-block-image img {
-    display: block; }
+    margin-left: auto;
+    margin-right: auto; }
+  .wp-block-image a {
+    box-shadow: none; }
   .wp-block-image.alignleft, .wp-block-image.alignright {
     width: 100%; }
   .wp-block-image.alignfull img {
@@ -3132,7 +3143,7 @@ ol {
     font-weight: 500;
     letter-spacing: -0.015em;
     line-height: 1.2;
-    text-transform: normal;
+    text-transform: none;
     display: block;
     margin-bottom: 0.4rem; }
     @media only screen and (min-width: 640px) {
@@ -3439,7 +3450,7 @@ blockquote,
     font-weight: 400;
     letter-spacing: -0.015em;
     line-height: 1.2;
-    text-transform: normal; }
+    text-transform: none; }
     @media only screen and (min-width: 640px) {
       .wp-block-quote.is-large p {
         font-size: 2.8125rem; } }

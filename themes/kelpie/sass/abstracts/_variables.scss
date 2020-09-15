@@ -174,7 +174,7 @@ $typography: (
 		line-height: 1.2,
 		letter-spacing: -0.025em,
 		weight: 600,
-		text-transform: normal,
+		text-transform: none,
 	),
 	'titles':  (
 		font-family: ($system-stack),
@@ -182,7 +182,7 @@ $typography: (
 		line-height: 1,
 		letter-spacing: -0.025em,
 		weight: 400,
-		text-transform: normal,
+		text-transform: none,
 	),
 	'subtitles':  (
 		font-family: ($system-stack),
@@ -190,7 +190,7 @@ $typography: (
 		line-height: 1.2,
 		letter-spacing: -0.015em,
 		weight: 400,
-		text-transform: normal,
+		text-transform: none,
 	),
 	'interface':  (
 		font-family: ($system-stack),
@@ -198,7 +198,7 @@ $typography: (
 		line-height: 1.2,
 		letter-spacing: -0.015em,
 		weight: 500,
-		text-transform: normal,
+		text-transform: none,
 	),
 	'metadata':  (
 		font-family: ($system-stack),
