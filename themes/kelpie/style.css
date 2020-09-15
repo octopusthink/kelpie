@@ -3246,11 +3246,67 @@ ol {
 /*--------------------------------------------------------------
 ## Latest Posts
 --------------------------------------------------------------*/
-ul.wp-block-latest-posts .alignwide,
-ul.wp-block-latest-posts .alignfull,
-ul.wp-block-latest-posts .is-grid.alignwide,
-ul.wp-block-latest-posts .is-grid.alignwide {
-  padding: 0 14px; }
+.wp-block-latest-posts {
+  margin: 0 auto 2.4rem;
+  max-width: 56rem;
+  margin-bottom: 4.8rem; }
+  .wp-block-latest-posts.alignwide {
+    max-width: 104rem; }
+  .wp-block-latest-posts.alignfull {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    max-width: calc(100% + 2 * 1.6rem); }
+  @media only screen and (min-width: 1024px) {
+    .wp-block-latest-posts {
+      margin-bottom: 12.8rem; } }
+  .wp-block-latest-posts li > a {
+    font-size: 1.8rem;
+    font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    text-transform: none;
+    box-shadow: none;
+    color: #666c76;
+    margin-bottom: 1.6rem; }
+    @media only screen and (min-width: 640px) {
+      .wp-block-latest-posts li > a {
+        font-size: 2.25rem; } }
+    .wp-block-latest-posts li > a:hover {
+      color: #00a8b4; }
+    .wp-block-latest-posts li > a:focus {
+      box-shadow: 0 0 0 0.3rem #f19dca;
+      outline: 0; }
+
+.wp-block-latest-posts__post-date {
+  font-size: 1.42222rem;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #666c76;
+  display: none; }
+  @media only screen and (min-width: 640px) {
+    .wp-block-latest-posts__post-date {
+      font-size: 1.44rem; } }
+
+.wp-block-latest-posts__post-excerpt {
+  font-size: 1.6rem;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6; }
+  @media only screen and (min-width: 640px) {
+    .wp-block-latest-posts__post-excerpt {
+      font-size: 1.8rem; } }
+
+/* Space posts out a wee bit more */
+.wp-block-latest-posts__list li {
+  padding-bottom: 1.6rem; }
 
 /*--------------------------------------------------------------
 # Lists

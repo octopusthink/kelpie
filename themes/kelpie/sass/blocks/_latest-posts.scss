@@ -2,11 +2,39 @@
 ## Latest Posts
 --------------------------------------------------------------*/
 
-ul.wp-block-latest-posts {
-	.alignwide,
-	.alignfull,
-	.is-grid.alignwide,
-	.is-grid.alignwide {
-		padding: 0 14px;
+.wp-block-latest-posts {
+	@include content-block();
+	@include extra-bottom-margin();
+
+	// This seems to be the only way to select the post title. :(
+	li > a {
+		@include typography('subtitles', 's');
+		@include remove-underline();
+		color: get($colors, 'text', 'light');
+		margin-bottom: get($spacing, 'xs');
+
+		&:hover {
+			color: get($colors, 'interactive', 'hover');
+		}
+
+		&:focus {
+			@include focus-ring();
+		}
 	}
+}
+
+.wp-block-latest-posts__post-date {
+	@include typography('metadata', 'm');
+	color: get($colors, 'text', 'light');
+	display: none;
+}
+
+.wp-block-latest-posts__post-excerpt {
+	@include typography('body');
+}
+
+
+/* Space posts out a wee bit more */
+.wp-block-latest-posts__list li {
+	padding-bottom: get($spacing, 'xs');
 }
