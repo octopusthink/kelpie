@@ -3483,7 +3483,7 @@ blockquote,
   margin: 0 auto 2.4rem;
   max-width: 56rem;
   border: 0;
-  padding: 0;
+  padding: 0 3.2rem;
   position: relative; }
   blockquote.alignwide,
   .wp-block-pullquote.alignwide,

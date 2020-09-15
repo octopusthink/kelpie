@@ -7,7 +7,7 @@ blockquote,
 .wp-block-quote {
 	@include content-block();
 	border: 0;
-	padding: 0;
+	padding: 0 get($spacing, 'm');
 	position: relative;
 
 	&::before {
