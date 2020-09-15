@@ -522,13 +522,17 @@ figcaption {
 --------------------------------------------------------------*/
 .wp-block-columns {
   margin: 0 auto 2.4rem;
-  max-width: 56rem; }
+  max-width: 56rem;
+  margin-bottom: 4.8rem; }
   .wp-block-columns.alignwide {
     max-width: 104rem; }
   .wp-block-columns.alignfull {
     margin-left: -1.6rem;
     margin-right: -1.6rem;
     max-width: calc(100% + 2 * 1.6rem); }
+  @media only screen and (min-width: 1024px) {
+    .wp-block-columns {
+      margin-bottom: 12.8rem; } }
 
 @media (min-width: 600px) and (max-width: 781px) {
   .wp-block-column {
@@ -659,13 +663,16 @@ figcaption {
 .wp-block-group {
   margin: 0 auto 2.4rem;
   max-width: 56rem;
-  margin-bottom: 6.4rem; }
+  margin-bottom: 4.8rem; }
   .wp-block-group.alignwide {
     max-width: 104rem; }
   .wp-block-group.alignfull {
     margin-left: -1.6rem;
     margin-right: -1.6rem;
     max-width: calc(100% + 2 * 1.6rem); }
+  @media only screen and (min-width: 1024px) {
+    .wp-block-group {
+      margin-bottom: 12.8rem; } }
   .wp-block-group.has-background {
     padding-bottom: 6.4rem;
     padding-left: 1.6rem;

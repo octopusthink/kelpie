@@ -4,6 +4,7 @@
 
 .wp-block-columns {
 	@include content-block();
+	@include extra-bottom-margin();
 }
 
 // Increase default spacing between columns.

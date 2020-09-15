@@ -4,7 +4,7 @@
 
 .wp-block-group {
 	@include content-block();
-	margin-bottom: get($spacing, 'xl');
+	@include extra-bottom-margin();
 
 	&.has-background {
 		padding-bottom: get($spacing, 'xl');
