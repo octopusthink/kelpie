@@ -189,6 +189,10 @@ a {
   .wp-block a:hover,
   .wp-block a:active {
     box-shadow: 0 0.2rem #00a8b4; }
+  .kelpie-page-content a:focus,
+  .wp-block a:focus {
+    box-shadow: 0 0 0 0.3rem #f19dca;
+    outline: 0; }
 
 /*--------------------------------------------------------------
 # Alignments
@@ -418,6 +422,9 @@ figcaption {
   color: inherit; }
   .has-background a:not(.wp-block-button__link):hover {
     box-shadow: none; }
+  .has-background a:not(.wp-block-button__link):focus {
+    box-shadow: 0 0 0 0.3rem #f19dca;
+    outline: 0; }
 
 .has-primary-white-color {
   color: #fcebf4; }

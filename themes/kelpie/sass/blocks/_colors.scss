@@ -78,6 +78,10 @@
 		&:hover {
 			@include remove-underline();
 		}
+
+		&:focus {
+			@include focus-ring();
+		}
 	}
 }
 

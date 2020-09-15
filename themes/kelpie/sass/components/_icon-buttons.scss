@@ -25,19 +25,7 @@
 	}
 
 	&:focus {
-		outline: 0;
-		position: relative;
-
-		&::before {
-			@include focus-ring();
-			bottom: -2.4rem;
-			content: '';
-			display: block;
-			left: 0;
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
+		@include focus-ring();
 	}
 }
 

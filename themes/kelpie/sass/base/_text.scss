@@ -51,4 +51,8 @@ a {
 	&:active {
 		@include underline( get($colors, 'interactive', 'hover') );
 	}
+
+	&:focus {
+		@include focus-ring();
+	}
 }

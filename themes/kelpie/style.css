@@ -1060,6 +1060,10 @@ a {
   .wp-block a:hover,
   .wp-block a:active {
     box-shadow: 0 0.2rem #00a8b4; }
+  .kelpie-page-content a:focus,
+  .wp-block a:focus {
+    box-shadow: 0 0 0 0.3rem #f19dca;
+    outline: 0; }
 
 /*--------------------------------------------------------------
 # Site Content
@@ -2059,18 +2063,8 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
   .kelpie-icon-button:active .kelpie-icon-button-label {
     box-shadow: 0 0.2rem currentColor; }
   .kelpie-icon-button:focus {
-    outline: 0;
-    position: relative; }
-    .kelpie-icon-button:focus::before {
-      box-shadow: 0 0 0 0.3rem #f19dca;
-      outline: 0;
-      bottom: -2.4rem;
-      content: '';
-      display: block;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0; }
+    box-shadow: 0 0 0 0.3rem #f19dca;
+    outline: 0; }
 
 .kelpie-icon-button-label {
   font-size: 1.42222rem;
@@ -2812,6 +2806,9 @@ figcaption {
   color: inherit; }
   .has-background a:not(.wp-block-button__link):hover {
     box-shadow: none; }
+  .has-background a:not(.wp-block-button__link):focus {
+    box-shadow: 0 0 0 0.3rem #f19dca;
+    outline: 0; }
 
 .has-primary-white-color {
   color: #fcebf4; }
