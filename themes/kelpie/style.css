@@ -1011,7 +1011,13 @@ body {
 
 .site-main {
   background-color: #fff;
-  max-width: 160rem; }
+  max-width: 160rem;
+  margin: 0 auto;
+  padding: 1.6rem; }
+
+.alignfull:last-child,
+.wp-block-embed.alignfull:last-child {
+  margin-bottom: -1.6rem; }
 
 .site-header,
 .site-footer {
