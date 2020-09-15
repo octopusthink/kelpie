@@ -2,12 +2,31 @@
 ## Cover
 --------------------------------------------------------------*/
 
-.wp-block-cover-text p {
-	padding: 1.5em 14px;
-}
+.wp-block-cover {
+	@include content-block();
+	@include extra-bottom-margin();
 
-@media screen and (min-width: 608px) {
-	.wp-block-cover-text p {
-		padding: 1.5em 0;
+	h1, h2, h3, h4, h5, h6,
+	p, ul {
+		max-width: 70rem;
+	}
+
+	.wp-block-cover__inner-container {
+		color: inherit;
+    	width: 100%;
+	}
+
+	a {
+		@include underline(currentColor);
+		color: inherit;
+
+		&:hover {
+			@include remove-underline();
+			color: inherit;
+		}
+
+		&:focus {
+			@include focus-ring();
+		}
 	}
 }

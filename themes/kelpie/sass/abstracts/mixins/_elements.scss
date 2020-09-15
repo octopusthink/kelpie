@@ -15,6 +15,7 @@
 	top: 0;
 	transition: all 200ms ease-out;
 	white-space: nowrap;
+	width: auto;
 
 	@if $color == 'default' {
 		background: get($colors, 'interactive', 'background');
@@ -67,6 +68,17 @@
 	}
 
 	&.alignfull {
-		max-width: 100%;
+		margin-left: -#{get($site, 'padding')};
+		margin-right: -#{get($site, 'padding')};
+		max-width: calc(100% + 2 * #{get($site, 'padding')});
+	}
+}
+
+// Add consistent bottom margins to container and layout blocks.
+@mixin extra-bottom-margin() {
+	margin-bottom: get($spacing, 'l');
+
+	@include media('tablet-wide') {
+		margin-bottom: get($spacing, 'xxl');
 	}
 }

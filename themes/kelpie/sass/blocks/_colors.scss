@@ -50,6 +50,10 @@
 	}
 }
 
+.has-background-dim:not(.has-text-color) {
+	color: get($palette, 'neutral', 'grey100');
+}
+
 .has-white-background-color {
 	background-color: get($palette, 'neutral', 'white');
 
@@ -88,22 +92,22 @@
 // Generate text colours for primary palette.
 @each $name, $color in get($palette, 'primary') {
 	.has-primary-#{$name}-color {
-		color: $color;
+		color: $color !important;
 	}
 }
 
 // Generate text colours for secondary palette.
 @each $name, $color in get($palette, 'secondary') {
 	.has-secondary-#{$name}-color {
-		color: $color;
+		color: $color !important;
 	}
 }
 
 // Black and white colour classes.
 .has-black-color {
-	color: get($palette, 'neutral', 'black');
+	color: get($palette, 'neutral', 'black') !important;
 }
 
 .has-white-color {
-	color: get($palette, 'neutral', 'white');
+	color: get($palette, 'neutral', 'white') !important;
 }
