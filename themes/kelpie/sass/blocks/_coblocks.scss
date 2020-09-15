@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+# CoBlocks Blocks: https://wordpress.org/plugins/coblocks/
+--------------------------------------------------------------*/
+
+/* Media Card ---------------------------- */
+.wp-block-coblocks-media-card {
+	// Allows CoBlocks to apply padding in a cohesive way using ems.
+	@include typography('body', 'l');
+	@include content-block();
+	@include extra-bottom-margin();
+}
+
+// Adjust padding around Media Card for different breakpoints.
+.wp-block-coblocks-media-card .wp-block-coblocks-row__inner {
+	padding: get($spacing, 'm');
+
+	@include media('tablet') {
+		padding: get($spacing, 'l');
+	}
+	@include media('desktop') {
+		padding: get($spacing, 'xl');
+	}
+	@include media('desktop') {
+		padding: get($spacing, 'xxl');
+	}
+}

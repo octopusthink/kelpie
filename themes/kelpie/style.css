@@ -2727,6 +2727,45 @@ figcaption {
     max-width: calc(100% + 2 * 1.6rem); }
 
 /*--------------------------------------------------------------
+# CoBlocks Blocks: https://wordpress.org/plugins/coblocks/
+--------------------------------------------------------------*/
+/* Media Card ---------------------------- */
+.wp-block-coblocks-media-card {
+  font-size: 1.8rem;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6;
+  margin: 0 auto 2.4rem;
+  max-width: 56rem;
+  margin-bottom: 4.8rem; }
+  @media only screen and (min-width: 640px) {
+    .wp-block-coblocks-media-card {
+      font-size: 2.25rem; } }
+  .wp-block-coblocks-media-card.alignwide {
+    max-width: 104rem; }
+  .wp-block-coblocks-media-card.alignfull {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    max-width: calc(100% + 2 * 1.6rem); }
+  @media only screen and (min-width: 1024px) {
+    .wp-block-coblocks-media-card {
+      margin-bottom: 12.8rem; } }
+
+.wp-block-coblocks-media-card .wp-block-coblocks-row__inner {
+  padding: 3.2rem; }
+  @media only screen and (min-width: 768px) {
+    .wp-block-coblocks-media-card .wp-block-coblocks-row__inner {
+      padding: 4.8rem; } }
+  @media only screen and (min-width: 1248px) {
+    .wp-block-coblocks-media-card .wp-block-coblocks-row__inner {
+      padding: 6.4rem; } }
+  @media only screen and (min-width: 1248px) {
+    .wp-block-coblocks-media-card .wp-block-coblocks-row__inner {
+      padding: 12.8rem; } }
+
+/*--------------------------------------------------------------
 ## Code
 --------------------------------------------------------------*/
 .wp-block-code {
@@ -3165,6 +3204,9 @@ ol,
     max-width: 100%;
     width: 100%; }
 
+/*--------------------------------------------------------------
+# Jetpack Blocks: https://jetpack.com/
+--------------------------------------------------------------*/
 /* Contact info ---------------------------- */
 .wp-block-jetpack-contact-info {
   margin: 0 auto 2.4rem;
