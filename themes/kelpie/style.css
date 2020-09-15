@@ -1390,6 +1390,8 @@ body:not(.enable-search-modal) .kelpie-menu-bar {
 
 .mobile-nav-toggle {
   color: inherit; }
+  .mobile-nav-toggle:hover {
+    background: none; }
 
 .kelpie-close-nav-toggle-wrapper {
   align-items: center;
