@@ -4,6 +4,7 @@
 
 .wp-block-image {
 	@include content-block();
+	display: block;
 	margin-bottom: get($spacing, 'm');
 	margin-top: get($spacing, 'm');
 	text-align: center;
