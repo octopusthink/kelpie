@@ -303,7 +303,8 @@ a {
       font-size: 1.8rem; } }
   .wp-block-button__link:hover,
   .kelpie-page-content .wp-block-button__link:hover {
-    background: #00a8b4; }
+    background: #00a8b4;
+    color: #fff; }
   .wp-block-button__link:active,
   .kelpie-page-content .wp-block-button__link:active {
     background: #00a8b4; }
@@ -314,13 +315,35 @@ a {
     outline: none; }
   .wp-block-button__link:hover,
   .kelpie-page-content .wp-block-button__link:hover {
-    box-shadow: none; }
+    box-shadow: none;
+    color: #fff; }
+  .wp-block-button__link:focus,
+  .kelpie-page-content .wp-block-button__link:focus {
+    box-shadow: 0 0 0 0.3rem #f19dca;
+    outline: 0; }
 
 .wp-block-button__link:not(.has-background) {
   background: #b32973; }
 
 .wp-block-button__link:not(.has-text-color) {
   color: #fff; }
+
+.wp-block-button__link.has-text-color:hover {
+  color: #fff !important; }
+
+/* Outline style */
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background) {
+  background: transparent; }
+
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
+  color: #b32973;
+  border-color: #b32973; }
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+  box-shadow: inset 0 0 0 2px currentColor; }
+  .wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background: rgba(0, 168, 180, 0.05);
+    color: #00a8b4 !important; }
 
 /*--------------------------------------------------------------
 ## Captions: used for Image, Audio, Video, Gallery blocks.

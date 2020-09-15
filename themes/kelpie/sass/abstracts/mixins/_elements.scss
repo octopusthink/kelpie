@@ -24,6 +24,7 @@
 
 	&:hover {
 		background: get($colors, 'interactive', 'hover');
+		color: get($colors, 'text', 'inverse-light');
 	}
 
 	&:active {
