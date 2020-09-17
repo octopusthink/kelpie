@@ -1431,6 +1431,50 @@ table,
     .jetpack-contact-info-block {
       font-size: 18px; } }
 
+.jetpack-contact-form {
+  font-size: 1.6rem;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6;
+  font-size: 16px; }
+  @media only screen and (min-width: 640px) {
+    .jetpack-contact-form {
+      font-size: 1.8rem; } }
+  @media only screen and (min-width: 640px) {
+    .jetpack-contact-form {
+      font-size: 18px; } }
+
+.jetpack-field-label .required {
+  font-size: inherit;
+  opacity: 0.6; }
+
+.wp-block-coblocks-media-card .wp-block-coblocks-row__inner {
+  padding: 32px; }
+
+.wp-block-cover blockquote,
+.wp-block-cover .wp-block-pullquote,
+.wp-block-cover .wp-block-quote {
+  margin-bottom: 128px;
+  margin-top: 128px;
+  padding-bottom: 64px;
+  padding-top: 64px; }
+  .wp-block-cover blockquote::before,
+  .wp-block-cover .wp-block-pullquote::before,
+  .wp-block-cover .wp-block-quote::before {
+    left: -64px;
+    top: -24px; }
+  .wp-block-cover blockquote p,
+  .wp-block-cover .wp-block-pullquote p,
+  .wp-block-cover .wp-block-quote p {
+    margin-bottom: 32px; }
+
+.wp-block.alignfull {
+  margin-left: -16px;
+  margin-right: -16px;
+  max-width: calc(100% + 26px); }
+
 body {
   background-color: #fff; }
 
@@ -1440,88 +1484,170 @@ body {
     .editor-post-title__block {
       font-size: 18px; } }
 
-.wp-block-paragraph {
+.wp-block-paragraph,
+p.wp-block {
   font-size: 16px; }
   @media only screen and (min-width: 640px) {
-    .wp-block-paragraph {
+    .wp-block-paragraph,
+    p.wp-block {
       font-size: 18px; } }
-  .wp-block-paragraph.has-small-font-size {
+  .wp-block-paragraph.has-small-font-size,
+  p.wp-block.has-small-font-size {
     font-size: 14.22222px; }
     @media only screen and (min-width: 640px) {
-      .wp-block-paragraph.has-small-font-size {
+      .wp-block-paragraph.has-small-font-size,
+      p.wp-block.has-small-font-size {
         font-size: 14.4px; } }
-  .wp-block-paragraph.has-large-font-size {
+  .wp-block-paragraph.has-large-font-size,
+  p.wp-block.has-large-font-size {
     font-size: 18px; }
     @media only screen and (min-width: 640px) {
-      .wp-block-paragraph.has-large-font-size {
+      .wp-block-paragraph.has-large-font-size,
+      p.wp-block.has-large-font-size {
         font-size: 22.5px; } }
 
-.wp-block > ul,
-.wp-block > ol {
+ul.wp-block,
+ol.wp-block {
   font-size: 16px; }
   @media only screen and (min-width: 640px) {
-    .wp-block > ul,
-    .wp-block > ol {
+    ul.wp-block,
+    ol.wp-block {
       font-size: 18px; } }
-  .wp-block > ul ul,
-  .wp-block > ul ol,
-  .wp-block > ol ul,
-  .wp-block > ol ol {
+  ul.wp-block ul,
+  ul.wp-block ol,
+  ol.wp-block ul,
+  ol.wp-block ol {
     font-size: inherit; }
 
-.wp-block h1 {
+h1 {
   font-size: 32.43658px; }
   @media only screen and (min-width: 640px) {
-    .wp-block h1 {
+    h1 {
       font-size: 68.66455px; } }
 
-.wp-block h2 {
+h2 {
   font-size: 28.83252px; }
   @media only screen and (min-width: 640px) {
-    .wp-block h2 {
+    h2 {
       font-size: 54.93164px; } }
 
-.wp-block h3 {
+h3 {
   font-size: 25.62891px; }
   @media only screen and (min-width: 640px) {
-    .wp-block h3 {
+    h3 {
       font-size: 43.94531px; } }
 
-.wp-block h4 {
+h4 {
   font-size: 22.78125px; }
   @media only screen and (min-width: 640px) {
-    .wp-block h4 {
+    h4 {
       font-size: 35.15625px; } }
 
-.wp-block h5 {
+h5 {
   font-size: 20.25px; }
   @media only screen and (min-width: 640px) {
-    .wp-block h5 {
+    h5 {
       font-size: 28.125px; } }
 
-.wp-block h6 {
+h6 {
   font-size: 18px; }
   @media only screen and (min-width: 640px) {
-    .wp-block h6 {
+    h6 {
       font-size: 22.5px; } }
 
-.wp-block-quote p {
-  font-size: 18px; }
-  @media only screen and (min-width: 640px) {
-    .wp-block-quote p {
-      font-size: 22.5px; } }
+.wp-block-quote::before,
+blockquote::before {
+  font-size: 160px;
+  top: -72px; }
 
-.wp-block-quote cite {
-  font-size: 12.64198px; }
+.wp-block-quote p,
+blockquote p {
+  font-size: 16px; }
   @media only screen and (min-width: 640px) {
-    .wp-block-quote cite {
+    .wp-block-quote p,
+    blockquote p {
+      font-size: 18px; } }
+
+.wp-block-quote.is-large p,
+blockquote.is-large p {
+  font-size: 20.25px; }
+  @media only screen and (min-width: 640px) {
+    .wp-block-quote.is-large p,
+    blockquote.is-large p {
+      font-size: 28.125px; } }
+
+.wp-block-quote__citation {
+  font-size: 1.42222rem;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6;
+  font-size: 12.64198px;
+  color: inherit; }
+  @media only screen and (min-width: 640px) {
+    .wp-block-quote__citation {
+      font-size: 1.44rem; } }
+  @media only screen and (min-width: 640px) {
+    .wp-block-quote__citation {
       font-size: 11.52px; } }
 
-.wp-block-quote.is-large p {
-  font-size: 20.25px; }
+figcaption {
+  font-size: 14.22222px; }
   @media only screen and (min-width: 640px) {
-    .wp-block-quote.is-large p {
-      font-size: 28.125px; } }
+    figcaption {
+      font-size: 14.4px; } }
+
+.wp-block-cover blockquote p,
+.wp-block-cover .wp-block-pullquote p,
+.wp-block-cover .wp-block-quote p {
+  font-size: 28.83252px;
+  color: inherit; }
+  @media only screen and (min-width: 640px) {
+    .wp-block-cover blockquote p,
+    .wp-block-cover .wp-block-pullquote p,
+    .wp-block-cover .wp-block-quote p {
+      font-size: 54.93164px; } }
+
+.wp-block-cover blockquote::before,
+.wp-block-cover .wp-block-pullquote::before,
+.wp-block-cover .wp-block-quote::before {
+  font-size: 240px; }
+
+.wp-block-cover blockquote cite,
+.wp-block-cover .wp-block-pullquote cite,
+.wp-block-cover .wp-block-quote cite {
+  font-size: 16px;
+  color: inherit; }
+  @media only screen and (min-width: 640px) {
+    .wp-block-cover blockquote cite,
+    .wp-block-cover .wp-block-pullquote cite,
+    .wp-block-cover .wp-block-quote cite {
+      font-size: 18px; } }
+
+.wp-block-latest-posts li > a {
+  font-size: 18px;
+  margin-bottom: 16px; }
+  @media only screen and (min-width: 640px) {
+    .wp-block-latest-posts li > a {
+      font-size: 22.5px; } }
+
+.wp-block-latest-posts__post-date {
+  font-size: 14.22222px; }
+  @media only screen and (min-width: 640px) {
+    .wp-block-latest-posts__post-date {
+      font-size: 14.4px; } }
+
+.wp-block-latest-posts__post-excerpt,
+.wp-block-latest-posts__post-full-content p {
+  font-size: 16px; }
+  @media only screen and (min-width: 640px) {
+    .wp-block-latest-posts__post-excerpt,
+    .wp-block-latest-posts__post-full-content p {
+      font-size: 18px; } }
+
+.wp-block-latest-posts__list li {
+  padding-bottom: 16px; }
 
 
 /*# sourceMappingURL=style-editor.css.map*/

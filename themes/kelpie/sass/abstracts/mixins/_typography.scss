@@ -67,7 +67,7 @@
 	}
 }
 
-// The editor context is weird, and sizing fonts in rems doesn't work as expected, so we use ems instead, and convert the numbers.
+// The editor context is weird, and sizing fonts in rems doesn't work as expected, so we use pixels instead, and convert the numbers.
 @mixin responsive-font-size-editor($size) {
 	font-size: rems-to-pixels(get($typography, 'scale-mobile', $size));
 

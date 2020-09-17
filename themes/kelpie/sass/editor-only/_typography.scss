@@ -9,7 +9,8 @@ body {
 }
 
 // Apply font sizes to elements using ems.
-.wp-block-paragraph {
+.wp-block-paragraph,
+p.wp-block {
 	@include font-size-editor();
 
 	&.has-small-font-size {
@@ -21,8 +22,8 @@ body {
 	}
 }
 
-.wp-block > ul,
-.wp-block > ol {
+ul.wp-block,
+ol.wp-block {
 	@include font-size-editor();
 
 	ul,
@@ -31,42 +32,93 @@ body {
 	}
 }
 
-.wp-block {
-	h1 {
-		@include font-size-editor('titles');
-	}
-
-	h2 {
-		@include font-size-editor('headings', 'l');
-	}
-
-	h3 {
-		@include font-size-editor('headings', 'm');
-	}
-
-	h4 {
-		@include font-size-editor('headings', 's');
-	}
-
-	h5 {
-		@include font-size-editor('subtitles', 'l');
-	}
-
-	h6 {
-		@include font-size-editor('subtitles', 's');
-	}
+h1 {
+	@include font-size-editor('titles');
 }
 
-.wp-block-quote {
-	p {
-		@include font-size-editor('body', 'l');
+h2 {
+	@include font-size-editor('headings', 'l');
+}
+
+h3 {
+	@include font-size-editor('headings', 'm');
+}
+
+h4 {
+	@include font-size-editor('headings', 's');
+}
+
+h5 {
+	@include font-size-editor('subtitles', 'l');
+}
+
+h6 {
+	@include font-size-editor('subtitles', 's');
+}
+
+.wp-block-quote,
+blockquote {
+	&::before {
+		font-size: rems-to-pixels(16);
+		top: rems-to-pixels(-7.2);
 	}
 
-	cite {
-		@include font-size-editor('metadata', 's');
+	p {
+		@include font-size-editor('body', 'm');
 	}
 
 	&.is-large p {
 		@include font-size-editor('subtitles', 'l');
 	}
+}
+
+.wp-block-quote__citation {
+	@include typography('body', 's');
+	@include font-size-editor('metadata', 's');
+	color: inherit;
+}
+
+figcaption {
+	@include font-size-editor('body', 's');
+}
+
+.wp-block-cover {
+	blockquote,
+	.wp-block-pullquote,
+	.wp-block-quote {
+		p {
+			@include font-size-editor('headings', 'l');
+
+			color: inherit;
+		}
+
+		&::before {
+			font-size: rems-to-pixels(24rem);
+		}
+
+		cite {
+			@include font-size-editor('body', 'm');
+			color: inherit;
+		}
+	}
+}
+
+.wp-block-latest-posts {
+	li > a {
+		@include font-size-editor('subtitles', 's');
+		margin-bottom: rems-to-pixels(get($spacing, 'xs'));
+	}
+}
+
+.wp-block-latest-posts__post-date {
+	@include font-size-editor('metadata', 'm');
+}
+
+.wp-block-latest-posts__post-excerpt,
+.wp-block-latest-posts__post-full-content p {
+	@include font-size-editor('body', 'm');
+}
+
+.wp-block-latest-posts__list li {
+	padding-bottom: rems-to-pixels(1.6rem);
 }

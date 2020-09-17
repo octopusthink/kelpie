@@ -45,3 +45,49 @@
 	@include typography();
 	@include font-size-editor();
 }
+
+// Contact form
+.jetpack-contact-form {
+	@include typography();
+	@include font-size-editor();
+}
+
+.jetpack-field-label .required {
+	font-size: inherit;
+	opacity: 0.6;
+}
+
+// Don't get too wild with the padding around the media card.
+.wp-block-coblocks-media-card .wp-block-coblocks-row__inner {
+	padding: rems-to-pixels(get($spacing, 'm'));
+
+	@include media('deskop') {
+		padding: rems-to-pixels(get($spacing, 'l'));
+	}
+}
+
+.wp-block-cover {
+	blockquote,
+	.wp-block-pullquote,
+	.wp-block-quote {
+		margin-bottom: rems-to-pixels(get($spacing, 'xxl'));
+		margin-top: rems-to-pixels(get($spacing, 'xxl'));
+		padding-bottom: rems-to-pixels(get($spacing, 'xl'));
+		padding-top: rems-to-pixels(get($spacing, 'xl'));
+
+		&::before {
+			left: rems-to-pixels(-6.4rem);
+			top: rems-to-pixels(-2.4rem);
+		}
+
+		p {
+			margin-bottom: rems-to-pixels(get($spacing, 'm'));
+		}
+	}
+}
+
+.wp-block.alignfull {
+	margin-left: rems-to-pixels(-1.6);
+	margin-right: rems-to-pixels(-1.6);
+	max-width: calc(100% + #{rems-to-pixels(2.6)});
+}
