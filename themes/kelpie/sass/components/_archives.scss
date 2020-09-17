@@ -4,6 +4,6 @@
 
 .kelpie-archive-type {
 	@include typography('metadata', 'm');
-	margin-bottom: get($spacing, 'xxs');
 	display: block;
+	margin-bottom: get($spacing, 'xxs');
 }

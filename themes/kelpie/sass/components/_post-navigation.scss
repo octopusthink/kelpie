@@ -60,8 +60,8 @@
 
 	.nav-previous a,
 	.nav-next a {
-		display: block;
 		color: get($colors, 'interactive', 'text');
+		display: block;
 
 		&:hover,
 		&:active {

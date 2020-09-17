@@ -13,8 +13,8 @@ body {
 
 .site-main {
 	background-color: get($colors, 'layout', 'content-background');
-	max-width: get($site, 'max-site-width');
 	margin: 0 auto;
+	max-width: get($site, 'max-site-width');
 	padding: get($site, 'padding');
 }
 
@@ -22,7 +22,7 @@ body {
 // Aim is to avoid empty whitespace between a full-width block & site footer.
 .alignfull:last-child,
 .wp-block-embed.alignfull:last-child {
-    margin-bottom: -#{get($site, 'padding')};
+	margin-bottom: -#{get($site, 'padding')};
 }
 
 .site-header,

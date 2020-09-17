@@ -69,8 +69,8 @@
 	}
 
 	.wp-block-button__link:not(.has-text-color) {
-		color: get($colors, 'interactive', 'background');
 		border-color: get($colors, 'interactive', 'background');
+		color: get($colors, 'interactive', 'background');
 	}
 
 	.wp-block-button__link {

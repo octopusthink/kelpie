@@ -3,9 +3,9 @@
 --------------------------------------------------------------*/
 
 .search-form {
+	@include content-block();
 	display: flex;
 	margin-bottom: get($spacing, 'm');
-	@include content-block();
 	text-align: center;
 	width: 100%;
 
@@ -18,11 +18,11 @@
 
 .search-field {
 	@include textfield();
-	
+
 	width: 100%;
 }
 
-input[type="submit"].search-submit {
+input[type='submit'].search-submit {
 	@include button();
 	margin-left: -2px; // To put the input + button together.
 	padding-bottom: get($spacing, 'xxs');
