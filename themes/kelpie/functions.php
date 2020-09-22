@@ -328,3 +328,8 @@ require get_template_directory() . '/classes/class-kelpie-walker-comment.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Disable emoji to reduce cruft.
+ */
+require get_template_directory() . '/inc/disable-emoji.php';
