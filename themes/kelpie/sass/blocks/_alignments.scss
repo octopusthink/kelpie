@@ -46,11 +46,14 @@
 }
 
 .alignwide {
-	max-width: get($site, 'wide-content-width');
+	width: get($site, 'wide-content-width');
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .alignfull {
 	margin-left: -#{get($site, 'padding')};
 	margin-right: -#{get($site, 'padding')};
-	width: calc(100% + 2 * #{get($site, 'padding')});
+	max-width: calc(100% + 2 * #{get($site, 'padding')});
 }

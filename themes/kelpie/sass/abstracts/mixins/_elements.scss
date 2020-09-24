@@ -65,7 +65,10 @@
 	max-width: get($site, 'max-content-width');
 
 	&.alignwide {
-		max-width: get($site, 'wide-content-width');
+		width: get($site, 'wide-content-width');
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	&.alignfull {
