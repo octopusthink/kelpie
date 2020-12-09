@@ -41,8 +41,10 @@
 @mixin textfield() {
 	@include typography('body');
 	-webkit-appearance: none;
+	background: get($colors, 'layout', 'content-background');
 	border: 2px solid get($colors, 'borders', 'default');
 	border-radius: 0;
+	color: get($colors, 'text', 'default');
 	padding: get($spacing, 'xxs') get($spacing, 'xxs');
 	width: 100%;
 

@@ -8,6 +8,16 @@ textarea {
 	@include textfield();
 }
 
+input[type='checkbox'] {
+	-webkit-appearance: checkbox;
+	width: auto;
+}
+
+input[type='radio'] {
+	-webkit-appearance: radio;
+	width: auto;
+}
+
 label {
 	@include label();
 }
