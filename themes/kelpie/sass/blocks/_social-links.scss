@@ -1,0 +1,33 @@
+/* Social Links ------------------------------ */
+.wp-block-social-links {
+	@include content-block;
+	align-items: center;
+	display: flex;
+	justify-content: center !important;
+
+	.menu-item {
+		margin-right: get($spacing, 'xxs');
+	}
+
+	.wp-social-link {
+		height: auto;
+		width: auto;
+
+		a {
+			background: get($colors, 'interactive', 'background');
+			padding: get($spacing, 'xxs');
+
+			&:hover,
+			&:active {
+				color: inherit;
+				text-decoration: none;
+				transform: scale(1.1);
+			}
+
+			&:focus {
+				@include focus-ring();
+			}
+		}
+	}
+}
+

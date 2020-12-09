@@ -3817,6 +3817,38 @@ blockquote,
     color: #dee0e5;
     height: auto; }
 
+/* Social Links ------------------------------ */
+.wp-block-social-links {
+  margin: 0 auto 2.4rem;
+  max-width: 56rem;
+  align-items: center;
+  display: flex;
+  justify-content: center !important; }
+  .wp-block-social-links.alignwide {
+    width: 104rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+  .wp-block-social-links.alignfull {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    max-width: calc(100% + 2 * 1.6rem); }
+  .wp-block-social-links .menu-item {
+    margin-right: 0.8rem; }
+  .wp-block-social-links .wp-social-link {
+    height: auto;
+    width: auto; }
+    .wp-block-social-links .wp-social-link a {
+      background: #b32973;
+      padding: 0.8rem; }
+      .wp-block-social-links .wp-social-link a:hover, .wp-block-social-links .wp-social-link a:active {
+        color: inherit;
+        text-decoration: none;
+        transform: scale(1.1); }
+      .wp-block-social-links .wp-social-link a:focus {
+        box-shadow: 0 0 0 0.3rem #f19dca;
+        outline: 0; }
+
 /*--------------------------------------------------------------
 ## Tables
 --------------------------------------------------------------*/
