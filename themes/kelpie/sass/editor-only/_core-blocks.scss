@@ -1,0 +1,240 @@
+// Paragraphs
+p {
+	@include font-size-editor();
+
+	&.has-small-font-size {
+		@include font-size-editor('body', 's');
+	}
+
+	&.has-large-font-size {
+		@include font-size-editor('body', 'l');
+	}
+}
+
+// Lists
+ul,
+ol {
+	@include font-size-editor();
+	list-style-position: outside;
+
+	@include media('tablet-small', 'max') {
+		margin-left: rems-to-pixels(get($spacing, 'xs'));
+	}
+
+	ul,
+	ol {
+		font-size: inherit;
+		margin-left: rems-to-pixels(get($spacing, 'xs'));
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	& + ol,
+	& + ul {
+		margin-top: -#{rems-to-pixels(get($spacing, 'xxs'))};
+	}
+}
+
+// Headings
+h1 {
+	@include font-size-editor('titles');
+}
+
+h2 {
+	@include font-size-editor('headings', 'l');
+}
+
+h3 {
+	@include font-size-editor('headings', 'm');
+}
+
+h4 {
+	@include font-size-editor('headings', 's');
+}
+
+h5 {
+	@include font-size-editor('subtitles', 'l');
+}
+
+h6 {
+	@include font-size-editor('subtitles', 's');
+}
+
+p,
+ul,
+ol,
+.wp-block-buttons,
+.wp-block-image {
+	& + h1,
+	& + h2,
+	& + h3,
+	& + h4,
+	& + h5,
+	& + h6 {
+		margin-top: rems-to-pixels(get($spacing, 'xl')) !important;
+	}
+}
+
+
+// Quotes
+.wp-block-quote,
+blockquote {
+	&::before {
+		font-size: rems-to-pixels(16);
+		top: rems-to-pixels(-7.2);
+	}
+
+	p {
+		@include font-size-editor('body', 'm');
+	}
+
+	&.is-large p {
+		@include font-size-editor('subtitles', 'l');
+	}
+}
+
+.wp-block-quote__citation {
+	@include typography('body', 's');
+	@include font-size-editor('metadata', 's');
+	color: inherit;
+}
+
+
+// Images
+figcaption {
+	@include font-size-editor('body', 's');
+}
+
+
+// Cover
+.wp-block-cover {
+	blockquote,
+	.wp-block-pullquote,
+	.wp-block-quote {
+		margin-bottom: rems-to-pixels(get($spacing, 'xxl'));
+		margin-top: rems-to-pixels(get($spacing, 'xxl'));
+		padding-bottom: rems-to-pixels(get($spacing, 'xl'));
+		padding-top: rems-to-pixels(get($spacing, 'xl'));
+
+		p {
+			@include font-size-editor('headings', 'l');
+			margin-bottom: rems-to-pixels(get($spacing, 'm'));
+			color: inherit;
+		}
+
+		&::before {
+			font-size: rems-to-pixels(24rem);
+			left: rems-to-pixels(-6.4rem);
+			top: rems-to-pixels(-2.4rem);
+		}
+
+		cite {
+			@include font-size-editor('body', 'm');
+			color: inherit;
+		}
+	}
+}
+
+
+// Latest posts
+.wp-block-latest-posts {
+	padding-left: 0;
+
+	li {
+		padding-bottom: 0;
+	}
+
+	li > a {
+		@include font-size-editor('subtitles', 's');
+		margin-bottom: rems-to-pixels(get($spacing, 'xs'));
+	}
+}
+
+.wp-block-latest-posts__post-date {
+	@include font-size-editor('metadata', 'm');
+}
+
+.wp-block-latest-posts__post-excerpt,
+.wp-block-latest-posts__post-full-content p {
+	@include font-size-editor('body', 'm');
+}
+
+.wp-block-latest-posts__list li {
+	padding-bottom: rems-to-pixels(1.6rem);
+}
+
+
+// Verse
+.wp-block-verse {
+	@include font-size-editor('body');
+}
+
+
+// Groups
+.wp-block-group {
+	margin-bottom: rems-to-pixels(get($spacing, 'xl'));
+	max-width: none;
+
+	&.has-background {
+		padding-bottom: rems-to-pixels(get($spacing, 'xl'));
+		padding-left: rems-to-pixels(get($spacing, 'xs'));
+		padding-right: rems-to-pixels(get($spacing, 'xs'));
+		padding-top: rems-to-pixels(get($spacing, 'xl'));
+
+		@include media('tablet') {
+			padding: rems-to-pixels(get($spacing, 'xxl'));
+		}
+	}
+
+	.wp-block-group__inner-container {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rems-to-pixels(get($site, 'max-content-width'));
+	}
+}
+
+.wp-block-group.progressiveshopper-actions {
+	margin-bottom: rems-to-pixels(get($spacing, 'xxl'));
+	margin-top: rems-to-pixels(get($spacing, 'xl'));
+}
+
+// Special styling for groups on the press page, to ensure equal spacing.
+.wp-block-group.progressiveshopper-press {
+	margin-bottom: rems-to-pixels(get($spacing, 'xl'));
+	margin-top: rems-to-pixels(get($spacing, 'xl'));
+
+	img {
+		max-height: rems-to-pixels(12.8rem);
+	}
+}
+
+
+// Buttons
+.wp-block-button__link {
+	@include font-size-editor('interface', 'm');
+	margin-bottom: rems-to-pixels(get($spacing, 'xs'));
+	margin-top: rems-to-pixels(get($spacing, 'xs'));
+	padding: rems-to-pixels(get($spacing, 'xs')) rems-to-pixels(get($spacing, 'l'));
+}
+
+
+// Separator
+.wp-block-separator {
+	margin-bottom: rems-to-pixels(get($spacing, 'xl'));
+	margin-top: rems-to-pixels(get($spacing, 'xl'));
+}
+
+
+// Table
+.wp-block-table {
+	@include font-size-editor('body', 's');
+	
+	td {
+		border: 1px dotted get($colors, 'borders', 'light');
+	}
+}

@@ -3307,7 +3307,6 @@ ol,
 .wp-block-image {
   margin: 0 auto 2.4rem;
   max-width: 56rem;
-  display: block;
   margin-bottom: 3.2rem;
   margin-top: 3.2rem;
   text-align: center; }
@@ -3334,6 +3333,8 @@ ol,
   .wp-block-image.alignright figcaption {
     max-width: 100%;
     width: 100%; }
+  .wp-block-column .wp-block-image {
+    margin-top: 0; }
 
 /*--------------------------------------------------------------
 # Jetpack Blocks: https://jetpack.com/
@@ -3805,21 +3806,16 @@ blockquote,
 ## Separator
 --------------------------------------------------------------*/
 .wp-block-separator {
-  margin: 0 auto 2.4rem;
-  max-width: 56rem;
   border: 0;
   height: 1px;
-  margin: 3em auto;
-  padding: 0; }
-  .wp-block-separator.alignwide {
-    width: 104rem;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto; }
-  .wp-block-separator.alignfull {
-    margin-left: -1.6rem;
-    margin-right: -1.6rem;
-    max-width: calc(100% + 2 * 1.6rem); }
+  padding: 0;
+  margin: 6.4rem auto;
+  max-width: 32rem; }
+  .wp-block-separator.is-style-wide {
+    max-width: 560px; }
+  .wp-block-separator.is-style-dots {
+    color: #dee0e5;
+    height: auto; }
 
 /*--------------------------------------------------------------
 ## Tables

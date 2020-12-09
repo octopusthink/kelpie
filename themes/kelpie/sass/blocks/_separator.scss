@@ -3,9 +3,19 @@
 --------------------------------------------------------------*/
 
 .wp-block-separator {
-	@include content-block();
 	border: 0;
+	background: get($colors, 'borders', 'light');
 	height: 1px;
-	margin: 3em auto;
 	padding: 0;
+	margin: get($spacing, 'xl') auto;
+	max-width: 32rem;
+
+	&.is-style-wide {
+		max-width: rems-to-pixels(get($site, 'max-content-width'));
+	}
+
+	&.is-style-dots {
+		color: get($colors, 'borders', 'default');
+		height: auto;
+	}
 }

@@ -4,7 +4,6 @@
 
 .wp-block-image {
 	@include content-block();
-	display: block;
 	margin-bottom: get($spacing, 'm');
 	margin-top: get($spacing, 'm');
 	text-align: center;
@@ -32,5 +31,9 @@
 	&.alignright figcaption {
 		max-width: 100%;
 		width: 100%;
+	}
+
+	.wp-block-column & {
+		margin-top: 0;
 	}
 }
