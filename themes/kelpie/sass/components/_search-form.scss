@@ -3,16 +3,11 @@
 --------------------------------------------------------------*/
 
 .search-form {
-	@include content-block();
-	display: flex;
-	margin-bottom: get($spacing, 'm');
-	text-align: center;
-	width: 100%;
+	@include inline-form('label', '.search-submit');
 
 	label {
-		flex-grow: 1;
-		margin-bottom: 0;
-		width: 100%;
+		@include label;
+		color: inherit;
 	}
 }
 

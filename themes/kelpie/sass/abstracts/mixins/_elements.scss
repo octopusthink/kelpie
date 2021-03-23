@@ -61,6 +61,31 @@
 	margin-bottom: get($spacing, 'hairline');
 }
 
+// Display an input and a button side by side.
+@mixin inline-form($input-wrapper, $submit-wrapper ) {
+	display: flex;
+
+	input {
+		@include textfield();
+	}
+
+
+	@include media('tablet', 'max') {
+		flex-direction: column;
+	}
+
+	@include media('tablet') {
+		#{$input-wrapper} {
+			margin-right: get($spacing, 'xxs');
+			width: 100%;
+		}
+	}
+
+	#{$submit-wrapper} {
+		margin: get($spacing, 'xs') auto 0;
+	}
+}
+
 // Style blocks of text or other content within pages so they're consistently sizes and spaced.
 @mixin content-block() {
 	margin: 0 auto get($spacing, 's');

@@ -2321,25 +2321,51 @@ that were hidden (via .neverending) before.
 # Search form
 --------------------------------------------------------------*/
 .search-form {
-  margin: 0 auto 2.4rem;
-  max-width: 56rem;
-  display: flex;
-  margin-bottom: 3.2rem;
-  text-align: center;
-  width: 100%; }
-  .search-form.alignwide {
-    width: 104rem;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto; }
-  .search-form.alignfull {
-    margin-left: -1.6rem;
-    margin-right: -1.6rem;
-    max-width: calc(100% + 2 * 1.6rem); }
-  .search-form label {
-    flex-grow: 1;
-    margin-bottom: 0;
+  display: flex; }
+  .search-form input {
+    font-size: 1.6rem;
+    font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.6;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 2px solid #dee0e5;
+    border-radius: 0;
+    color: #3b3f45;
+    padding: 0.8rem 0.8rem;
     width: 100%; }
+    @media only screen and (min-width: 640px) {
+      .search-form input {
+        font-size: 1.8rem; } }
+    .search-form input:focus {
+      box-shadow: 0 0 0 0.3rem #f19dca;
+      outline: 0;
+      border-color: #b32973; }
+  @media only screen and (max-width: 767px) {
+    .search-form {
+      flex-direction: column; } }
+  @media only screen and (min-width: 768px) {
+    .search-form label {
+      margin-right: 0.8rem;
+      width: 100%; } }
+  .search-form .search-submit {
+    margin: 1.6rem auto 0; }
+  .search-form label {
+    font-size: 1.42222rem;
+    font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    text-transform: none;
+    display: block;
+    margin-bottom: 0.4rem;
+    color: inherit; }
+    @media only screen and (min-width: 640px) {
+      .search-form label {
+        font-size: 1.44rem; } }
 
 .search-field {
   font-size: 1.6rem;
